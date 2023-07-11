@@ -8,7 +8,7 @@
           $emailaddress = $_POST["emailaddress"];
           $cellno = $_POST["cellno"];
 
-          if ($name == NULL)
+          if ($id == NULL||$name == NULL||$surname == NULL||$emailaddress == NULL||$cellno == NULL)
           {
             echo "Please enter your details again";
           }
