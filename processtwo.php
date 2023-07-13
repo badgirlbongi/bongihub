@@ -13,4 +13,5 @@ if(array_key_exists('register', $_POST))
             'cellno' => isset($_POST['user']['cellno'])?$_POST['user']['cellno'] :'',
             'password' => isset($_POST['user']['password'])?$_POST['user']['password'] :'',
            ]
+           
 }
