@@ -1,7 +1,5 @@
-<html>
-<head><title>Welcome Page</title></head>
-<body>
-    <?php
+
+    <?php /*
           $id = $_POST["id"];
           $name = $_POST["name"];
           $surname = $_POST["surname"];
@@ -16,8 +14,6 @@
           {
             echo "Hello, " . $name." with email address ".$emailaddress;
           }    
-    ?>
-</body>
-</html>
+    */?>
 
 

@@ -1,4 +1,4 @@
-<?php
+<?php /*
 // testing user POST request
 //13:00 13.07.2023
 
@@ -30,5 +30,5 @@ else if(array_key_exists('cancel', $_POST))
 {
     Helper::redirect('.');
 }
-
+*/
 ?>
