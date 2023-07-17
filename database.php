@@ -183,7 +183,7 @@ if ($conn->query($sql) === TRUE) {
 }
 
 //limit data selections
-$sql = "SELECT * FROM gitbongi LIMIT 2 OFFSET 3";
+$sql = "SELECT * FROM gitbongi LIMIT 2 OFFSET 4";
 
 
 $conn->close();
