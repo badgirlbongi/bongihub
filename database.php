@@ -161,5 +161,28 @@ if ($result->num_rows > 0) {
   echo "0 results";
 }
 
+//delete data
+$sql = "DELETE FROM gitbongi WHERE id=2";
+
+if ($conn->query($sql) === TRUE) {
+  echo "Record deleted successfully";
+} else {
+  echo "Error deleting record: " . $conn->error;
+}
+
+//update data
+$sql = "UPDATE gitbongi SET lastname='Skhosana' WHERE id=3";
+
+if ($conn->query($sql) === TRUE) {
+  echo "Record updated successfully";
+} else {
+  echo "Error updating record: " . $conn->error;
+}
+
+//13:00 17.07.2023
+//limit data selections
+
+
+
 $conn->close();
 ?>
