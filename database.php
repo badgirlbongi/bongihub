@@ -132,6 +132,7 @@ if ($result->num_rows > 0)
     echo "0 results";
   }
 
+//12:00 17.07.2023
 //selecting data and puttiing  it in an html table 
 $sql = "SELECT id, firstname, lastname FROM gitbongi";
 $result = $conn->query($sql);
@@ -147,7 +148,7 @@ if ($result->num_rows > 0) {
   echo "0 results";
 }
 
-//12:00 17.07.2023
+//13:00 17.07.2023
 //order by clause
 $sql = "SELECT id, firstname, lastname FROM gitbongi ORDER BY lastname";
 $result = $conn->query($sql);
@@ -161,6 +162,7 @@ if ($result->num_rows > 0) {
   echo "0 results";
 }
 
+//14:00 17.07.2023
 //delete data
 $sql = "DELETE FROM gitbongi WHERE id=2";
 
@@ -170,6 +172,7 @@ if ($conn->query($sql) === TRUE) {
   echo "Error deleting record: " . $conn->error;
 }
 
+//15:00 17.07.2023
 //update data
 $sql = "UPDATE gitbongi SET lastname='Skhosana' WHERE id=3";
 
@@ -179,9 +182,8 @@ if ($conn->query($sql) === TRUE) {
   echo "Error updating record: " . $conn->error;
 }
 
-//13:00 17.07.2023
 //limit data selections
-
+$sql = "SELECT * FROM gitbongi LIMIT 2 OFFSET 3";
 
 
 $conn->close();
