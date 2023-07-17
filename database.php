@@ -90,7 +90,76 @@ else
 }
 
 //php mysql prepared statements
+//prepare and bind
+$stmt = $conn->prepare("INSERT INTO gitbongi (firstname, lastname,email)
+VALUES(?,?,?)");
+$stmt->bind_param("sss", $firstname, $lastname, $email);
 
+// set parameters and execute
+$firstname = "Thabiso";
+$lastname = "Seerati";
+$email = "thabisoT@gmail.com";
+$stmt->execute();
+
+$firstname = "Ayanda";
+$lastname = "More";
+$email = "ayandamore@gmail.com";
+$stmt->execute();
+
+$firstname = "Mandisa";
+$lastname = "Shabalala";
+$email = "mandishabz@gmail.com";
+$stmt->execute();
+
+echo "New records created successfully";
+
+$stmt->close();
+
+//11:00 17.07.2023
+//selecting data from mysql database
+$sql = "SELECT id, firstname, lastname FROM gitbongi";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) 
+{
+  // output data of each row
+  while($row = $result->fetch_assoc()) 
+  {
+    echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+  }
+} else 
+  {
+    echo "0 results";
+  }
+
+//selecting data and puttiing  it in an html table 
+$sql = "SELECT id, firstname, lastname FROM gitbongi";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  echo "<table><tr><th>ID</th><th>Name</th></tr>";
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "<tr><td>".$row["id"]."</td><td>".$row["firstname"]." ".$row["lastname"]."</td></tr>";
+  }
+  echo "</table>";
+} else {
+  echo "0 results";
+}
+
+//12:00 17.07.2023
+//order by clause
+$sql = "SELECT id, firstname, lastname FROM gitbongi ORDER BY lastname";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  // output data of each row
+  while($row = $result->fetch_assoc()) {
+    echo "id: " . $row["id"]. " - Name: " . $row["firstname"]. " " . $row["lastname"]. "<br>";
+  }
+} else {
+  echo "0 results";
+}
 
 $conn->close();
 ?>
