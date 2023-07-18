@@ -1,4 +1,5 @@
 <?php
+//18.07.2023
 // string is a sequence of character
 
 //return the length of a string using (strlen)
@@ -29,4 +30,9 @@ echo($str);
 $str = "Techcode Hive!";
 echo bin2hex($str) . "<br>";
 echo pack("T*",bin2hex($str)) . "<br>";
+
+//chop() function removes whitespaces or other predefined characters from the right end of a string.
+$str = "Techcode Hive!";
+echo $str . "<br>";
+echo chop($str,"Hive!");
 ?>
