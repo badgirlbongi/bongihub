@@ -37,17 +37,26 @@ myTest();
 echo $c; // outputs 15*/
 
 //using global variables from the $GLOBAL array
-$d = 5;
+/*$d = 5;
 $e = 10;
 
-function myTest() {
+function myTest()
+{
   $GLOBALS['e'] = $GLOBALS['d'] + $GLOBALS['e'];
 }
 
 myTest();
-echo $e; // outputs 15
+echo $e; // outputs 15*/
 
-
+//using the static keyword so that the local variable will not be deleted after being used in the function
+function myTest() 
+{
+    static $f = 0;
+    echo $f;
+    $f++;
+}
+  
+  myTest();
+  myTest();
+  myTest();
 ?>
-
-
