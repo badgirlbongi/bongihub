@@ -67,6 +67,5 @@ echo "<br>";
 $m = "23465.768";
 $int_cast = (int)$m;
 echo $int_cast;
-?>
 
 ?>
