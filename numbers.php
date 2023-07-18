@@ -56,7 +56,7 @@ $k = "Hive";
 var_dump(is_numeric($k));
 
 //Casting Strings and Floats to Integers
-//(int), (integer), or intval() function are often used to convert a value to an integer.
+//(int),(integer), or intval() function are often used to convert a value to an integer.
 // Cast float to int
 $l = 23465.768;
 $int_cast = (int)$l;
