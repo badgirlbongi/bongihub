@@ -122,7 +122,6 @@ final class Index{
         throw new NotFoundException('Page "' . $page . '" has neither script nor template!');
       }
   }
-
   /**
    * 
    */
