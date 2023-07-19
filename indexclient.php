@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- 10:00 14.07.2023-->
+	<!--
+ 10:00 14.07.2023
 <head>
 	<title>BadgirlBeautyBar - Store Data</title>
 </head>
@@ -35,6 +36,6 @@
 
 			<input type="submit" value="Submit">
 		</form>
-	</center>
+	</center>-->
 </body>
 </html>

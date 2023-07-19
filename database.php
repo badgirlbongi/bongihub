@@ -1,5 +1,6 @@
 
 <?php
+/*
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -186,5 +187,5 @@ if ($conn->query($sql) === TRUE) {
 $sql = "SELECT * FROM gitbongi LIMIT 2 OFFSET 4";
 
 
-$conn->close();
+$conn->close();*/
 ?>

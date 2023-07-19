@@ -1,4 +1,4 @@
-<?php
+<?php/*
 //18.07.2023
 //pi function
 echo(pi()); // returns 3.1415926535898
@@ -25,5 +25,6 @@ echo(rand(10, 100)); //getting a random number between 10 and 100
 echo(acos(0.64) . "<br>");
 echo(acos(-0.4) . "<br>");
 echo(acos(-1) . "<br>");//returns PI
+*/
 
 ?>

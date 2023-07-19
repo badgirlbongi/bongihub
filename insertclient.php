@@ -8,6 +8,7 @@
 <body>
 	<center>
 		<?php
+		/*
 //10:00 14.07.2023
 		// servername => localhost
 		// username => root
@@ -65,7 +66,7 @@
 		}
 		
 		// Close connection
-		mysqli_close($conn);
+		mysqli_close($conn);*/
 		?>
 	</center>
 </body>

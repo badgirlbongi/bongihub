@@ -8,6 +8,7 @@
 //is_int(),is_integer() - alias of is_int(),is_long() - alias of is_int()
 
 //checking if variable is an integer
+/*
 $a = 5985;
 var_dump(is_int($a));
 $b = 59.85;
@@ -66,6 +67,6 @@ echo "<br>";
 // Cast string to int
 $m = "23465.768";
 $int_cast = (int)$m;
-echo $int_cast;
+echo $int_cast;*/
 
 ?>

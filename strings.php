@@ -1,7 +1,7 @@
 <?php
 //18.07.2023
 // string is a sequence of character
-
+/*
 //return the length of a string using (strlen)
 echo strlen("Techcode Hive!"); // outputs 14
 
@@ -34,5 +34,5 @@ echo pack("T*",bin2hex($str)) . "<br>";
 //chop() function removes whitespaces or other predefined characters from the right end of a string.
 $str = "Techcode Hive!";
 echo $str . "<br>";
-echo chop($str,"Hive!");
+echo chop($str,"Hive!");*/
 ?>

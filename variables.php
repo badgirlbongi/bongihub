@@ -77,6 +77,7 @@ echo $e; // outputs 15*/
   echo $x + $y;*/
 
   //print
+  /*
   print "<h2>PHP is Fun!</h2>";
   print "Hello world!<br>";
   print "I'm learning PHP!";
@@ -88,5 +89,5 @@ echo $e; // outputs 15*/
 
   print "<h2>" . $txt1 . "</h2>";
   print "Study PHP at " . $txt2 . "<br>";
-  print $g + $h;
+  print $g + $h;*/
 ?>
