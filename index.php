@@ -45,15 +45,9 @@ final class Index{
   const LAYOUT_PAGE='index.phtml';
   const DEFAULT_PAGE = 'home';
   
-  private static $CLASS = [//this where i have to declare my classes for project
-    'Db' => '/model/model.php', 
-    'UserDao' => '/model/model.php',
-    'ProductDao' => '/model/model.php',
-    'User' => '/view/view.php',
-    'Product' => '/view/view.php',
+  private static $CLASS = [//this where i have to declare my classes for project 
+    'client' => '/model/model.php',
     'NotFoundException' => 'index.php',
-    'Helper'=>'/view/view.php',
-    'Cart'=>'/view/view.php'
   ];
 
     /**
@@ -80,7 +74,7 @@ final class Index{
      */
   public function loadClass($name){
     if (!array_key_exists($name, self::$CLASS)) {
-        die('Class "' . $name . '" not found.');
+       die('Class "' . $name . '" not found.');
     }
     require_once __DIR__.self::$CLASS[$name];
   }
