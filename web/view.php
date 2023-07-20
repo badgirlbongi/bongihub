@@ -15,7 +15,8 @@
         echo "<p>Surname: $surname</p>";
         echo "<p>Email: $email</p>";
     
-    } else {
+    } else
+     {
         echo "<p>No data submitted.</p>";
     }
     ?>
