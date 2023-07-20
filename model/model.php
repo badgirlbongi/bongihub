@@ -1,64 +1,36 @@
 <?php
-/*
-final class User{
-private $name;
-private $surname;
-private $email;
-private $cellno;
-
-function __construct(){}
-
-public function setParam(stdClass $user){
-
-    if(array_key_exists('name', $user)){
-        $this->name = $user->name;
-    }
-
-    if(array_key_exists('surname', $user)){
-        $this->surname = $user->surname;
-    }
-
-    if(array_key_exists('email', $user)){
-        $this->email = $user->email;
-    }
-
-    if(array_key_exist('cellno', $user)){
-        $this->cellno = $user->cellno;
-    }
-}
-
-public function register( array $user)
+class Client 
 {
-    $errors = [];
+  // Properties
+  public $name;
+  public $surname;
+  public $email;
+  public $cellno;
 
-    if(trim($user['name'])){
-        $this->name = $user['name'];
-    }
-    else{
-        $errors[] = new ValidatorError('name','name cannot be empty');
-    }
+  // Methods
+  function set_name($name)
+  { $this->name = $name;}
 
-    if(trim($user['surname'])){
-        $this->surname = $user['surname'];
-    }
-    else{
-        $errors[] = new ValidatorError('surname','surname cannot be empty');
-    }
+  function get_name() 
+  { return $this->name;}
 
-    if(trim($user['email'])){
-        $this->email = $user['email'];
-    }
-    else{
-        $errors[] = new ValidatorError('email','email cannot be empty');
-    }
+  function set_surname($surname) 
+  { $this->surname = $surname;}
 
-    if(trim($user['cellno'])){
-        $this->cellno = $user['cellno'];
-    }
-    else{
-        $errors[] = new ValidatorError('cellno','cellno cannot be empty');
-    }
-    
-    return $errors;
-}}*/
+  function get_surname()
+  { return $this->surname;}
+
+  function set_email($email)
+   { $this->email = $email;}
+
+  function get_email() 
+  { return $this->email;}
+
+  function set_cellno($cellno) 
+  { $this->cellno = $cellno;}
+
+  function get_cellno()
+  { return $this->cellno;}
+
+}
 ?>

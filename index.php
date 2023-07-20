@@ -45,7 +45,7 @@ final class Index{
   const LAYOUT_PAGE='index.phtml';
   const DEFAULT_PAGE = 'home';
   
-  private static $CLASS = [
+  private static $CLASS = [//this where i have to declare my classes for project
     'Db' => '/model/model.php', 
     'UserDao' => '/model/model.php',
     'ProductDao' => '/model/model.php',
