@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
 <head>
     <title> Result</title>
 </head>
 <body>
     <h2> Result</h2>
-    <?php
+    <?php/*
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $name = $_POST['name'];
         $surname = $_POST['surname'];
@@ -18,7 +18,7 @@
     } else
      {
         echo "<p>No data submitted.</p>";
-    }
+    }*/
     ?>
 </body>
-</html>
+</html>-->
