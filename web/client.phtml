@@ -1,58 +1,41 @@
-<!--<html>
- <head> 
- <title>home Page</title>
- </head>   
- <body>
- <style> body {background-color: #c4a484;} </style>
- <form action="viewclient.php"  method="post">
-    Enter your name: <input type="text" name="name"></br>
-    Enter your surname: <input type="text" name="surname"></br>
-    Enter your email address: <input type="text" name="email"></br>
-    Enter your cellphone number: <input type="text" name="cellno"></br>
-    <input type="Register">    
- </form>
- </body>
-</html>-->
-
-
-     <!-- <div class="col-md-8 offset-lg-0">
+     <div class="col-md-8 offset-lg-0">
         <h1 class="text-center">Welcome User</h1>
         <hr>
     
     <div class="col-10 col-md-6 offset-1 offset-md-3">
-        <?php// if (!empty($errors)): ?>
+        <?php if (!empty($errors)): ?>
     <ul class="errors">
-        <?php// foreach ($errors as $error): ?>
+        <?php foreach ($errors as $error): ?>
             <?php /* @var $error ValidationError */ ?>
-            <li><?php //echo Helper::escape($error->getMessage()) ?></li>
-        <?php// endforeach; ?>
+            <li><?php echo Helper::escape($error->getMessage()) ?></li>
+        <?php endforeach; ?>
     </ul>
-<?php// endif; ?>
+<?php endif; ?>
 
         <form target="_self" method="post">
-            <?php //if($action ==='register'): ?>
+            <?php if($action ==='register'): ?>
             <div class="form-group">
                 <input type="text" placeholder="Name"  name="user[name]" 
                     class="form-control"<?php //echo error_field('name', $errors); ?>/></div>
-            <?php// endif; ?>
+            <?php endif; ?>
 
-            <?php// if($action ==='register'): ?>
+            <?php if($action ==='register'): ?>
             <div class="form-group">
                 <input type="surname" name="user[surname]" placeholder="surname" 
                 class="form-control"<?php //echo error_field('surname', $errors); ?> /></div>
-            <?php// endif; ?>
+            <?php endif; ?>
 
-            <?php// if($action ==='register'): ?>
+            <?php if($action ==='register'): ?>
             <div class="form-group">
                 <input type="email" name="user[email]" placeholder="email" 
                     class="form-control"<?php //echo error_field('email', $errors); ?>/>
-            <?php// endif; ?>
+            <?php endif; ?>
 
-            <?php// if($action ==='register'): ?>
+            <?php if($action ==='register'): ?>
             <div class="form-group">
                 <input type="cellno" name="user[cellno]" placeholder="cellno" 
                     class="form-control"<?php //echo error_field('cellno', $errors); ?>/>
-            <?php //endif; ?>
+            <?php endif; ?>
             
             </div>
         </form>

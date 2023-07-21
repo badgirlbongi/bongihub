@@ -1,5 +1,4 @@
 <?php
-
 //the class i created
 final class Client{
 private $name;

@@ -1,4 +1,4 @@
-<?php /*
+<?php 
     // user template setup
     $model = ['register'];
 
@@ -28,5 +28,5 @@
 
            echo '<br />registration good';
         }
-    }*/
+    }
     ?>
