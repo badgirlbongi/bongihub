@@ -27,6 +27,7 @@ public function setParam(stdClass $client){
     }
 }
 
+/*
 public function register( array $client)
 {
     $errors = [];
@@ -60,7 +61,8 @@ public function register( array $client)
     } 
 
     return $errors;
-}
+}*/
+
 function set_name($name)
 { $this->name = $name;}
 

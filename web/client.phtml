@@ -1,51 +1,25 @@
-     <div class="col-md-8 offset-lg-0">
-        <h1 class="text-center">Welcome User</h1>
-        <hr>
-    
-    <div class="col-10 col-md-6 offset-1 offset-md-3">
-        <?php if (!empty($errors)): ?>
-    <ul class="errors">
-        <?php foreach ($errors as $error): ?>
-            <?php /* @var $error ValidationError */ ?>
-            <li><?php echo Helper::escape($error->getMessage()) ?></li>
-        <?php endforeach; ?>
-    </ul>
-<?php endif; ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Welcome Page</title>
+</head>
+<body>
+    <h2>Home page </h2>
+    <form action="client.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
 
-        <form target="_self" method="post">
-            <?php if($action ==='register'): ?>
-            <div class="form-group">
-                <input type="text" placeholder="Name"  name="user[name]" 
-                    class="form-control"<?php //echo error_field('name', $errors); ?>/></div>
-            <?php endif; ?>
+        <label for="surname">Surname:</label>
+        <input type="surname" id="surname" name="surname" required><br>
 
-            <?php if($action ==='register'): ?>
-            <div class="form-group">
-                <input type="surname" name="user[surname]" placeholder="surname" 
-                class="form-control"<?php //echo error_field('surname', $errors); ?> /></div>
-            <?php endif; ?>
+        <label for="email">Email:</label> 
+       <input type="email" id="email" name="email" required><br>
 
-            <?php if($action ==='register'): ?>
-            <div class="form-group">
-                <input type="email" name="user[email]" placeholder="email" 
-                    class="form-control"<?php //echo error_field('email', $errors); ?>/>
-            <?php endif; ?>
+       <label for="cellno">Cellphone:</label> 
+       <input type="cellno" id="cellno" name="cellno" required><br>
 
-            <?php if($action ==='register'): ?>
-            <div class="form-group">
-                <input type="cellno" name="user[cellno]" placeholder="cellno" 
-                    class="form-control"<?php //echo error_field('cellno', $errors); ?>/>
-            <?php endif; ?>
-            
-            </div>
-        </form>
-    </div>
-<style>
-.errors {
-    margin-bottom: 20px;
-}
-.errors li {
-    color: red;
-}
-</style>
-</div>-->
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+

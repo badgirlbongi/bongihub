@@ -9,29 +9,7 @@
  * @link        https://revtech.co.za
  */
 
-/*
-    require "user.php";
 
-    $user = new user();
-
-    var_dump($user->selectProperties('mike@example.com'));
-
-    echo '-----------------------------';
-
-    $play = $user->selectProperties('mike@example.com');
-
-    foreach( $play as $playr):
-
-      if(array_key_exists('name', $playr)){
-        echo $playr->name." \n";
-      }
-
-    endforeach;
-*/
-
-/**
- * Exception which causes HTTP ERROR 404 (Not Found).
- */
 class NotFoundException extends Exception {
 }
 
@@ -43,10 +21,10 @@ final class Index{
   const LAYOUT_DIR = '/layout/';
   const PAGE_DIR = '/web/';
   const LAYOUT_PAGE='index.phtml';
-  const DEFAULT_PAGE = 'home';
+  const DEFAULT_PAGE = 'client';
   
   private static $CLASS = [//this where i have to declare my classes for project 
-    /*'client' => '/model/model.php',*/
+    'client' => '/model/model.php',
     'NotFoundException' => 'index.php',
     'Helper'=>'/model/model.php',
   ];
