@@ -1,26 +1,32 @@
-<!--<html>
- <head> 
- <title>view page </title>
- </head>   
- <body>
- <style> body {background-color: #c4a484;} </style>
-Welcome your details are as follows:<br>
 <?php /*
- require __DIR__ .'/model.php';
-$regclient = new client();
-$regclient->set_name();
-$regclient->set_surname();
-$regclient->set_email();
-$regclient->set_cellno();
+    // user template setup
+    $model = ['register'];
 
-const nameInput = document.get_name("name");
-const displayName = document.get_name("display-name");
+    $action = Helper::getUrlParam('model');
 
-echo "Name: ".$regclient->get_name()."<br>";
-echo "Surname: ".$regclient->get_surname()."<br>";
-echo "Email address: ".$regclient->get_email()."<br>";
-echo "Cellphone: ".$regclient->get_cellno()."<br>";*/
+    if(! (array_key_exists('model',$_GET) && in_array($action, $model))){
+        throw  new NotFoundException("View not found");  
+    }
+    // user POST request 
+    $errors = [];
+    if(array_key_exists('register', $_POST)){
+        $data = [
+            'name' => isset($_POST['user']['name'])?$_POST['user']['name'] :'',
+            'surname' => isset($_POST['user']['surname'])?$_POST['user']['surname'] :'',
+            'email' => isset($_POST['user']['email'])?$_POST['user']['email'] :'',
+            'cellno' => isset($_POST['user']['cellno'])?$_POST['user']['cellno'] :''
+        ];
+            $obj = new User();  
+            $errors = $obj->register($data);
 
-?>
-</body>
-</html>-->
+        if(empty($errors)){
+           
+           $user = new UserDao();
+
+           // returns the last insert Id
+           $_SESSION['_userId'] = $user->setProperties($obj);
+
+           echo '<br />registration good';
+        }
+    }*/
+    ?>

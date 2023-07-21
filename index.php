@@ -48,6 +48,7 @@ final class Index{
   private static $CLASS = [//this where i have to declare my classes for project 
     /*'client' => '/model/model.php',*/
     'NotFoundException' => 'index.php',
+    'Helper'=>'/model/model.php',
   ];
 
     /**
@@ -74,7 +75,8 @@ final class Index{
      */
   public function loadClass($name){
     if (!array_key_exists($name, self::$CLASS)) {
-       die('Class "' . $name . '" not found.');
+       /*die('Class "' . $name . '" not found.');*/
+       throw new exception("name not found for".$name);
     }
     require_once __DIR__.self::$CLASS[$name];
   }
