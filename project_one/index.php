@@ -18,6 +18,6 @@
      <h1>This is the index page</h1>
 
      <br>
-      Hello, Username.
+      Hello, <?php echo $user_data['user_name']; ?>
 </body>
 </html>
