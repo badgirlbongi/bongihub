@@ -5,7 +5,7 @@
 </head>
 <body>
     <h2>Home page </h2>
-    <form action="client.php" method="POST">
+    <form action="view" method="POST">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br>
 
@@ -20,23 +20,12 @@
 
         <input type="submit" value="Submit";>  
     </form>
-<?php
-session_start();
-if (isset($_SESSION['inserted_data']))
-{
-    //display the inserted data from the session
-    echo "<h2>Inserted Data: </h2>";
-    echo "<p><strong>Name: </strong>{$_SESSION['inserted_data']['name']}";
-    echo "<p><strong>Surname: </strong>{$_SESSION['inserted_data']['surname']}";
-    echo "<p><strong>Email Address: </strong>{$_SESSION['inserted_data']['email']}";
-    echo "<p><strong>Cellphone: </strong>{$_SESSION['inserted_data']['cellno']}";
 
-    //clear the session data
-    unset($_SESSION['inserted_data']);
-}
-?>
-</body>
+    </body>
 </html>
+
+
+
 
 
 

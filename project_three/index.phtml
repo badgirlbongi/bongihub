@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Insert Data</title>
+</head>
+<body>
+    <form action = "process_form" method = "POST" >
+
+    <label for = "name">Name: </label>
+    <input type = "text" name = "name" id = "name" required>
+
+    <label for = "position">Work position: </label>
+    <input type = "text" name = "position" id = "position" required>
+
+    <input type = "submit" value = "Submit">
+</form>
+
+<?php 
+session_start();
+if (isset($_SESSION['inserted_data']))
+{
+    //display the inserted data from the session
+    echo "<h2>Inserted Data: </h2>";
+    echo "<p><strong>Name: </strong>{$_SESSION['inserted_data']['name']}";
+    echo "<p><strong>Work Position: </strong>{$_SESSION['inserted_data']['position']}";
+
+    //clear the session data
+    unset($_SESSION['inserted_data']);
+}
+?>
