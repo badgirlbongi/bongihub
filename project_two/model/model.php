@@ -27,42 +27,6 @@ public function setParam(stdClass $client){
     }
 }
 
-/*
-public function register( array $client)
-{
-    $errors = [];
-
-    if(trim($client['name'])){
-        $this->name = $client['name'];
-    }
-    else{
-        $errors[] = new ValidatorError('name','name cannot be empty');
-    }
-
-    if(trim($client['surname'])){
-        $this->surname = $client['surname'];
-    }
-    else{
-        $errors[] = new ValidatorError('surname','surname cannot be empty');
-    }
-
-    if(trim($client['email'])){
-        $this->email = $client['email'];
-    }
-    else{
-        $errors[] = new ValidatorError('email','email cannot be empty');
-    }
-    
-    if(trim($client['cellno'])){
-        $this->cellno = $client['cellno'];
-    }
-    else{
-        $errors[] = new ValidatorError('cellno','cellphone cannot be empty');
-    } 
-
-    return $errors;
-}*/
-
 function set_name($name)
 { $this->name = $name;}
 

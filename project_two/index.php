@@ -24,7 +24,7 @@ final class Index{
   const DEFAULT_PAGE = 'client';
   
   private static $CLASS = [//this where i have to declare my classes for project 
-    'client' => '/model/model.php',
+    'Client' => '/model/model.php',
     'NotFoundException' => 'index.php',
     'Helper'=>'/model/model.php',
   ];
