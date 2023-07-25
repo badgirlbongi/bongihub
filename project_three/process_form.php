@@ -13,7 +13,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
            'position'=>$position);
 
     //redirect back to the index.phtml
-    header("Location: index.phtml");
+    header("Location: index.html");
     exit();
 }
 ?>
