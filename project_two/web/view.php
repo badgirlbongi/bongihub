@@ -12,16 +12,10 @@ if($_SERVER['REQUEST_METHOD'] === 'POST')
     $user_surname =$_POST["surname"];
     $user_email =$_POST["email"];
     $user_cellno =$_POST["cellno"];
-
-    echo"Name: ".$user_name;
-    echo"<br>";
-    echo"Surname: ".$user_surname;
-    echo"<br>";
-    echo"Email: ".$user_email;
-    echo"<br>";
-    echo"Cellphone: ".$user_cellno;
-    echo"<br>";
-
+  
 }
-
 ?>
+
+
+
+

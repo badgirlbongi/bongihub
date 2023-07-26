@@ -17,38 +17,3 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     exit();
 }
 ?>
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title> Welcome Page</title>
-</head>
-<body>
-    <h2>Home page </h2>
-    <form action = "view" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br>
-
-        <label for="surname">Surname:</label>
-        <input type="text" id="surname" name="surname" required><br>
-
-        <label for="email">Email:</label> 
-       <input type="text" id="email" name="email" required><br>
-
-       <label for="cellno">Cellphone:</label> 
-       <input type="text" id="cellno" name="cellno" required><br>
-
-        <input type="submit" value="Submit" action="client";>  
- 
-    </form>
-    </body>
-</html>
-
-<?php 
-//using class created in model.php
-$user = new Client;
-$user_name = $user->set_name('$user_name');
-$user_surname = $user->set_surname('$surname');
-$user_email = $user->set_email('$user_email');
-$user_cellno = $user->set_cellno('$user_cellno'); 
