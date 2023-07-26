@@ -13,7 +13,17 @@ if($_SERVER['REQUEST_METHOD'] === 'POST')
     $user_email =$_POST["email"];
     $user_cellno =$_POST["cellno"];
 
+    echo"Name: ".$user_name =$_POST["name"];
+    echo"<br>";
+    echo"Surname: ".$user_surname =$_POST["surname"];
+    echo"<br";
+    echo"Email: ".$user_email =$_POST["email"];
+    echo"<br>";
+    echo"Cellphone: ".$user_cellno =$_POST["cellno"];
+    echo"<br>";
+
 }
+
 ?>
 
    
