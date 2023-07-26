@@ -1,36 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title> Welcome Page</title>
-</head>
-<body>
-    <h2>Home page </h2>
-    <form action = "view" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br>
-
-        <label for="surname">Surname:</label>
-        <input type="text" id="surname" name="surname" required><br>
-
-        <label for="email">Email:</label> 
-       <input type="text" id="email" name="email" required><br>
-
-       <label for="cellno">Cellphone:</label> 
-       <input type="text" id="cellno" name="cellno" required><br>
-
-        <input type="submit" value="Submit" action="client";>  
- 
-    </form>
-    </body>
-</html>
-
-<?php 
+<?php
 //using class created in model.php
 $user = new Client;
 $user_name = $user->set_name('$user_name');
 $user_surname = $user->set_surname('$surname');
 $user_email = $user->set_email('$user_email');
-$user_cellno = $user->set_cellno('$user_cellno'); 
+$user_cellno = $user->set_cellno('$user_cellno');
 
 if($_SERVER['REQUEST_METHOD'] === 'POST')
 { 
@@ -39,13 +13,13 @@ if($_SERVER['REQUEST_METHOD'] === 'POST')
     $user_email =$_POST["email"];
     $user_cellno =$_POST["cellno"];
 
-    echo"Name: ".$user_name =$_POST["name"];
+    echo"Name: ".$user_name;
     echo"<br>";
-    echo"Surname: ".$user_surname =$_POST["surname"];
+    echo"Surname: ".$user_surname;
     echo"<br>";
-    echo"Email: ".$user_email =$_POST["email"];
+    echo"Email: ".$user_email;
     echo"<br>";
-    echo"Cellphone: ".$user_cellno =$_POST["cellno"];
+    echo"Cellphone: ".$user_cellno;
     echo"<br>";
 
 }

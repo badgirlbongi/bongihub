@@ -6,27 +6,6 @@ private $surname;
 private $email;
 private $cellno;
 
-function __construct(){}
-
-public function setParam(stdClass $client){
-
-    if(array_key_exists('name', $client)){
-        $this->name = $client->name;
-    }
-
-    if(array_key_exists('surname',$client)){
-        $this->surname = $client->surname;
-    }
-
-    if(array_key_exists('email', $client)){
-        $this->email = $client->email;
-    }
-
-    if(array_key_exist('cellno', $client)){
-        $this->cellno = $client->institution;
-    }
-}
-
 function set_name($name)
 { $this->name = $name;}
 
