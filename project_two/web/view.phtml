@@ -25,26 +25,21 @@
 </html>
 
 <?php
-$user = new Client;
-$user->get_name('$user_name');
-$user->get_surname('$user_surname');
-$user->get_email('$user_email');
-$user->get_cellno('$user_cellno');
+
+$user->get_name();
+$user->get_surname();
+$user->get_email();
+$user->get_cellno();
 
 if($_SERVER['REQUEST_METHOD'] === 'POST')
 { 
-    $user_name =$_POST["name"];
-    $user_surname =$_POST["surname"];
-    $user_email =$_POST["email"];
-    $user_cellno =$_POST["cellno"];
-
-    echo"Name: ".$user_name;
+    echo"Name: ".$user->get_name();
     echo"<br>";
-    echo"Surname: ".$user_surname;
+    echo"Surname: ".$user->get_surname();
     echo"<br>";
-    echo"Email: ".$user_email;
+    echo"Email: ".$user->get_email();
     echo"<br>";
-    echo"Cellphone: ".$user_cellno;
+    echo"Cellphone: ".$user->get_cellno();
     echo"<br>";
 
 }
