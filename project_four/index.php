@@ -44,6 +44,7 @@ final class Index
     }
 
     //execption handler
+    //these exceptions will output  what's on the 404&500 files on the web folder
     public function handleException($ex)
     {
         $extra = ['message' => $ex->getMessage()];
