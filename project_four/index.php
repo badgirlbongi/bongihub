@@ -1,6 +1,7 @@
 <?php
-/** 
- * controller class Api and access point
+/**
+ * Controller Class Api & access point
+ * 
  * @category    Controller
  * @package     FirstTest
  * @author      RamakhanyaD <techcodehive@gmail.com>
@@ -8,132 +9,155 @@
  * @link        https://revtech.co.za
  */
 
-//exception which causes HTTP ERROR 404(Not Found)
-class NotFoundException extends Exception {}
 
-//Application controller and main access point
-final class Index
-{ 
-    const LAYOUT_DIR = '';
-    const PAGE_DIR = '';
-    const LAYOUT_PAGE='';
-    const DEFAULT_PAGE = '';
+class NotFoundException extends Exception {
+}
 
-    //static $class is where you declare all classes created outside index.php form
-    private static $CLASS = 
-    [
+/**
+ * Application controller & main access point
+ */
+final class Index{
 
-    ];
-
-    //system configurations
-    function __construct()
-    {
-        // error reporting - all errors for development (ensure you have display_errors = On in your php.ini file)
-        error_reporting(E_ALL | E_STRICT);
-        mb_internal_encoding('UTF-8');
-        set_exception_handler([$this, 'handleException']);
-        spl_autoload_register([$this, 'loadClass']);
-    }
-
-    //class loader
-    public function loadClass($name)
-    {
-        if (!array_key_exists($name, self::$CLASS)) 
-        { die('Class "' . $name . '" not found.'); }
-        require_once __DIR__.self::$CLASS[$name];
-    }
-
-    //execption handler
-    //these exceptions will output  what's on the 404&500 files on the web folder
-    public function handleException($ex)
-    {
-        $extra = ['message' => $ex->getMessage()];
-        if ($ex instanceof NotFoundException) 
-        { header('HTTP/1.0 404 Not Found');
-          $this->runPage('404', $extra);
-        } 
-        else 
-        { // TODO log exception
-          header('HTTP/1.1 500 Internal Server Error');
-          $this->runPage('500', $extra);
-        }
-    }
+  const LAYOUT_DIR = '/layout/';
+  const PAGE_DIR = '/web/';
+  const LAYOUT_PAGE='index.phtml';
+  const DEFAULT_PAGE = 'user';
   
-    private function runPage($page, array $extra = [])
-    {
+  private static $CLASS = [//this where i have to declare my classes for project 
+    'Client' => '/model/model.php',
+    'NotFoundException' => 'index.php',
+    'Helper'=>'view/view.php',
+  ];
+
+    /**
+     * System config.
+     */
+    function __construct(){
+      // error reporting - all errors for development (ensure you have display_errors = On in your php.ini file)
+      error_reporting(E_ALL | E_STRICT);
+      mb_internal_encoding('UTF-8');
+      set_exception_handler([$this, 'handleException']);
+      spl_autoload_register([$this, 'loadClass']);
+      // session handler setup
+      try{
+        //$handler = new mysqlsessionHandler();
+        //session_set_save_handler( $handler);
+        //session_start();  
+      }catch( Exception $e){
+        throw $e;
+      }
+  }
+
+  /**
+     * Class loader.
+     */
+  public function loadClass($name){
+    if (!array_key_exists($name, self::$CLASS)) {
+       /*die('Class "' . $name . '" not found.');*/
+       throw new exception("name not found for".$name);
+    }
+    require_once __DIR__.self::$CLASS[$name];
+  }
+
+  /**
+    * Exception handler.
+    */
+  public function handleException($ex) {
+    $extra = ['message' => $ex->getMessage()];
+    if ($ex instanceof NotFoundException) {
+        header('HTTP/1.0 404 Not Found');
+        $this->runPage('404', $extra);
+    } else {
+        // TODO log exception
+        header('HTTP/1.1 500 Internal Server Error');
+        $this->runPage('500', $extra);
+    }
+  }
+
+  /**
+   * 
+   */
+  private function runPage($page, array $extra = []) {
+      
       $run = false;
-      if ($this->hasScript($page)) 
-      {
+      if ($this->hasScript($page)) {
         $run = true;
         require $this->getScript($page);
       }
-      if ($this->hasTemplate($page))
-      {
+      if ($this->hasTemplate($page)) {
         $run = true;
         // data for main template
         $template = $this->getTemplate($page);
+         
         // main template (layout)
         require __DIR__.self::LAYOUT_DIR.self::LAYOUT_PAGE;
       }
-      if (!$run) 
-      {
+      if (!$run) {
         throw new NotFoundException('Page "' . $page . '" has neither script nor template!');
       }
-    }
-  
-  private function getPage() 
-  {
+  }
+  /**
+   * 
+   */
+  private function getPage() {
     $page = self::DEFAULT_PAGE;
-    if (array_key_exists('page', $_GET))
-    {
+    if (array_key_exists('page', $_GET)) {
       $page = $_GET['page'];
     }
     return $this->checkPage($page);
   }
 
+  /**
+   * 
+   */
   private function checkPage($page) {
-      if (!preg_match('/^[a-z0-9-]+$/i', $page)) 
-      {
+      if (!preg_match('/^[a-z0-9-]+$/i', $page)) {
         // TODO log attempt, redirect attacker, ...
         throw new NotFoundException('Unsafe page "' . $page . '" requested');
       }
       if (!$this->hasScript($page)
-          && !$this->hasTemplate($page)) 
-      {
+          && !$this->hasTemplate($page)) {
         // TODO log attempt, redirect attacker, ...
         throw new NotFoundException('Page "' . $page . '" not found');
       }
       return $page;
   }
 
-  private function hasScript($page)
-  {
+  /**
+   * 
+   */
+  private function hasScript($page) {
     return file_exists($this->getScript($page));
   }
 
-  private function getScript($page) 
-  {
+  /**
+   * 
+   */
+  private function getScript($page) {
     return __DIR__.self::PAGE_DIR.$page.'.php';
   }
 
-  private function hasTemplate($page) 
-  {
+  /**
+   * 
+   */
+  private function hasTemplate($page) {
       return file_exists($this->getTemplate($page));
   } 
   
-  private function getTemplate($page) 
-  {
+  /**
+   * 
+   */
+  private function getTemplate($page) {
       return __DIR__.self::PAGE_DIR.$page.'.phtml';
   }
 
-  public function run() 
-  {
+  /**
+    * Run the application!
+    */
+  public function run() {
       $this->runPage($this->getPage());
   }
 }
 
 $index = new Index();
 $index->run();
-
-?>
-
