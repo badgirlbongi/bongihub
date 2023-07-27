@@ -18,7 +18,8 @@ final class User
     function set_password($password)
      { $this->password = $password;}
 
-public function register( array $user){
+  public function register( array $user)
+  {
     $errors = [];
 
     if(trim($user['name'])){
@@ -26,6 +27,13 @@ public function register( array $user){
     }
     else{
         $errors[] = new ValidatorError('name','name cannot be empty');
+    }
+
+    if(trim($user['surname'])){
+        $this->surname = $user['surname'];
+    }
+    else{
+        $errors[] = new ValidatorError('surname','surname cannot be empty');
     }
 
     if(trim($user['email'])){
@@ -52,9 +60,10 @@ public function register( array $user){
     }
     
     return $errors;
-}
+  }
 
-public function login( array $user){
+  public function login( array $user)
+  {
     $errors = [];
 
     if(trim($user['email'])){
@@ -72,9 +81,10 @@ public function login( array $user){
     }
 
     return $errors;
-}
+   }
 
-public function forgot( array $user){
+  public function forgot( array $user)
+  {
     $errors = [];
     if(trim($user['name'])){
         $this->name = $user['name'];
@@ -91,19 +101,19 @@ public function forgot( array $user){
     }
 
     return $errors;
-}
+   }
 
-public function getId(){
-    return $this->id;
-}
-
-public function getName(){
+  public function getName(){
     return $this->name;
-}
+   }
 
-public function getEmail(){
+  public function getSurname(){
+    return $this->surname;
+   }
+
+   public function getEmail(){
     return $this->email;
-}
+   }
 
    public function getPassword()
    {
