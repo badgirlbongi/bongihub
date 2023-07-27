@@ -72,7 +72,6 @@ final class Index
         $run = true;
         // data for main template
         $template = $this->getTemplate($page);
-         
         // main template (layout)
         require __DIR__.self::LAYOUT_DIR.self::LAYOUT_PAGE;
       }
