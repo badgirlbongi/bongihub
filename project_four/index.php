@@ -10,21 +10,19 @@
  */
 
 
-class NotFoundException extends Exception {
-}
+class NotFoundException extends Exception {}
 
-/**
- * Application controller & main access point
- */
-final class Index{
-
+//Application controller & main access point
+final class Index
+{
   const LAYOUT_DIR = '/layout/';
   const PAGE_DIR = '/web/';
   const LAYOUT_PAGE='index.phtml';
   const DEFAULT_PAGE = 'user';
   
-  private static $CLASS = [//this where i have to declare my classes for project 
-    'Client' => '/model/model.php',
+  private static $CLASS = 
+  [ //this where i have to declare my classes for project 
+    'User' => '/view/view.php',
     'NotFoundException' => 'index.php',
     'Helper'=>'view/view.php',
   ];
@@ -32,20 +30,14 @@ final class Index{
     /**
      * System config.
      */
-    function __construct(){
-      // error reporting - all errors for development (ensure you have display_errors = On in your php.ini file)
+    function __construct()
+    {
+      // error reporting
       error_reporting(E_ALL | E_STRICT);
       mb_internal_encoding('UTF-8');
       set_exception_handler([$this, 'handleException']);
       spl_autoload_register([$this, 'loadClass']);
-      // session handler setup
-      try{
-        //$handler = new mysqlsessionHandler();
-        //session_set_save_handler( $handler);
-        //session_start();  
-      }catch( Exception $e){
-        throw $e;
-      }
+    }
   }
 
   /**
