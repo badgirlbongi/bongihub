@@ -10,10 +10,33 @@
     <link rel="stylesheet" href="assets/css/styles.min.css">
 </head>
 
- <body>
-   <?php
+<body>
+    <div>
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+            <div class="container"><a class="navbar-brand" href=".">Client Information</a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+                    <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                        <li class="dropdown"><a class="dropdown-toggle nav-link dropdown-toggle" 
+                            data-toggle="dropdown" aria-expanded="false" href="#">User Option</a>
+                            <div class="dropdown-menu" role="menu">
+                                <a class="dropdown-item" role="presentation" href="<?php echo Helper::createLink('user', ['view' => 'register']);?>">Register</a>
+                                <a class="dropdown-item" role="presentation" href="<?php echo Helper::createLink('user', ['view' => 'login']);?>">Login</a>
+                                <a class="dropdown-item" role="presentation" href="<?php echo Helper::createLink('user', ['view' => 'forgot']);?>">Forgot Password</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+ <!--<body>
+   <?php /*
     require $template;
-   ?>	
+  */ ?>	
  </body>
-</html
+</html -->
 
