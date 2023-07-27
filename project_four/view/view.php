@@ -50,12 +50,14 @@ final class User
         $errors[] = new ValidatorError('password','password cannot be empty');
     }
     
-    if(trim($user['password2'])){
+    if(trim($user['password2']))
+    {
         if($user['password2'] != $this->password){
             $errors[] = new ValidatorError('Password Match','Password and passwordRepeat must match');
         }
     }
-    else{
+    else
+    {
         $errors[] = new ValidatorError('passwordRepeat','passwordRepeat cannot be empty');
     }
     
@@ -66,58 +68,30 @@ final class User
   {
     $errors = [];
 
-    if(trim($user['email'])){
-        $this->email = $user['email'];
-    }
-    else{
-        $errors[] = new ValidatorError('email','email cannot be empty');
-    }
+    if(trim($user['email']))
+    { $this->email = $user['email'];}
+    else
+    { $errors[] = new ValidatorError('email','email cannot be empty');}
 
-    if(trim($user['password'])){
-        $this->password = $user['password'];
-    }
-    else{
-        $errors[] = new ValidatorError('password','password cannot be empty');
-    }
+    if(trim($user['password']))
+    { $this->password = $user['password'];}
+    else
+    {  $errors[] = new ValidatorError('password','password cannot be empty');}
 
     return $errors;
    }
 
-  public function forgot( array $user)
-  {
-    $errors = [];
-    if(trim($user['name'])){
-        $this->name = $user['name'];
-    }
-    else{
-        $errors[] = new ValidatorError('name','name cannot be empty');
-    }
+  public function getName()
+  { return $this->name;}
 
-    if(trim($user['email'])){
-        $this->email = $user['email'];
-    }
-    else{
-        $errors[] = new ValidatorError('email','email cannot be empty');
-    }
+  public function getSurname()
+  { return $this->surname;}
 
-    return $errors;
-   }
+  public function getEmail()
+  { return $this->email;}
 
-  public function getName(){
-    return $this->name;
-   }
-
-  public function getSurname(){
-    return $this->surname;
-   }
-
-   public function getEmail(){
-    return $this->email;
-   }
-
-   public function getPassword()
-   {
-    return $this->password;
-   }
+  public function getPassword()
+  { return $this->password;}
+  
 }
 ?>

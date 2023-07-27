@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project four</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+</head>
+
+<body>        
+           <nav class="navbar navbar-light navbar-expand-md navigation-clean">
+            <div class="container"><a class="navbar-brand" href=".">Clients Online Workshop</a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+                    <span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                        <li class="dropdown"><a class="dropdown-toggle nav-link dropdown-toggle" 
+                            data-toggle="dropdown" aria-expanded="false" href="#">User Option</a>
+                            <div class="dropdown-menu" role="menu">
+                                <a class="dropdown-item" role="presentation" href="<?php echo Helper::createLink('user', ['view' => 'register']);?>">Register</a>
+                                <a class="dropdown-item" role="presentation" href="<?php echo Helper::createLink('user', ['view' => 'login']);?>">Login</a>
+                                <a class="dropdown-item" role="presentation" href="<?php echo Helper::createLink('user', ['view' => 'forgot']);?>">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div>                               
+    <?php
+        require $template;
+    ?>
+    </div>
+    
+</body>
+</html>
