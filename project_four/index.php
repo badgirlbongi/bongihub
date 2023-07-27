@@ -13,10 +13,10 @@ class NotFoundException extends Exception {}
 
 //Application controller and main access point
 final class Index
-{
+{ 
     const LAYOUT_DIR = '';
     const PAGE_DIR = '';
-    const LAYOUT_PAGE = '';
+    const LAYOUT_PAGE='';
     const DEFAULT_PAGE = '';
 
     //static $class is where you declare all classes created outside index.php form
@@ -58,9 +58,83 @@ final class Index
           $this->runPage('500', $extra);
         }
     }
-    //function that will
+  
+    private function runPage($page, array $extra = [])
+    {
+      $run = false;
+      if ($this->hasScript($page)) 
+      {
+        $run = true;
+        require $this->getScript($page);
+      }
+      if ($this->hasTemplate($page))
+      {
+        $run = true;
+        // data for main template
+        $template = $this->getTemplate($page);
+         
+        // main template (layout)
+        require __DIR__.self::LAYOUT_DIR.self::LAYOUT_PAGE;
+      }
+      if (!$run) 
+      {
+        throw new NotFoundException('Page "' . $page . '" has neither script nor template!');
+      }
+    }
+  
+  private function getPage() 
+  {
+    $page = self::DEFAULT_PAGE;
+    if (array_key_exists('page', $_GET))
+    {
+      $page = $_GET['page'];
+    }
+    return $this->checkPage($page);
+  }
 
+  private function checkPage($page) {
+      if (!preg_match('/^[a-z0-9-]+$/i', $page)) 
+      {
+        // TODO log attempt, redirect attacker, ...
+        throw new NotFoundException('Unsafe page "' . $page . '" requested');
+      }
+      if (!$this->hasScript($page)
+          && !$this->hasTemplate($page)) 
+      {
+        // TODO log attempt, redirect attacker, ...
+        throw new NotFoundException('Page "' . $page . '" not found');
+      }
+      return $page;
+  }
 
+  private function hasScript($page)
+  {
+    return file_exists($this->getScript($page));
+  }
 
+  private function getScript($page) 
+  {
+    return __DIR__.self::PAGE_DIR.$page.'.php';
+  }
+
+  private function hasTemplate($page) 
+  {
+      return file_exists($this->getTemplate($page));
+  } 
+  
+  private function getTemplate($page) 
+  {
+      return __DIR__.self::PAGE_DIR.$page.'.phtml';
+  }
+
+  public function run() 
+  {
+      $this->runPage($this->getPage());
+  }
 }
+
+$index = new Index();
+$index->run();
+
+?>
 
