@@ -1,6 +1,6 @@
 <?php
   //user template setup
-  $view = ['register','login'];
+  $view = ['signup','login'];
 
   $action = Helper::getUrlParam('view');
 
@@ -10,7 +10,7 @@ if(! (array_key_exists('view',$_GET) && in_array($action, $view)))
 }
 
 $errors = [];
-    if(array_key_exists('register', $_POST))
+    if(array_key_exists('signup', $_POST))
     {
         $data = ['name' => isset($_POST['user']['name'])?$_POST['user']['name'] :'',
             'surname' => isset($_POST['user']['surname'])?$_POST['user']['surname'] :'',
@@ -19,13 +19,13 @@ $errors = [];
             'password2' => isset($_POST['user']['passwordRepeat'])?$_POST['user']['passwordRepeat'] :''];
 
             $obj = new User();  
-            $errors = $obj->register($data);
+            $errors = $obj->signup($data);
 
         if(empty($errors))
         {
             $user = new UserDao();
 
-           echo '<br />registration good';
+           echo '<br />signup was successful';
         }
     }
     else if(array_key_exists('login', $_POST))

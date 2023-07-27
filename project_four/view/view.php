@@ -53,7 +53,7 @@ final class User
     function set_password($password)
      { $this->password = $password;}
 
-  public function register( array $user)
+  public function signup( array $user)
   {
     $errors = [];
 
