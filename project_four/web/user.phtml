@@ -1,29 +1,29 @@
 <?php
 
-    function error_field($title, array $errors) 
+    /*function error_field($title, array $errors) 
     {
         foreach ($errors as $error) 
         {
-            /* @var $error ValidatorError */
+            /* @var $error ValidatorError 
             if ($error->getSource() == $title) 
             { return ' style="background-color:pink;"'; }
         }
         return '';
-    }
+    }*/
 ?>
     <div class="col-md-8 offset-lg-0">
         <h1 class="text-center">Welcome Client</h1>
         <hr>
     
     <div class="col-10 col-md-6 offset-1 offset-md-3">
-<?php if (!empty($errors)): ?>
-    <ul class="errors">
-        <?php foreach ($errors as $error): ?>
+<?php // if (!empty($errors)): ?>
+    <!--<ul class="errors">
+        <?php //foreach ($errors as $error): ?>
             <?php /* @var $error ValidationError */ ?>
-            <li><?php echo Helper::escape($error->getMessage()) ?></li>
-        <?php endforeach; ?>
-    </ul>
-<?php endif; ?>
+            <li><?php //echo Helper::escape($error->getMessage()) ?></li>
+        <?php //endforeach; ?>
+    </ul>-->
+<?php // endif; ?>
         <form target="_self" method="post">
             <?php
                 if($action ==='signup'|| $action ==='login'):
