@@ -21,10 +21,23 @@ $errors = [];
             $obj = new User();  
             $errors = $obj->signup($data);
 
+            if(empty($errors)){
+
+                if($obj->getPassword() != $data['password']){
+                    $errors[] = new ValidatorError('Login Failed', 'Incorrect Username or Password');
+                }
+                else{ echo 'welcome'; }
+                if(empty($errors)){
+
+            if($obj->getPassword() != $data['password']){
+                $errors[] = new ValidatorError('Login Failed', 'Incorrect Username or Password');
+            }
+            else{ echo 'welcome'; }
+        }
+            }
+
         if(empty($errors))
         {
-            $user = new UserDao();
-
            echo '<br />signup was successful';
         }
     }
@@ -37,9 +50,6 @@ $errors = [];
         $errors = $obj->login($data);
 
         if(empty($errors)){
-
-            $user = new UserDao();
-            $obj = $user->selectProperties('email', $obj);
 
             if($obj->getPassword() != $data['password']){
                 $errors[] = new ValidatorError('Login Failed', 'Incorrect Username or Password');
