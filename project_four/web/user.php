@@ -2,12 +2,12 @@
   //user template setup
   $view = ['signup','login'];
 
-  $action = $view; //Helper::getUrlParam('user');
+  $action = Helper::getUrlParam('view');
 
-/*if(! (array_key_exists('user',$_GET) && in_array($action, $view)))
+if(! (array_key_exists('view',$_GET) && in_array($action, $view)))
 {
     throw  new NotFoundException("View not found");  
-}*/
+}
 
 $errors = [];
     if(array_key_exists('signup', $_POST))
@@ -23,6 +23,8 @@ $errors = [];
 
         if(empty($errors))
         {
+           // $user = new UserDao();
+
            echo '<br />signup was successful';
         }
     }
@@ -35,6 +37,9 @@ $errors = [];
         $errors = $obj->login($data);
 
         if(empty($errors)){
+
+            //$user = new UserDao();
+            //$obj = $user->selectProperties('email', $obj);
 
             if($obj->getPassword() != $data['password']){
                 $errors[] = new ValidatorError('Login Failed', 'Incorrect Username or Password');
