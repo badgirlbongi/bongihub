@@ -2,12 +2,12 @@
   //user template setup
   $view = ['signup','login'];
 
-  $action = Helper::getUrlParam('view');
+  $action = $view; //Helper::getUrlParam('user');
 
-if(! (array_key_exists('view',$_GET) && in_array($action, $view)))
+/*if(! (array_key_exists('user',$_GET) && in_array($action, $view)))
 {
     throw  new NotFoundException("View not found");  
-}
+}*/
 
 $errors = [];
     if(array_key_exists('signup', $_POST))
