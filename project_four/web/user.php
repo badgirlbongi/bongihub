@@ -21,21 +21,6 @@ $errors = [];
             $obj = new User();  
             $errors = $obj->signup($data);
 
-            if(empty($errors)){
-
-                if($obj->getPassword() != $data['password']){
-                    $errors[] = new ValidatorError('Login Failed', 'Incorrect Username or Password');
-                }
-                else{ echo 'welcome'; }
-                if(empty($errors)){
-
-            if($obj->getPassword() != $data['password']){
-                $errors[] = new ValidatorError('Login Failed', 'Incorrect Username or Password');
-            }
-            else{ echo 'welcome'; }
-        }
-            }
-
         if(empty($errors))
         {
            echo '<br />signup was successful';
