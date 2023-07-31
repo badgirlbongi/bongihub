@@ -1,17 +1,100 @@
 <!DOCTYPE HTML>
 <html>
+<style>
+/* Bordered form */
+form {border: 3px solid #f1f1f1;}
 
-<head>
-  
-  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
-</head>
+/* Full-width inputs */
+input[type=text], input[type=password] 
+{ width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;}
 
-<body>
-    <div id="footer">
-    ---<a href="<?php echo Helper::createLink('user', ['view' => 'signup']);?>">Signup</a>||
-    <a href="<?php echo Helper::createLink('user', ['view' => 'login']);?>">Login</a>--
-    </div>
-  
+/*style for all buttons */
+button 
+{background-color: #DC143C;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;}
+
+/* hover effect for buttons */
+button:hover {opacity: 0.8;}
+
+/*style for the cancel button (black) */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #000000;
+}
+
+/* to center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px)
+ {
+  span.psw {display: block;
+    float: none;}
+  .cancelbtn {width: 100%;}
+ }
+
+.about-section
+{padding: 50px;
+  text-align: center;
+  background-color: #FFB6C1;
+  color: white;}
+
+body {font-family: Arial, Helvetica, sans-serif;
+  margin: 0;}
+
+html {box-sizing: border-box;}
+
+*, *:before, *:after 
+{ box-sizing: inherit;}
+
+.title 
+{ color: white;}
+
+</style>
+
+<div class="about-section">
+  <h1>About Us Page</h1>
+  <p>Some text about who we are and what we do.</p>
+  <p>Resize the browser window to see that this page is responsive by the way.</p>
+  <div id="footer">
+    <p>
+    <button class="button"><a href="<?php echo Helper::createLink('user', ['view' => 'signup']);?>"></a>Signup</button>
+    <button class="button"><a href="<?php echo Helper::createLink('user', ['view' => 'login']);?>"></a>Login</button>
+    </p>
+  </div>
+</div>
+
 <div>
     <?php
         require $template;
