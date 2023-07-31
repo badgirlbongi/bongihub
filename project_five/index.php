@@ -21,7 +21,7 @@ final class Index{
   const LAYOUT_DIR = '/layout/';
   const PAGE_DIR = '/web/';
   const LAYOUT_PAGE='index.phtml';
-  const DEFAULT_PAGE = 'user';
+  const DEFAULT_PAGE = 'login';
   
   private static $CLASS = [//this where i have to declare my classes for project 
     'User' => '/view/view.php',

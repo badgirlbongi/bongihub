@@ -1,1 +1,22 @@
+<!DOCTYPE HTML>
+<html>
 
+<head>
+  
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+</head>
+
+<body>
+    <div id="footer">
+    ---<a href="<?php echo Helper::createLink('user', ['view' => 'signup']);?>">Signup</a>||
+    <a href="<?php echo Helper::createLink('user', ['view' => 'login']);?>">Login</a>--
+    </div>
+  
+<div>
+    <?php
+        require $template;
+    ?>
+</div>
+
+</body>
+</html>
