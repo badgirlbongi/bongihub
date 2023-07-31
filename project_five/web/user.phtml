@@ -75,25 +75,41 @@ span.psw {
 <?php
     if($action ==='signup'):
 ?>
-    <div class="form-group">
-    <input type="text" placeholder="Name"  name="user[name]" 
-    class="form-control"<?php echo error_field('name', $errors); ?>/></div>
-    
-    <div class="form-group">
-    <input type="text" placeholder="Surname"  name="user[surname]" 
-    class="form-control"<?php echo error_field('surname', $errors); ?>/></div>
+    <div class="imgcontainer">
+    <img src="1004916.png" alt="Avatar" class="avatar">
+    </div>
 
-    <div class="form-group">
-    <input type="text" placeholder="Email address"  name="user[email]" 
-    class="form-control"<?php echo error_field('email', $errors); ?>/></div>
-    
-    <div class="form-group">
-    <input type="password" name="user[password]" placeholder="Password" 
-    class="form-control"<?php echo error_field('password', $errors);?>/>
-    
-    <input type="password" name="user[passwordRepeat]" placeholder="Repeat Password" 
-    class="form-control" <?php echo error_field('passwordRepeat', $errors); ?>
-    style="margin-top:10px;"/></div>
+    <div class="container">
+        <label for="name"><b>Name</b></label>
+        <input type="text" placeholder="Enter Name" name="user[name]" required
+            class="form-control"<?php echo error_field('name', $errors); ?>/>
+    </div>
+
+    <div class="container">   
+        <label for="surname"><b>Surname</b></label>
+        <input type="text" placeholder="Enter Surname" name="user[surname]" required
+            class="form-control"<?php echo error_field('surname', $errors); ?>/>
+    </div>
+
+    <div class="container">   
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email Address" name="user[email]" required 
+            class="form-control"<?php echo error_field('email', $errors); ?>/>
+    </div>
+
+    <div class="container">   
+        <label for="password"><b>Password</b></label>
+        <input type="text" placeholder="Enter Password" name="user[password]" required 
+            class="form-control"<?php echo error_field('password', $errors); ?>/>
+       
+        <input type="text" placeholder="Repeat Password" name="user[passwordRepeat]" required 
+            class="form-control"<?php echo error_field('password', $errors); ?>/>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <span class="psw"><a href="#">Signup</a></span>
+    </div>
 <?php
     endif;
 ?>
@@ -106,10 +122,12 @@ span.psw {
 
     <div class="container">
     <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Username" name="uname" required>
+    <input type="text" placeholder="Enter Email Address" name="user[email]" required 
+    class="form-control"<?php echo error_field('email', $errors); ?>/>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" placeholder="Enter Password" name="user[password]" required 
+    class="form-control"<?php echo error_field('password', $errors); ?>/>
 
     <button type="submit">Login</button>
     <label>
