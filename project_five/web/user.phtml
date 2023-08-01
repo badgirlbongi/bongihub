@@ -43,3 +43,34 @@
     endif;
 ?>
 
+<?php
+    if($action === 'login'):
+?>
+    <div class="imgcontainer">
+    <img src="1004916.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Email Address" name="user[email]" required 
+    class="form-control"<?php echo error_field('email', $errors); ?>/>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="user[password]" required 
+    class="form-control"<?php echo error_field('password', $errors); ?>/>
+
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+    </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw"><a href="signup.phtml">Signup</a></span>
+  </div>
+
+<?php
+    endif;
+?>
+
