@@ -1,76 +1,96 @@
-<!DOCTYPE html>
-<html>
-<form target="_self" method="post">
+
 <?php
-    if($action ==='signup'):
+
+    function error_field($title, array $errors) 
+    {
+    foreach ($errors as $error) 
+    {
+        /* @var $error ValidatorError*/ 
+        if ($error->getSource() == $title) 
+        { return ' style="background-color:pink;"'; }
+    }
+    return '';
+    }
 ?>
-    <div class="imgcontainer">
-    <img src="1004916.png" alt="Avatar" class="avatar">
-    </div>
+<?php if (!empty($errors)): ?>
+    <ul class="errors">
+        <?php foreach ($errors as $error): ?>
+            <?php /* @var $error ValidationError */ ?>
+            <li><?php echo Helper::escape($error->getMessage()) ?></li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
+    <form target="_self" method="post">
+    <?php
+        if($action ==='signup'):
+    ?>
+        <div class="imgcontainer">
+            <img src="1004916.png" alt="Avatar" class="avatar">
+        </div>
 
-    <div class="container">
-        <label for="name"><b>Name</b></label>
-        <input type="text" placeholder="Enter Name" name="user[name]" required
-            class="form-control"<?php echo error_field('name', $errors); ?>/>
-    </div>
+        <div class="container">
+            <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="Enter Name" name="user[name]" required
+                class="form-control"<?php echo error_field('name', $errors); ?>/>
+        </div>
 
-    <div class="container">   
-        <label for="surname"><b>Surname</b></label>
-        <input type="text" placeholder="Enter Surname" name="user[surname]" required
-            class="form-control"<?php echo error_field('surname', $errors); ?>/>
-    </div>
+        <div class="container">   
+            <label for="surname"><b>Surname</b></label>
+            <input type="text" placeholder="Enter Surname" name="user[surname]" required
+                class="form-control"<?php echo error_field('surname', $errors); ?>/>
+        </div>
 
-    <div class="container">   
-        <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email Address" name="user[email]" required 
-            class="form-control"<?php echo error_field('email', $errors); ?>/>
-    </div>
+        <div class="container">   
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email Address" name="user[email]" required 
+                class="form-control"<?php echo error_field('email', $errors); ?>/>
+        </div>
 
-    <div class="container">   
-        <label for="password"><b>Password</b></label>
-        <input type="text" placeholder="Enter Password" name="user[password]" required 
-            class="form-control"<?php echo error_field('password', $errors); ?>/>
+        <div class="container">   
+            <label for="password"><b>Password</b></label>
+            <input type="text" placeholder="Enter Password" name="user[password]" required 
+                class="form-control"<?php echo error_field('password', $errors); ?>/>
        
-        <input type="text" placeholder="Repeat Password" name="user[passwordRepeat]" required 
+            <input type="text" placeholder="Repeat Password" name="user[passwordRepeat]" required 
+                class="form-control"<?php echo error_field('password', $errors); ?>/>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw"><a href="login.phtml">Login</a></span>
+        </div>
+    <?php
+        endif;
+    ?>
+    <?php
+        if($action === 'login'):
+    ?>
+        <div class="imgcontainer">
+            <img src="1004916.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Email Address" name="user[email]" required 
+            class="form-control"<?php echo error_field('email', $errors); ?>/>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="user[password]" required 
             class="form-control"<?php echo error_field('password', $errors); ?>/>
-    </div>
 
-    <div class="container" style="background-color:#f1f1f1">
-        <button type="button" class="cancelbtn">Cancel</button>
-        <span class="psw"><a href="login.phtml">Login</a></span>
-    </div>
-<?php
-    endif;
-?>
+            <button type="submit">Login</button>
+            <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+        </div>
 
-<?php
-    if($action === 'login'):
-?>
-    <div class="imgcontainer">
-    <img src="1004916.png" alt="Avatar" class="avatar">
-    </div>
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Cancel</button>
+            <span class="psw"><a href="signup.phtml">Signup</a></span>
+        </div>
 
-    <div class="container">
-    <label for="uname"><b>Username</b></label>
-    <input type="text" placeholder="Enter Email Address" name="user[email]" required 
-    class="form-control"<?php echo error_field('email', $errors); ?>/>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="user[password]" required 
-    class="form-control"<?php echo error_field('password', $errors); ?>/>
-
-    <button type="submit">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-    </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw"><a href="signup.phtml">Signup</a></span>
-  </div>
-
-<?php
-    endif;
-?>
+    <?php
+        endif;
+    ?>
+    </form>
 
