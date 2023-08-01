@@ -75,13 +75,7 @@ body {font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   }
 
-html {//box-sizing: border-box;
-  height: 100%;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  }
+html {box-sizing: border-box;}
 
 *, *:before, *:after 
 { box-sizing: inherit;}
@@ -90,12 +84,15 @@ html {//box-sizing: border-box;
 { color: white;}
 
 </style>
-
+<head>
 <div class="about-section">
   <h1>About Us Page</h1>
+</head>
+<body>
   <p>Some text about who we are and what we do.</p>
   <p>Resize the browser window to see that this page is responsive by the way.</p>
   <div id="footer">
+    <h2>Try Us!</h2>
     <p>
     <button class="button"><a href="<?php echo Helper::createLink('user', ['view' => 'signup']);?>"></a>Signup</button>
     <button class="button"><a href="<?php echo Helper::createLink('user', ['view' => 'login']);?>"></a>Login</button>
