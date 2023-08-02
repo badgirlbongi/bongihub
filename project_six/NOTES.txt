@@ -1,0 +1,17 @@
+HTML AND CSS NOTES
+-All HTML elements can have attributes
+*The href attribute of <a> specifies the URL of the page the link goes to
+*The src attribute of <img> specifies the path to the image to be displayed
+*The width and height attributes of <img> provide size information for images
+*The alt attribute of <img> provides an alternate text for an image
+*The style attribute is used to add styles to an element, such as color, font, size, and more
+*The lang attribute of the <html> tag declares the language of the Web page
+*The title attribute defines some extra information about an element
+
+
+<!-- <a tags are used for hyperlinks and href is an attribute-->
+<a href="https://www.github.com">This is a link for Github</a> 
+
+<!-- <img tag used to add an image you can include attributes if you like-->
+<!-- all extra things you wanna add for your project like graphics should be in the same folder-->
+<!--<img src="1004916" alt="pink panda" width="104" height="142">-->
