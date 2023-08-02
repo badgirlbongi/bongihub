@@ -22,8 +22,14 @@ HTML AND CSS NOTES
 <!-- all extra things you wanna add for your project like graphics should be in the same folder-->
 <!--<img src="1004916" alt="pink panda" width="104" height="142">-->
 
-
 <p>	Defines a paragraph
 <hr>	Defines a thematic change in the content
 <br>	Inserts a single line break
 <pre>	Defines pre-formatted text
+
+Use the style attribute for styling HTML elements
+Use background-color for background color
+Use color for text colors
+Use font-family for text fonts
+Use font-size for text sizes
+Use text-align for text alignment
