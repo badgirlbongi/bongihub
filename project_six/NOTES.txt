@@ -8,6 +8,12 @@ HTML AND CSS NOTES
 *The lang attribute of the <html> tag declares the language of the Web page
 *The title attribute defines some extra information about an element
 
+<!DOCTYPE html> <!-- represents the type of the document in hmtl5-->
+<html>
+<body> <!-- everything that will be visible comes in the body-->
+
+<h1 style="font-size:60px;">Learn about flags</h1> <!--h1-h6 are headings--> 
+<p>These colored paragraphs represents flags</p> <!--these are paragraphs-->
 
 <!-- <a tags are used for hyperlinks and href is an attribute-->
 <a href="https://www.github.com">This is a link for Github</a> 
@@ -15,3 +21,9 @@ HTML AND CSS NOTES
 <!-- <img tag used to add an image you can include attributes if you like-->
 <!-- all extra things you wanna add for your project like graphics should be in the same folder-->
 <!--<img src="1004916" alt="pink panda" width="104" height="142">-->
+
+
+<p>	Defines a paragraph
+<hr>	Defines a thematic change in the content
+<br>	Inserts a single line break
+<pre>	Defines pre-formatted text
