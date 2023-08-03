@@ -1,0 +1,39 @@
+JavaScript advantages
+Fast speed: JavaScript is executed on the client side that’s why it is very fast.
+Easy to learn: JavaScript is easy to learn. Any one which have basic knowledge of programming can easily lean JavaScript.
+Versatility: It refers to lots of skills. It can be used in a wide range of applications.
+Browser Compatible: JavaScript supports all modern browsers. It can execute on any browser and produce same result.
+Server Load: JavaScript reduce the server load as it executes on the client side.
+Rich interfaces: JavaScript provides the drag and drop functionalities which can provides the rich look to the web pages.
+Popularity: JavaScript is a very popular web language because it is used every where on the web.
+Regular Updates: JavaScript updated annually by ECMA.
+
+JavaScript disadvantages
+Code Visibility: JavaScript code is visible to every one and this is the biggest disadvantage of JavaScript.
+Stop Render: One error in JavaScript code can stop whole website to render.
+No Multiple Inheritance: JavaScript only support single inheritance.
+
+python advantages
+Ease of use: It has a simple, concise, and straighforward syntax
+Gentle learning curve: it one of the simpler languages to learn
+versatility: it is a flexible, general purpose language that fully supports both procedural and object-oriented programming
+efficient for rapid development:Because Python does not have to be compiled, programs take less time to develop
+true portability: it can be written once and run anywhere
+No Compile Process: Python is an interpreted language and programs are automatically compiled at run time
+Automatic Memory Allocation: Python does not have pointers and developers do not have to assign free space in memory.
+Extensive Built-In Objects and Libraries: Python has a large number of built-in compound objects including lists, sets, and record-like dictionaries
+Third-Party Library Availability: In addition to Python’s extensive built-in library, developers can access many free external libraries
+Open Source and Free to Use: All Python releases are available for free under an open source license
+Large User Base: Python has a large, active, and passionate community of users.
+
+python disadvantages
+Not Very Fast: Python is much slower than more efficient languages like C and Java. Python is interpreted and dynamically-typed, so the run-time compiler has a lot of work to do
+Memory Intensive: Python is not optimized to reduce memory.
+Harder to avoid Runtime Errors: Python is not compiled until runtime and is dynamically typed.
+Not Much Traction in Mobile or Desktop Applications: Because it is somewhat slow and uses a lot of memory, Python has not made gains in the mobile space. 
+Not Optimized for Database Access: It is more difficult to work with databases in Python than in some other applications
+No Multithreading Support: Due to its architecture, Python does not support multi-threading. Instead, it uses multiprocessing, where each “thread” runs in a separate Python process.
+Prone to Overuse or Misuse: Python’s simplicity is one of its strengths, but this can be a surprising weakness in some situations.
+
+
+
