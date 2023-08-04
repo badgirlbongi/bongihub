@@ -49,3 +49,24 @@ def myfunc():
 myfunc()
 
 print("Women is " + n)
+
+import random
+
+print(random.randrange(1, 10))
+
+o = "Hello, World!"
+print(o[1])
+
+for p in "bongisiwe":
+  print(p)
+
+txt = "The best things in life are free!"
+print("free" in txt)
+
+txt = "The best things in life are free!"
+if "free" in txt:
+  print("Yes, 'free' is present.")
+
+txt = "The best things in life are free!"
+if "expensive" not in txt:
+  print("No, 'expensive' is NOT present.")
