@@ -144,3 +144,21 @@ for c in fruits:
   print(c)
   if c == "banana":
     break
+
+#creating a function
+def my_function():
+  print("Hello from a function")
+
+#calling a function
+def my_function():
+  print("Hello from a function")
+
+my_function()
+
+#arguments
+def my_function(fname):
+  print(fname + " Shabalala")
+
+my_function("Bongi")
+my_function("Ntokozo")
+my_function("Anele")
