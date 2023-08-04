@@ -1,3 +1,4 @@
+"""
 #installed python on my pc
 #also installed python extentions on my vscode
 #my first project(how to comment)
@@ -82,3 +83,17 @@ print(s[2:])
 
 t = "Hello, World!"
 print(t[-5:-2])
+"""
+age = 22
+txt = "My name is Bongi, and I am {}"
+print(txt.format(age))
+
+quantity = 3
+itemno = 567
+price = 49.95
+myorder = "I want {} pieces of item {} for R{}."
+print(myorder.format(quantity, itemno, price))
+
+myordertwo = "I want to pay R{2} for {0} pieces of item {1}."
+print(myordertwo.format(quantity, itemno, price))
+
