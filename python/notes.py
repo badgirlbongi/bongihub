@@ -109,3 +109,38 @@ elif x == y:
   print("x and y are equal")
 else:
   print("x is greater than y")
+
+a = 33
+b = 200
+c = 500
+if b > a:
+  pass
+
+if a > b and c > a:
+  print("Both conditions are True")
+
+if a > b or a > c:
+  print("At least one of the conditions is True")
+
+if not a > b:
+  print("a is NOT greater than b")
+
+i = 1
+while i < 6:
+  print(i)
+  if i == 3:
+    break
+  i += 1
+
+j = 0
+while j < 6:
+  j += 1
+  if j == 3:
+    continue
+  print(j)
+
+fruits = ["apple", "banana", "cherry"]
+for c in fruits:
+  print(c)
+  if c == "banana":
+    break
