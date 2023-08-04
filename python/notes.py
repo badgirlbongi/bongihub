@@ -162,3 +162,26 @@ def my_function(fname):
 my_function("Bongi")
 my_function("Ntokozo")
 my_function("Anele")
+
+def my_function2(fname, lname):
+  print(fname + " " + lname)
+
+my_function2("Bongi", "Shabalala")
+
+def my_function3(*kids):
+  print("The youngest child is " + kids[2])
+
+my_function3("Bongi", "Ntokozo", "Anele")
+
+
+def my_function4(child3, child2, child1):
+  print("The youngest child is " + child3)
+
+my_function4(child1 = "Bongi", child2 = "Ntokozo", child3 = "Anele")
+
+def my_function5(**kid):
+  print("His last name is " + kid["lname"])
+
+my_function5(fname = "Nhlanhla", lname = "Shabalala")
+
+
