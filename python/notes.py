@@ -30,3 +30,22 @@ k = 5
 l = 10
 print(k + l)
 
+m = "awesome"
+
+def myfunc():
+  m = "fantastic"
+  print("Python is " + m)
+
+myfunc()
+
+print("Python is " + m)
+
+n = "awesome"
+
+def myfunc():
+  global n
+  n = "fantastic"
+
+myfunc()
+
+print("Women is " + n)
