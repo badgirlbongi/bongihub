@@ -97,3 +97,15 @@ print(myorder.format(quantity, itemno, price))
 myordertwo = "I want to pay R{2} for {0} pieces of item {1}."
 print(myordertwo.format(quantity, itemno, price))
 
+f = open("C:\xampp\htdocs\bongihub\project_six\js_and_python.txt", "r")
+print(f.read())
+f.close()
+
+x = 467
+y = 85
+if y > x:
+  print("y is greater than x")
+elif x == y:
+  print("x and y are equal")
+else:
+  print("x is greater than y")
