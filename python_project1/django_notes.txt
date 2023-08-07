@@ -39,3 +39,14 @@ and the browser requests the URL, this is basically what happens:
 -The view then sends the data to a specified template in the template folder.
 -The template contains HTML and Django tags, and with the data it returns finished HTML content back to the browser.
 
+to be able to use Django
+-check if python is correctly installed
+-check pip is also installed
+
+Virtual Environment
+It is suggested to have a dedicated virtual environment for each Django project,
+and then install Django in it.
+one way to manage a virtual environment is venv, which is included in Python.
+
+
+
