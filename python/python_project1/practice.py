@@ -1,10 +1,14 @@
 myName = input("What is your name?: ")
-mySurname = input("What is your surname?: ")
-myAge = input("How old are you?: ")
-print("\033[31m","No offense but that's really OLD!")
+mySurname = input("What is your surname?: ","\033[35m")
+myAge = input("How old are you?: ","\033[35m")
+old = print("\033[31m","No offense but that's really OLD!")
+oops = print("\033[31m","Oops!,looks like your pet isn't in our list")
+statement = print("\033[35m","You should really get a pet ",myName)
+
+print(old)
 print()
-print("\033[0m","So you are ","\033[35m",myName," ",mySurname,"\033[0m"," and you are ","\033[32m",myAge,"\033[0m","years old")
-print("\033[33m","nice to meet you ","\033[35m",myName,"\033[0m")
+print("So you are ",myName," ",mySurname," and you are ",myAge,"years old")
+print("nice to meet you ",myName)
 print()
 choice = input("Do you have a pet? ")
 if choice =="yes":
@@ -14,9 +18,9 @@ if choice =="yes":
     elif myPet =="cat":
         print("welcome to the meow! gang ",myName," together with your pet")
     else : 
-        print("Oops!,looks like your pet isn't in our list")
+        print(oops)
 else:
-    print("You should really get a pet ",myName)
+    print(statement)
 
 
   
