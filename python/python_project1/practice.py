@@ -59,5 +59,13 @@ print("Exam grade calculator")
 examName = input("Name of Exam: ")
 maxScore = int (input("Maximum score: "))
 score = int (input("Your Score: "))
+percent = float((score / maxScore) * 100)
+if percent <= 40:
+    print("You got ",percent," percent and your grade is C")
+elif percent > 40 and percent <= 60:
+    print("You got ",percent," percent and your grade is B")
+else:
+    print("You got ",percent," percent and your grade is A")
+
 
 
