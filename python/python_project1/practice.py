@@ -11,7 +11,7 @@ if choice =="yes":
     myPet = input("Is your pet a dog or a cat? ")
     if myPet == "dog":
         print("welcome to the woof! gang ",myName," together with your pet")
-    if myPet =="cat":
+    elif myPet =="cat":
         print("welcome to the meow! gang ",myName," together with your pet")
     else : 
         print("Oops!,looks like your pet isn't in our list")
