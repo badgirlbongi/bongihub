@@ -31,4 +31,21 @@ if playgame == "yes" or playgame == "Yes":
         print("\033[31m","OOPS!, You lost","\033[0m")
 else:
     print("\033[35m","Don't be such a bore!","\033[0m",)
+print()
+print("A bit of math")
+adding = 5 + 7
+print("5 + 7 = ",adding)
+subtracting = 9 - 3
+print("9 - 3 = ",subtracting)
+multiplication = 5 * 7
+print("5 * 7 = ",multiplication)
+division = 9 / 3
+print("9 / 3 = ",division)
+squared = 5**3
+print(squared)
+modulo = 15 % 4
+print("15 % 4 = ",modulo)
+divisor = 15 // 4
+print("15 // 4 = ",divisor)
+
 
