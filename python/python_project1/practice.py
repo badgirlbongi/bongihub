@@ -47,5 +47,10 @@ modulo = 15 % 4
 print("15 % 4 = ",modulo)
 divisor = 15 // 4
 print("15 // 4 = ",divisor)
-
+print()
+print("sample of a bill")
+myBill = float (input("What was the bill?: R"))
+numOfPeople = int (input("How many people?: "))
+answer = myBill / numOfPeople
+print("You all owe R",answer," each!")
 
