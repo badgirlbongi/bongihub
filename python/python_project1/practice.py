@@ -22,5 +22,3 @@ elif choice == "yes" and babysit == "no":
 else:
     print("\033[35m","You should really get a pet ",myName,"\033[0m")
 
-
-  
