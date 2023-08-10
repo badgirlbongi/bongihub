@@ -52,5 +52,12 @@ print("sample of a bill")
 myBill = float (input("What was the bill?: R"))
 numOfPeople = int (input("How many people?: "))
 answer = myBill / numOfPeople
+answer = round (answer,2)
 print("You all owe R",answer," each!")
+print()
+print("Exam grade calculator")
+examName = input("Name of Exam: ")
+maxScore = int (input("Maximum score: "))
+score = int (input("Your Score: "))
+
 
