@@ -12,13 +12,24 @@ Python is an open-source community language, so numerous independent programmers
 and functionality for it. Professionally, Python is great for backend web development, data analysis, artificial intelligence,
 and scientific computing. Developers also use Python to build productivity tools, games, and desktop apps.
 
-Features and Benefits of Python
+Features and Benefits of Python :
 •	Compatible with a variety of platforms including Windows, Mac, Linux, Raspberry Pi, and others.
 •	Uses a simple syntax comparable to the English language that lets developers use fewer lines than other programming languages.
 •	Operates on an interpreter system that allows code to be executed immediately, fast-tracking prototyping.
 •	Can be handled in a procedural, object-orientated, or functional way.
+
+What I have learned :
+•   python has a variety of libraries and extensions that allows you to create any kind of application you want 
+    and how you want it to be like or run like for example creating a web application using Django.
+•   The fact that it uses or accesses cmd is the best feature because you get to work with different directories 
+    and it having the advantageof using that gives you the freedom to create application in different folders using different 
+    libraries/extensions without disturbing/affecting other applications created in different folders.
+•   The language itself is straightforward and easy to work around with
+•   The math and other things are practically the same as all the other programming languages even though the syntax may differ
+    because this one is much simpler
+•   On the if statements python has an interesting feature called "elif" which is more like an elseif statement
 •   
-•
-•
-•
-•
+• 
+• 
+• 
+• 
