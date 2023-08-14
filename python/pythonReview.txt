@@ -28,8 +28,23 @@ What I have learned :
 •   The math and other things are practically the same as all the other programming languages even though the syntax may differ
     because this one is much simpler
 •   On the if statements python has an interesting feature called "elif" which is more like an elseif statement
-•   
-• 
-• 
-• 
-• 
+
+Python Syntax
+•	Somewhat similar to the English language, with a mathematical influence, Python is built for readability
+•	Unlike other languages that use semicolons and/or parentheses to complete a command,
+    Python uses new lines for the same function
+•	Defines scope (i.e., loops, functions, classes) by relying indentation, using whitespace,
+    rather than braces (aka curly brackets)
+
+Python Flexibility
+- It eliminates hard rules for building features and offering more problem-solving flexibility with a variety of methods.
+- It also allows uses to compile and run programs right up to a problematic area because 
+it uses run-time type checking rather than compile-time checking.
+
+The Less Great Parts of Python
+- It isn’t easy to maintain.
+- One command can have multiple meanings depending on context because Python is a dynamically typed language.
+- Maintaining a app as it grows in size and complexity can be increasingly difficult,
+especially finding and fixing errors. 
+
+
