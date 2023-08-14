@@ -28,6 +28,8 @@ What I have learned :
 •   The math and other things are practically the same as all the other programming languages even though the syntax may differ
     because this one is much simpler
 •   On the if statements python has an interesting feature called "elif" which is more like an elseif statement
+•   It more easier to use a python IDE to access most of it's features without complications and a lot of work 
+like when using VSCode
 
 Python Syntax
 •	Somewhat similar to the English language, with a mathematical influence, Python is built for readability
@@ -44,7 +46,19 @@ it uses run-time type checking rather than compile-time checking.
 The Less Great Parts of Python
 - It isn’t easy to maintain.
 - One command can have multiple meanings depending on context because Python is a dynamically typed language.
-- Maintaining a app as it grows in size and complexity can be increasingly difficult,
+- Maintaining an app as it grows in size and complexity can be increasingly difficult,
 especially finding and fixing errors. 
+- Speed is another weakness in Python. It's flexibility, because it is dynamically typed, 
+requires a significant amount of referencing to land on a correct definition, slowing performance.
+- when you want to create a web application using python via django the framework is a lot and it's too much to 
+understand and work around as it creates a lot of files with different information and everytime you make changes'
+on one file you also have to do the same for the other files so that your program may run without errors which i find
+to be more complicated especially when using VSCode
+
+overall
+In conclusion python is a cool programming language to learn and i still want and i am encouraged to know more
+what I want to explore going forward is understanding it's framework to create applications more specofocally 
+web based application and learn how python connects it's database and how it work
+
 
 
