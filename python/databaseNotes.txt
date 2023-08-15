@@ -1,0 +1,11 @@
+-you can use sqlite for database uses in python especially if yoou're dealing with small manageable data
+- did the first steps of connecting to a database
+import sqlite3
+
+#connect to a (new) database
+conn = sqlite3.connect("C:\\demo\\alpha.db")
+
+#close connection
+conn.close()
+-and program did not run error being an operationalerror
+-i have to download a new database host since i cant use phpmyadmin and i don't have alpha db 
