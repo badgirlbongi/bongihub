@@ -7,5 +7,9 @@ conn = sqlite3.connect("C:\\demo\\alpha.db")
 
 #close connection
 conn.close()
--and program did not run error being an operationalerror
+-and program did not run error being an operational error
 -i have to download a new database host since i cant use phpmyadmin and i don't have alpha db 
+- turns out alpa.db is just a name of the database not a host or anything
+#connect to a (new) database
+conn = sqlite3.connect("namesample.db")
+-and all is well now now next to the next step
