@@ -16,7 +16,21 @@ conn = sqlite3.connect("namesample.db")
 -create a cursor
 cur = conn.cursor()
 - create a table and use the (if not exists) to avoid errors and duplicate tables
--use the execute property to create the table and use the commit to post the sql statements
+-use the execute property to create the table via the cursor and 
+use the commit via connection to post the sql statements
+#create a cursor
+cur = conn.cursor()
+
+#create a "people" table
+cur.execute('''CREATE TABLE IF NOT EXISTS people
+               (firstname TEXT, lastname TEXT)''')
+conn.commit()
+
+#close connection
+cur.close()
+conn.close()
+- you can also create the table without using the cursor 
+
 
 
 - don't forget to close all the hings you've opened like the cursor and the connection

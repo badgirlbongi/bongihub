@@ -7,10 +7,9 @@ conn = sqlite3.connect("namesample.db")
 cur = conn.cursor()
 
 #create a "people" table
-cur.execute('''CREATE TABLE IF NOT EXISTS people
+conn.execute('''CREATE TABLE IF NOT EXISTS people
                (firstname TEXT, lastname TEXT)''')
-conn.commit()
 
-#close connection
+#close db objects
 cur.close()
 conn.close()
