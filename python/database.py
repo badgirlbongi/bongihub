@@ -6,9 +6,20 @@ conn = sqlite3.connect("namesample.db")
 #create a cursor
 cur = conn.cursor()
 
-#create a "people" table
-conn.execute('''CREATE TABLE IF NOT EXISTS people
-               (firstname TEXT, lastname TEXT)''')
+#Test Data
+names_list = [
+    ("Naume", "Malinga")
+    ("Nokuthula", "Sosibo")
+    ("Bongisiwe", "Shabalala")
+    ("Kgotsofalo", "Malinga")
+    ("Ayanda", "More")
+]
+
+#insert data into database
+cur.executemany('''
+                INSERT INTO people (firstname, lastname) VALUES (?, ?)
+            ''',names_list)
+conn.commit()
 
 #close db objects
 cur.close()

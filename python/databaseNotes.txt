@@ -30,6 +30,20 @@ conn.commit()
 cur.close()
 conn.close()
 - you can also create the table without using the cursor 
+#create a "people" table
+conn.execute('''CREATE TABLE IF NOT EXISTS people
+               (firstname TEXT, lastname TEXT)''')
+
+- create a variable that will hold the data you want to insert in the table
+#Test Data
+names_list = [
+    ("Naume", "Malinga")
+    ("Nokuthula", "Sosibo")
+    ("Bongisiwe", "Shabalala")
+    ("Kgotsofalo", "Malinga")
+    ("Ayanda", "More")
+]
+
 
 
 

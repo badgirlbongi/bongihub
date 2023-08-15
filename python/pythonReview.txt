@@ -58,7 +58,8 @@ to be more complicated especially when using VSCode
 overall
 In conclusion python is a cool programming language to learn and i still want and i am encouraged to know more
 what I want to explore going forward is understanding it's framework to create applications more specofocally 
-web based application and learn how python connects it's database and how it work
+web based application and learn how python connects it's database and how it works
+
 
 
 
