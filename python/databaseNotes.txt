@@ -13,3 +13,10 @@ conn.close()
 #connect to a (new) database
 conn = sqlite3.connect("namesample.db")
 -and all is well now now next to the next step
+-create a cursor
+cur = conn.cursor()
+- create a table and use the (if not exists) to avoid errors and duplicate tables
+-use the execute property to create the table and use the commit to post the sql statements
+
+
+- don't forget to close all the hings you've opened like the cursor and the connection
