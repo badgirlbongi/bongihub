@@ -43,6 +43,16 @@ names_list = [
     ("Kgotsofalo", "Malinga")
     ("Ayanda", "More")
 ]
+#insert data into database
+cur.executemany('''
+                INSERT INTO people (firstname, lastname) VALUES (?, ?)
+            ''',names_list)
+conn.commit()
+
+-accessing database from an sql script file 
+-created an sql file name testing.sql with data inside 
+-will be used in the testingsql.py file
+
 
 
 
