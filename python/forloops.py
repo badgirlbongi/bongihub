@@ -1,2 +1,2 @@
-for days in range(7):
-    print("Day ",days+1)
+for days in range(1,8):
+    print("Day ",days)
