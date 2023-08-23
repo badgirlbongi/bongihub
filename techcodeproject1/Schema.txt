@@ -1,0 +1,12 @@
+GALLERY PROJECT 
+Requirements
+-about us page
+-types of art that will be displayed 
+-contact infromation
+-the design of the whole website
+-the home page will display all the information and in order to see all the pictures of the art we'll go the 
+requested page by hyperlinks
+-have to use keywords combined with pictures for research purposes (seo tools)
+   *so that when a user searches for some certain art the picture from the website may appear first and 
+   redirect them to the main website so that they can see other arts for interests purposes.
+
