@@ -5,3 +5,40 @@ WHAT IS SEO?
 -It is not the same as search engine paid advertising 
 -It optimizes your website for google search so that it organically shows up on the first page of the search results
 -The number of visitors who come to your website through these search results is defined as organic traffic(because the searcher found the website by themselves)
+-Organic results are the non-paid listings that appear based on their relevance to the search query, while paid results are the advertisements that
+ appear at the top or side of the search results page.
+-Search engines crawl and index billions of webpages,analyzing various factors such as relevance, authority, and user experience to deliver the most relevant 
+results to users'queries.
+
+BENEFITS OF SEO
+-it improves your website’s visibility, ensuring that your target audience can find you when they need you
+-it increases organic traffic, meaning more potential customers are discovering your offerings
+-it helps build credibility and authority in your industry, establishing trust with both search engines and users.
+
+CORE FUNDAMENTALS OF SEO
+*On-Page Optimization
+  on-page opyimization focuses on optimizing elements directly within your website.
+1.Keyword research and analysis: Researching and selecting relevant keywords that align with your target audience’s search queries.
+2.Meta tags optimization: Crafting compelling titles, descriptions, and headings that accurately represent your content and incorporate target keywords.
+3.URL structure and formatting: Creating clean and descriptive URLs that are easily understandable by both users and search engines.
+4.Content optimization: Developing high-quality, keyword-rich content that is engaging, readable, well-formatted, and provides value to your audience.
+5.Internal linking and site architecture: Creating a logical and user-friendly website structure, with well-structured internal links that improve navigation and distribute authority throughout your site.
+6.Image optimization: Optimizing images by reducing file sizes, using descriptive filenames, and adding relevant alt text to improve accessibility and search engine understanding.
+*Off-Page Optimization
+  off-page optimization focuses on factors outside of yyour website that impact your search engine rankings
+1.Link building and earning backlinks: Acquiring high-quality backlinks from reputable websites to demonstrate authority and credibility to search engines.
+2.Social media signals and engagement: Building a strong social media presence and encouraging social signals, such as likes, shares, and comments, to enhance your online visibility.
+3.Online directories and citations: Listing your business in relevant online directories and ensuring consistent and accurate citations across the web to improve local search visibility.
+4.Guest blogging and influencer outreach: Collaborating with industry influencers and guest blogging on authoritative websites to expand your reach and gain exposure.
+
+TECHNICAL SEO
+-Technical SEO is about optimizing your website’s infrastructure so that search engine crawlers can easily access and index your website.
+-It focuses on optimizing the technical aspects of your website to improve its performance and search engine crawlability.
+- It’s called technical SEO because it only deals with the backend.
+what to considerfor technical SEO
+1.Website speed and performance optimization: Optimizing your site’s loading speed, minimizing server response time, and optimizing code to ensure a fast and seamless user experience.
+2.Mobile-friendliness and responsive design: Ensuring your website is fully optimized for mobile devices and offers a responsive design that adapts to different screen sizes.
+3.Site structure and XML sitemaps: Organizing your website’s structure in a logical manner and creating XML sitemaps to help search engines understand and crawl your site more efficiently.
+4.Robots.txt and canonicalization: Implementing a robots.txt file to guide search engine crawlers and utilizing canonical tags to prevent duplicate content issues.
+5.HTTPS and website security: Securing your website with HTTPS encryption to protect user data and improve trustworthiness in the eyes of both visitors and search engines.
+
