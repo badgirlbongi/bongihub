@@ -1,0 +1,7 @@
+WHAT IS SEO?
+-Seo stands for Search Engine Optimization
+-It is a fundemental aspect of online succcess,driving organic traffic and enhancing online visibility
+-It is the process of optimizing your website and content to improve its visibility on search engine results pages(SERPs)
+-It is not the same as search engine paid advertising 
+-It optimizes your website for google search so that it organically shows up on the first page of the search results
+-The number of visitors who come to your website through these search results is defined as organic traffic(because the searcher found the website by themselves)
