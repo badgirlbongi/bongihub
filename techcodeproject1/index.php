@@ -37,8 +37,9 @@ body {margin:0;}
   <a href="#"><i class="fa fa-search"></i> Search</a> 
   <a href="#"><i class="fa fa-envelope"></i> Chat</a> 
   <a href="#"><i class="fa fa-globe"></i> News</a>
-  <a href="#"><i class="fa fa-question"></i> About</a>
+  <a href="about.php?link=about"><i class="fa fa-question"></i> About</a>
 </div>
 
 </body>
 </html> 
+
