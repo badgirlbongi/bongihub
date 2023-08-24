@@ -10,3 +10,12 @@ requested page by hyperlinks
    *so that when a user searches for some certain art the picture from the website may appear first and 
    redirect them to the main website so that they can see other arts for interests purposes.
 
+DETAILED REQUIREMENTS 
+Interface
+-icon bar with the following fields
+  *dropdown menu
+  *home
+  *search
+  *envelope for sending emails/ or writting opinions or questions on the blog
+  *the globe icon for latest news
+-
