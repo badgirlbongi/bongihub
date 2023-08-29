@@ -7,4 +7,7 @@ def whichCake(ingredient, base, coating):
         print("Yeah, that's great I suppose__")
         print("So you want a ",ingredient, " cake on a ",base, " base with ", coating, " on top")
 
-whichCake("carrot", "biscuit", "icing")
+userIngredient = input("Name an ingredient: ")
+userBase = input("Name a type of base: ")
+userCoating = input("Favourite cake topping: ")
+whichCake(userIngredient, userBase, userCoating)
