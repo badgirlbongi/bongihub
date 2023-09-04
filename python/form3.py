@@ -22,7 +22,7 @@ first_name_entry.grid(row = 1, column = 0)
 last_name_entry.grid(row = 1, column = 0)
 
 title = tkinter.Label(user_info_frame, text = "Title")
-
+title_combobox = ttk.Combobox()
 
 
 
