@@ -21,7 +21,7 @@ last_name_entry = tkinter.Entry(user_info_frame)
 first_name_entry.grid(row = 1, column = 0)
 last_name_entry.grid(row = 1, column = 0)
 
-title = tkinter.Label(user_info_frame, text = "Title")
+title_label = tkinter.Label(user_info_frame, text = "Title")
 title_combobox = ttk.Combobox(user_info_frame, values = ["", "Mr.", "Ms.", "Dr."])
 title_label.grid(row = 0, column = 2)
 title_combobox.grid(row = 1, column = 2)
@@ -32,11 +32,20 @@ age_label.grid(row = 2, column = 0)
 age_spinbox.grid(row = 3, column = 0)
 
 nationality_label = tkinter.Label(user_info_frame, text = "Nationality")
-nationality_combobox = ttk.Combobox(user_info_frame, valuess = ["Africa", "Antarctica", "Asia","Europe", "North America", "Oceania", "South America"])
+nationality_combobox = ttk.Combobox(user_info_frame, values = ["Africa", "Antarctica", "Asia","Europe", "North America", "Oceania", "South America"])
 nationality_label.grid(row = 2, column = 1)
 nationality_combobox.grid(row = 3, column = 1)
 
+for widget in user_info_frame.winfo_children():
+    widget.grid_configure(padx = 10, pady = 5)
 
+#saving course info 
+courses_frame = tkinter.Label(frame)
+courses_frame.grid(row = 1, column = 8, sticky = "news", padx = 20, pady = 20)
 
+registered_label = tkinter.Label(courses_frame, text = "Registration Status")
+registered_check = tkinter.Checkbutton(courses_frame, text ="Currently Registered")
+registered_label.grid(row = 0, column = 0)
+registered_check.grid(row = 1, column = 0)
 
 window.mainloop()
