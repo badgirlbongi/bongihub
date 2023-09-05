@@ -22,8 +22,14 @@ first_name_entry.grid(row = 1, column = 0)
 last_name_entry.grid(row = 1, column = 0)
 
 title = tkinter.Label(user_info_frame, text = "Title")
-title_combobox = ttk.Combobox()
+title_combobox = ttk.Combobox(user_info_frame, values = ["", "Mr.", "Ms.", "Dr."])
+title_label.grid(row = 0, column = 2)
+title_combobox.grid(row = 1, column = 2)
 
+age_label = tkinter.Label(user_info_frame, text = "Age")
+age_spinbox = tkinter.SSpinbox(user_info_frame)
+age_label.grid(row = 2, column = 0)
+age_spinbox.grid(row = 3, column = 0)
 
 
 window.mainloop()
