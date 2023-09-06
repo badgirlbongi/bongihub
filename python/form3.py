@@ -1,6 +1,9 @@
 import tkinter 
 from tkinter import ttk
 
+def enter_data():
+    print ("hi")
+
 window = tkinter.Tk()
 window.title("Data Entry Form")
 
@@ -68,7 +71,7 @@ terms_check = tkinter.Checkbutton(terms_frame, text ="I accept the terms and con
 terms_check.grid(row = 0, column = 0)
 
 #Button 
-button = tkinter.Button(frame, text = "Enter Data")
+button = tkinter.Button(frame, text = "Enter Data", command = enter_data)
 button.grid(row = 3, column = 0, sticky = "news", padx = 20, pady = 10)
 
 window.mainloop()
