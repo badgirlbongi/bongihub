@@ -2,7 +2,21 @@ import tkinter
 from tkinter import ttk
 
 def enter_data():
-    print ("hi")
+    #user info
+    firstname = first_name_entry.get()
+    lastname = last_name_entry.get()
+    title = title_combobox.get()
+    age = age_spinbox.get()
+    nationality = nationality_combobox.get()
+
+    #course info
+    numcourses = numcourses_spinbox.get()
+    numsemesters = numsemesters_spinbox.get()
+
+    print ("First name: ",firstname," Last name: ",lastname)
+    print ("Title: ",title," Age: ",age," Nationality: ",nationality)
+    print ("Courses: ",numcourses," Semesters: ",numsemesters)
+    
 
 window = tkinter.Tk()
 window.title("Data Entry Form")
@@ -47,7 +61,8 @@ courses_frame = tkinter.LabelFrame(frame)
 courses_frame.grid(row = 1, column = 0, sticky = "news", padx = 20, pady = 10)
 
 registered_label = tkinter.Label(courses_frame, text = "Registration Status")
-registered_check = tkinter.Checkbutton(courses_frame, text ="Currently Registered")
+reg_status_var = tkinter.StringVar()
+registered_check = tkinter.Checkbutton(courses_frame, text ="Currently Registered", variable = reg_status_var, onvalue = "Registered", offvalue = "Not registered")
 registered_label.grid(row = 0, column = 0)
 registered_check.grid(row = 1, column = 0)
 
