@@ -10,13 +10,15 @@ def enter_data():
     nationality = nationality_combobox.get()
 
     #course info
+    registration_status = reg_status_var.get()
     numcourses = numcourses_spinbox.get()
     numsemesters = numsemesters_spinbox.get()
 
     print ("First name: ",firstname," Last name: ",lastname)
     print ("Title: ",title," Age: ",age," Nationality: ",nationality)
+    print ("Registration Status: ",registration_status)
     print ("Courses: ",numcourses," Semesters: ",numsemesters)
-    
+    print ("-----------------------------------------------------")
 
 window = tkinter.Tk()
 window.title("Data Entry Form")
