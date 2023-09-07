@@ -14,10 +14,14 @@ def enter_data():
     numcourses = numcourses_spinbox.get()
     numsemesters = numsemesters_spinbox.get()
 
+    #terms & cons info
+    terms = terms_status_var.get()
+
     print ("First name: ",firstname," Last name: ",lastname)
     print ("Title: ",title," Age: ",age," Nationality: ",nationality)
     print ("Registration Status: ",registration_status)
     print ("Courses: ",numcourses," Semesters: ",numsemesters)
+    print ("Terms and Condition: ",terms_status_var)
     print ("-----------------------------------------------------")
 
 window = tkinter.Tk()
@@ -83,8 +87,9 @@ for widget in user_info_frame.winfo_children():
 
 #Accept terms
 terms_frame = tkinter.LabelFrame(frame, text = "Terms and Conditions")
+terms_status_var = tkinter.StringVar()
 terms_frame.grid(row = 2, column = 0, sticky = "news", padx = 20, pady = 10)
-terms_check = tkinter.Checkbutton(terms_frame, text ="I accept the terms and conditions.")
+terms_check = tkinter.Checkbutton(terms_frame, text ="I accept the terms and conditions.", variable = terms_status_var, onvalue = "Accepted", offvalue = "Not Accepted")
 terms_check.grid(row = 0, column = 0)
 
 #Button 
