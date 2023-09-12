@@ -2,9 +2,13 @@ from tkinter import *
 from PIL import ImageTk
 
 #functionality Part
-def on_enter(event):
+def username_enter(event):
     if usernameEntry.get()=='Username':
         usernameEntry.delete(0,END)
+
+def password_enter(event):
+    if passwordEntry.get()=='Password':
+        passwordEntry.delete(0,END)
 
 #GUI Part
 login_window = Tk()
@@ -24,11 +28,19 @@ usernameEntry = Entry(login_window,width=25,font=('Microsoft Yahei UI Light',11,
                       ,bd=0,fg='firebrick1')
 usernameEntry.place(x=580,y=200)
 usernameEntry.insert(0,'Username')
-usernameEntry.bind('<FocusIn>',on_enter)
+usernameEntry.bind('<FocusIn>',username_enter)
 
-Frame(login_window)
+frame1 = Frame(login_window,width=250,height=2,bg='firebrick1')
+frame1.place(x=580,y=222)
 
+passwordEntry = Entry(login_window,width=25,font=('Microsoft Yahei UI Light',11,'bold')
+                      ,bd=0,fg='firebrick1')
+passwordEntry.place(x=580,y=260)
+passwordEntry.insert(0,'Password')
+passwordEntry.bind('<FocusIn>',password_enter)
 
+frame2 = Frame(login_window,width=250,height=2,bg='firebrick1')
+frame2.place(x=580,y=282)
 
 login_window.mainloop()
 
