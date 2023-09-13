@@ -10,12 +10,24 @@ def password_enter(event):
     if passwordEntry.get()=='Password':
         passwordEntry.delete(0,END)
 
+def hide():
+    openeye.config(__file__='closeye.png')
+    passwordEntry.config(show='*')
+    eyeButton.config(command=show)
+    
+def show():
+    openeye.config(__file__='openeye.png')
+    passwordEntry.config(show='')
+    eyeButton.config(command=hide)
+
+
 #GUI Part
 login_window = Tk()
 login_window.geometry('990x660+50+50')
 login_window.resizable(0,0)
 login_window.title('Login Page')
-bgImage = ImageTk.PhotoImage(file='bg.jpg')
+#bgImage = ImageTk.PhotoImage(file='bg.jpg')
+bgImage = PhotoImage(file= 'bg.jpg')
 
 bgLabel = Label(login_window, image = bgImage)
 bgLabel.place(x = 0, y = 0)
@@ -42,11 +54,20 @@ passwordEntry.bind('<FocusIn>',password_enter)
 frame2 = Frame(login_window,width=250,height=2,bg='firebrick1')
 frame2.place(x=580,y=282)
 
-closeeye = PhotoImage(file = 'closeye.png')
-eyeButton = Button(login_window,image = closeeye,bd=0,bg='white')
+openeye = PhotoImage(file = 'openeye.png')
+eyeButton = Button(login_window,image = openeye,bd=0,bg='white',activebackground='white'
+                   ,cursor='hand2',command=hide)
 eyeButton.place(x=800,y=255)
 
+forgetButton = Button(login_window,text='Forgot Password?',bd=0,bg='white',activebackground='white'
+                   ,cursor='hand2',font=('Microsoft Yahei UI Light',9,'bold'),
+                   fg='firebrick1',activeforeground='firebrick1')
+forgetButton.place(x=715,y=295)
 
+loginButton = Button(login_window,text='Login',font=('Open Sans',16,'bold'),fg='white',
+                     bg='firebrick1',activeforeground='white',activebackground='firebrick1',
+                     cursor='hand2',bd=0,width=16)
+loginButton.place(x=578,y=350)
 
 login_window.mainloop()
 
