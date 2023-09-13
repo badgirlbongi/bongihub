@@ -85,6 +85,15 @@ google_logo=PhotoImage(file='google.png')
 gLabel=Label(login_window,image=google_logo,bg='white')
 gLabel.place(x=740,y=440)
 
+signupLabel=Label(login_window,text="Don't have an accont?",font=('Open Sans',9,'bold',),
+                fg='firebrick1',bg='white')
+signupLabel.place(x=590,y=500)
+
+newaccountButton = Button(login_window,text='Create New Account?',font=('Open Sans',9,'bold underline'),
+                          fg='blue',bg='white',activeforeground='blue',
+                          activebackground='white',cursor='hand2',bd=0)
+newaccountButton.place(x=727,y=500)
+
 login_window.mainloop()
 
 
