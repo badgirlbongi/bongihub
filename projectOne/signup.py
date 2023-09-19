@@ -1,5 +1,21 @@
 from tkinter import*
+from tkinter import messagebox
 from PIL import ImageTk
+import pymysql
+
+def connect_database():
+    if emailEntry.get()=='' or usernameEntry.get()=='' or passwordEntry.get()=='' or confirmEntry.get()=='':
+        messagebox.showerror('Error','All Fields Are Required')
+    elif passwordEntry.get() != confirmEntry.get():   
+        messagebox.showerror('Error','Password Mismatch')
+        
+
+
+
+
+def login_page():
+    signup_window.destroy()
+    import signin
 
 signup_window =Tk()
 signup_window.title('Signup page')
@@ -50,7 +66,8 @@ termsandconditions = Checkbutton(frame, text ='I agree to the Terms & Conditions
 termsandconditions.grid(row=9,column=0,pady=10,padx=15)
 
 signupButton = Button(frame,text='Signup',font=('Open Sans',16,'bold'),bd=0
-                      ,activebackground='firebrick1',activeforeground='white',width=17)
+                      ,activebackground='firebrick1',activeforeground='white',width=17,
+                      command=connect_data)
 signupButton.grid(row=10,column=0,pady=10)
 
 alreadyaccount= Label(frame,text='Create New Account?',font=('Open Sans',9,'bold underline'),
