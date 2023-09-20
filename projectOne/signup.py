@@ -11,8 +11,6 @@ def connect_database():
         
 
 
-
-
 def login_page():
     signup_window.destroy()
     import signin
