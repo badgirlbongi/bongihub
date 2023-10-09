@@ -1,0 +1,60 @@
+-you can use sqlite for database uses in python especially if yoou're dealing with small manageable data
+- did the first steps of connecting to a database
+import sqlite3
+
+#connect to a (new) database
+conn = sqlite3.connect("C:\\demo\\alpha.db")
+
+#close connection
+conn.close()
+-and program did not run error being an operational error
+-i have to download a new database host since i cant use phpmyadmin and i don't have alpha db 
+- turns out alpa.db is just a name of the database not a host or anything
+#connect to a (new) database
+conn = sqlite3.connect("namesample.db")
+-and all is well now now next to the next step
+-create a cursor
+cur = conn.cursor()
+- create a table and use the (if not exists) to avoid errors and duplicate tables
+-use the execute property to create the table via the cursor and 
+use the commit via connection to post the sql statements
+#create a cursor
+cur = conn.cursor()
+
+#create a "people" table
+cur.execute('''CREATE TABLE IF NOT EXISTS people
+               (firstname TEXT, lastname TEXT)''')
+conn.commit()
+
+#close connection
+cur.close()
+conn.close()
+- you can also create the table without using the cursor 
+#create a "people" table
+conn.execute('''CREATE TABLE IF NOT EXISTS people
+               (firstname TEXT, lastname TEXT)''')
+
+- create a variable that will hold the data you want to insert in the table
+#Test Data
+names_list = [
+    ("Naume", "Malinga")
+    ("Nokuthula", "Sosibo")
+    ("Bongisiwe", "Shabalala")
+    ("Kgotsofalo", "Malinga")
+    ("Ayanda", "More")
+]
+#insert data into database
+cur.executemany('''
+                INSERT INTO people (firstname, lastname) VALUES (?, ?)
+            ''',names_list)
+conn.commit()
+
+-accessing database from an sql script file 
+-created an sql file name testing.sql with data inside 
+-will be used in the testingsql.py file
+
+
+
+
+
+- don't forget to close all the hings you've opened like the cursor and the connection
