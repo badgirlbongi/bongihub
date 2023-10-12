@@ -23,8 +23,8 @@ class operators {
         return sqrt($cookie_value1);
     }
 
-    public function exponent($cookie_value1) {
-        return pow($cookie_value1, 2);
+    public function exponent($cookie_value1,$cookie_value2) {
+        return pow($cookie_value1, $cookie_value2);
     }
 
     public function cosine($cookie_value1) {
