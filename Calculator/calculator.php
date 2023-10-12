@@ -4,121 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <style>
-        body {
-            background-color: rgb(163, 159, 159);
-        }
-       
-        .calc {
-            margin: auto;
-            background-color: black;
-            border: 2px solid whitesmoke;
-            width: 47%;
-            height: 630px;
-            border-radius: 20px;
-            box-shadow: 10px 10px 40px;
-        }
-        .maininput {
-            background-color: black;
-            border: 1px solid grey;
-            height: 125px;
-            width: 98.2%;
-            font-size: 80px;
-            color: whitesmoke;
-        }
-        .numbtn {
-            padding: 30px 35px;
-            border-radius: 50px;
-            font-weight: 500;
-            font-size: large;
-            background-color: rgb(155, 154, 154);
-        }
-        .numbtn:hover {
-            background-color: rgb(136, 133, 133);
-            color: whitesmoke;
-        }
-        .calbtn {
-            padding: 30px 35px;
-            border-radius: 50px;
-            font-weight: 500;
-            font-size: 30px;
-            background-color: orange;
-        }
-        .calbtn:hover {
-            background-color: rgb(211, 140, 7);
-            color: whitesmoke;
-        }
-        .c {
-            padding: 30px 35px;
-            border-radius: 50px;
-            font-weight: 500;
-            font-size: large;
-            background-color: red;
-        }
-        .c:hover {
-            background-color: rgb(188, 16, 16);
-            color: whitesmoke;
-        }
-        .equal {
-            padding: 30px 35px;
-            border-radius: 50px;
-            font-weight: 500;
-            font-size: large;
-            background-color: rgb(8, 181, 8);
-        }
-        .equal:hover {
-            background-color: green;
-            color: whitesmoke;
-        }
-    </style>
+ 
 </head>
-<body>
-<?php
-class operators {
-    public function add($cookie_value1, $cookie_value2) {
-        return $cookie_value1 + $cookie_value2;
-    }
-
-    public function subtract($cookie_value1, $cookie_value2) {
-        return $cookie_value1 - $cookie_value2;
-    }
-
-    public function multiply($cookie_value1, $cookie_value2) {
-        return $cookie_value1 * $cookie_value2;
-    }
-
-    public function divide($cookie_value1, $cookie_value2) {
-        return $cookie_value1 / $cookie_value2;
-    }
-
-    public function modulus($cookie_value1, $cookie_value2) {
-        return fmod($cookie_value1, $cookie_value2);
-    }
-
-    public function squareroot($cookie_value1) {
-        return sqrt($cookie_value1);
-    }
-
-    public function exponent($cookie_value1) {
-        return pow($cookie_value1, 2);
-    }
-
-    public function cosine($cookie_value1) {
-        return cos($cookie_value1);
-    }
-
-    public function sine($cookie_value1) {
-        return sin($cookie_value1);
-    }
-
-    public function tangent($cookie_value1) {
-        return tan($cookie_value1);
-    }
-
-    public function pie() {
-        return pi();
-    }
+<style>
+body {
+    background-color: rgb(163, 159, 159);
 }
+
+.calc {
+    margin: auto;
+    background-color: black;
+    border: 2px solid whitesmoke;
+    width: 47%;
+    height: 630px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 40px;
+}
+.maininput {
+    background-color: black;
+    border: 1px solid grey;
+    height: 125px;
+    width: 98.2%;
+    font-size: 80px;
+    color: whitesmoke;
+}
+.numbtn {
+    padding: 30px 35px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: large;
+    background-color: rgb(155, 154, 154);
+}
+.numbtn:hover {
+    background-color: rgb(136, 133, 133);
+    color: whitesmoke;
+}
+.calbtn {
+    padding: 30px 35px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: 30px;
+    background-color: orange;
+}
+.calbtn:hover {
+    background-color: rgb(211, 140, 7);
+    color: whitesmoke;
+}
+.c {
+    padding: 30px 35px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: large;
+    background-color: red;
+}
+.c:hover {
+    background-color: rgb(188, 16, 16);
+    color: whitesmoke;
+}
+.equal {
+    padding: 30px 35px;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size: large;
+    background-color: rgb(8, 181, 8);
+}
+.equal:hover {
+    background-color: green;
+    color: whitesmoke;
+}
+</style>
+<body>
+   
+<?php 
+include 'operators.php';
 
 $cookie_name1 = "num";
 $cookie_value1 = "";
@@ -213,7 +171,6 @@ if (isset($_POST['equal'])) {
 
         </form>
     </div>
-
 </body>
 </html>
 
