@@ -83,6 +83,10 @@ $cookie_value1 = "";
 $cookie_name2 = "op";
 $cookie_value2 = "";
 
+function appendToDisplay() {}
+
+function clearDisplay() {}
+
 if (isset($_POST['num'])) {
     $num = $_POST['input'] . $_POST['num'];
 } else {
@@ -144,30 +148,30 @@ if (isset($_POST['equal'])) {
         <br>
         <input type="text" class="maininput" name="input" value="<?php echo @$num ?>">
         <br><br>
-        <input type="submit" class="numbtn" name="num" value="7">
-        <input type="submit" class="numbtn" name="num" value="8">
-        <input type="submit" class="numbtn" name="num" value="9">
-        <input type="submit" class="calbtn" name="op" value="+">
-        <input type="submit" class="calbtn" name="op" value="Sin">
+        <input type="submit" class="numbtn" name="num" value="7" onclick="appendToDisplay'7'">
+        <input type="submit" class="numbtn" name="num" value="8" onclick="appendToDisplay'8'">
+        <input type="submit" class="numbtn" name="num" value="9" onclick="appendToDisplay'9'">
+        <input type="submit" class="calbtn" name="op" value="+" onclick="appendToDisplay'+'">
+        <input type="submit" class="calbtn" name="op" value="Sin" onclick="appendToDisplay'sin'">
         <input type="submit" class="calbtn" name="op" value="Hist"><br><br>
-        <input type="submit" class="numbtn" name="num" value="4">
-        <input type="submit" class="numbtn" name="num" value="5">
-        <input type="submit" class="numbtn" name="num" value="6">
-        <input type="submit" class="calbtn" name="op" value="-">
-        <input type="submit" class="calbtn" name="op" value="Tan">
-        <input type="submit" class="calbtn" name="op" value="SQR"><br><br>
-        <input type="submit" class="numbtn" name="num"value="1">
-        <input type="submit" class="numbtn" name="num"value="2">
-        <input type="submit" class="numbtn" name="num"value="3">
-        <input type="submit" class="calbtn" name="op"value="*">
-        <input type="submit" class="calbtn" name="op"value="Cos">
-        <input type="submit" class="calbtn" name="op"value="Exp"><br><br>
-        <input type="submit" class="c" name="num"value="c">
-        <input type="submit" class="numbtn" name="num"value="0">
-        <input type="submit" class="equal" name="equal"value="=">
-        <input type="submit" class="calbtn" name="op"value="/">
-        <input type="submit" class="calbtn" name="op"value="%">
-        <input type="submit" class="calbtn" name="op"value="Pi">
+        <input type="submit" class="numbtn" name="num" value="4" onclick="appendToDisplay'4'">
+        <input type="submit" class="numbtn" name="num" value="5" onclick="appendToDisplay'5'">
+        <input type="submit" class="numbtn" name="num" value="6" onclick="appendToDisplay'6'">
+        <input type="submit" class="calbtn" name="op" value="-" onclick="appendToDisplay'-'">
+        <input type="submit" class="calbtn" name="op" value="Tan" onclick="appendToDisplay'tan'">
+        <input type="submit" class="calbtn" name="op" value="SQR" onclick="appendToDisplay'sqr'"><br><br>
+        <input type="submit" class="numbtn" name="num"value="1" onclick="appendToDisplay'1'">
+        <input type="submit" class="numbtn" name="num"value="2" onclick="appendToDisplay'2'">
+        <input type="submit" class="numbtn" name="num"value="3" onclick="appendToDisplay'3'">
+        <input type="submit" class="calbtn" name="op"value="*" onclick="appendToDisplay'*'">
+        <input type="submit" class="calbtn" name="op"value="Cos" onclick="appendToDisplay'cos'">
+        <input type="submit" class="calbtn" name="op"value="Exp" onclick="appendToDisplay'exp'"><br><br>
+        <input type="submit" class="c" name="num"value="c" onclick="clearDisplay()">
+        <input type="submit" class="numbtn" name="num"value="0" onclick="appendToDisplay'0'">
+        <input type="submit" class="equal" name="equal"value="=" onclick="appendToDisplay'='">
+        <input type="submit" class="calbtn" name="op"value="/" onclick="appendToDisplay'/'">
+        <input type="submit" class="calbtn" name="op"value="%" onclick="appendToDisplay'%'">
+        <input type="submit" class="calbtn" name="op"value="Pi" onclick="appendToDisplay'pi'">
 
         </form>
     </div>
