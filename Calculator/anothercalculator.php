@@ -14,7 +14,7 @@ body {
     margin: auto;
     background-color: black;
     border: 2px solid whitesmoke;
-    width: 47%;
+    width: 50%;
     height: 630px;
     border-radius: 20px;
     box-shadow: 10px 10px 40px;
@@ -83,26 +83,27 @@ body {
         <input type="button" class="numbtn" value="8" onclick="appendToDisplay('8')">
         <input type="button" class="numbtn" value="9" onclick="appendToDisplay('9')">
         <input type="button" class="calbtn" value="+" onclick="appendToDisplay('+')">
-        <input type="button" class="calbtn" value="Sin" onclick="appendToDisplay('sin')">
-        <input type="button" class="calbtn" value="Hist"><br><br>
+        <input type="button" class="calbtn" value="Sin" onclick="appendToDisplay('Math.sin(')">
+        <input type="button" class="calbtn" value="History"><br><br>
         <input type="button" class="numbtn" value="4" onclick="appendToDisplay('4')">
         <input type="button" class="numbtn" value="5" onclick="appendToDisplay('5')">
         <input type="button" class="numbtn" value="6" onclick="appendToDisplay('6')">
         <input type="button" class="calbtn" value="-" onclick="appendToDisplay('-')">
-        <input type="button" class="calbtn" value="Tan" onclick="appendToDisplay('tan')">
-        <input type="button" class="calbtn" value="SQR" onclick="appendToDisplay('sqr')"><br><br>
+        <input type="button" class="calbtn" value="Tan" onclick="appendToDisplay('Math.tan(')">
+        <input type="button" class="calbtn" value="SQR" onclick="appendToDisplay('Math.sqrt(')"><br><br>
         <input type="button" class="numbtn" value="1" onclick="appendToDisplay('1')">
         <input type="button" class="numbtn" value="2" onclick="appendToDisplay('2')">
         <input type="button" class="numbtn" value="3" onclick="appendToDisplay('3')">
         <input type="button" class="calbtn" value="*" onclick="appendToDisplay('*')">
-        <input type="button" class="calbtn" value="Cos" onclick="appendToDisplay('cos')">
-        <input type="button" class="calbtn" value="Exp" onclick="appendToDisplay('exp')"><br><br>
+        <input type="button" class="calbtn" value="Cos" onclick="appendToDisplay('Math.cos(')">
+        <input type="button" class="calbtn" value="Exp" onclick="appendToDisplay('Math.pow(')"><br><br>
         <input type="button" class="c" value="c" onclick="clearDisplay()">
         <input type="button" class="numbtn" value="0" onclick="appendToDisplay('0')">
         <input type="button" class="equal" value="=" onclick="calculate()">
         <input type="button" class="calbtn" value="/" onclick="appendToDisplay('/')">
         <input type="button" class="calbtn" value="%" onclick="appendToDisplay('%')">
-        <input type="button" class="calbtn" value="Pi" onclick="appendToDisplay('pi')">
+        <input type="button" class="calbtn" value="Pi" onclick="appendToDisplay('Math.PI(')">
+        <input type="button" class="calbtn" value=")" onclick="appendToDisplay(')')">
     </form>
 
     <script>
@@ -119,6 +120,7 @@ body {
             try {
                 var result = eval(display);
                 document.getElementById('display').value = result;
+                
             } catch (error) {
                 document.getElementById('display').value = 'Error';
             }
