@@ -11,7 +11,8 @@ body {
 }
 
 .calc {
-    margin: auto;
+    /*margin: auto;*/
+    left:0;
     background-color: black;
     border: 2px solid whitesmoke;
     width: 50%;
@@ -71,6 +72,17 @@ body {
     background-color: green;
     color: whitesmoke;
 }
+.history{
+    right:0;
+    background-color: black;
+    border: 2px solid whitesmoke;
+    width: 50%;
+    height: 430px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 40px;
+
+}
+
 </style>
 </head>
 <body>
@@ -104,9 +116,11 @@ body {
         <input type="button" class="calbtn" value="%" onclick="appendToDisplay('%')">
         <input type="button" class="calbtn" value="Pi" onclick="appendToDisplay('Math.PI')">
         <input type="button" class="calbtn" value=")" onclick="appendToDisplay(')')">
+        
     </form>
-    <textarea id="historyDisplay" rows="5" cols="30" readonly></textarea>
-
+    <form action="" method="post">
+    <textarea id="historyDisplay" class="history" rows="5" cols="30" readonly></textarea><br><br>
+    </form>
     <script>
         var expressionArray = [];
         var historyArray = [];
@@ -139,7 +153,7 @@ body {
         }
 
         function showHistory() {
-            var historyDisplay = document.getElementById('historyDisplay');
+            var historyDisplay = document.getElementById('display');
             historyDisplay.value = historyArray.join('\n');
         }
 
