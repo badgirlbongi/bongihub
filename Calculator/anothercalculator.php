@@ -107,25 +107,33 @@ body {
     </form>
 
     <script>
+        var expressionArray = [];
+
         function appendToDisplay(value) {
-            document.getElementById('display').value += value;
+            expressionArray.push(value);
+            updateDisplay();
         }
 
         function clearDisplay() {
-            document.getElementById('display').value = '';
+            expressionArray = [];
+            updateDisplay();
+        }
+
+        function updateDisplay() {
+            document.getElementById('display').value = expressionArray.join('');
         }
 
         function calculate() {
-            var display = document.getElementById('display').value;
+            var display = expressionArray.join('');
             try {
                 var result = eval(display);
                 document.getElementById('display').value = result;
-                
-            } catch (error) {
-                document.getElementById('display').value = 'Error';
+                expressionArray = [result]; // Update the array with the result
+            } 
+            catch (error) {
+               document.getElementById('display').value = 'Error';
             }
         }
-
     </script>
 </div>
 </body>
