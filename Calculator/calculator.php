@@ -72,19 +72,34 @@ body {
     background-color: green;
     color: whitesmoke;
 }
-.history{
-    right:0;
+.history-box {
+    position: fixed;
+    top: 0;
+    right: 0;
     background-color: black;
+    width: 40%; /* Adjust the width as needed */
     border: 2px solid whitesmoke;
-    width: 50%;
-    height: 430px;
     border-radius: 20px;
     box-shadow: 10px 10px 40px;
-
 }
-
+.history-box h2 {
+    text-align: center;
+    color: whitesmoke;
+    margin: 0;
+    padding: 10px;
+}
+.history {
+    width: 100%;
+    height: 430px;
+    background-color: black;
+    font-weight: 500;
+    font-size: large;
+    color: whitesmoke;
+    
+}
 </style>
 </head>
+
 <body>
 <div class="calc">
     <form action="" method="post">
@@ -116,11 +131,13 @@ body {
         <input type="button" class="calbtn" value="%" onclick="appendToDisplay('%')">
         <input type="button" class="calbtn" value="Pi" onclick="appendToDisplay('Math.PI')">
         <input type="button" class="calbtn" value=")" onclick="appendToDisplay(')')">
-        
+
+        <div class="history-box">
+        <h2>History</h2>
+        <textarea id="historyDisplay" class="history" rows="5" cols="30" readonly></textarea><br><br>
+    </div>
     </form>
-    <form action="" method="post">
-    <textarea id="historyDisplay" class="history" rows="5" cols="30" readonly></textarea><br><br>
-    </form>
+
     <script>
         var expressionArray = [];
         var historyArray = [];
@@ -153,7 +170,7 @@ body {
         }
 
         function showHistory() {
-            var historyDisplay = document.getElementById('display');
+            var historyDisplay = document.getElementById('historyDisplay');
             historyDisplay.value = historyArray.join('\n');
         }
 
