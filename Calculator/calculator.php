@@ -102,7 +102,7 @@ body {
         <input type="button" class="equal" value="=" onclick="calculate()">
         <input type="button" class="calbtn" value="/" onclick="appendToDisplay('/')">
         <input type="button" class="calbtn" value="%" onclick="appendToDisplay('%')">
-        <input type="button" class="calbtn" value="Pi" onclick="appendToDisplay('Math.PI(')">
+        <input type="button" class="calbtn" value="Pi" onclick="appendToDisplay('Math.PI')">
         <input type="button" class="calbtn" value=")" onclick="appendToDisplay(')')">
     </form>
 
@@ -115,7 +115,7 @@ body {
         }
 
         function clearDisplay() {
-            expressionArray = [];
+            expressionArray.pop(); // Remove the last element from the array
             updateDisplay();
         }
 
@@ -131,7 +131,7 @@ body {
                 expressionArray = [result]; // Update the array with the result
             } 
             catch (error) {
-               document.getElementById('display').value = 'Error';
+                document.getElementById('display').value = 'Error';
             }
         }
     </script>
