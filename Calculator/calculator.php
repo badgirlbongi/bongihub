@@ -84,7 +84,7 @@ body {
         <input type="button" class="numbtn" value="9" onclick="appendToDisplay('9')">
         <input type="button" class="calbtn" value="+" onclick="appendToDisplay('+')">
         <input type="button" class="calbtn" value="Sin" onclick="appendToDisplay('Math.sin(')">
-        <input type="button" class="calbtn" value="History"><br><br>
+        <input type="button" class="calbtn" value="History" onclick="showHistory()"><br><br>
         <input type="button" class="numbtn" value="4" onclick="appendToDisplay('4')">
         <input type="button" class="numbtn" value="5" onclick="appendToDisplay('5')">
         <input type="button" class="numbtn" value="6" onclick="appendToDisplay('6')">
@@ -105,9 +105,11 @@ body {
         <input type="button" class="calbtn" value="Pi" onclick="appendToDisplay('Math.PI')">
         <input type="button" class="calbtn" value=")" onclick="appendToDisplay(')')">
     </form>
+    <textarea id="historyDisplay" rows="5" cols="30" readonly></textarea>
 
     <script>
         var expressionArray = [];
+        var historyArray = [];
 
         function appendToDisplay(value) {
             expressionArray.push(value);
@@ -128,12 +130,19 @@ body {
             try {
                 var result = eval(display);
                 document.getElementById('display').value = result;
+                historyArray.push(display); //save the current expression in history
                 expressionArray = [result]; // Update the array with the result
             } 
             catch (error) {
                 document.getElementById('display').value = 'Error';
             }
         }
+
+        function showHistory() {
+            var historyDisplay = document.getElementById('historyDisplay');
+            historyDisplay.value = historyArray.join('\n');
+        }
+
     </script>
 </div>
 </body>
