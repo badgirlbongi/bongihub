@@ -1,12 +1,11 @@
-* {
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
 }
-
-header {
+header{
     position: fixed;
     right: 0;
     top: 0;
@@ -18,18 +17,15 @@ header {
     padding: 33px 9%;
     background: transparent;
 }
-
-.logo {
+.logo{
     font-size: 30px;
     font-weight: 700;
     color: white;
 }
-
-.navlist {
+.navlist{
     display: flex;
 }
-
-.navlist a {
+.navilist a{
     color: white;
     margin-left: 60px;
     font-size: 15px;
@@ -37,19 +33,17 @@ header {
     border-bottom: 2px solid transparent;
     transition: all .55s ease;
 }
-
-.navlist a:hover {
+.navilist a:hover{
     border-bottom: 2px solid white;
 }
-
-#menu-icon {
+#menu-icon{
     color: white;
     font-size: 30px;
     z-index: 10001;
     cursor: pointer;
-    display: block; /* Add this line */
+    display: none;
 }
-.hero {
+.hero{
     height: 100%;
     width: 100%;
     min-height: 100vh;
