@@ -217,7 +217,7 @@ section{
     .navlist{
         position: absolute;
         top: 100%;
-        right: 0;
+        right: -100%;
         width: 300px;
         height: 40vh;
         background: #4d9559;
@@ -234,5 +234,12 @@ section{
     }
     .navlist.open{
         right: 0;
+    }
+}
+
+@media (max-width: 680px){
+    .hero-img img{
+        width: 100%;
+        height: auto;
     }
 }
