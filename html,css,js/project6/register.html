@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  <!--for making sure it fits-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+        <!--custom css link-->
+        <link rel="stylesheet" type="text/css" href="regstyle.css">
+
+</head>
+
+<body>
+
+    <form action="process_form.php" method="post">
+          
+        <div class="form-container">
+        <label for="name" class="required">Name:</label>
+        <input type="text" name="name" required><br>
+
+        <label for="lastname" class="required">Last Name:</label>
+        <input type="text" name="lastname" required><br>
+
+        <label for="id" class="required ">Identity Number:</label>
+        <input type="text" name="id" required><br>
+
+        <label for="email" class="required ">Email:</label>
+        <input type="email" name="email" required><br>
+
+        <label for="cellnumber">Phone:</label>
+        <input type="text" name="cellnumber"><br>
+
+        <label for="companyname">Company name:</label>
+        <input type="text" name="companyname"><br>
+
+        <label for="role">Job description:</label> 
+        <select id="role" name="role">
+            <option value="intern">Intern employee</option>
+            <option value="parttime">Part-time Employee</option>
+            <option value="permanent">Permanent Employee</option>
+            <option value="mentor">Mentor</option>
+            <option value="owner">Owner/Boss</option>
+        </select><br>
+
+        <label for="role">Sign up as:</label> 
+        <select id="role" name="role">
+            <option value="employee">Employee</option>
+            <option value="admin">Administrator</option>
+        </select><br>
+
+        <label for="password" class="required">Password:</label>
+        <input type="password" name="password" required><br>
+
+        <label for="password2" class="required">Password Confirm:</label>
+        <input type="password" name="password2" required><br>
+        
+
+        <div class="button-container">
+            <input type="submit" value="Register">
+            <input type="submit" value="Login">
+        </div>
+        
+        
+        <label>
+            <input type="checkbox" name="terms"> I accept the terms and conditions
+        </label><br>
+
+        
+        <!--<a href = "https://localhost/learnerhub/secondinfo"> forgot password </a> -->
+         
+    </form>
+
+        
+
+</body>
+</html>
