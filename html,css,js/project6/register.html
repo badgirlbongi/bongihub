@@ -3,7 +3,7 @@
 <head>  <!--for making sure it fits-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
+    <title>Registration</title>
         <!--custom css link-->
         <link rel="stylesheet" type="text/css" href="regstyle.css">
 
@@ -12,7 +12,10 @@
 <body>
 
     <form action="process_form.php" method="post">
-          
+        <div class="home-text">
+            <h1>Register</h1>
+        </div>
+       
         <div class="form-container">
         <label for="name" class="required">Name:</label>
         <input type="text" name="name" required><br>
@@ -24,7 +27,7 @@
         <input type="text" name="id" required><br>
 
         <label for="email" class="required ">Email:</label>
-        <input type="email" name="email" required><br>
+        <input type="text" name="email" required><br>
 
         <label for="cellnumber">Phone:</label>
         <input type="text" name="cellnumber"><br>
@@ -48,7 +51,7 @@
         </select><br>
 
         <label for="password" class="required">Password:</label>
-        <input type="password" name="password" required><br>
+        <input type="text" name="password" required><br>
 
         <label for="password2" class="required">Password Confirm:</label>
         <input type="password" name="password2" required><br>
@@ -56,7 +59,7 @@
 
         <div class="button-container">
             <input type="submit" value="Register">
-            <input type="submit" value="Login">
+            <input type="submit" value="Login" href="index.html">
         </div>
         
         
