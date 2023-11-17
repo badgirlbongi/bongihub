@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap picture webpage</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--boxicons link-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
   </head>
-  <body>
+  <body class="bg-warning-subtle">
     
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-warning-subtle">
@@ -18,37 +20,108 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link active text-warning" aria-current="page" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="destination.html">Destinations</a>
+                <a class="nav-link text-warning" href="destination.html">Destinations</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
+                <a class="nav-link text-warning" href="about.html">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
+                <a class="nav-link text-warning" href="contact.html">Contact Us</a>
               </li>
             </ul>
           </div>
           <form class="form-inline ml-auto">
             <div class="input-group">
               <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-warning" type="submit">Search</button>
+              <button class="btn btn-outline-warning text-warning" type="submit">Search</button>
             </div>
           </form>
           
         </div>
     </nav>
-    <!-- Contact Page Content -->
-    <div class="container mt-5">
-        <h1>Contact Us</h1>
-        <p>This is the Contact Us page.</p>
-    </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Contact Page Content -->
+  <div class="container mt-5">
+    <h3 class="text-warning">Connect with Us</h3>
+    <p class="text-warning">Follow us on our socials and let's be friends!!</p>
+    <a href="https://www.facebook.com/YourBookstore">
+      <i class='bx bxl-facebook text-warning' style="font-size: 3em;"></i></a>
+
+    <a href="https://twitter.com/YourBookstore">
+      <i class='bx bxl-twitter text-warning' style="font-size: 3em;"></i></a>
+
+    <a href="https://www.instagram.com/YourBookstore">
+      <i class='bx bxl-instagram text-warning' style="font-size: 3em;"></i></a>
+
+      <a href="#"><i class='bx bxl-linkedin text-warning' style="font-size: 3em;"></i></a>
+
+  </div>                    
+
+<!-- Reviews and Comments Section -->
+<div class="container mt-5">
+  <h3 class="text-warning">Let us know what you thinking</h3>
+  <form id="reviewForm">
+      <div class="form-group">
+          <label for="userName">Your Name:</label>
+          <input type="text" class="form-control" id="userName" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+          <label for="email">Your Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label>Rating:</label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="rating" id="rating5" value="5" required>
+            <label class="form-check-label" for="rating5">
+                5 stars
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="rating" id="rating4" value="4" required>
+            <label class="form-check-label" for="rating4">
+                4 stars
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="rating" id="rating3" value="3" required>
+            <label class="form-check-label" for="rating3">
+                3 stars
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="rating" id="rating2" value="2" required>
+            <label class="form-check-label" for="rating2">
+                2 stars
+            </label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="rating" id="rating1" value="1" required>
+            <label class="form-check-label" for="rating1">
+                1 star
+            </label>
+        </div>
+    </div>
+    
+    <form>
+    
+      <div class="form-group">
+          <label for="comment">Your Review:</label>
+          <textarea class="form-control" id="comment" rows="4" required></textarea>
+      </div>
+      <button type="button" class="btn btn-warning" onclick="submitReview()">Submit Review</button>
+  </form>
+
+
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
