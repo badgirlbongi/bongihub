@@ -124,58 +124,135 @@
       </div>
     </div>
   </section>
-
   <div class="album py-5 bg-body-tertiary">
     <div class="container">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="row row-cols-1 row-cols-md-3 g-3">
 
-        <div class="col">
-          <div class="card shadow-sm">
-              <img src="img/WC/1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Your Image Description">
-                <div class="card-body">
-                    <p class="card-text">
-                      The Western Cape province in South Africa enchants with its diverse beauty, from the iconic
-                      Table Mountain overseeing Cape Town to the sweeping vineyards of the Cape Winelands, 
-                      offering a blend of cosmopolitan charm, breathtaking landscapes, and world-class wine experiences.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+            <div class="col">
+                <div class="card shadow-sm">
+                  <!--carousel-->
+                  <div id="carouselExampleIndicators" class="carousel slide">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="img/WC/1.jpg" class="d-block w-100 h-50" alt="westerncape">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/WC/westerncape.webp" class="d-block w-100" alt="easterncape">
+                      </div>
+                  </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+             </div>
+                    <div class="card-body">
+                      <p class="card-text">
+                        The Western Cape province in South Africa enchants with its diverse beauty, from the iconic
+                        Table Mountain overseeing Cape Town to the sweeping vineyards of the Cape Winelands, 
+                        offering a blend of cosmopolitan charm, breathtaking landscapes, and world-class wine experiences.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary" id="WC">View</button>
+                            </div>
+                            <small class="text-body-secondary">places</small>
                         </div>
-                        <small class="text-body-secondary">places</small>
                     </div>
                 </div>
             </div>
-        </div>
-    
-        <div class="col">
-          <div class="card shadow-sm">
-              <img src="img/EC/2.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Your Image Description">
-                <div class="card-body">
+
+            <div class="col">
+              <div class="card shadow-sm">
+                <!--carousel-->
+                <div id="carouselExampleIndicators" class="carousel slide">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  </div>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="img/EC/2.jpg" class="d-block w-100 h-50" alt="westerncape">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="img/EC/easterncape.jpg" class="d-block w-100" alt="easterncape">
+                    </div>
+                </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+           </div>
+                  <div class="card-body">
                     <p class="card-text">
                       The Eastern Cape, with its rugged Wild Coast, rich history including Nelson Mandela's birthplace, and diverse wildlife reserves, 
                       embodies an untamed allure and cultural significance in South Africa's landscape.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                    </div>
-                        <small class="text-body-secondary"> places</small>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-              <img src="img/NC/3.webp" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Your Image Description">
-                <div class="card-body">
-                    <p class="card-text">
-                      The Northern Cape, renowned for its vast semi-desert landscapes, ancient rock formations like the majestic Augrabies Falls,
-                      and stargazing opportunities in the remote wilderness, offers a serene and unique exploration of South Africa's natural wonders.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                              <button type="button" class="btn btn-sm btn-outline-secondary" id="WC">View</button>
+                          </div>
+                          <small class="text-body-secondary">places</small>
                       </div>
-                        <small class="text-body-secondary">9 places</small>
+                  </div>
+              </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <!--carousel-->
+              <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/NC/3.webp" class="d-block w-100 h-50" alt="westerncape">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/NC/kimberley.png" class="d-block w-100" alt="easterncape">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/NC/Upington.jpg" class="d-block w-100" alt="easterncape">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/NC/sutherland.jpg" class="d-block w-100" alt="easterncape">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/NC/kuruman.jpg" class="d-block w-100" alt="easterncape">
+                  </div>
+              </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+         </div>
+                <div class="card-body">
+                  <p class="card-text">
+                    The Northern Cape, renowned for its vast semi-desert landscapes, ancient rock formations like the majestic Augrabies Falls,
+                    and stargazing opportunities in the remote wilderness, offers a serene and unique exploration of South Africa's natural wonders.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary" id="WC">View</button>
+                        </div>
+                        <small class="text-body-secondary"> 9 places</small>
                     </div>
                 </div>
             </div>
@@ -183,8 +260,30 @@
 
         <div class="col">
           <div class="card shadow-sm">
-              <img src="img/KZN/4.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Your Image Description">
-                <div class="card-body">
+            <!--carousel-->
+            <div id="carouselExampleIndicators" class="carousel slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/KZN/4.jpg" class="d-block w-100 h-50" alt="westerncape">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/KZN/kwazulunatal.jpg" class="d-block w-100" alt="easterncape">
+                </div>
+            </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+       <div class="card-body">
                     <p class="card-text">
                       KwaZulu-Natal, nestled along the eastern coast of South Africa, boasts a rich tapestry of landscapes,
                       from the majestic Drakensberg Mountains to the golden shores of its coastline, embodying a fusion of Zulu traditions, 
@@ -201,8 +300,30 @@
 
         <div class="col">
           <div class="card shadow-sm">
-              <img src="img/MP/5.png" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Your Image Description">
-                <div class="card-body">
+            <!--carousel-->
+            <div id="carouselExampleIndicators" class="carousel slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/MP/5.png" class="d-block w-100 h-50" alt="westerncape">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/MP/mpumalanga.jpg" class="d-block w-100" alt="easterncape">
+                </div>
+            </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+       </div>
+           <div class="card-body">
                     <p class="card-text">
                       Mpumalanga, known for its lush landscapes, dramatic escarpment along the Blyde River Canyon, and wildlife-rich Kruger National Park,
                       presents a breathtaking immersion into South Africa's scenic beauty and wildlife wonders.</p>
@@ -218,8 +339,30 @@
 
         <div class="col">
           <div class="card shadow-sm">
-              <img src="img/FS/6.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Your Image Description">
-                <div class="card-body">
+            <!--carousel-->
+            <div id="carouselExampleIndicators" class="carousel slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/FS/6.jpg" class="d-block w-100 h-50" alt="westerncape">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/FS/freestate.jpg" class="d-block w-100" alt="easterncape">
+                </div>
+            </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+       </div>
+       <div class="card-body">
                     <p class="card-text">
                       The Free State province in South Africa captivates with its vast golden plains, historic charm in towns like Bloemfontein, 
                       and agricultural richness, encapsulating a serene and storied essence of the country's heartland.</p>
@@ -235,8 +378,30 @@
 
         <div class="col">
           <div class="card shadow-sm">
-              <img src="img/G/7.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Your Image Description">
-                <div class="card-body">
+            <!--carousel-->
+            <div id="carouselExampleIndicators" class="carousel slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/G/7.jpg" class="d-block w-100 h-50" alt="westerncape">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/G/gauteng.jpg" class="d-block w-100" alt="easterncape">
+                </div>
+            </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+       </div> 
+       <div class="card-body">
                     <p class="card-text">
                       Gauteng, the vibrant economic hub of South Africa, pulsates with the energy of Johannesburg and Pretoria, offering a dynamic blend of urban sophistication, 
                       cultural diversity, and historical significance.</p>
@@ -252,8 +417,30 @@
 
         <div class="col">
           <div class="card shadow-sm">
-              <img src="img/NW/8.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Your Image Description">
-                <div class="card-body">
+            <!--carousel-->
+            <div id="carouselExampleIndicators" class="carousel slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/NW/8.jpg" class="d-block w-100 h-50" alt="westerncape">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/NW/northwest.webp" class="d-block w-100" alt="easterncape">
+                </div>
+            </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+       </div>
+       <div class="card-body">
                     <p class="card-text">
                     North West province, adorned with the scenic beauty of the Pilanesberg National Park, Sun City's entertainment allure, and rural charm,
                     invites exploration into a realm of natural splendor and leisurely pursuits in South Africa.</p>
@@ -269,8 +456,30 @@
 
         <div class="col">
           <div class="card shadow-sm">
-              <img src="img/L/9.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Your Image Description">
-                <div class="card-body">
+            <!--carousel-->
+            <div id="carouselExampleIndicators" class="carousel slide">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="img/L/9.jpg" class="d-block w-100 h-50" alt="westerncape">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/L/limpopo.jpg" class="d-block w-100" alt="easterncape">
+                </div>
+            </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+       </div>
+       <div class="card-body">
                     <p class="card-text">
                     Limpopo province, steeped in ancient baobab trees, the diverse wildlife of Kruger National Park's northern reaches, and cultural richness,
                     beckons with its untamed landscapes and a deep connection to South Africa's natural and historical heritage.</p>
