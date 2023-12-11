@@ -6,7 +6,7 @@ $password = "";
 $database = "tourza_db";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$conn = new mysqli($servername, $username, $password, $database);
 
 // Check connection
 if ($conn->connect_error) {
@@ -29,6 +29,7 @@ $queryCreateTable = "CREATE TABLE IF NOT EXISTS place_ratings (
     id INT AUTO_INCREMENT PRIMARY KEY,
     place_id INT,
     rating FLOAT,
+    comment TEXT,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );";
 
@@ -38,7 +39,14 @@ if ($conn->query($queryCreateTable) === TRUE) {
     echo "Error creating table: " . $conn->error;
 }
 
+if ($conn->query($queryCreateTable) === TRUE) {
+    // Table created successfully or already exists
+} else {
+    echo "Error creating table: " . $conn->error;
+}
+
 // Close connection
 $conn->close();
 
 ?>
+

@@ -16,6 +16,17 @@
     <link rel="stylesheet" href="assets\dist\css\bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
+    <script>
+      function showPopup() {
+        var comment = prompt("Please enter your comment:");
+        if (comment != null) {
+          // If the user enters a comment, proceed to submit the rating and comment via form
+          document.getElementById("comment").value = comment;
+          document.getElementById("ratingForm").submit();
+        }
+      }
+    </script>
+
   </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -119,7 +130,7 @@
                       mining in the region. Today, it serves as a museum and tourist attraction, offering visitors a glimpse into the fascinating history of diamond mining in South Africa.</p>
                       <p><a href="https://thebighole.co.za/" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Visit this place</a></p>
                       <!-- Rating Form -->
-                      <form action="process.php" method="post">
+                      <form id="ratingForm" action="process.php" method="post">
                         <p>Rate this place:</p>
                         <label><input type="radio" name="rating" value="1"> ★</label>
                         <label><input type="radio" name="rating" value="2"> ★★</label>
@@ -127,14 +138,15 @@
                         <label><input type="radio" name="rating" value="4"> ★★★★</label>
                         <label><input type="radio" name="rating" value="5"> ★★★★★</label>
                         <br><br>
+                        <input type="hidden" id="comment" name="comment" value="">
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
-                            <button type="submit" name="submit_rating" class="btn btn-sm btn-outline-secondary">Rate</button>
+                            <button type="button" onclick="showPopup()" class="btn btn-sm btn-outline-secondary">Rate</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary">Reviews</button>
                           </div>
-                        <small class="text-body-secondary">Reviews</small>
-                      </div>
-                    </form>
+                          <small class="text-body-secondary">Reviews</small>
+                        </div>
+                      </form>
                   </div>
             </div>
         </div>

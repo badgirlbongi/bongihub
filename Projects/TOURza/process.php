@@ -1,6 +1,4 @@
 <?php
-
-//for ratings
 // Establish database connection
 $servername = "localhost";
 $username = "root";
@@ -14,13 +12,14 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-if (isset($_POST['submit_rating'])) {
-    if (isset($_POST['rating'])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['rating']) && isset($_POST['comment'])) {
         $rating = $_POST['rating'];
+        $comment = $_POST['comment'];
 
         // Prepare and bind the SQL statement
-        $stmt = $conn->prepare("INSERT INTO place_ratings (rating) VALUES (?)");
-        $stmt->bind_param("i", $rating);
+        $stmt = $conn->prepare("INSERT INTO place_ratings (rating, comment) VALUES (?, ?)");
+        $stmt->bind_param("is", $rating, $comment);
 
         // Execute the query
         $stmt->execute();
@@ -42,11 +41,10 @@ if (isset($_POST['submit_rating'])) {
 
         echo "Average Rating: " . number_format($averageRating, 2);
     } else {
-        echo "Please select a rating!";
+        echo "Please select a rating and add a comment!";
     }
 }
 
 $conn->close();
-
-
 ?>
+
