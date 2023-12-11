@@ -25,4 +25,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     echo "Form submission error.";
 }
+
+//for ratings
+// Check if form is submitted
+if (isset($_POST['submit_rating'])) {
+    // Check if rating is selected
+    if (isset($_POST['rating'])) {
+        // Get the submitted rating
+        $rating = $_POST['rating'];
+
+        // For demonstration
+        $ratings = []; 
+        
+        // Add the new rating to the existing ratings array
+        $ratings[] = $rating;
+
+        // Calculate the average rating
+        $averageRating = array_sum($ratings) / count($ratings);
+
+        // For checking echo the average rating
+        echo "Average Rating: " . number_format($averageRating, 2);
+        
+
+    } else {
+        echo "Please select a rating!";
+    }
+}
+
 ?>
