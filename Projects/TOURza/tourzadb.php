@@ -1,32 +1,26 @@
 <?php
 
-// Establish database connection
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "tourza_db";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+// Create connection
+$conn = new mysqli($servername, $username, $password);
 
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-//create tables
-$queryCreateTables = "
-    CREATE TABLE place_ratings (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        rating INT
-    );";
-
-if ($conn->multi_query($queryCreateTables)) {
-    echo "Table created successfully";
+// Create database
+$sql = "CREATE DATABASE IF NOT EXISTS tourza_db";
+if ($conn->query($sql) === TRUE) {
+    echo "Database created successfully";
 } else {
-    echo "Error creating tables: " . $conn->error;
+    echo "Error creating database: " . $conn->error;
 }
 
-//close connection
+// Close connection
 $conn->close();
 
 ?>
