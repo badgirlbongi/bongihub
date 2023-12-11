@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Store the review in a file
     $reviewData = "Review by: $userName\nEmail: $email\nRating: $rating stars\nComment: $comment\n\n";
-    $file = 'reviews.txt';
+    $file = 'tourzaReview.txt';
     file_put_contents($file, $reviewData, FILE_APPEND | LOCK_EX);
 
     echo "Review submitted successfully!";
