@@ -163,7 +163,7 @@
                        can experience the park's untamed beauty through game drives, guided tours, and self-drive safaris, reveling in the serenity of this remote and captivating wilderness.</p>
                        <p><a href="https://kgalagaditransfrontierpark.co.za/" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Visit this place</a></p>
                        <!-- Rating Form -->
-                       <form action="process.php" method="post">
+                       <form id="ratingForm" action="process.php" method="post">
                         <p>Rate this place:</p>
                         <label><input type="radio" name="rating" value="1"> ★</label>
                         <label><input type="radio" name="rating" value="2"> ★★</label>
@@ -171,14 +171,15 @@
                         <label><input type="radio" name="rating" value="4"> ★★★★</label>
                         <label><input type="radio" name="rating" value="5"> ★★★★★</label>
                         <br><br>
+                        <input type="hidden" id="comment" name="comment" value="">
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
-                            <button type="submit" name="submit_rating" class="btn btn-sm btn-outline-secondary">Rate</button>
+                            <button type="button" onclick="showPopup()" class="btn btn-sm btn-outline-secondary">Rate</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary">Reviews</button>
                           </div>
-                        <small class="text-body-secondary">Reviews</small>
-                      </div>
-                    </form>
+                          <small class="text-body-secondary">Reviews</small>
+                        </div>
+                      </form>
                 </div>
             </div>
         </div>
@@ -195,7 +196,7 @@
                       species such as dassies, monkeys, and a variety of birdlife. Visitors can explore the park through hiking trails, viewpoints, and guided tours, immersing themselves in the raw beauty of this arid yet mesmerizing landscape.</p>
                       <p><a href="https://augrabiesnationalpark.co.za/" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Visit this place</a></p>
                        <!-- Rating Form -->
-                       <form action="process.php" method="post">
+                       <form id="ratingForm" action="process.php" method="post">
                         <p>Rate this place:</p>
                         <label><input type="radio" name="rating" value="1"> ★</label>
                         <label><input type="radio" name="rating" value="2"> ★★</label>
@@ -203,12 +204,13 @@
                         <label><input type="radio" name="rating" value="4"> ★★★★</label>
                         <label><input type="radio" name="rating" value="5"> ★★★★★</label>
                         <br><br>
+                        <input type="hidden" id="comment" name="comment" value="">
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
-                            <button type="submit" name="submit_rating" class="btn btn-sm btn-outline-secondary">Rate</button>
+                            <button type="button" onclick="showPopup()" class="btn btn-sm btn-outline-secondary">Rate</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary">Reviews</button>
                           </div>
-                        <small class="text-body-secondary">Reviews</small>
+                          <small class="text-body-secondary">Reviews</small>
                         </div>
                       </form>
                 </div>
@@ -227,7 +229,7 @@
                       Its location in an area known for clear skies and minimal light pollution enhances its capabilities, allowing for groundbreaking research and discoveries in the field of astronomy.</p>
                       <p><a href="https://www.salt.ac.za/" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Visit this place</a></p> 
                       <!-- Rating Form -->
-                      <form action="process.php" method="post">
+                      <form id="ratingForm" action="process.php" method="post">
                         <p>Rate this place:</p>
                         <label><input type="radio" name="rating" value="1"> ★</label>
                         <label><input type="radio" name="rating" value="2"> ★★</label>
@@ -235,12 +237,13 @@
                         <label><input type="radio" name="rating" value="4"> ★★★★</label>
                         <label><input type="radio" name="rating" value="5"> ★★★★★</label>
                         <br><br>
+                        <input type="hidden" id="comment" name="comment" value="">
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
-                            <button type="submit" name="submit_rating" class="btn btn-sm btn-outline-secondary">Rate</button>
+                            <button type="button" onclick="showPopup()" class="btn btn-sm btn-outline-secondary">Rate</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary">Reviews</button>
                           </div>
-                        <small class="text-body-secondary">Reviews</small>
+                          <small class="text-body-secondary">Reviews</small>
                         </div>
                       </form>
                 </div>
@@ -259,7 +262,7 @@
                       opportunities for game drives, guided walks, and birdwatching, inviting guests to immerse themselves in the tranquility of this lesser-known but captivating wilderness.</p>
                       <p><a href="https://mokalanationalpark.co.za/" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Visit this place</a></p>
                       <!-- Rating Form -->
-                      <form action="process.php" method="post">
+                      <form id="ratingForm" action="process.php" method="post">
                         <p>Rate this place:</p>
                         <label><input type="radio" name="rating" value="1"> ★</label>
                         <label><input type="radio" name="rating" value="2"> ★★</label>
@@ -267,15 +270,15 @@
                         <label><input type="radio" name="rating" value="4"> ★★★★</label>
                         <label><input type="radio" name="rating" value="5"> ★★★★★</label>
                         <br><br>
+                        <input type="hidden" id="comment" name="comment" value="">
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
-                            <button type="submit" name="submit_rating" class="btn btn-sm btn-outline-secondary">Rate</button>
+                            <button type="button" onclick="showPopup()" class="btn btn-sm btn-outline-secondary">Rate</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary">Reviews</button>
                           </div>
+                          <small class="text-body-secondary">Reviews</small>
                         </div>
-                        <small class="text-body-secondary">Reviews</small>
-                      </div>
-                    </form>
+                      </form>
                 </div>
             </div>
         </div>
@@ -293,7 +296,7 @@
                        flowering plants, making it a haven for nature enthusiasts, hikers, and photographers eager to witness the striking beauty of this semi-desert environment.</p>
                        <p><a href="http://denc.ncpg.gov.za/index.php/component/sppagebuilder/?view=page&id=6&Itemid=40" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Visit this place</a></p>
                        <!-- Rating Form -->
-                       <form action="process.php" method="post">
+                       <form id="ratingForm" action="process.php" method="post">
                         <p>Rate this place:</p>
                         <label><input type="radio" name="rating" value="1"> ★</label>
                         <label><input type="radio" name="rating" value="2"> ★★</label>
@@ -301,14 +304,15 @@
                         <label><input type="radio" name="rating" value="4"> ★★★★</label>
                         <label><input type="radio" name="rating" value="5"> ★★★★★</label>
                         <br><br>
+                        <input type="hidden" id="comment" name="comment" value="">
                         <div class="d-flex justify-content-between align-items-center">
                           <div class="btn-group">
-                            <button type="submit" name="submit_rating" class="btn btn-sm btn-outline-secondary">Rate</button>
+                            <button type="button" onclick="showPopup()" class="btn btn-sm btn-outline-secondary">Rate</button>
                             <button type="button" class="btn btn-sm btn-outline-secondary">Reviews</button>
                           </div>
-                        <small class="text-body-secondary">Reviews</small>
-                      </div>
-                    </form>
+                          <small class="text-body-secondary">Reviews</small>
+                        </div>
+                      </form>
                 </div>
             </div>
         </div>
@@ -322,7 +326,7 @@
                     </p>
                     <p><a href="https://thebighole.co.za/" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Visit this place</a></p>
                      <!-- Rating Form -->
-                     <form action="process.php" method="post">
+                     <form id="ratingForm" action="process.php" method="post">
                       <p>Rate this place:</p>
                       <label><input type="radio" name="rating" value="1"> ★</label>
                       <label><input type="radio" name="rating" value="2"> ★★</label>
@@ -330,14 +334,15 @@
                       <label><input type="radio" name="rating" value="4"> ★★★★</label>
                       <label><input type="radio" name="rating" value="5"> ★★★★★</label>
                       <br><br>
+                      <input type="hidden" id="comment" name="comment" value="">
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                          <button type="submit" name="submit_rating" class="btn btn-sm btn-outline-secondary">Rate</button>
+                          <button type="button" onclick="showPopup()" class="btn btn-sm btn-outline-secondary">Rate</button>
                           <button type="button" class="btn btn-sm btn-outline-secondary">Reviews</button>
                         </div>
-                      <small class="text-body-secondary">Reviews</small>
-                    </div>
-                  </form>
+                        <small class="text-body-secondary">Reviews</small>
+                      </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -351,7 +356,7 @@
                   </p>
                   <p><a href="https://namakwatoere.com/" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Visit this place</a></p>
                    <!-- Rating Form -->
-                   <form action="process.php" method="post">
+                   <form id="ratingForm" action="process.php" method="post">
                     <p>Rate this place:</p>
                     <label><input type="radio" name="rating" value="1"> ★</label>
                     <label><input type="radio" name="rating" value="2"> ★★</label>
@@ -359,14 +364,15 @@
                     <label><input type="radio" name="rating" value="4"> ★★★★</label>
                     <label><input type="radio" name="rating" value="5"> ★★★★★</label>
                     <br><br>
+                    <input type="hidden" id="comment" name="comment" value="">
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="submit" name="submit_rating" class="btn btn-sm btn-outline-secondary">Rate</button>
+                        <button type="button" onclick="showPopup()" class="btn btn-sm btn-outline-secondary">Rate</button>
                         <button type="button" class="btn btn-sm btn-outline-secondary">Reviews</button>
                       </div>
-                    <small class="text-body-secondary">Reviews</small>
-                  </div>
-                </form>
+                      <small class="text-body-secondary">Reviews</small>
+                    </div>
+                  </form>
                 </div>
             </div>
           </div>
@@ -380,7 +386,7 @@
                     </p>
                     <p><a href="https://www.richtersveldnationalpark.co.za/" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Visit this place</a></p>
                      <!-- Rating Form -->
-                     <form action="process.php" method="post">
+                     <form id="ratingForm" action="process.php" method="post">
                       <p>Rate this place:</p>
                       <label><input type="radio" name="rating" value="1"> ★</label>
                       <label><input type="radio" name="rating" value="2"> ★★</label>
@@ -388,14 +394,15 @@
                       <label><input type="radio" name="rating" value="4"> ★★★★</label>
                       <label><input type="radio" name="rating" value="5"> ★★★★★</label>
                       <br><br>
+                      <input type="hidden" id="comment" name="comment" value="">
                       <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                          <button type="submit" name="submit_rating" class="btn btn-sm btn-outline-secondary">Rate</button>
+                          <button type="button" onclick="showPopup()" class="btn btn-sm btn-outline-secondary">Rate</button>
                           <button type="button" class="btn btn-sm btn-outline-secondary">Reviews</button>
+                        </div>
+                        <small class="text-body-secondary">Reviews</small>
                       </div>
-                      <small class="text-body-secondary">Reviews</small>
-                    </div>
-                  </form>
+                    </form>
                 </div>
             </div>
         </div>
