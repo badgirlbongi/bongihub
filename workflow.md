@@ -8,5 +8,5 @@ Folder (projects) subfolder (TOURza)
 changed the about picture on the about.html
 Done updating info and pictures on the kwazulunatal.html
 Done updating info and pictures on the limpopo.html
-
+Done updating info and pictures on the mpumalanga.html
 
