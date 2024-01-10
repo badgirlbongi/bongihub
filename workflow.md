@@ -13,3 +13,4 @@ Done updating info and pictures on the northwest.html
 
 01/10/2024
 Folder (projects) subfolder (TOURza)
+Done updating info and pictures on the weesterncape.html
