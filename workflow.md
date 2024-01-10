@@ -10,3 +10,6 @@ Done updating info and pictures on the kwazulunatal.html
 Done updating info and pictures on the limpopo.html
 Done updating info and pictures on the mpumalanga.html
 Done updating info and pictures on the northwest.html
+
+01/10/2024
+Folder (projects) subfolder (TOURza)
