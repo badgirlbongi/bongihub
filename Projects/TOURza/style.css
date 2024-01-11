@@ -75,4 +75,11 @@
     display: block !important;
   }
 
+    /* Add a class for hiding content */
+  .hidden {
+    display: none;
+  }
+
+
+
   

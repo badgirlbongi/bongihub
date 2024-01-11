@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <link rel="stylesheet" href="assets\dist\css\bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 
     <script>
       function showPopup() {
@@ -25,9 +27,24 @@
           document.getElementById("ratingForm").submit();
         }
       }
-    </script>
 
+      // jQuery script for view more functionality
+      $(document).ready(function() {
+        // Hide the full text initially
+        $('#fullText').hide();
+
+        // Handle click event on "View more" link
+        $('#viewMoreLink').click(function(e) {
+            e.preventDefault();
+            // Toggle visibility of the short and full text
+            $('#shortText').toggle();
+            $('#fullText').toggle();
+        });
+      });
+    
+    </script>
   </head>
+
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
@@ -126,7 +143,8 @@
                       Port Alfred, nestled along the Sunshine Coast of the Eastern Cape in South Africa, is a charming town known for its scenic beauty, relaxed atmosphere, and a wealth of outdoor activities. This coastal gem boasts stunning beaches that cater to both leisure seekers and water sports enthusiasts. The Kowie River adds to its allure, offering opportunities for boating, fishing, and river cruises.
                       History buffs can explore the town's rich heritage through its historical buildings, such as the iconic Wharf Street, while nature lovers can revel in the beauty of nearby game reserves and nature trails. The Royal Port Alfred Golf Club presents a picturesque setting for golf aficionados.
                       The town's laid-back vibe, coupled with its natural splendor, makes it an ideal destination for those seeking a peaceful retreat amidst breathtaking landscapes and a touch of South African coastal charm.
-                       <p><a href="https://portalfred.co.za/" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Visit this place</a></p>
+                       <p>
+                      <a href="https://portalfred.co.za/" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Visit this place</a></p>
                       <!-- Rating Form -->
                       <form id="ratingForm" action="process.php" method="post">
                         <p>Rate this place:</p>
