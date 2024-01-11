@@ -28,3 +28,6 @@ bongihub/projects/TOURza
 + added more links
 + added a dropdown to show remaining info
 + used same jscripts as the one in the first card
+(testing on easterncape.html third card)
++ added scroll down by changing the height and overflow
++ the changes messed up the whole page
