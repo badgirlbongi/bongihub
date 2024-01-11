@@ -20,7 +20,11 @@ bongihub/projects/TOURza
 bongihub/projects/TOURza
 + replaced "reviews" with provinces on all provinces files
 + did research on how to add view more link to display the information in cards
-(testing on easterncape.html)
+(testing on easterncape.html first card)
 + added jquery script link 
 + added jscript functions to control the viewmore link
 + added css to hide the fulltext on style.css
+(testing on easterncape.html second card)
++ added more links
++ added a dropdown to show remaining info
++ used same jscripts as the one in the first card
