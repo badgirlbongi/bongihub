@@ -15,13 +15,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <link rel="stylesheet" href="assets\dist\css\bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
 
     <script>
       function showPopup() {
@@ -32,21 +25,9 @@
           document.getElementById("ratingForm").submit();
         }
       }
-
-      $(document).ready(function() {
-        $('#fullText').hide();
-
-        // Handle click event on "View more" link
-        $('#viewMoreLink').click(function(e) {
-            e.preventDefault();
-            $('#shortText').toggle();
-            $('#fullText').toggle();
-        });
-      });
-    
     </script>
-  </head>
 
+  </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
@@ -141,17 +122,11 @@
           <div class="card shadow-sm">
               <img src="img/EC/1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Your Image Description">
                 <div class="card-body">
-                    <p class="card-text" id="shortText">
+                    <p class="card-text">
                       Port Alfred, nestled along the Sunshine Coast of the Eastern Cape in South Africa, is a charming town known for its scenic beauty, relaxed atmosphere, and a wealth of outdoor activities. This coastal gem boasts stunning beaches that cater to both leisure seekers and water sports enthusiasts. The Kowie River adds to its allure, offering opportunities for boating, fishing, and river cruises.
-                    </p>
-                    <p class="card-text hidden" id="fullText">
                       History buffs can explore the town's rich heritage through its historical buildings, such as the iconic Wharf Street, while nature lovers can revel in the beauty of nearby game reserves and nature trails. The Royal Port Alfred Golf Club presents a picturesque setting for golf aficionados.
                       The town's laid-back vibe, coupled with its natural splendor, makes it an ideal destination for those seeking a peaceful retreat amidst breathtaking landscapes and a touch of South African coastal charm.
-                    </p>
-                    <p>
-                      <a href="#" id="viewMoreLink" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">View more</a>
-                    </p>
-                      <a href="https://portalfred.co.za/" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Visit this place</a></p>
+                       <p><a href="https://portalfred.co.za/" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Visit this place</a></p>
                       <!-- Rating Form -->
                       <form id="ratingForm" action="process.php" method="post">
                         <p>Rate this place:</p>
@@ -178,21 +153,11 @@
           <div class="card shadow-sm">
               <img src="img/EC/two.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Your Image Description">
                 <div class="card-body">
-                    <p class="card-text" id="shortText">
+                    <p class="card-text">
                       The Mountain Zebra National Park, situated in the Eastern Cape of South Africa, is a haven for wildlife enthusiasts and nature lovers. This conservation area is renowned for its successful efforts in preserving the endangered Cape mountain zebra, offering visitors a chance to witness these majestic creatures in their natural habitat. 
-                    </p>
-                    <div class="dropdown">
-                      <button class="btn btn-link dropdown-toggle" type="button" id="viewMoreDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          View more
-                      </button>
-                      <div class="dropdown-menu" aria-labelledby="viewMoreDropdown">
-                        <p class="dropdown-item" id="fullText">
-                          The park's diverse landscape, characterized by rolling hills, expansive plains, and rugged mountains, provides a habitat for various other wildlife species, including buffalo, cheetahs, various antelope species, and a variety of birdlife.
-                          Visitors can explore the park through guided game drives, walking trails, or self-drive routes, immersing themselves in the scenic beauty while encountering a wide array of indigenous flora and fauna. With its conservation efforts, striking landscapes, and opportunities for wildlife sightings, the Mountain Zebra National Park stands as a testament to South Africa's commitment to preserving its natural heritage.
-                        </p>
-                      </div>
-                      </div>
-                        <a href="https://mountainzebranationalpark.co.za/" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Visit this place</a></p>
+                      The park's diverse landscape, characterized by rolling hills, expansive plains, and rugged mountains, provides a habitat for various other wildlife species, including buffalo, cheetahs, various antelope species, and a variety of birdlife.
+                      Visitors can explore the park through guided game drives, walking trails, or self-drive routes, immersing themselves in the scenic beauty while encountering a wide array of indigenous flora and fauna. With its conservation efforts, striking landscapes, and opportunities for wildlife sightings, the Mountain Zebra National Park stands as a testament to South Africa's commitment to preserving its natural heritage.
+                      <p><a href="https://mountainzebranationalpark.co.za/" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Visit this place</a></p>
                        <!-- Rating Form -->
                        <form id="ratingForm" action="process.php" method="post">
                         <p>Rate this place:</p>
@@ -216,37 +181,33 @@
         </div>
 
         <div class="col">
-          <div class="card shadow-sm" style="max-height: 400px; overflow-y: auto;">
+          <div class="card shadow-sm">
               <img src="img/EC/3.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Your Image Description">
-              <div class="card-body">
-                  <p class="card-text">
-                    Coffee Bay, nestled on the Wild Coast of the Eastern Cape in South Africa, boasts stunning beaches, dramatic cliffs, and a relaxed vibe. It's a haven for beachgoers, surfers, and nature lovers. Visitors can explore the "Hole in the Wall" rock formation, enjoy activities like surfing and hiking, and immerse themselves in the vibrant local Xhosa culture. This off-the-beaten-path destination offers a unique blend of natural beauty and cultural experiences for a memorable coastal getaway.
-                  </p>
-              </div>
-          </div>
-          <p>
-            <a href="https://coffeebay.co.za/" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Visit this place</a>
-          </p>
-          <!-- Rating Form -->
-          <form id="ratingForm" action="process.php" method="post">
-              <p>Rate this place:</p>
-              <label><input type="radio" name="rating" value="1"> ★</label>
-              <label><input type="radio" name="rating" value="1"> ★</label>
-              <label><input type="radio" name="rating" value="2"> ★★</label>
-              <label><input type="radio" name="rating" value="3"> ★★★</label>
-              <label><input type="radio" name="rating" value="4"> ★★★★</label>
-              <label><input type="radio" name="rating" value="5"> ★★★★★</label>
-              <br><br>
-              <input type="hidden" id="comment" name="comment" value="">
-              <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                      <button type="button" onclick="showPopup()" class="btn btn-sm btn-outline-secondary">Rate</button>
-                      <a href="reviews.html" class="btn btn-sm btn-outline-secondary" id="reviews">Reviews</a>
-                  </div>
-                  <small class="text-body-secondary">Eastern Cape</small>
-              </div>
-          </form>
-      </div>    
+                <div class="card-body">
+                    <p class="card-text">
+                      Coffee Bay, nestled on the Wild Coast of the Eastern Cape in South Africa, boasts stunning beaches, dramatic cliffs, and a relaxed vibe. It's a haven for beachgoers, surfers, and nature lovers. Visitors can explore the "Hole in the Wall" rock formation, enjoy activities like surfing and hiking, and immerse themselves in the vibrant local Xhosa culture. This off-the-beaten-path destination offers a unique blend of natural beauty and cultural experiences for a memorable coastal getaway.
+                      <p><a href="https://coffeebay.co.za/" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Visit this place</a></p>
+                       <!-- Rating Form -->
+                       <form id="ratingForm" action="process.php" method="post">
+                        <p>Rate this place:</p>
+                        <label><input type="radio" name="rating" value="1"> ★</label>
+                        <label><input type="radio" name="rating" value="2"> ★★</label>
+                        <label><input type="radio" name="rating" value="3"> ★★★</label>
+                        <label><input type="radio" name="rating" value="4"> ★★★★</label>
+                        <label><input type="radio" name="rating" value="5"> ★★★★★</label>
+                        <br><br>
+                        <input type="hidden" id="comment" name="comment" value="">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <button type="button" onclick="showPopup()" class="btn btn-sm btn-outline-secondary">Rate</button>
+                            <a href="reviews.html" class="btn btn-sm btn-outline-secondary" id="reviews">Reviews</a>
+                          </div>
+                          <small class="text-body-secondary">Eastern Cape</small>
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div>
 
         <div class="col">
           <div class="card shadow-sm">
