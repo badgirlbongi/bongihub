@@ -15,3 +15,7 @@ Folder (projects) subfolder (TOURza)
 Folder (projects) subfolder (TOURza)
 -Done updating info and pictures on the weesterncape.html
 -encountered a db error for saving the comment when rating the place files (process.php(ine 21) anyprovince.html)
+
+01/11/2024
+Folder (projects) subfolder (TOURza)
+-replaced "reviews" with provinces on all provinces files
