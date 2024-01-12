@@ -48,3 +48,4 @@ bongihub/projects/TOURza/tourzareview.php
 + Used JavaScript to show a popup and redirect back to the previous page
 + renamed files 
 + testing to see the popup updates on tourzaContactUs.txt
++ research on layout file and framework
