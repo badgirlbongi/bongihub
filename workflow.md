@@ -39,3 +39,4 @@ bongihub/projects/TOURza
 + added something at the bottom of every page
 (testing on easterncape.html 1st,2md and 3rd card)
 + put style for the card to test for fitting
++ added footers on the cards
