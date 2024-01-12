@@ -42,3 +42,4 @@ bongihub/projects/TOURza
 + added footers on the cards
 + tried to put a spyscroll (on the 9th card)
 - spyscroll not working 
++ added a header to the body and footer and the scrolling succeeded(testing on 9th card)
