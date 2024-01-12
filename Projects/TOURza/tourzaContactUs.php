@@ -1,6 +1,6 @@
 <?php
 
-//contact us
+//to process contact.html
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -18,11 +18,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Store the review in a file
     $reviewData = "Review by: $userName\nEmail: $email\nRating: $rating stars\nComment: $comment\n\n";
-    $file = 'tourzaReview.txt';
+    $file = 'tourzaContactUs.txt';
     file_put_contents($file, $reviewData, FILE_APPEND | LOCK_EX);
 
-    // Use JavaScript to show a popup
-    echo "<script>alert('Review submitted successfully!');</script>";
+   //to show a popup and redirect back to the previous page
+   echo "<script>alert('Review submitted successfully!'); window.location.href = document.referrer;</script>";
 } else {
     echo "Form submission error.";
 }

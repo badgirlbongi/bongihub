@@ -45,3 +45,6 @@ bongihub/projects/TOURza
 + added a header to the body and footer and the scrolling succeeded(testing on 9th card)
 bongihub/projects/TOURza/tourzareview.php
 + make a popup after submitting the review form
++ Used JavaScript to show a popup and redirect back to the previous page
++ renamed files 
++ testing to see the popup updates on tourzaContactUs.txt
