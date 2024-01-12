@@ -43,3 +43,5 @@ bongihub/projects/TOURza
 + tried to put a spyscroll (on the 9th card)
 - spyscroll not working 
 + added a header to the body and footer and the scrolling succeeded(testing on 9th card)
+bongihub/projects/TOURza/tourzareview.php
++ make a popup after submitting the review form

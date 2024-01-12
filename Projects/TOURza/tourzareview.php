@@ -21,9 +21,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $file = 'tourzaReview.txt';
     file_put_contents($file, $reviewData, FILE_APPEND | LOCK_EX);
 
-    echo "Review submitted successfully!";
+    // Use JavaScript to show a popup
+    echo "<script>alert('Review submitted successfully!');</script>";
 } else {
     echo "Form submission error.";
 }
-
 ?>
