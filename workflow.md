@@ -32,3 +32,7 @@ bongihub/projects/TOURza
 + added scroll down by changing the height and overflow
 - the changes messed up the whole page
 + removed all the changes to find a new way to resolve the issue
+
+01/12/2024
++ put home buttons on all province pages
++ added something at the bottom of every page
