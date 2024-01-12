@@ -34,5 +34,8 @@ bongihub/projects/TOURza
 + removed all the changes to find a new way to resolve the issue
 
 01/12/2024
+bongihub/projects/TOURza
 + put home buttons on all province pages
 + added something at the bottom of every page
+(testing on easterncape.html 1st,2md and 3rd card)
++ put style for the card to test for fitting
