@@ -40,3 +40,5 @@ bongihub/projects/TOURza
 (testing on easterncape.html 1st,2md and 3rd card)
 + put style for the card to test for fitting
 + added footers on the cards
++ tried to put a spyscroll (on the 9th card)
+- spyscroll not working 
