@@ -58,3 +58,4 @@ bongihub/projects/TOURza/tourzareview.php
 + added a header, body and footer bongihub/projects/TOURza/kwazulunatal.html
 + added a header, body and footer bongihub/projects/TOURza/limpopo.html
 + added a header, body and footer bongihub/projects/TOURza/mpumalanga.html
++ added a header, body and footer bongihub/projects/TOURza/northerncape.html
