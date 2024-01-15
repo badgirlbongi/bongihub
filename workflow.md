@@ -54,3 +54,4 @@ bongihub/projects/TOURza/tourzareview.php
 + bongihub/projects/TOURza/about.html added column to store the info in paragraphs for neatness
 + added a header, body and footer bongihub/projects/TOURza/freestate.html
 + added a header, body and footer bongihub/projects/TOURza/gauteng.html
++ added a header, body and footer bongihub/projects/TOURza/index.html
