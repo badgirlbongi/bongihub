@@ -61,3 +61,4 @@ bongihub/projects/TOURza/tourzareview.php
 + added a header, body and footer bongihub/projects/TOURza/northerncape.html
 + added a header, body and footer bongihub/projects/TOURza/northwest.html
 + added a header, body and footer bongihub/projects/TOURza/westencape.html
++ added a small change on top of every page
