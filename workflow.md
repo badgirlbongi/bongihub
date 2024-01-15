@@ -49,3 +49,6 @@ bongihub/projects/TOURza/tourzareview.php
 + renamed files 
 + testing to see the popup updates on tourzaContactUs.txt
 + research on layout file and framework
+
+01/15/2024
++ bongihub/projects/TOURza/about.html added column to store the info in paragraphs for neatness
