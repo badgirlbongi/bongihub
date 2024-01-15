@@ -52,3 +52,5 @@ bongihub/projects/TOURza/tourzareview.php
 
 01/15/2024
 + bongihub/projects/TOURza/about.html added column to store the info in paragraphs for neatness
++ added a header, body and footer bongihub/projects/TOURza/freestate.html
+
