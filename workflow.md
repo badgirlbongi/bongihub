@@ -62,3 +62,6 @@ bongihub/projects/TOURza/tourzareview.php
 + added a header, body and footer bongihub/projects/TOURza/northwest.html
 + added a header, body and footer bongihub/projects/TOURza/westencape.html
 + added a small change on top of every page
+
+01/16/2023
++ fixed the card sizes and carousels on the bongihub/projects/TOURza/index.html
