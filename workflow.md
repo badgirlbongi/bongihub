@@ -79,3 +79,4 @@ bongihub/projects/TOURza/tourzareview.php
 + created DB on myPhpAdmnin
 + added a provinceID FK on the place table bongihub/projects/TOURza/erd.txt
 + save picture columns as data type BLOB
++ exported the tourza.sql database bongihub/projects/TOURza/tourza.sql
