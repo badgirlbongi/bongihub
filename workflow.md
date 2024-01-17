@@ -65,3 +65,10 @@ bongihub/projects/TOURza/tourzareview.php
 
 01/16/2023
 + fixed the card sizes and carousels on the bongihub/projects/TOURza/index.html
++ online meeting with mentor for HTML class
++ online meeting with mentor for sql class
++ brainstorming and researching about drawing up a plan for an ERD
++ created an ERD on bongihub/projects/TOURza/erd.txt
++ encountered a problem with the ERD in terms of recording mutliple pictures for one province for the carousel 
++ basic research about OOP(still need more info)
++ basic research about using PDO(still need more info)
