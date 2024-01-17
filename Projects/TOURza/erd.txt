@@ -23,5 +23,7 @@ Diagram :
 | ProvinceID (PK)|          | PlaceID (PK)  |          | RatingID (PK)|
 | ProvinceName   |1       * | PlaceName     |          | RatingValue  |
 | ProvincePicture|          | PlacePicture  |          | Comment     |
-| ProvinceDescription|      | PlaceDescription|1      *| PlaceID (FK) |
-+----------------+          +---------------+          +-------------+
+| ProvinceDescription|      | Description   |1       * | PlaceID (FK) |
++----------------+          | ProvinceID (FK)|          +-------------+
+                           +-----------------+
+
