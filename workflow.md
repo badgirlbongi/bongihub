@@ -15,6 +15,7 @@ bongihub/projects/TOURza
 bongihub/projects/TOURza
 + Done updating info and pictures on the weesterncape.html
 - encountered a db error for saving the comment when rating the place files (process.php(ine 21) anyprovince.html)
++ updates meeting with mentor
 
 01/11/2024
 bongihub/projects/TOURza
@@ -63,7 +64,7 @@ bongihub/projects/TOURza/tourzareview.php
 + added a header, body and footer bongihub/projects/TOURza/westencape.html
 + added a small change on top of every page
 
-01/16/2023
+01/16/2024
 + fixed the card sizes and carousels on the bongihub/projects/TOURza/index.html
 + online meeting with mentor for HTML class
 + online meeting with mentor for sql class
@@ -72,3 +73,7 @@ bongihub/projects/TOURza/tourzareview.php
 + encountered a problem with the ERD in terms of recording mutliple pictures for one province for the carousel 
 + basic research about OOP(still need more info)
 + basic research about using PDO(still need more info)
+
+01/17/2024
++ added description on the ERD tables bongihub/projects/TOURza/erd.txt
++ created DB on myPhpAdmnin

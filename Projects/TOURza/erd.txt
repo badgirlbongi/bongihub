@@ -1,11 +1,10 @@
 ERD
 Entities:
 1. Province
-   - Attributes: ProvinceID (Primary Key), ProvinceName, ProvincePicture
+   - Attributes: ProvinceID (Primary Key), ProvinceName, ProvincePicture, ProvinceDescription
 
 2. Place
-   - Attributes: PlaceID (Primary Key), PlaceName, PlacePicture, ProvinceID (Foreign Key referencing Province.ProvinceID)
-
+   - Attributes: PlaceID (Primary Key), PlaceName, PlacePicture, PlaceDescription, ProvinceID (Foreign Key referencing Province.ProvinceID)
 3. Rating
    - Attributes: RatingID (Primary Key), RatingValue, Comment, PlaceID (Foreign Key referencing Place.PlaceID)
 
@@ -18,13 +17,11 @@ Relationships:
 
 Diagram :
 
-```
 +----------------+          +---------------+          +-------------+
 |   Province     |          |    Place      |          |   Rating    |
 +----------------+          +---------------+          +-------------+
 | ProvinceID (PK)|          | PlaceID (PK)  |          | RatingID (PK)|
 | ProvinceName   |1       * | PlaceName     |          | RatingValue  |
 | ProvincePicture|          | PlacePicture  |          | Comment     |
-+----------------+----------| ProvinceID (FK)|1       * | PlaceID (FK) |
-                                                          +-------------+
-```
+| ProvinceDescription|      | PlaceDescription|1      *| PlaceID (FK) |
++----------------+          +---------------+          +-------------+
