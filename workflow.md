@@ -84,3 +84,8 @@ bongihub/projects/TOURza/tourzareview.php
 01/18/2024
 + researching and brainstorming on how to make the province pages to run from one page
 + trying to figure out how to run the pages from one page( added placeContent.phtml and placeContent.php)
++ renamed files
++ moved erd to bongihub/projects/TOURza/docs
++ moved provinces to bongihub/projects/TOURza/provinces
++ created  testing pages to see if the idea will work 
+objectives : when you click a button on the index.phtml for example for free state it should load the places.phtml and process the content on placeContent.phtml 
