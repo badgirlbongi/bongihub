@@ -91,3 +91,4 @@ bongihub/projects/TOURza/tourzareview.php
 objectives : when you click a button on the index.phtml for example for free state it should load the places.phtml and process the content on placeContent.phtml 
 + added a column on erd to save the links to the website of the places or to access more information on bongihub/projects/TOURza/docs/erd.txt
 + linked the index page with places.phtml
++ can't seem to figure out how to display the contents, tried a switch statement but doesn't make sense need to go back to the planning and drawing board
