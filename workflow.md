@@ -83,3 +83,4 @@ bongihub/projects/TOURza/tourzareview.php
 
 01/18/2024
 + researching and brainstorming on how to make the province pages to run from one page
++ trying to figure out how to run the pages from one page( added placeContent.phtml and placeContent.php)
