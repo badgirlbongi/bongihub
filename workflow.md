@@ -89,3 +89,5 @@ bongihub/projects/TOURza/tourzareview.php
 + moved provinces to bongihub/projects/TOURza/provinces
 + created  testing pages to see if the idea will work 
 objectives : when you click a button on the index.phtml for example for free state it should load the places.phtml and process the content on placeContent.phtml 
++ added a column on erd to save the links to the website of the places or to access more information on bongihub/projects/TOURza/docs/erd.txt
++ linked the index page with places.phtml
