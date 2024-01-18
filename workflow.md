@@ -80,3 +80,6 @@ bongihub/projects/TOURza/tourzareview.php
 + added a provinceID FK on the place table bongihub/projects/TOURza/erd.txt
 + save picture columns as data type BLOB
 + exported the tourza.sql database bongihub/projects/TOURza/tourza.sql
+
+01/18/2024
++ researching and brainstorming on how to make the province pages to run from one page
