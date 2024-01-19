@@ -96,3 +96,6 @@ objectives : when you click a button on the index.phtml for example for free sta
 01/19/2024
 + stil trying to display content using a switch statement
 + first method testing on button WC on bongihub/projects/TOURza/placeContent.phtml
++ first method not working
++ To fix the issues i have to make the three pages correspond and link the 'WC' button to the 'places.phtml' page, i created links with appropriate parameters in the navigation buttons. Additionally, i handled the parameter in the 'places.phtml' file and call the generateContent function accordingly.
++

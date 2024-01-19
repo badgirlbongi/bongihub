@@ -1,3 +1,10 @@
+<?php
+include 'placeContent.phtml';
+
+$page = $_GET['page'] ?? ''; // Get the 'page' parameter from the URL
+
+?>
+
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
   <head><script src="assets\js\color-modes.js"></script>
@@ -118,8 +125,7 @@
 </header>
 
 <main>
-    <?php include 'placeContent.phtml'; ?>
-    <?php generateContent($_GET['page'] ?? ''); ?>
+      <?php generateContent($page); ?>
 </main>
 
 <footer class="text-body-secondary py-5">
