@@ -95,3 +95,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 
 01/19/2024
 + stil trying to display content using a switch statement
++ first method testing on button WC on bongihub/projects/TOURza/placeContent.phtml

@@ -1,154 +1,52 @@
 <?php
 function generateContent($page) {
     
-    $linkButton = '<a href="places.phtml" class="btn btn-sm btn-outline-secondary" id="WC">View</a>';
-
-     switch ($linkButton) {
-        case '<a href="places.phtml" class="btn btn-sm btn-outline-secondary" id="WC">View</a>':
-            echo "<div class="album py-5 bg-body-tertiary">
-            <div class="container">
-              <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+    switch ($page) {
+        case 'WC':
+            echo "
+            <div class= 'album py-5 bg-body-tertiary'>
+            <div class='container'>
+              <div class='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3'>
         
-                <div class="col">
-                  <div class="card shadow-sm">
-                      <img src="img/WC/1.jpeg" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Your Image Description">
-                      <div class="card-body" style="max-height: 250px; overflow-y: auto;">
-                            <p class="card-text">
+                <div class='col'>
+                  <div class='card shadow-sm'>
+                      <img src='mg/WC/1.jpeg' class='bd-placeholder-img card-img-top' width='100%' height='225' alt='Your Image Description'>
+                      <div class='card-body' style='max-height: 250px; overflow-y: auto;''>
+                            <p class='card-text'>
                               Kirstenbosch National Botanical Garden, nestled at the foot of Table Mountain in Cape Town, Western Cape, is a stunning haven for biodiversity and natural beauty. Renowned for its diverse flora, it showcases South Africa's indigenous plant species across various themed gardens and landscapes. The garden offers visitors a chance to explore tranquil pathways, marvel at unique plant collections, and appreciate the breathtaking scenery. It's not just a botanical paradise but also a hub for conservation, research, and education, making it a must-visit destination for nature enthusiasts and botany lovers.
-                              <p><a href="https://www.capetown.travel/relax-on-the-lawns-of-cape-towns-prettiest-garden/" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Visit this place</a></p>
+                              <p><a href='https://www.capetown.travel/relax-on-the-lawns-of-cape-towns-prettiest-garden/' class=link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover'>Visit this place</a></p>
                             </div>
                               <!-- Rating Form -->
-                              <div class="card-footer">
-                              <form id="ratingForm" action="process.php" method="post">
+                              <div class='card-footer'>
+                              <form id='ratingForm' action='process.php' method='post'>
                                 <p>Rate this place:</p>
-                                <label><input type="radio" name="rating" value="1"> ★</label>
-                                <label><input type="radio" name="rating" value="2"> ★★</label>
-                                <label><input type="radio" name="rating" value="3"> ★★★</label>
-                                <label><input type="radio" name="rating" value="4"> ★★★★</label>
-                                <label><input type="radio" name="rating" value="5"> ★★★★★</label>
+                                <label><input type='radio' name='rating' value='1'> ★</label>
+                                <label><input type='radio' name='rating' value='2'> ★★</label>
+                                <label><input type='radio' name='rating' value='3'> ★★★</label>
+                                <label><input type='radio' name='rating' value='4'> ★★★★</label>
+                                <label><input type='radio' name='rating' value='5'> ★★★★★</label>
                                 <br><br>
-                                <input type="hidden" id="comment" name="comment" value="">
-                                <div class="d-flex justify-content-between align-items-center">
-                                  <div class="btn-group">
-                                    <button type="button" onclick="showPopup()" class="btn btn-sm btn-outline-secondary">Rate</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Reviews</button>
+                                <input type='hidden' id='comment' name='comment' value=''>
+                                <div class='d-flex justify-content-between align-items-center'>
+                                  <div class='btn-group'>
+                                    <button type='button' onclick='showPopup()' class='btn btn-sm btn-outline-secondary'>Rate</button>
+                                    <button type='button' class='btn btn-sm btn-outline-secondary'>Reviews</button>
                                   </div>
-                                  <small class="text-body-secondary">Western Cape</small>
+                                  <small class='text-body-secondary'>Western Cape</small>
                                 </div>
                               </form>
                           </div>
                     </div>
                 </div>
-            
-                <div class="col">
-                  <div class="card shadow-sm">
-                      <img src="img/WC/2.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Your Image Description">
-                      <div class="card-body" style="max-height: 250px; overflow-y: auto;">
-                            <p class="card-text">
-                              The Cango Caves, situated in the Western Cape of South Africa, stand as an awe-inspiring natural wonder. These extensive underground caverns boast a labyrinth of chambers adorned with spectacular limestone formations, such as stalactites and stalagmites, formed over millions of years. Visitors can embark on guided tours through different sections of the caves, experiencing the grandeur of the colossal halls and narrow passageways. The Cango Caves offer a captivating glimpse into the intricate beauty and geological history of these ancient underground formations, making it a captivating destination for explorers and nature enthusiasts alike.
-                              <p><a href="https://www.cango-caves.co.za/" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Visit this place</a></p>
-                            </div> 
-                              <!-- Rating Form -->
-                               <div class="card-footer">
-                               <form id="ratingForm" action="process.php" method="post">
-                                <p>Rate this place:</p>
-                                <label><input type="radio" name="rating" value="1"> ★</label>
-                                <label><input type="radio" name="rating" value="2"> ★★</label>
-                                <label><input type="radio" name="rating" value="3"> ★★★</label>
-                                <label><input type="radio" name="rating" value="4"> ★★★★</label>
-                                <label><input type="radio" name="rating" value="5"> ★★★★★</label>
-                                <br><br>
-                                <input type="hidden" id="comment" name="comment" value="">
-                                <div class="d-flex justify-content-between align-items-center">
-                                  <div class="btn-group">
-                                    <button type="button" onclick="showPopup()" class="btn btn-sm btn-outline-secondary">Rate</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Reviews</button>
-                                  </div>
-                                  <small class="text-body-secondary">Western Cape</small>
-                                </div>
-                              </form>
-                        </div>
-                    </div>
-                </div>
-                
-              </div>
-            </div>
-          </div>";
-            break; 
-        case '<a href="places.phtml" class="btn btn-sm btn-outline-secondary" id="EC">View</a>':
-            
-            echo "This is the Eastern Cape link.";
-            break;
-        
-        default:
-            
-            break;
+             ";
+             break; 
+      case 'EC':
+          echo "This is the Eastern Cape link.";
+       break;
+      default:
+        // Handle other cases or provide a default behavior
+        break;
     }
-}
+  }
 ?>
-
-<!--//function generateContent($page) {
-    
-    $Button = '<a href="places.phtml" class="btn btn-sm btn-outline-secondary" id="WC">View</a>';
-
-     switch ($linkButton) {
-        case '<a href="places.phtml" class="btn btn-sm btn-outline-secondary" id="WC">View</a>':
-            $picture = ;
-            $information = ;
-            $link = ;
-        
-            echo "This is the Western Cape link.";
-            break; 
-        case '<a href="places.phtml" class="btn btn-sm btn-outline-secondary" id="EC">View</a>':
-            
-            echo "This is the Eastern Cape link.";
-            break;
-        
-        default:
-            
-            break;
-    }
-
-       echo '
-<div class="album py-5 bg-body-tertiary">
-    <div class="container">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-header">
-              <img src="$image" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Your Image Description">
-                </div>
-              <div class="card-body" style="max-height: 250px; overflow-y: auto;">
-                    <p class="card-text">
-                    $information
-                     <p>
-                    <a href="$link" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Visit this place</a></p>
-                    </div>
-                        Rating Form 
-                       <div class="card-footer">
-                      <form id="ratingForm" action="process.php" method="post">
-                        <p>Rate this place:</p>
-                        <label><input type="radio" name="rating" value="1"> ★</label>
-                        <label><input type="radio" name="rating" value="2"> ★★</label>
-                        <label><input type="radio" name="rating" value="3"> ★★★</label>
-                        <label><input type="radio" name="rating" value="4"> ★★★★</label>
-                        <label><input type="radio" name="rating" value="5"> ★★★★★</label>
-                        <br><br>
-                        <input type="hidden" id="comment" name="comment" value="">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div class="btn-group">
-                            <button type="button" onclick="showPopup()" class="btn btn-sm btn-outline-secondary">Rate</button>
-                            <a href="reviews.html" class="btn btn-sm btn-outline-secondary" id="reviews">Reviews</a>
-                          </div>
-                          <small class="text-body-secondary"></small>
-                        </div>
-                      </form>
-                  </div>
-            </div>
-        </div>
-
-        </div>
-    </div>
-  </div>';
-  -->
+                
