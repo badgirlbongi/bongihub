@@ -106,3 +106,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + added a link column on the places 
 + research on php framework 
 + rearranged files and folders
++ created new folder and starting the project from scratch
