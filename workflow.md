@@ -108,3 +108,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + rearranged files and folders
 + created new folder and starting the project from scratch
 + bongihub/projects/TOURza/index.php
++ replanning
