@@ -104,3 +104,5 @@ objectives : when you click a button on the index.phtml for example for free sta
 01/22/2024
 + still trying to debugg
 + added a link column on the places 
++ research on php framework 
++ rearranged files and folders
