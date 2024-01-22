@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 17, 2024 at 10:23 PM
+-- Generation Time: Jan 22, 2024 at 07:55 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -45,7 +45,8 @@ CREATE TABLE `province` (
   `provinceID` varchar(10) NOT NULL,
   `provinceName` varchar(255) NOT NULL,
   `provincePicture` blob NOT NULL,
-  `provinceDescription` longtext NOT NULL
+  `provinceDescription` longtext NOT NULL,
+  `placeLink` mediumtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
