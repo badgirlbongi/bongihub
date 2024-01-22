@@ -3,20 +3,7 @@ function generateContent($page) {
     
     switch ($page) {
         case 'WC':
-            echo "This is the western cape link";
-             break; 
-      case 'EC':
-          echo "This is the Eastern Cape link.";
-       break;
-      default:
-        // Handle other cases or provide a default behavior
-        break;
-    }
-  }
-?>
-
-<!--
-<div class= 'album py-5 bg-body-tertiary'>
+            echo "<div class= 'album py-5 bg-body-tertiary'>
             <div class='container'>
               <div class='row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3'>
         
@@ -49,7 +36,16 @@ function generateContent($page) {
                               </form>
                           </div>
                     </div>
-                </div>
-             
--->
+                </div>";
+             break; 
+      case 'EC':
+          echo "This is the Eastern Cape link.";
+       break;
+      default:
+        // Handle other cases or provide a default behavior
+        break;
+    }
+  }
+?>
+
                 

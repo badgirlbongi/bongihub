@@ -100,3 +100,6 @@ objectives : when you click a button on the index.phtml for example for free sta
 + To fix the issues i have to make the three pages correspond and link the 'WC' button to the 'places.phtml' page, i created links with appropriate parameters in the navigation buttons. Additionally, i handled the parameter in the 'places.phtml' file and call the generateContent function accordingly.
 + still doesn't display the WC content
 + it doesn't display anything
+
+01/22/2024
++ still trying to debugg
