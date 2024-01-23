@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "tourza_db";
+$dbname = "tourza"; // Update to the correct database name
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $comment = $_POST['comment'];
 
         // Prepare and bind the SQL statement
-        $stmt = $conn->prepare("INSERT INTO place_ratings (rating, comment) VALUES (?, ?)");
+        $stmt = $conn->prepare("INSERT INTO rating (ratingValue, rateComment) VALUES (?, ?)");
         $stmt->bind_param("is", $rating, $comment);
 
         // Execute the query
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->close();
 
         // Retrieve all ratings from the database
-        $sql = "SELECT rating FROM place_ratings";
+        $sql = "SELECT ratingValue FROM rating"; // Update table and column names
         $result = $conn->query($sql);
 
         // Calculate average rating
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $sumRatings = 0;
 
         while ($row = $result->fetch_assoc()) {
-            $sumRatings += $row['rating'];
+            $sumRatings += $row['ratingValue']; // Update column name
         }
 
         $averageRating = $totalRatings > 0 ? $sumRatings / $totalRatings : 0;
@@ -47,4 +47,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $conn->close();
 ?>
-

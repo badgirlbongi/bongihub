@@ -1,6 +1,19 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-  <head><script src="assets\js\color-modes.js"></script>
+
+<script>
+function showPopup() {
+      var comment = prompt("Please enter your comment:");
+      if (comment != null) {
+        // If the user enters a comment, proceed to submit the rating and comment via form
+        document.getElementById("comment").value = comment;
+        document.getElementById("ratingForm").submit();
+      }
+    }
+  </script>
+
+  <head>
+    <script src="assets\js\color-modes.js"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,8 +29,8 @@
     <link rel="stylesheet" href="assets\dist\css\bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
-
   </head>
+  
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
@@ -108,6 +121,49 @@
 </header>
 
 <main>
+
+  <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="card-header">
+              <img src="img/EC/1.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Your Image Description">
+                </div>
+              <div class="card-body" style="max-height: 250px; overflow-y: auto;">
+                    <p class="card-text">
+                      Port Alfred, nestled along the Sunshine Coast of the Eastern Cape in South Africa, is a charming town known for its scenic beauty, relaxed atmosphere, and a wealth of outdoor activities. This coastal gem boasts stunning beaches that cater to both leisure seekers and water sports enthusiasts. The Kowie River adds to its allure, offering opportunities for boating, fishing, and river cruises.
+                      History buffs can explore the town's rich heritage through its historical buildings, such as the iconic Wharf Street, while nature lovers can revel in the beauty of nearby game reserves and nature trails. The Royal Port Alfred Golf Club presents a picturesque setting for golf aficionados.
+                      The town's laid-back vibe, coupled with its natural splendor, makes it an ideal destination for those seeking a peaceful retreat amidst breathtaking landscapes and a touch of South African coastal charm.
+                       <p><a href="https://portalfred.co.za/" class="link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Visit this place</a></p>
+                    </div>
+                       <!-- Rating Form -->
+                      <div class="card-footer">
+                      <form id="ratingForm" action="process.php" method="post">
+                        <p>Rate this place:</p>
+                        <label><input type="radio" name="rating" value="1"> ★</label>
+                        <label><input type="radio" name="rating" value="2"> ★★</label>
+                        <label><input type="radio" name="rating" value="3"> ★★★</label>
+                        <label><input type="radio" name="rating" value="4"> ★★★★</label>
+                        <label><input type="radio" name="rating" value="5"> ★★★★★</label>
+                        <br><br>
+                        <input type="hidden" id="comment" name="comment" value="">
+                        <div class="d-flex justify-content-between align-items-center">
+                          <div class="btn-group">
+                            <button type="button" onclick="showPopup()" class="btn btn-sm btn-outline-secondary">Rate</button>
+                            <a href="reviews.html" class="btn btn-sm btn-outline-secondary" id="reviews">Reviews</a>
+                          </div>
+                          <small class="text-body-secondary">Eastern Cape</small>
+                        </div>
+                      </form>
+                  </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+  </div>
 
 </main>
 
