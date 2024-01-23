@@ -1,0 +1,30 @@
+ERD
+Entities:
+1. Province
+   - Attributes: ProvinceID (Primary Key), ProvinceName, ProvincePicture, ProvinceDescription
+
+2. Place
+   - Attributes: PlaceID (Primary Key), PlaceName, PlacePicture, PlaceDescription, ProvinceID (Foreign Key referencing Province.ProvinceID)
+3. Rating
+   - Attributes: RatingID (Primary Key), RatingValue, Comment, PlaceID (Foreign Key referencing Place.PlaceID)
+
+Relationships:
+1. One-to-Many Relationship between Province and Place:
+   - One Province can have many Places, but each Place belongs to only one Province.
+
+2. One-to-Many Relationship between Place and Rating:
+   - One Place can have many Ratings, but each Rating belongs to only one Place.
+
+Diagram :
+
++----------------+          +---------------+          +-------------+
+|   Province     |          |    Place      |          |   Rating    |
++----------------+          +---------------+          +-------------+
+| ProvinceID (PK)|          | PlaceID (PK)  |          | RatingID (PK)|
+| ProvinceName   |1       * | PlaceName     |          | RatingValue  |
+| ProvincePicture|          | PlacePicture  |          | Comment     |
+| ProvinceDescription|      | Description   |1       * | PlaceID (FK) |
++----------------+          | placeLink     |          +-------------+
+                            | ProvinceID (FK)|
+                           +-----------------+
+
