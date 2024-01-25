@@ -118,4 +118,5 @@ objectives : when you click a button on the index.phtml for example for free sta
 01/25/2024
 + adding data to table rows in the database using myPhpAdmin
 + pictures cannot be added to the database
++ managed to fix the error images can now be added to the database on myphpadmin
 
