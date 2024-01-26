@@ -125,4 +125,5 @@ objectives : when you click a button on the index.phtml for example for free sta
 + still addding data to the table rows on the database using myphpAdmnin
 + done adding data and exported the tourza database
 + changed a few things on the files of the project and updated the reviews.phtml file
++ bongihub/projects/TOURza/places.php trying to fect data from the database and use it
 
