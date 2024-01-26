@@ -121,4 +121,6 @@ objectives : when you click a button on the index.phtml for example for free sta
 + managed to fix the error images can now be added to the database on myphpadmin
 + resolving a "Got a packet bigger than 'max_allowed_packet' bytes," error on the myphpadmin
 
+01/26/2024
++ still addding data to the table rows on the database using myphpAdmnin
 
