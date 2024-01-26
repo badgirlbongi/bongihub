@@ -123,4 +123,5 @@ objectives : when you click a button on the index.phtml for example for free sta
 
 01/26/2024
 + still addding data to the table rows on the database using myphpAdmnin
++ done adding data and exported the tourza database
 
