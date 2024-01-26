@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "tourza"; // Update to the correct database name
+$dbname = "tourza"; 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->close();
 
         // Retrieve all ratings from the database
-        $sql = "SELECT ratingValue FROM rating"; // Update table and column names
+        $sql = "SELECT ratingValue FROM rating"; 
         $result = $conn->query($sql);
 
         // Calculate average rating

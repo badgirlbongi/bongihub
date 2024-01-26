@@ -1,6 +1,6 @@
 <?php
 
-//to process contact.html
+//to process contactUs.phtml
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 

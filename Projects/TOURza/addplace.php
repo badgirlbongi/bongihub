@@ -1,8 +1,8 @@
 <?php
 
-$servername = "127.0.0.1";
-$username = "your_username";
-$password = "your_password";
+$servername = "localhost";
+$username = "root";
+$password = "";
 $dbname = "tourza";
 
 // Create connection
@@ -21,8 +21,7 @@ $placeDescription = "Your place description";
 $placeLink = "Your place link";
 $provinceID = "your_province_id";
 
-// Handle image upload if needed
-// Assuming the image file is in the same directory as this script
+
 $imageContent = file_get_contents($placePicture);
 
 // SQL query to insert data into the 'place' table
@@ -31,7 +30,7 @@ $sql = "INSERT INTO `place`
         VALUES 
         ('$placeID', '$placeName', ?, '$placeDescription', '$placeLink', '$provinceID')";
 
-// Use prepared statement to bind parameters, especially for BLOB data
+// Use prepared statement to bind parameters
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $imageContent);
 
@@ -42,7 +41,6 @@ if ($stmt->execute()) {
     echo "Error inserting data: " . $stmt->error;
 }
 
-// Close statement and connection
 $stmt->close();
 $conn->close();
 
