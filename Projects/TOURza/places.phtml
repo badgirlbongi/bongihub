@@ -115,14 +115,17 @@
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
       <?php
-      // Include the PHP content generation code here
-      generateContent($province, $conn);
+
+      include 'index.html';
+      include 'places.php';
+
+      $selectedProvince = $_GET['province'];
+      generateContent($places, $conn);
       ?>
 
       </div>
     </div>
   </div>
-
 
 </main>
 

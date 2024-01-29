@@ -130,4 +130,5 @@ objectives : when you click a button on the index.phtml for example for free sta
 29/01/2024
 + testing if the database is working via bongihub/projects/TOURza/places.php
 + trying to display the results on the other page
++ the contents are not being displayed
 
