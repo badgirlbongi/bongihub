@@ -132,4 +132,5 @@ objectives : when you click a button on the index.phtml for example for free sta
 + trying to display the results on the other page
 + the contents are not being displayed pages to check bongihub/projects/TOURza/index.html , places.php, places.phtml
 + when running the system the page for displaying places is now showing the whole code in bongihub/projects/TOURza/places.phtml
++ moved the places.php and the contents of the file in the places.phtml, and modified other files changes places.phtml to places.php
 

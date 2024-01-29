@@ -177,3 +177,14 @@
 
     </body>
 </html>
+
+
+<?php
+      include 'index.html';
+      include 'places.php';
+      include 'index.html';
+      
+      $selectedProvince = $_GET['province'];
+      generateContent($places, $conn, $selectedProvince);
+      
+?>
