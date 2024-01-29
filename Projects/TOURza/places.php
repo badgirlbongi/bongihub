@@ -64,8 +64,23 @@ function generateContent($province, $conn) {
         $provinceID = $row['provinceID'];
 
         // to test if its working
-        echo "Image: $image, Description: $description, Link: $link, Province: $provinceID";
-    } else {
+       //echo "Image: $image, Description: $description, Link: $link, Province: $provinceID";
+        echo "<div class='col'>
+        <div class='card shadow-sm'>
+          <div class='card-header'>
+            <img src='$image' class='bd-placeholder-img card-img-top' width='100%' height='225' alt='place picture'>
+          </div>
+          <div class='card-body' style='max-height: 250px; overflow-y: auto;'>
+            <p class='card-text'>
+              $description
+            <p>
+            <a href='$link' class='link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover'>Visit this place</a></p>
+          </div>
+                      
+          <small class='text-body-secondary'>$provinceID</small>
+        </div>";
+    } 
+    else {
         echo "Query failed";
     }
 }
