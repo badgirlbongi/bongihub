@@ -1,9 +1,9 @@
-01/08/2024
+08/01/2024
 bongihub/projects/TOURza
 + Done updating info and pictures on the gauteng.html
 + Done updating info and pictures on the easterncape.html
 
-01/09/2024
+09/01/2024
 bongihub/projects/TOURza
 + changed the about picture on the about.html
 +  Done updating info and pictures on the kwazulunatal.html
@@ -11,13 +11,13 @@ bongihub/projects/TOURza
 + Done updating info and pictures on the mpumalanga.html
 + Done updating info and pictures on the northwest.html
 
-01/10/2024
+10/01/2024
 bongihub/projects/TOURza
 + Done updating info and pictures on the weesterncape.html
 - encountered a db error for saving the comment when rating the place files (process.php(ine 21) anyprovince.html)
 + updates meeting with mentor
 
-01/11/2024
+11/01/2024
 bongihub/projects/TOURza
 + replaced "reviews" with provinces on all provinces files
 + did research on how to add view more link to display the information in cards
@@ -34,7 +34,7 @@ bongihub/projects/TOURza
 - the changes messed up the whole page
 + removed all the changes to find a new way to resolve the issue
 
-01/12/2024
+12/01/2024
 bongihub/projects/TOURza
 + put home buttons on all province pages
 + added something at the bottom of every page
@@ -51,7 +51,7 @@ bongihub/projects/TOURza/tourzareview.php
 + testing to see the popup updates on tourzaContactUs.txt
 + research on layout file and framework
 
-01/15/2024
+15/01/2024
 + bongihub/projects/TOURza/about.html added column to store the info in paragraphs for neatness
 + added a header, body and footer bongihub/projects/TOURza/freestate.html
 + added a header, body and footer bongihub/projects/TOURza/gauteng.html
@@ -64,7 +64,7 @@ bongihub/projects/TOURza/tourzareview.php
 + added a header, body and footer bongihub/projects/TOURza/westencape.html
 + added a small change on top of every page
 
-01/16/2024
+16/01/2024
 + fixed the card sizes and carousels on the bongihub/projects/TOURza/index.html
 + online meeting with mentor for HTML class
 + online meeting with mentor for sql class
@@ -74,14 +74,14 @@ bongihub/projects/TOURza/tourzareview.php
 + basic research about OOP(still need more info)
 + basic research about using PDO(still need more info)
 
-01/17/2024
+17/01/2024
 + added description on the ERD tables bongihub/projects/TOURza/erd.txt
 + created DB on myPhpAdmnin
 + added a provinceID FK on the place table bongihub/projects/TOURza/erd.txt
 + save picture columns as data type BLOB
 + exported the tourza.sql database bongihub/projects/TOURza/tourza.sql
 
-01/18/2024
+18/01/2024
 + researching and brainstorming on how to make the province pages to run from one page
 + trying to figure out how to run the pages from one page( added placeContent.phtml and placeContent.php)
 + renamed files
@@ -93,7 +93,7 @@ objectives : when you click a button on the index.phtml for example for free sta
 + linked the index page with places.phtml
 + can't seem to figure out how to display the contents, tried a switch statement but doesn't make sense need to go back to the planning and drawing board
 
-01/19/2024
+19/01/2024
 + stil trying to display content using a switch statement
 + first method testing on button WC on bongihub/projects/TOURza/placeContent.phtml
 + first method not working
@@ -101,7 +101,7 @@ objectives : when you click a button on the index.phtml for example for free sta
 + still doesn't display the WC content
 + it doesn't display anything
 
-01/22/2024
+22/01/2024
 + still trying to debugg
 + added a link column on the places 
 + research on php framework 
@@ -110,20 +110,23 @@ objectives : when you click a button on the index.phtml for example for free sta
 + bongihub/projects/TOURza/index.php
 + replanning and restructuring
 
-01/23/2024
+23/01/2024
 + rearranged the files and put everything back to normal and made a few changes
 + added new sql
 + added php and js updated 
 
-01/25/2024
+25/01/2024
 + adding data to table rows in the database using myPhpAdmin
 + pictures cannot be added to the database
 + managed to fix the error images can now be added to the database on myphpadmin
 + resolving a "Got a packet bigger than 'max_allowed_packet' bytes," error on the myphpadmin
 
-01/26/2024
+26/01/2024
 + still addding data to the table rows on the database using myphpAdmnin
 + done adding data and exported the tourza database
 + changed a few things on the files of the project and updated the reviews.phtml file
-+ bongihub/projects/TOURza/places.php trying to fect data from the database and use it
++ bongihub/projects/TOURza/places.php trying to fetch data from the database and use it
+
+29/01/2024
++ testing if the database is working
 

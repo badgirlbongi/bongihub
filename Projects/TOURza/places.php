@@ -19,7 +19,7 @@ function generateContent($province, $conn) {
     
     switch ($province) {
         case 'EC':
-          $sql = "SELECT placePicture, placeDescription, placeLink FROM place WHERE provinceID = 'EC'";
+          $sql = "SELECT placePicture, placeDescription, placeLink, FROM place WHERE provinceID = 'EC'";
           break; 
         case 'FS':
           $sql = "SELECT placePicture, placeDescription, placeLink FROM place WHERE provinceID = 'FS'";
@@ -61,9 +61,10 @@ function generateContent($province, $conn) {
         $image = $row['placePicture'];
         $description = $row['placeDescription'];
         $link = $row['placeLink'];
+        $provinceID = $row['provinceID'];
 
         // to test if its working
-        echo "Image: $image, Description: $description, Link: $link";
+        echo "Image: $image, Description: $description, Link: $link, Province: $provinceID";
     } else {
         echo "Query failed";
     }
@@ -77,15 +78,5 @@ mysqli_close($conn);
 
 ?>
 
-
-
-<!--
-php
-include 'index.html';
-
-$page = $_GET['page'] ?? ''; // Get the 'page' parameter from the URL
-
-
--->
 
                 
