@@ -18,6 +18,17 @@
     <link rel="stylesheet" href="assets\dist\css\bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
+    <script>
+      function showPopup() {
+        var comment = prompt("Please enter your comment:");
+        if (comment != null) {
+          // If the user enters a comment, proceed to submit the rating and comment via form
+          document.getElementById("comment").value = comment;
+          document.getElementById("ratingForm").submit();
+        }
+      }
+    </script>
+
   </head>
   
   <body>
@@ -150,18 +161,38 @@ function generateContent($conn, $selectedProvince) {
         $provinceID = $row['provinceID'];
 
         // Display place information
-        echo "<div class='col'>
-                <div class='card shadow-sm'>
-                  <div class='card-header'>
-                    <img src='$image' class='bd-placeholder-img card-img-top' width='100%' height='225' alt='place picture'>
-                  </div>
-                  <div class='card-body' style='max-height: 250px; overflow-y: auto;'>
-                    <p class='card-text'>$description</p>
-                    <p><a href='$link' class='link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover'>Visit this place</a></p>
-                  </div>
-                  <small class='text-body-secondary'>$provinceID</small>
+       echo "
+      <div class='col'>
+        <div class='card shadow-sm'>
+          <div class='card-header'>
+            <img src='$image' class='bd-placeholder-img card-img-top' width='100%' height='225' alt='place image'>
+          </div>
+          <div class='card-body' style='max-height: 250px; overflow-y: auto;'>
+            <p class='card-text'>$description</p>
+            <p><a href='$link' class='link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover'>Visit this place</a></p>
+          </div>
+          <!-- Rating Form -->
+          <div class='card-footer'>
+            <form id='ratingForm' action='reviews.php' method='post'>
+              <p>Rate this place:</p>
+              <label><input type='radio' name='rating' value='1'> ★</label>
+              <label><input type='radio' name='rating' value='2'> ★★</label>
+              <label><input type='radio' name='rating' value='3'> ★★★</label>
+              <label><input type='radio' name='rating' value='4'> ★★★★</label>
+              <label><input type='radio' name='rating' value='5'> ★★★★★</label>
+              <br><br>
+              <input type='hidden' id='comment' name='comment' value=''>
+              <div class='d-flex justify-content-between align-items-center'>
+                <div class='btn-group'>
+                  <button type='button' onclick='showPopup()' class='btn btn-sm btn-outline-secondary'>Rate</button>
+                  <a href='reviews.phtml' class='btn btn-sm btn-outline-secondary' id='reviews'>Reviews</a>
                 </div>
-              </div>";
+                <small class='text-body-secondary'>$provinceID</small>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>";
     }
 
     $stmt->close();

@@ -27,3 +27,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "Form submission error.";
 }
 ?>
+echo "<div class='col'>
+                <div class='card shadow-sm'>
+                  <div class='card-header'>
+                    <img src='$image' class='bd-placeholder-img card-img-top' width='100%' height='225' alt='place picture'>
+                  </div>
+                  <div class='card-body' style='max-height: 250px; overflow-y: auto;'>
+                    <p class='card-text'>$description</p>
+                    <p><a href='$link' class='link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover'>Visit this place</a></p>
+                  </div>
+                  <small class='text-body-secondary'>$provinceID</small>
+                </div>
+              </div>";
