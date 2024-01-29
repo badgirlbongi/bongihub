@@ -131,4 +131,5 @@ objectives : when you click a button on the index.phtml for example for free sta
 + testing if the database is working via bongihub/projects/TOURza/places.php
 + trying to display the results on the other page
 + the contents are not being displayed pages to check bongihub/projects/TOURza/index.html , places.php, places.phtml
++ when running the system the page for displaying places is now showing the whole code in bongihub/projects/TOURza/places.phtml
 

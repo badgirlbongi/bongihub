@@ -13,7 +13,9 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$selectedProvince = $_GET['province'];
+//$selectedProvince = $_GET['province'];
+$selectedProvince = isset($_GET['province']);
+// ? $_GET['province'] : null;
 
 function generateContent($places, $conn, $selectedProvince) {
    
@@ -58,5 +60,7 @@ function generateContent($places, $conn, $selectedProvince) {
 $conn->close();
 
 ?>
+
+
 
 
