@@ -120,7 +120,7 @@
       include 'places.php';
 
       $selectedProvince = $_GET['province'];
-      generateContent($places, $conn);
+      generateContent($places, $conn, $selectedProvince);
       ?>
 
       </div>
