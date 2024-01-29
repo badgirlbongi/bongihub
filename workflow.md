@@ -128,5 +128,5 @@ objectives : when you click a button on the index.phtml for example for free sta
 + bongihub/projects/TOURza/places.php trying to fetch data from the database and use it
 
 29/01/2024
-+ testing if the database is working
++ testing if the database is working via bongihub/projects/TOURza/places.php
 

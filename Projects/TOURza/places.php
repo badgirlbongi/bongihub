@@ -19,31 +19,31 @@ function generateContent($province, $conn) {
     
     switch ($province) {
         case 'EC':
-          $sql = "SELECT placePicture, placeDescription, placeLink, FROM place WHERE provinceID = 'EC'";
+          $sql = "SELECT placePicture, placeDescription, placeLink, provinceID FROM place WHERE provinceID = 'EC'";
           break; 
         case 'FS':
-          $sql = "SELECT placePicture, placeDescription, placeLink FROM place WHERE provinceID = 'FS'";
+          $sql = "SELECT placePicture, placeDescription, placeLink, provinceID FROM place WHERE provinceID = 'FS'";
           break;
         case 'G':
-          $sql = "SELECT placePicture, placeDescription, placeLink FROM place WHERE provinceID = 'G'";
+          $sql = "SELECT placePicture, placeDescription, placeLink, provinceID FROM place WHERE provinceID = 'G'";
           break;
         case 'KZN':
-          $sql = "SELECT placePicture, placeDescription, placeLink FROM place WHERE provinceID = 'KZN'";
+          $sql = "SELECT placePicture, placeDescription, placeLink, provinceID FROM place WHERE provinceID = 'KZN'";
           break;
         case 'L':
-          $sql = "SELECT placePicture, placeDescription, placeLink FROM place WHERE provinceID = 'L'";
+          $sql = "SELECT placePicture, placeDescription, placeLink, provinceID FROM place WHERE provinceID = 'L'";
           break;
         case 'MP':
-          $sql = "SELECT placePicture, placeDescription, placeLink FROM place WHERE provinceID = 'MP'";
+          $sql = "SELECT placePicture, placeDescription, placeLink, provinceID FROM place WHERE provinceID = 'MP'";
           break;
         case 'NC':
-          $sql = "SELECT placePicture, placeDescription, placeLink FROM place WHERE provinceID = 'NC'";
+          $sql = "SELECT placePicture, placeDescription, placeLink, provinceID FROM place WHERE provinceID = 'NC'";
           break;
         case 'NW':
-          $sql = "SELECT placePicture, placeDescription, placeLink FROM place WHERE provinceID = 'NW'";
+          $sql = "SELECT placePicture, placeDescription, placeLink, provinceID FROM place WHERE provinceID = 'NW'";
           break;
         case 'WC':
-          $sql = "SELECT placePicture, placeDescription, placeLink FROM place WHERE provinceID = 'WC'";
+          $sql = "SELECT placePicture, placeDescription, placeLink, provinceID FROM place WHERE provinceID = 'WC'";
           break;
         default:
           // Handle other cases or provide a default behavior
