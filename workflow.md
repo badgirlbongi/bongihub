@@ -135,3 +135,5 @@ objectives : when you click a button on the index.phtml for example for free sta
 + moved the places.php and the contents of the file in the places.phtml, and modified other files changes places.phtml to places.php
 + its displaying but the pictures are not showing only unicode
 
+30/01/2024
++ trying to resolve the issues of pictures (watching youtube videos and research)
