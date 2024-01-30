@@ -137,3 +137,5 @@ objectives : when you click a button on the index.phtml for example for free sta
 
 30/01/2024
 + trying to resolve the issues of pictures (watching youtube videos and research)
++ researching about uploading and fetching images from the database
++ comparing this project with the first test main tch project for the usage of pdos and sql
