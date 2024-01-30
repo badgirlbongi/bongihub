@@ -139,4 +139,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + trying to resolve the issues of pictures (watching youtube videos and research)
 + researching about uploading and fetching images from the database
 + comparing this project with the first test main tch project for the usage of pdos and sql
-+ created a new db for testing called imagetest I am going to add a place from inserting data and saving to the db to see if it will show file for the code to test bongihub/projects/TOURza/addplace.php
++ created a new db for testing called imagetest I am going to add a place from inserting data and saving to the db to see if it will show file for the code to test bongihub/projects/TOURza/insert.php and viewing on confirmation.php
