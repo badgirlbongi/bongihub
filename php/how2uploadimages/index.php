@@ -47,12 +47,30 @@ if(isset($_FILES['userfile'])){
             $extensions = array('jpg','png','jpeg','web','gif');
 
             $file_ext = explode('.',$file_array[$i]['name']);
+
+           // pre_r($file_ext);die;
+
+           $name = $file_ext[0];
+
             $file_ext = end($file_ext);
 
             if(!in_array($file_ext, $extensions))
             {
                 ?> <div class="alert alert-danger">
                 <?php echo"{$file_array[$i]['name']} - Invalid file extension!";
+                ?> </div> <?php
+            }
+            else {
+
+                $img_dir = 'web/'.$file_array[$i]['name'];
+
+                move_uploaded_file($file_array[$i]['tmp_name'], $img_dir);
+
+                $sql = "INSERT IGNORE INTO $table (imageName,image_dir) VALUES('$name','$image_dir')";
+                $mysqli->query($sql) or die($mysqli->error);
+
+                ?> <div class="alert alert-success">
+                <?php echo $file_array[$i]['name'].' - '.$phpFileUploadErrors[$file_array[$i]['error']];
                 ?> </div> <?php
             }
         }
