@@ -1,6 +1,12 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>image upload</title>
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+        <link rel="stylesheet" href="assets\dist\css\bootstrap.min.css">
+        <script src="assets\dist\js\bootstrap.bundle.min.js"></script>
     </head>
     <body>
         <form action= "" method="POST"enctype="multipart/form-data">
@@ -52,8 +58,23 @@ if(isset($_FILES['userfile'])){
         }
     }
 }
+
 function reArrayFiles(&$file_post){
     $file_ary = array();
     $file_count = count($file_post['name']);
     $file_keys = array_keys($file_post);
+
+    for ($i=0; $i<$file_count; $i++){
+        foreach ($file_keys as $key){
+            $file_ary[$i][$key] = $file_post[$key][$i];
+        }
+    }
+
+    return $file_ary;
+}
+
+function pre_r($array){
+    echo '<pre' ;
+    print_r($array);
+    echo '</pre';
 }
