@@ -66,7 +66,7 @@ if(isset($_FILES['userfile'])){
 
                 move_uploaded_file($file_array[$i]['tmp_name'], $img_dir);
 
-                $sql = "INSERT IGNORE INTO $table (imageName,image_dir) VALUES('$imageName','$image_dir')";
+                $sql = "INSERT IGNORE INTO $table (imageName,image_dir) VALUES('$name','$img_dir')";
                 $mysqli->query($sql) or die($mysqli->error);
 
                 ?> <div class="alert alert-success">
