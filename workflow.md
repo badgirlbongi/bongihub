@@ -142,4 +142,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + created a new db for testing called imagetest I am going to add a place from inserting data and saving to the db to see if it will show file for the code to test bongihub/projects/TOURza/insert.php and viewing on confirmation.php
 
 31/01/2024
-+ forgot to put the html code for inserting data on bongihub/projects/TOURza/insert.php just added it now hence it was showing a blank page yesterday
++ forgot to put the html code for inserting data on bongihub/projects/TOURza/insert.php just added it now hence it was showing a blank page yesterday, uploading is working but the picture is still not showing
