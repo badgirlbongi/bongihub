@@ -44,7 +44,7 @@ if(isset($_FILES['userfile'])){
             ?> </div> <?php
         }
         else {
-            $extensions = array('jpg','png','jpeg','web','gif');
+            $extensions = array('jpg','png','jpeg','webp','gif');
 
             $file_ext = explode('.',$file_array[$i]['name']);
 
@@ -66,7 +66,7 @@ if(isset($_FILES['userfile'])){
 
                 move_uploaded_file($file_array[$i]['tmp_name'], $img_dir);
 
-                $sql = "INSERT IGNORE INTO $table (imageName,image_dir) VALUES('$name','$image_dir')";
+                $sql = "INSERT IGNORE INTO $table (imageName,image_dir) VALUES('$imageName','$image_dir')";
                 $mysqli->query($sql) or die($mysqli->error);
 
                 ?> <div class="alert alert-success">
