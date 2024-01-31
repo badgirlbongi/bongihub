@@ -63,3 +63,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $conn->close();
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Data</title>
+</head>
+<body>
+
+<form method="post" enctype="multipart/form-data">
+    Place ID: <input type="text" name="placeID" required><br>
+    Place Name: <input type="text" name="placeName" required><br>
+    Place Picture: <input type="file" name="placePicture" accept="image/*" required><br>
+    Place Description: <textarea name="placeDescription" required></textarea><br>
+    Place Link: <input type="text" name="placeLink" required><br>
+    Province ID: <input type="text" name="provinceID" required><br>
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
