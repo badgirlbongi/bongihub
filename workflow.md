@@ -148,3 +148,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 --- added if-statements and functions
 --- variable name error but pictures uploaded without the names and directory 
 --- fixing the error
+--- the pictures were uploaded successfully
