@@ -14,12 +14,12 @@ if ($conn->connect_error) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['rating']) && isset($_POST['comment'])) {
-        $rating = $_POST['rating'];
-        $comment = $_POST['comment'];
+        $rating = $_POST['ratingValue'];
+        $comment = $_POST['rateComment'];
 
         // Prepare and bind the SQL statement
-        $stmt = $conn->prepare("INSERT INTO rating (ratingValue, rateComment) VALUES (?, ?)");
-        $stmt->bind_param("is", $rating, $comment);
+        $stmt = $conn->prepare("INSERT INTO rating (ratingValue, rateComment, placeID) VALUES (?, ?, ?)");
+        $stmt->bind_param("iss", $rating, $comment, $placeID);
 
         // Execute the query
         $stmt->execute();
@@ -47,3 +47,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $conn->close();
 ?>
+

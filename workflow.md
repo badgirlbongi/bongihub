@@ -161,3 +161,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + included screen shots of uploading the images, there's only one picture that can't be uploaded cause of the unknown extension
 + updated the sql query on places.php to check if it's working
 + the pictures are displaying and the project is running
++ research about review calculations while updating 
