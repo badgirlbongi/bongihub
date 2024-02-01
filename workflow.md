@@ -155,3 +155,5 @@ objectives : when you click a button on the index.phtml for example for free sta
 01/02/2024
 + renaming images to match placeID on the database and moving them to the local folder
 + updated the index.html by changing the dir of the images
++ delete the images column on the tourza database 
++ add a table named images to store images on the tourza database
