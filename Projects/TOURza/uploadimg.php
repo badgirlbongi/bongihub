@@ -44,7 +44,7 @@ if(isset($_FILES['userfile'])){
             ?> </div> <?php
         }
         else {
-            $extensions = array('jpg','png','jpeg','webp','gif','avif');
+            $extensions = array('jpg','png','jpeg','webp','gif','avif','JPG');
 
             $file_ext = explode('.',$file_array[$i]['name']);
 
