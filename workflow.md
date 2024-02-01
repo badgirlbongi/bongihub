@@ -151,3 +151,6 @@ objectives : when you click a button on the index.phtml for example for free sta
 --- the pictures were uploaded successfully
 + added bongihub/php/how2uploadimages/display.php to display the uploaded images
 + renaming images to match placeID on the database and moving them to the local folder
+
+01/02/2024
++ renaming images to match placeID on the database and moving them to the local folder
