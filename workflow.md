@@ -157,3 +157,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + updated the index.html by changing the dir of the images
 + delete the images column on the tourza database 
 + add a table named images to store images on the tourza database
++ created new files to add images to the database by storing their dir files uploadimg.php and displayimg.php 
