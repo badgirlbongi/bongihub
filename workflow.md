@@ -154,3 +154,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 
 01/02/2024
 + renaming images to match placeID on the database and moving them to the local folder
+
