@@ -141,8 +141,12 @@ if ($conn->connect_error) {
 $selectedProvince = $_GET['province'];
 
 function generateContent($conn, $selectedProvince) {
-    $sql = "SELECT placePicture, placeDescription, placeLink, provinceID FROM place WHERE provinceID = ?";
-    
+
+    $sql = "SELECT p.placeDescription, p.placeLink, p.provinceID, i.image_dir 
+        FROM place p
+        INNER JOIN images i ON p.placeID = i.imageName
+        WHERE p.provinceID = ?";
+
     // Prepare and bind the statement
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $selectedProvince);
@@ -155,7 +159,7 @@ function generateContent($conn, $selectedProvince) {
 
     while ($row = $result->fetch_assoc()) {
         // Assign values to variables
-        $image = $row['placePicture'];
+        $image = $row['image_dir'];
         $description = $row['placeDescription'];
         $link = $row['placeLink'];
         $provinceID = $row['provinceID'];

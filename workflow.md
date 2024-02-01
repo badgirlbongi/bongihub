@@ -159,3 +159,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + add a table named images to store images on the tourza database
 + created new files to add images to the database by storing their dir files uploadimg.php and displayimg.php 
 + included screen shots of uploading the images, there's only one picture that can't be uploaded cause of the unknown extension
++ updated the sql query on places.php to check if it's working
