@@ -1,24 +1,17 @@
 <?php
 // Establish database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "tourza"; 
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$mysqli = new mysqli('localhost','root','','tourza') or die ($mysqli->connect_error);
+$table = 'rating';
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST['rating']) && isset($_POST['comment'])) {
+    if (isset($_POST['ratingValue']) && isset($_POST['rateComment'])) {
         $rating = $_POST['ratingValue'];
         $comment = $_POST['rateComment'];
 
         // Prepare and bind the SQL statement
-        $stmt = $conn->prepare("INSERT INTO rating (ratingValue, rateComment, placeID) VALUES (?, ?, ?)");
+        $stmt = $mysqli->prepare("INSERT INTO $table (ratingValue, rateComment, placeID) VALUES (?, ?, ?)");
         $stmt->bind_param("iss", $rating, $comment, $placeID);
 
         // Execute the query
@@ -26,8 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->close();
 
         // Retrieve all ratings from the database
-        $sql = "SELECT ratingValue FROM rating"; 
-        $result = $conn->query($sql);
+        $sql = "SELECT ratingValue FROM $table"; 
+        $result = $mysqli->query($sql);
 
         // Calculate average rating
         $totalRatings = $result->num_rows;
@@ -45,6 +38,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-$conn->close();
+$mysqli->close();
 ?>
 
