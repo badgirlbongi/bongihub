@@ -142,7 +142,7 @@ $selectedProvince = $_GET['province'];
 
 function generateContent($conn, $selectedProvince) {
 
-    $sql = "SELECT p.placeDescription, p.placeLink, p.provinceID, i.image_dir 
+    $sql = "SELECT p.placeDescription, p.placeLink, p.provinceID, p.placeID, i.image_dir 
         FROM place p
         INNER JOIN images i ON p.placeID = i.imageName
         WHERE p.provinceID = ?";
@@ -163,6 +163,7 @@ function generateContent($conn, $selectedProvince) {
         $description = $row['placeDescription'];
         $link = $row['placeLink'];
         $provinceID = $row['provinceID'];
+        $placeID = $row['placeID'];
 
         // Display place information
        echo "
@@ -191,7 +192,7 @@ function generateContent($conn, $selectedProvince) {
                   <button type='button' onclick='showPopup()' class='btn btn-sm btn-outline-secondary'>Rate</button>
                   <a href='reviews.phtml' class='btn btn-sm btn-outline-secondary' id='reviews'>Reviews</a>
                 </div>
-                <small class='text-body-secondary'>$provinceID</small>
+                <small class='text-body-secondary'>$provinceID - $placeID</small>
               </div>
             </form>
           </div>

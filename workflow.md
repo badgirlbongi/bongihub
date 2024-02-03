@@ -162,3 +162,6 @@ objectives : when you click a button on the index.phtml for example for free sta
 + updated the sql query on places.php to check if it's working
 + the pictures are displaying and the project is running
 + research about review calculations while updating 
+
+02/02/2024
++ adjusted the code so that i can retrieve the placeID so that it can later be used on the reviews page
