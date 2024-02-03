@@ -186,7 +186,8 @@ function generateContent($conn, $selectedProvince) {
               <label><input type='radio' name='rateValue' value='4'> ★★★★</label>
               <label><input type='radio' name='rateValue' value='5'> ★★★★★</label>
               <br><br>
-              <input type='hidden' id='comment' name='rateComment' value=''>
+              <input type='hidden' id='comment' name='comment' value=''>
+              <input type='hidden' name='placeID' value='<?php echo $placeID; ?>'>
               <div class='d-flex justify-content-between align-items-center'>
                 <div class='btn-group'>
                   <button type='button' onclick='showPopup()' class='btn btn-sm btn-outline-secondary'>Rate</button>
