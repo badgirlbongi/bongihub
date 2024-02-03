@@ -18,23 +18,16 @@
     <link rel="stylesheet" href="assets\dist\css\bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
-  <script>
-    function submitForm(event) {
-      event.preventDefault(); // Prevent the default form submission
-
-      var comment = prompt("Please enter your comment:");
-
-      if (comment != null) {
-         // If the user enters a comment, proceed to submit the rating and comment via form
-         document.getElementById("rateComment").value = comment;
-         document.getElementById("ratingForm").submit();
+    <script>
+      function showPopup() {
+        var comment = prompt("Please enter your comment:");
+        if (comment != null) {
+          // If the user enters a comment, proceed to submit the rating and comment via form
+          document.getElementById("comment").value = comment;
+          document.getElementById("ratingForm").submit();
+        }
       }
-
-      // Redirect to the Places page after form submission
-      window.location.href = 'places.php'; // Change 'places.php' to the actual filename or URL of your Places page
-   }
-  </script>
-
+    </script>
 
   </head>
   
@@ -185,15 +178,15 @@ function generateContent($conn, $selectedProvince) {
           </div>
           <!-- Rating Form -->
           <div class='card-footer'>
-          <form id='ratingForm' method='post' onsubmit='submitForm(event)'>
+            <form id='ratingForm' action='reviews.php' method='post'>
               <p>Rate this place:</p>
-              <label><input type='radio' name='ratingValue' value='1'> ★</label>
-              <label><input type='radio' name='ratingValue' value='2'> ★★</label>
-              <label><input type='radio' name='ratingValue' value='3'> ★★★</label>
-              <label><input type='radio' name='ratingValue' value='4'> ★★★★</label>
-              <label><input type='radio' name='ratingValue' value='5'> ★★★★★</label>
+              <label><input type='radio' name='rateValue' value='1'> ★</label>
+              <label><input type='radio' name='rateValue' value='2'> ★★</label>
+              <label><input type='radio' name='rateValue' value='3'> ★★★</label>
+              <label><input type='radio' name='rateValue' value='4'> ★★★★</label>
+              <label><input type='radio' name='rateValue' value='5'> ★★★★★</label>
               <br><br>
-              <input type='hidden' id='rateComment' name='comment' value=''>
+              <input type='hidden' id='comment' name='rateComment' value=''>
               <div class='d-flex justify-content-between align-items-center'>
                 <div class='btn-group'>
                   <button type='button' onclick='showPopup()' class='btn btn-sm btn-outline-secondary'>Rate</button>

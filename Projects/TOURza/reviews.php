@@ -6,9 +6,10 @@ $table = 'rating';
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST['ratingValue']) && isset($_POST['rateComment'])) {
-        $rating = $_POST['ratingValue'];
+    if (isset($_POST['rateValue']) && isset($_POST['comment'])) {
+        $rating = $_POST['rateValue'];
         $comment = $_POST['rateComment'];
+        $placeID = $_POST['placeID'];
 
         // Prepare and bind the SQL statement
         $stmt = $mysqli->prepare("INSERT INTO $table (ratingValue, rateComment, placeID) VALUES (?, ?, ?)");
