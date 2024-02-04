@@ -168,5 +168,7 @@ objectives : when you click a button on the index.phtml for example for free sta
 + working on reviews.php to calculate reviews : the comment form is not showing file to check places.php and reviews.php
 + comment form is showing the button can be clicked to rate but throws an error that the rate and comment were not selected and entered 
 + trying to fix the reviews form on places.php
-+ switching from sql to pdos
-+ testing if it's working
++ bongihub/projects/tourza2
+: switching from sql to pdos
+: testing if it's working
+: project working but still throwing reviews error
