@@ -207,14 +207,9 @@ generateContent($pdo, $selectedProvince);
 // Close the connection
 $pdo = null;
 ?>
-        <div class='col'>
-          <div class='card shadow-sm'>
-            <div class="card-header">
-              <a href="addplace.php">
-              <i class='bx bxs-plus-circle' style="color: #f7b602;"></i></a>
-          </div>
-          </div>
-        </div>
+
+        <a href="addplace.php">
+          <i class='bx bxs-plus-circle' style="color: #f7b602;font-size: 6em;"></i></a>
 
       </div>
     </div>
