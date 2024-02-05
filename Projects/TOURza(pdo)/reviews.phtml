@@ -106,7 +106,49 @@
   </div>
 </header>
 
+<?php
+function displayRatings($dsn, $username, $password, $options, $table, $provinceID) {
+    try {
+        $pdo = new PDO($dsn, $username, $password, $options);
+    } catch (PDOException $e) {
+        die("Connection failed: " . $e->getMessage());
+    }
+
+    // SQL query to retrieve ratings
+    $sql = "SELECT ratingValue, rateComment, placeID FROM $table WHERE provinceID = :provinceID";
+    try {
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(':provinceID', $provinceID);
+        $stmt->execute();
+
+        // Display ratings in card-body
+        echo '<div class="card-body" style="max-height: 250px; overflow-y: auto;">';
+        if ($stmt->rowCount() > 0) {
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                echo '<p class="card-text">'.$row['rateComment'].'-'.$row['placeID'].'</p>';
+            }
+        } else {
+            echo '<p class="card-text">No ratings available</p>';
+        }
+        echo '</div>';
+    } catch (PDOException $e) {
+        die("Error: " . $e->getMessage());
+    }
+}
+?>
+
 <main>
+<?php
+$dsn = 'mysql:host=localhost;dbname=tourza';
+$username = 'root';
+$password = '';
+$options = [
+    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    PDO::ATTR_EMULATE_PREPARES => false,
+];
+$table = 'rating';
+?>
+
 <div class="album py-5 bg-body-tertiary">
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -117,7 +159,10 @@
               <a><strong class="text-warning">Eastern Cape</strong></a>
               </div>
               <div class="card-body" style="max-height: 250px; overflow-y: auto;">
-                <p class="card-text">       
+                <p class="card-text">
+                <?php $provinceID = 'EC';
+                displayRatings($dsn, $username, $password, $options, $table, $provinceID); ?> 
+                </p>   
             </div>
             <div class="card-footer">
               <small class="text-body-secondary">The average for the places in this province :</small>
@@ -131,7 +176,10 @@
               <a><strong class="text-warning">Free State</strong></a>
               </div>
               <div class="card-body" style="max-height: 250px; overflow-y: auto;">
-                <p class="card-text">       
+              <p class="card-text">
+                <?php $provinceID = 'FS';
+                displayRatings($dsn, $username, $password, $options, $table, $provinceID); ?> 
+                </p>      
             </div>
             <div class="card-footer">
               <small class="text-body-secondary">The average for the places in this province :</small>
