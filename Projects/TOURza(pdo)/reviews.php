@@ -20,7 +20,7 @@ $table = 'rating';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['rateValue']) && isset($_POST['comment'])) {
         $rating = $_POST['rateValue'];
-        $comment = $_POST['rateComment'];
+        $comment = $_POST['comment'];
         $placeID = $_POST['placeID'];
 
         // Prepare and bind the SQL statement

@@ -188,7 +188,7 @@ function generateContent($pdo, $selectedProvince) {
               <label><input type='radio' name='rateValue' value='5'> ★★★★★</label>
               <br><br>
               <input type='hidden' id='comment' name='comment' value=''>
-              <input type='hidden' name='placeID' value='<?php echo $placeID; ?>'>
+              <input type='hidden' name='placeID' value='$placeID'>
               <div class='d-flex justify-content-between align-items-center'>
                 <div class='btn-group'>
                   <button type='button' onclick='showPopup()' class='btn btn-sm btn-outline-secondary'>Rate</button>
