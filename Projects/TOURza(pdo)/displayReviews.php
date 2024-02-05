@@ -107,18 +107,23 @@
 </header>
 
 <?php
-function displayRatings($dsn, $username, $password, $options, $table, $provinceID) {
+function displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) {
     try {
         $pdo = new PDO($dsn, $username, $password, $options);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $e) {
         die("Connection failed: " . $e->getMessage());
     }
 
     // SQL query to retrieve ratings
-    $sql = "SELECT ratingValue, rateComment, placeID FROM $table WHERE provinceID = :provinceID";
+    $sql = "SELECT r.rateComment, r.placeID, p.provinceID
+            FROM $table1 r
+            JOIN $table2 p ON r.placeID = p.placeID
+            WHERE p.provinceID = :provinceID";
+
     try {
         $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':provinceID', $provinceID);
+        $stmt->bindParam(':provinceID', $provinceID, PDO::PARAM_INT);
         $stmt->execute();
 
         // Display ratings in card-body
@@ -138,20 +143,21 @@ function displayRatings($dsn, $username, $password, $options, $table, $provinceI
 ?>
 
 <main>
-<?php
-$dsn = 'mysql:host=localhost;dbname=tourza';
-$username = 'root';
-$password = '';
-$options = [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_EMULATE_PREPARES => false,
-];
-$table = 'rating';
-?>
-
 <div class="album py-5 bg-body-tertiary">
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+      <?php
+        $dsn = 'mysql:host=localhost;dbname=tourza';
+        $username = 'root';
+        $password = '';
+        $options = [
+          PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+          PDO::ATTR_EMULATE_PREPARES => false,
+        ];
+        $table1 = 'rating';
+        $table2 = 'place';
+      ?>
 
         <div class="col">
           <div class="card shadow-sm">
@@ -161,7 +167,7 @@ $table = 'rating';
               <div class="card-body" style="max-height: 250px; overflow-y: auto;">
                 <p class="card-text">
                 <?php $provinceID = 'EC';
-                displayRatings($dsn, $username, $password, $options, $table, $provinceID); ?> 
+                displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID); ?> 
                 </p>   
             </div>
             <div class="card-footer">
@@ -178,7 +184,7 @@ $table = 'rating';
               <div class="card-body" style="max-height: 250px; overflow-y: auto;">
               <p class="card-text">
                 <?php $provinceID = 'FS';
-                displayRatings($dsn, $username, $password, $options, $table, $provinceID); ?> 
+                displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID); ?> 
                 </p>      
             </div>
             <div class="card-footer">
@@ -195,7 +201,7 @@ $table = 'rating';
               <div class="card-body" style="max-height: 250px; overflow-y: auto;">
               <p class="card-text">
                 <?php $provinceID = 'G';
-                displayRatings($dsn, $username, $password, $options, $table, $provinceID); ?> 
+                displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID); ?> 
                 </p>      
             </div>
             <div class="card-footer">
@@ -212,7 +218,7 @@ $table = 'rating';
               <div class="card-body" style="max-height: 250px; overflow-y: auto;">
               <p class="card-text">
                 <?php $provinceID = 'KZN';
-                displayRatings($dsn, $username, $password, $options, $table, $provinceID); ?> 
+                displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID); ?> 
                 </p>
             </div>
             <div class="card-footer">
@@ -229,7 +235,7 @@ $table = 'rating';
               <div class="card-body" style="max-height: 250px; overflow-y: auto;">
               <p class="card-text">
                 <?php $provinceID = 'L';
-                displayRatings($dsn, $username, $password, $options, $table, $provinceID); ?> 
+                displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID); ?> 
                 </p>       
             </div>
             <div class="card-footer">
@@ -246,7 +252,7 @@ $table = 'rating';
               <div class="card-body" style="max-height: 250px; overflow-y: auto;">
               <p class="card-text">
                 <?php $provinceID = 'MP';
-                displayRatings($dsn, $username, $password, $options, $table, $provinceID); ?> 
+                displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID); ?> 
                 </p>      
             </div>
             <div class="card-footer">
@@ -263,7 +269,7 @@ $table = 'rating';
               <div class="card-body" style="max-height: 250px; overflow-y: auto;">
               <p class="card-text">
                 <?php $provinceID = 'NC';
-                displayRatings($dsn, $username, $password, $options, $table, $provinceID); ?> 
+                displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID); ?> 
                 </p>       
             </div>
             <div class="card-footer">
@@ -280,7 +286,7 @@ $table = 'rating';
               <div class="card-body" style="max-height: 250px; overflow-y: auto;">
               <p class="card-text">
                 <?php $provinceID = 'NW';
-                displayRatings($dsn, $username, $password, $options, $table, $provinceID); ?> 
+                displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID); ?> 
                 </p>       
             </div>
             <div class="card-footer">
@@ -297,7 +303,7 @@ $table = 'rating';
             <div class="card-body" style="max-height: 250px; overflow-y: auto;">
             <p class="card-text">
                 <?php $provinceID = 'WC';
-                displayRatings($dsn, $username, $password, $options, $table, $provinceID); ?> 
+                displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID); ?> 
                 </p>       
             </div>
             <div class="card-footer">

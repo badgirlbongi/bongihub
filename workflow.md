@@ -177,6 +177,7 @@ objectives : when you click a button on the index.phtml for example for free sta
 + reviews.php no longer throwing an error
 + research on how to properly display the database query of showing the reviews on the reviews.phtml
 -- added a function to retrieve the data
+-- the comments and placeID are being displayed
 + adding a place (bongihub/projects/TOURza(pdo)):
 -- added a plus circle icon for adding the place(places.php)
 -- the plus circle is not showing
