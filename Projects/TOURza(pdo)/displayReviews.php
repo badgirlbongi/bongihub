@@ -86,8 +86,8 @@
             <a href="https://www.linkedin.com/TOURza">
                 <i class='bx bxl-linkedin text-warning' style="font-size: 2em;"></i></a>
             <a href="index.html" class="btn btn-warning my-2">Home</a>
-            <a href="about.html" class="btn btn-warning my-2">About</a>
-            <a href="contact.phtml" class="btn btn-warning my-2">Contact Us</a>
+            <a href="displayReviews.php" class="btn btn-warning my-2">About</a>
+            <a href="contactUs.html" class="btn btn-warning my-2">Contact Us</a>
           </div> 
         </div>
       </div>
@@ -193,7 +193,10 @@ $table = 'rating';
               <a><strong class="text-warning">Gauteng</strong></a>
               </div>
               <div class="card-body" style="max-height: 250px; overflow-y: auto;">
-                <p class="card-text">       
+              <p class="card-text">
+                <?php $provinceID = 'G';
+                displayRatings($dsn, $username, $password, $options, $table, $provinceID); ?> 
+                </p>      
             </div>
             <div class="card-footer">
               <small class="text-body-secondary">The average for the places in this province :</small>
@@ -207,7 +210,10 @@ $table = 'rating';
               <a><strong class="text-warning">Kwa-Zulu Natal</strong></a>
               </div>
               <div class="card-body" style="max-height: 250px; overflow-y: auto;">
-                <p class="card-text"></p>
+              <p class="card-text">
+                <?php $provinceID = 'KZN';
+                displayRatings($dsn, $username, $password, $options, $table, $provinceID); ?> 
+                </p>
             </div>
             <div class="card-footer">
               <small class="text-body-secondary">The average for the places in this province :</small>
@@ -221,7 +227,10 @@ $table = 'rating';
               <a><strong class="text-warning">Limpopo</strong></a>
               </div>
               <div class="card-body" style="max-height: 250px; overflow-y: auto;">
-                <p class="card-text">       
+              <p class="card-text">
+                <?php $provinceID = 'L';
+                displayRatings($dsn, $username, $password, $options, $table, $provinceID); ?> 
+                </p>       
             </div>
             <div class="card-footer">
               <small class="text-body-secondary">The average for the places in this province :</small>
@@ -235,7 +244,10 @@ $table = 'rating';
               <a><strong class="text-warning">Mpumalanga</strong></a>
               </div>
               <div class="card-body" style="max-height: 250px; overflow-y: auto;">
-                <p class="card-text">       
+              <p class="card-text">
+                <?php $provinceID = 'MP';
+                displayRatings($dsn, $username, $password, $options, $table, $provinceID); ?> 
+                </p>      
             </div>
             <div class="card-footer">
               <small class="text-body-secondary">The average for the places in this province :</small>
@@ -249,7 +261,10 @@ $table = 'rating';
               <a><strong class="text-warning">Northern Cape</strong></a>
               </div>
               <div class="card-body" style="max-height: 250px; overflow-y: auto;">
-                <p class="card-text">       
+              <p class="card-text">
+                <?php $provinceID = 'NC';
+                displayRatings($dsn, $username, $password, $options, $table, $provinceID); ?> 
+                </p>       
             </div>
             <div class="card-footer">
               <small class="text-body-secondary">The average for the places in this province :</small>
@@ -263,7 +278,10 @@ $table = 'rating';
               <a><strong class="text-warning">North West</strong></a>
               </div>
               <div class="card-body" style="max-height: 250px; overflow-y: auto;">
-                <p class="card-text">       
+              <p class="card-text">
+                <?php $provinceID = 'NW';
+                displayRatings($dsn, $username, $password, $options, $table, $provinceID); ?> 
+                </p>       
             </div>
             <div class="card-footer">
               <small class="text-body-secondary">The average for the places in this province :</small>
@@ -277,7 +295,10 @@ $table = 'rating';
               <a><strong class="text-warning">Western Cape</strong></a>
             </div>
             <div class="card-body" style="max-height: 250px; overflow-y: auto;">
-                <p class="card-text">       
+            <p class="card-text">
+                <?php $provinceID = 'WC';
+                displayRatings($dsn, $username, $password, $options, $table, $provinceID); ?> 
+                </p>       
             </div>
             <div class="card-footer">
               <small class="text-body-secondary">The average for the places in this province :</small>

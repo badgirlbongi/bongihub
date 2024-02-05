@@ -99,8 +99,8 @@
               <i class='bx bxl-instagram text-warning' style="font-size: 3em;"></i></a>
             <a href="#"><i class='bx bxl-linkedin text-warning' style="font-size: 3em;"></i></a>
             <a href="index.html" class="btn btn-warning my-2">Home</a>
-            <a href="reviews.html" class="btn btn-warning my-2">Reviews</a>
-            <a href="contact.html" class="btn btn-warning my-2">Contact Us</a>
+            <a href="displayReviews.php" class="btn btn-warning my-2">Reviews</a>
+            <a href="contactUs.html" class="btn btn-warning my-2">Contact Us</a>
           </div> 
         </div>
       </div>
