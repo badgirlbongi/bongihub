@@ -179,3 +179,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 -- the plus circle is not showing
 -- plus circle button now showing (used bs icon), now needs styling
 -- addplace.php html code
+-- fixing database and adding images when adding place information

@@ -1,3 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>image upload</title>
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+        <link rel="stylesheet" href="assets\dist\css\bootstrap.min.css">
+        <script src="assets\dist\js\bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <form action= "" method="POST"enctype="multipart/form-data">
+            <input type="file" name="userfile[]" value="" multiple="">
+            <input type="submit" name="submit" value="upload">
+        </form>
+    </body>
+</html>
 <?php
 
 $dsn = 'mysql:host=localhost;dbname=tourza';
