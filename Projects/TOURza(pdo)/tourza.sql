@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 01, 2024 at 10:39 AM
+-- Generation Time: Feb 05, 2024 at 09:59 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -32,6 +32,109 @@ CREATE TABLE `images` (
   `imageName` varchar(225) NOT NULL,
   `image_dir` varchar(225) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `images`
+--
+
+INSERT INTO `images` (`imgID`, `imageName`, `image_dir`) VALUES
+(1, 'aenp', 'web/aenp.jpg'),
+(2, 'bb', 'web/bb.png'),
+(3, 'bbwc', 'web/bbwc.jpg'),
+(4, 'bfr', 'web/bfr.png'),
+(5, 'bnr', 'web/bnr.jpg'),
+(6, 'brits', 'web/brits.jpg'),
+(7, 'cb', 'web/cb.jpg'),
+(8, 'chhrp', 'web/chhrp.jpg'),
+(9, 'd', 'web/d.jpg'),
+(10, 'ds', 'web/ds.jpg'),
+(11, 'el', 'web/el.jpg'),
+(12, 'ep', 'web/ep.jpg'),
+(13, 'frbopc', 'web/frbopc.jpg'),
+(14, 'gr', 'web/gr.webp'),
+(15, 'grctp', 'web/grctp.jpg'),
+(16, 'gsk', 'web/gsk.jpg'),
+(17, 'gsw', 'web/gsw.JPG'),
+(18, 'h', 'web/h.jpg'),
+(19, 'hbs', 'web/hbs.jpg'),
+(20, 'hf', 'web/hf.jpg'),
+(21, 'hip', 'web/hip.jpg'),
+(22, 'hs', 'web/hs.jpg'),
+(23, 'iwp', 'web/iwp.jpg'),
+(24, 'jb', 'web/jb.jpg'),
+(25, 'knbg', 'web/knbg.jpeg'),
+(26, 'ksd', 'web/ksd.jpg'),
+(27, 'm', 'web/m.jpg'),
+(28, 'mb', 'web/mb.jpg'),
+(29, 'mbk', 'web/mbk.jpg'),
+(30, 'mbwc', 'web/mbwc.avif'),
+(31, 'mc', 'web/mc.jpg'),
+(32, 'mgrnw', 'web/mgrnw.jpg'),
+(33, 'mhknw', 'web/mhknw.jpg'),
+(34, 'mmgr', 'web/mmgr.jpg'),
+(35, 'mnp', 'web/mnp.jpg'),
+(36, 'mnpl', 'web/mnpl.jpg'),
+(37, 'mnpnc', 'web/mnpnc.jpg'),
+(38, 'ncc', 'web/ncc.jpg'),
+(39, 'nh', 'web/nh.jpg'),
+(40, 'nms', 'web/nms.jpg'),
+(41, 'nql', 'web/nql.jpg'),
+(42, 'p', 'web/p.jpg'),
+(43, 'pa', 'web/pa.jpg'),
+(44, 'pfs', 'web/pfs.jpg'),
+(45, 'pl', 'web/pl.png'),
+(46, 'plk', 'web/plk.jpg'),
+(47, 'pnpnw', 'web/pnpnw.JPG'),
+(48, 'prm', 'web/prm.jpg'),
+(49, 'rnb', 'web/rnb.jpg'),
+(50, 'rnnp', 'web/rnnp.jpg'),
+(51, 'rnpncr', 'web/rnpncr.jpg'),
+(52, 'salt', 'web/salt.jpg'),
+(53, 'skk', 'web/skk.avif'),
+(54, 'ssgr', 'web/ssgr.jpg'),
+(55, 't', 'web/t.jpg'),
+(56, 'tafnp', 'web/tafnp.webp'),
+(57, 'tam', 'web/tam.webp'),
+(58, 'tar', 'web/tar.jpg'),
+(59, 'tbcv', 'web/tbcv.jpg'),
+(60, 'tbh', 'web/tbh.jpg'),
+(61, 'tcc', 'web/tcc.jpg'),
+(62, 'tcogh', 'web/tcogh.webp'),
+(63, 'tcohk', 'web/tcohk.jpg'),
+(64, 'tcpnr', 'web/tcpnr.jpg'),
+(65, 'tdbg', 'web/tdbg.jpg'),
+(66, 'tfsnbg', 'web/tfsnbg.jpg'),
+(67, 'tgd', 'web/tgd.jpg'),
+(68, 'tgghnp', 'web/tgghnp.jpg'),
+(69, 'tgnr', 'web/tgnr.jpg'),
+(70, 'tgtosk', 'web/tgtosk.jpg'),
+(71, 'thpm', 'web/thpm.jpg'),
+(72, 'tibkm', 'web/tibkm.jpg'),
+(73, 'tkep', 'web/tkep.jpg'),
+(74, 'tkmm', 'web/tkmm.jpg'),
+(75, 'tknpwc', 'web/tknpwc.jpg'),
+(76, 'tktp', 'web/tktp.jpg'),
+(77, 'tmms', 'web/tmms.jpg'),
+(78, 'tmnpwc', 'web/tmnpwc.jpg'),
+(79, 'tmp', 'web/tmp.jpeg'),
+(80, 'tmznp', 'web/tmznp.jpg'),
+(81, 'tnm', 'web/tnm.jpg'),
+(82, 'tnmcs', 'web/tnmcs.jpg'),
+(83, 'tpnr', 'web/tpnr.jpg'),
+(84, 'trnrwc', 'web/trnrwc.jpg'),
+(85, 'ttoacpt', 'web/ttoacpt.jpg'),
+(86, 'ttoc', 'web/ttoc.jpg'),
+(87, 'tvahwc', 'web/tvahwc.webp'),
+(88, 'tvawft', 'web/tvawft.jpg'),
+(89, 'tvd', 'web/tvd.jpg'),
+(90, 'tvm', 'web/tvm.jpg'),
+(91, 'twcaec', 'web/twcaec.jpg'),
+(92, 'twlraa', 'web/twlraa.jpeg'),
+(93, 'twsnbg', 'web/twsnbg.jpg'),
+(94, 'tzn', 'web/tzn.avif'),
+(95, 'umw', 'web/umw.JPG'),
+(96, 'vybg', 'web/vybg.jpg'),
+(97, 'wgr', 'web/wgr.jpg');
 
 -- --------------------------------------------------------
 
@@ -194,7 +297,7 @@ ALTER TABLE `rating`
 -- AUTO_INCREMENT for table `images`
 --
 ALTER TABLE `images`
-  MODIFY `imgID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `imgID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 
 --
 -- AUTO_INCREMENT for table `rating`

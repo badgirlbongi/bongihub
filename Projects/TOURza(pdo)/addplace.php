@@ -191,24 +191,35 @@ $pdo = null;
   
     <form method="post" enctype="multipart/form-data">
         <div class="form-group">
-            <label for="userName">Your Name:</label>
-            <input type="text" class="form-control" id="userName" name="userName" placeholder="Enter your name" required>
+            <label for="userName">Place ID:</label>
+            <input type="text" class="form-control" name="placeID" placeholder="Enter the place ID " required>
         </div>
         <div class="form-group">
-            <label for="email">Your Email:</label>
-            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+            <label for="userName">Place Name:</label>
+            <input type="text" class="form-control" name="placeName" placeholder="Enter the place full name" required>
         </div>
-      
-      <div class="form-group">
-          <label for="comment">Your Comment:</label>
-          <textarea class="form-control" id="comment" name="comment" rows="4" required></textarea>
-      </div>
+        <div class="form-group">
+            <label for="userName">Place Picture:</label>
+            <input type="file" class="form-control" name="placePicture" accept="image/*" required>
+        </div>
+        <div class="form-group">
+            <label for="userName">Place Description:</label>
+            <input type="text" class="form-control" name="placeName" placeholder="Enter the place full name" required>
+        </div>
+        <div class="form-group">
+            <label for="userName">Place Link:</label>
+            <input type="text" class="form-control" name="placeLink" placeholder="Paste the place website link" required>
+        </div>
+        <div class="form-group">
+            <label for="userName">Province ID:</label>
+            <input type="text" class="form-control" name="provinceID" placeholder="Enter the province abbreviation" required>
+        </div>
       <br>
-      <button type="submit" class="btn btn-warning">Submit Review</button>
+      <button type="submit" class="btn btn-warning">Add place</button>
     </form>
 
 </main>
-<form method="post" enctype="multipart/form-data">
+<!--<form method="post" enctype="multipart/form-data">
     Place ID: <input type="text" name="placeID" required><br>
     Place Name: <input type="text" name="placeName" required><br>
     Place Picture: <input type="file" name="placePicture" accept="image/*" required><br>
@@ -216,7 +227,7 @@ $pdo = null;
     Place Link: <input type="text" name="placeLink" required><br>
     Province ID: <input type="text" name="provinceID" required><br>
     <input type="submit" value="Submit">
-</form>
+</form>-->
 
 <footer class="text-body-secondary py-5">
   <div class="container">
