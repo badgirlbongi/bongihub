@@ -177,3 +177,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + adding a place (bongihub/projects/TOURza(pdo)):
 -- added a plus circle icon for adding the place(places.php)
 -- the plus circle is not showing
+-- plus circle button now showing (used bs icon), now needs styling
