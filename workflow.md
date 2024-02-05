@@ -172,3 +172,7 @@ objectives : when you click a button on the index.phtml for example for free sta
 : switching from sql to pdos
 : testing if it's working
 : project working but still throwing reviews error
+
+05/02/2024
++ adding a place (bongihub/projects/TOURza(pdo)):
+-- added a plus circle icon for adding the place
