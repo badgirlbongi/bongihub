@@ -175,4 +175,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 
 05/02/2024
 + adding a place (bongihub/projects/TOURza(pdo)):
--- added a plus circle icon for adding the place
+-- added a plus circle icon for adding the place(places.php)
