@@ -109,7 +109,6 @@
   </div>
 </header>
 
-<main>
 <?php
 $dsn = 'mysql:host=localhost;dbname=tourza';
 $username = 'root';
@@ -186,7 +185,7 @@ $pdo = null;
         </div>
         <div class="form-group">
             <label for="placePicture">Place Picture: (save image name as placeID)</label>
-            <input type="file" class="form-control" name="userFile[]" value="" required>
+            <input type="file" class="form-control" name="userfile[]" value="" required>
         </div>
         <div class="form-group">
           <label for="placeDescription">Place Description:</label>
