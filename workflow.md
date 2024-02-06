@@ -196,3 +196,5 @@ objectives : when you click a button on the index.phtml for example for free sta
 + working on calculating the average of rates per province 
 + created a function to calculate the average on displayReviews.php
 + fixed the function as it was repeating some things
++ calling/using the function
++ testing if it works, function is not working

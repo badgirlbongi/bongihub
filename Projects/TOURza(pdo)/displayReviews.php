@@ -165,6 +165,7 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
       $averageRating = $totalRatings > 0 ? $sumRatings / $totalRatings : 0;
 
       return $averageRating;
+
   } catch (PDOException $e) {
       die("Error: " . $e->getMessage());
   }
@@ -196,11 +197,14 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
               <div class="card-body" style="max-height: 250px; overflow-y: auto;">
                 <p class="card-text">
                 <?php $provinceID = 'EC';
-                displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID); ?> 
+                displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
                 </p>   
             </div>
             <div class="card-footer">
-              <small class="text-body-secondary">The average for the places in this province :</small>
+              <small class="text-body-secondary">The average for the places in this province :
+                <?php $provinceID = 'EC';
+                displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID)?>
+              </small>
             </div>
           </div>
         </div>
@@ -217,7 +221,10 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
                 </p>      
             </div>
             <div class="card-footer">
-              <small class="text-body-secondary">The average for the places in this province :</small>
+              <small class="text-body-secondary">The average for the places in this province :
+                <?php $provinceID = 'FS';
+                displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID)?>
+                </small>
             </div>
           </div>
         </div>
@@ -234,7 +241,10 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
                 </p>      
             </div>
             <div class="card-footer">
-              <small class="text-body-secondary">The average for the places in this province :</small>
+              <small class="text-body-secondary">The average for the places in this province :
+                <?php $provinceID = 'G';
+                displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID)?>
+              </small>
             </div>
           </div>
         </div>
@@ -251,7 +261,10 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
                 </p>
             </div>
             <div class="card-footer">
-              <small class="text-body-secondary">The average for the places in this province :</small>
+              <small class="text-body-secondary">The average for the places in this province :
+                <?php $provinceID = 'KZN';
+                displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID)?>
+              </small>
             </div>
           </div>
         </div>
