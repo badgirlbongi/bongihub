@@ -33,25 +33,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->execute();
         $stmt->closeCursor();
 
-        // Retrieve all ratings from the database
-        $sql = "SELECT ratingValue FROM $table";
-        $result = $pdo->query($sql);
-
-        // Calculate average rating
-        $totalRatings = $result->rowCount();
-        $sumRatings = 0;
-
-        while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-            $sumRatings += $row['ratingValue']; // Update column name
-        }
-
-        $averageRating = $totalRatings > 0 ? $sumRatings / $totalRatings : 0;
-
         // Use JavaScript to display the pop-up message
-        echo "Average Rating: " . number_format($averageRating, 2) . "";
+        echo "Comment and Rate submitted successfully";
     } else {
         // Use JavaScript to display the error message
-        echo "<script>alert('Please select a rating and add a comment!');</script>";
+        echo "Please select a rating and add a comment!";
     }
 }
 
