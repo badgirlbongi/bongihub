@@ -201,4 +201,5 @@ objectives : when you click a button on the index.phtml for example for free sta
 + trying to resolve the function, tried to but the average is not showing not sure if the function is working
 + adding a function on index,phtml to count places (function not counting)
 + created dp.php for connecting once to the db
-+  function for counting places on index.php i now working
++ function for counting places on index.php i now working
++ the rates are also display all the changes are working well

@@ -195,9 +195,9 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
                 </p>   
             </div>
             <div class="card-footer">
-              <small class="text-body-secondary">The average for the places in this province :
+              <small class="text-body-secondary">Average for the places in this province out of 5 :
                 <?php $provinceID = 'EC';
-                displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID)?>
+                echo displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID);?>
               </small>
             </div>
           </div>
@@ -215,7 +215,10 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
                 </p>      
             </div>
             <div class="card-footer">
-              <small class="text-body-secondary">The average for the places in this province :</small>
+            <small class="text-body-secondary">Average for the places in this province out of 5 :
+                <?php $provinceID = 'FS';
+                echo displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID);?>
+              </small>
             </div>
           </div>
         </div>
@@ -232,7 +235,10 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
                 </p>      
             </div>
             <div class="card-footer">
-              <small class="text-body-secondary">The average for the places in this province :</small>
+            <small class="text-body-secondary">Average for the places in this province out of 5 :
+                <?php $provinceID = 'G';
+                echo displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID);?>
+              </small>
             </div>
           </div>
         </div>
@@ -249,7 +255,10 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
                 </p>
             </div>
             <div class="card-footer">
-              <small class="text-body-secondary">The average for the places in this province :</small>
+            <small class="text-body-secondary">Average for the places in this province out of 5 :
+                <?php $provinceID = 'KZN';
+                echo displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID);?>
+              </small>
             </div>
           </div>
         </div>
@@ -266,7 +275,10 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
                 </p>       
             </div>
             <div class="card-footer">
-              <small class="text-body-secondary">The average for the places in this province :</small>
+            <small class="text-body-secondary">Average for the places in this province out of 5 :
+                <?php $provinceID = 'L';
+                echo displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID);?>
+              </small>
             </div>
           </div>
         </div>
@@ -283,7 +295,10 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
                 </p>      
             </div>
             <div class="card-footer">
-              <small class="text-body-secondary">The average for the places in this province :</small>
+            <small class="text-body-secondary">Average for the places in this province out of 5 :
+                <?php $provinceID = 'MP';
+                echo displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID);?>
+              </small>
             </div>
           </div>
         </div>
@@ -300,7 +315,10 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
                 </p>       
             </div>
             <div class="card-footer">
-              <small class="text-body-secondary">The average for the places in this province :</small>
+            <small class="text-body-secondary">Average for the places in this province out of 5 :
+                <?php $provinceID = 'NC';
+                echo displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID);?>
+              </small>
             </div>
           </div>
         </div>
@@ -317,7 +335,10 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
                 </p>       
             </div>
             <div class="card-footer">
-              <small class="text-body-secondary">The average for the places in this province :</small>
+            <small class="text-body-secondary">Average for the places in this province out of 5 :
+                <?php $provinceID = 'NW';
+                echo displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID);?>
+              </small>
             </div>
           </div>
         </div>
@@ -334,11 +355,10 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
                 </p>       
             </div>
             <div class="card-footer">
-            <?php 
-              $provinceID = 'WC';
-              $averageRating = displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID);
-              ?>
-              <small class="text-body-secondary">The average for the places in this province : <?php $averageRating ?></small>
+            <small class="text-body-secondary">Average for the places in this province out of 5 :
+                <?php $provinceID = 'WC';
+                echo displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID);?>
+              </small>
             </div>
           </div>
         </div>
