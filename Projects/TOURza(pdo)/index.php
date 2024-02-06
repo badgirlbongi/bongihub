@@ -28,11 +28,7 @@ function countPlacesByProvinceID($pdo, $provinceID) {
 
     return $result['placeCount'];
 }
-
-// Example usage:
-$count = countPlacesByProvinceID($pdo, $provinceID);
 ?>
-
 
   <head>
     <script src="assets\js\color-modes.js"></script>
@@ -222,7 +218,7 @@ $count = countPlacesByProvinceID($pdo, $provinceID);
                             <small class="text-body-secondary">
                             <?php $provinceID = 'WC';
                               $count = countPlacesByProvinceID($pdo,$provinceID);
-                              $count?> places</small>
+                              echo $count; ?> places</small>
                         </div>
                     </div>
                 </div>
@@ -278,7 +274,10 @@ $count = countPlacesByProvinceID($pdo, $provinceID);
                   <div class="card-footer">
                       <div class="d-flex justify-content-between align-items-center">
                     <a href="places.php?province=EC" class="btn btn-sm btn-outline-secondary" id="EC">View</a>
-                          <small class="text-body-secondary">9 places</small>
+                          <small class="text-body-secondary">
+                          <?php $provinceID = 'EC';
+                              $count = countPlacesByProvinceID($pdo,$provinceID);
+                              echo $count; ?> places</small>
                       </div>
                   </div>
               </div>
@@ -330,7 +329,10 @@ $count = countPlacesByProvinceID($pdo, $provinceID);
                  <div class="card-footer">
                     <div class="d-flex justify-content-between align-items-center">
                     <a href="places.php?province=NC" class="btn btn-sm btn-outline-secondary" id="NC">View</a>
-                        <small class="text-body-secondary"> 9 places</small>
+                        <small class="text-body-secondary"> 
+                          <?php $provinceID = 'NC';
+                              $count = countPlacesByProvinceID($pdo,$provinceID);
+                              echo $count; ?> places</small>
                     </div>
                 </div>
             </div>
@@ -403,7 +405,10 @@ $count = countPlacesByProvinceID($pdo, $provinceID);
                     <div class="card-footer">
                       <div class="d-flex justify-content-between align-items-center">
                       <a href="places.php?province=KZN" class="btn btn-sm btn-outline-secondary" id="KZN">View</a>
-                        <small class="text-body-secondary">12 places</small>
+                        <small class="text-body-secondary">
+                        <?php $provinceID = 'KZN';
+                              $count = countPlacesByProvinceID($pdo,$provinceID);
+                              echo $count; ?> places</small>
                     </div>
                 </div>
             </div>
@@ -467,7 +472,10 @@ $count = countPlacesByProvinceID($pdo, $provinceID);
                     <div class="card-footer">
                       <div class="d-flex justify-content-between align-items-center">
                       <a href="places.php?province=MP" class="btn btn-sm btn-outline-secondary" id="MP">View</a>
-                        <small class="text-body-secondary">9 places</small>
+                        <small class="text-body-secondary">
+                        <?php $provinceID = 'MP';
+                              $count = countPlacesByProvinceID($pdo,$provinceID);
+                              echo $count; ?> places</small>
                     </div>
                 </div>
             </div>
@@ -527,7 +535,10 @@ $count = countPlacesByProvinceID($pdo, $provinceID);
                    <div class="card-footer">
                       <div class="d-flex justify-content-between align-items-center">
                     <a href="places.php?province=FS" class="btn btn-sm btn-outline-secondary" id="FS">View</a>
-                        <small class="text-body-secondary">10 places</small>
+                        <small class="text-body-secondary">
+                        <?php $provinceID = 'FS';
+                              $count = countPlacesByProvinceID($pdo,$provinceID);
+                              echo $count; ?> places</small>
                     </div>
                 </div>
             </div>
@@ -603,7 +614,10 @@ $count = countPlacesByProvinceID($pdo, $provinceID);
                   <div class="card-footer">
                       <div class="d-flex justify-content-between align-items-center">
                     <a href="places.php?province=G" class="btn btn-sm btn-outline-secondary" id="GP">View</a>
-                        <small class="text-body-secondary">12 places</small>
+                        <small class="text-body-secondary">
+                        <?php $provinceID = 'G';
+                              $count = countPlacesByProvinceID($pdo,$provinceID);
+                              echo $count; ?> places</small>
                     </div>
                 </div>
             </div>
@@ -667,7 +681,10 @@ $count = countPlacesByProvinceID($pdo, $provinceID);
                     <div class="card-footer"> 
                     <div class="d-flex justify-content-between align-items-center">
                         <a href="places.php?province=NW" class="btn btn-sm btn-outline-secondary" id="NW">View</a>
-                        <small class="text-body-secondary">9 places</small>
+                        <small class="text-body-secondary">
+                        <?php $provinceID = 'NW';
+                              $count = countPlacesByProvinceID($pdo,$provinceID);
+                              echo $count; ?> places</small>
                     </div>
                 </div>
             </div>
@@ -735,7 +752,10 @@ $count = countPlacesByProvinceID($pdo, $provinceID);
                     <div class="card-footer">  
                     <div class="d-flex justify-content-between align-items-center">
                         <a href="places.php?province=L" class="btn btn-sm btn-outline-secondary" id="L">View</a>
-                        <small class="text-body-secondary">12 places</small>
+                        <small class="text-body-secondary">
+                        <?php $provinceID = 'L';
+                              $count = countPlacesByProvinceID($pdo,$provinceID);
+                              echo $count; ?> places</small>
                     </div>
                 </div>
             </div>
