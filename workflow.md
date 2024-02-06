@@ -198,3 +198,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + fixed the function as it was repeating some things
 + calling/using the function
 + testing if it works, function is not working
++ trying to resolve the function
