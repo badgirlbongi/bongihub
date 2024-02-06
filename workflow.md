@@ -184,3 +184,6 @@ objectives : when you click a button on the index.phtml for example for free sta
 -- plus circle button now showing (used bs icon), now needs styling
 -- addplace.php html code
 -- fixing database and adding images when adding place information
+
+06/02/2024
++ doing testing to see where to go next
