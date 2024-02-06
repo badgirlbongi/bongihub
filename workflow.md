@@ -189,3 +189,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + doing testing to see where to go next
 + display the average rating or error as a pop up for the displayReviews.php changes on reviews.php
 + throwing errors again with submitting the rate and comment
++ research on how to resolve the issue
