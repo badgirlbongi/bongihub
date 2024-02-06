@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $averageRating = $totalRatings > 0 ? $sumRatings / $totalRatings : 0;
 
         // Use JavaScript to display the pop-up message
-        echo "<script>alert('Average Rating: " . number_format($averageRating, 2) . "');</script>";
+        echo "Average Rating: " . number_format($averageRating, 2) . "";
     } else {
         // Use JavaScript to display the error message
         echo "<script>alert('Please select a rating and add a comment!');</script>";

@@ -18,17 +18,33 @@
     <link rel="stylesheet" href="assets\dist\css\bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
-    <script>
-      function showPopup() {
-        var comment = prompt("Please enter your comment:");
-        if (comment != null) {
-          // If the user enters a comment, proceed to submit the rating and comment via form
-          document.getElementById("comment").value = comment;
-          document.getElementById("ratingForm").submit();
-        }
-      }
-    </script>
+<script>
+  function submitForm() {
+    var formData = new FormData(document.getElementById("ratingForm"));
 
+    // Send form data asynchronously using AJAX
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "reviews.php", true);
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        // Display pop-up message
+        alert(xhr.responseText);
+        // Reset the form if needed
+        document.getElementById("ratingForm").reset();
+      }
+    };
+    xhr.send(formData);
+  }
+
+  function showPopup() {
+    var comment = prompt("Please enter your comment:");
+    if (comment !== null) {
+      // If the user enters a comment, add it to the form and submit
+      document.getElementById("comment").value = comment;
+      submitForm(); // Submit the form asynchronously
+    }
+  }
+</script>
   </head>
   
   <body>

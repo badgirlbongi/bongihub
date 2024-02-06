@@ -190,3 +190,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + display the average rating or error as a pop up for the displayReviews.php changes on reviews.php
 + throwing errors again with submitting the rate and comment
 + research on how to resolve the issue
++ problem solved but some of the places can't be rated I'm not sure what could be the problem and the database takes time to update 
