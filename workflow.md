@@ -187,3 +187,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 
 06/02/2024
 + doing testing to see where to go next
++ display the average rating or error as a pop up for the displayReviews.php changes on reviews.php

@@ -47,11 +47,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $averageRating = $totalRatings > 0 ? $sumRatings / $totalRatings : 0;
 
-        echo "Average Rating: " . number_format($averageRating, 2);
+        echo "<script>alert('Average Rating: " . number_format($averageRating, 2) . "');</script>";
     } else {
-        echo "Please select a rating and add a comment!";
+        echo "<script>alert('Please select a rating and add a comment!');</script>";
     }
 }
 
 $pdo = null;
 ?>
+
