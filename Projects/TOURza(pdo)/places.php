@@ -206,7 +206,7 @@ function generateContent($pdo, $selectedProvince) {
               <div class='d-flex justify-content-between align-items-center'>
                 <div class='btn-group'>
                   <button type='button' onclick='showPopup()' class='btn btn-sm btn-outline-secondary'>Rate</button>
-                  <a href='reviews.phtml' class='btn btn-sm btn-outline-secondary' id='reviews'>Reviews</a>
+                  <a href='displayReviews.php' class='btn btn-sm btn-outline-secondary' id='reviews'>Reviews</a>
                 </div>
                 <small class='text-body-secondary'>$provinceID - $placeID</small>
               </div>

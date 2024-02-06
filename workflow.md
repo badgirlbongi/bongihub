@@ -191,3 +191,5 @@ objectives : when you click a button on the index.phtml for example for free sta
 + throwing errors again with submitting the rate and comment
 + research on how to resolve the issue
 + problem solved but some of the places can't be rated I'm not sure what could be the problem and the database takes time to update 
+---
++ changed the href for the reviews on places.php
