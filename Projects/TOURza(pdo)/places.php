@@ -27,9 +27,8 @@
     xhr.open("POST", "reviews.php", true);
     xhr.onload = function() {
       if (xhr.status === 200) {
-        // Display pop-up message
-        alert(xhr.responseText);
-        // Reset the form if needed
+        alert("Average Rating: " + xhr.responseText);
+        // Reset the form after successful submission
         document.getElementById("ratingForm").reset();
       }
     };
@@ -39,13 +38,12 @@
   function showPopup() {
     var comment = prompt("Please enter your comment:");
     if (comment !== null) {
-      // If the user enters a comment, add it to the form and submit
       document.getElementById("comment").value = comment;
-      submitForm(); // Submit the form asynchronously
+      submitForm(); 
     }
   }
 </script>
-  </head>
+</head>
   
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
