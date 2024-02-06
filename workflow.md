@@ -199,4 +199,5 @@ objectives : when you click a button on the index.phtml for example for free sta
 + calling/using the function
 + testing if it works, function is not working
 + trying to resolve the function, tried to but the average is not showing not sure if the function is working
-+ adding a function on index,phtml to count places 
++ adding a function on index,phtml to count places (function not counting)
++ created dp.php for connecting once to the db

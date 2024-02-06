@@ -1,6 +1,7 @@
 
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
+<?php include 'db.php'; ?>
   <style>
     .card {
       height: 350px;
@@ -13,37 +14,25 @@
       height: 250px; 
     }
   </style>
-  <?php
-  function countPlacesByProvinceID($provinceID) {
-      $dsn = 'mysql:host=localhost;dbname=tourza';
-      $username = 'root';
-      $password = '';
-      $options = [
-          PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
-          PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
-          PDO::ATTR_EMULATE_PREPARES   => false,
-      ];
-  
-      try {
-          $pdo = new PDO($dsn, $username, $password, $options);
-      } catch (PDOException $e) {
-          throw new PDOException($e->getMessage(), (int)$e->getCode());
-      }
-  
-      // Prepare SQL query to select and count places with the given provinceID
-      $sql = "SELECT COUNT(*) AS placeCount FROM place WHERE provinceID = :provinceID";
-      $stmt = $pdo->prepare($sql);
-  
-      $stmt->bindParam(':provinceID', $provinceID, PDO::PARAM_STR);
-      $stmt->execute();
-  
-      $result = $stmt->fetch();
-  
-      $pdo = null;
-  
-      return $result['placeCount'];
-  }
-  ?>
+
+<?php
+function countPlacesByProvinceID($pdo, $provinceID) {
+    // Prepare SQL query to select and count places with the given provinceID
+    $sql = "SELECT COUNT(*) AS placeCount FROM place WHERE provinceID = :provinceID";
+    $stmt = $pdo->prepare($sql);
+
+    $stmt->bindParam(':provinceID', $provinceID, PDO::PARAM_STR);
+    $stmt->execute();
+
+    $result = $stmt->fetch();
+
+    return $result['placeCount'];
+}
+
+// Example usage:
+$count = countPlacesByProvinceID($pdo, $provinceID);
+?>
+
 
   <head>
     <script src="assets\js\color-modes.js"></script>
@@ -232,7 +221,7 @@
                               <a href="places.php?province=WC" class="btn btn-sm btn-outline-secondary" id="WC">View</a>
                             <small class="text-body-secondary">
                             <?php $provinceID = 'WC';
-                              $count = countPlacesByProvinceID($provinceID);
+                              $count = countPlacesByProvinceID($pdo,$provinceID);
                               $count?> places</small>
                         </div>
                     </div>

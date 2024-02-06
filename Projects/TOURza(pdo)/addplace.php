@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
+<?php include 'db.php'; ?>
 
   <head>
     <script src="assets\js\color-modes.js"></script>
@@ -110,18 +111,6 @@
 </header>
 
 <?php
-$dsn = 'mysql:host=localhost;dbname=tourza';
-$username = 'root';
-$password = '';
-
-try {
-    $pdo = new PDO($dsn, $username, $password, [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-        PDO::ATTR_EMULATE_PREPARES => false,
-    ]);
-} catch (PDOException $e) {
-    die("Connection failed: " . $e->getMessage());
-}
 
 $table = 'place';
 
@@ -205,19 +194,6 @@ $pdo = null;
 </main>
 
 <?php
-$dsn = 'mysql:host=localhost;dbname=tourza';
-$username = 'root';
-$password = '';
-$options = [
-    PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-    PDO::ATTR_EMULATE_PREPARES => false,
-];
-
-try {
-    $pdo = new PDO($dsn, $username, $password, $options);
-} catch (PDOException $e) {
-    die("Connection failed: " . $e->getMessage());
-}
 
 $table = 'images';
 

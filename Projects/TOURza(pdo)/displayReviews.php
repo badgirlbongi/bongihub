@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
+<?php include 'db.php'; ?>
   <head><script src="assets\js\color-modes.js"></script>
 
     <meta charset="utf-8">
@@ -178,13 +179,6 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
       <?php
-        $dsn = 'mysql:host=localhost;dbname=tourza';
-        $username = 'root';
-        $password = '';
-        $options = [
-          PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
-          PDO::ATTR_EMULATE_PREPARES => false,
-        ];
         $table1 = 'rating';
         $table2 = 'place';
       ?>
