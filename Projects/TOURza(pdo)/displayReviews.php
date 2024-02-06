@@ -115,7 +115,7 @@ function displayRatings($dsn, $username, $password, $options, $table1, $table2, 
         die("Connection failed: " . $e->getMessage());
     }
 
-    // SQL query to retrieve ratings
+    // SQL query to retrieve comments
     $sql = "SELECT r.rateComment, r.placeID, p.provinceID
             FROM $table1 r
             JOIN $table2 p ON r.placeID = p.placeID
@@ -140,6 +140,44 @@ function displayRatings($dsn, $username, $password, $options, $table1, $table2, 
         die("Error: " . $e->getMessage());
     }
 }
+
+function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID){
+    try {
+      $pdo = new PDO($dsn, $username, $password, $options);
+      $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (PDOException $e) {
+      die("Connection failed: " . $e->getMessage());
+    }
+
+    // SQL query to retrieve comments
+    $sql = "SELECT r.ratingValue, r.placeID, p.provinceID
+            FROM $table1 r
+            JOIN $table2 p ON r.placeID = p.placeID
+            WHERE p.provinceID = :provinceID";
+
+try {
+  $stmt = $pdo->prepare($sql);
+  $stmt->bindParam(':provinceID', $provinceID, PDO::PARAM_INT);
+  $stmt->execute();
+
+    $result = $pdo->query($sql);
+
+    // Calculate average rating
+    $totalRatings = $result->rowCount();
+    $sumRatings = 0;
+
+   while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+     $sumRatings += $row['ratingValue']; // Update column name
+    }
+
+    $averageRating = $totalRatings > 0 ? $sumRatings / $totalRatings : 0;
+
+    return $averageRating;
+  }catch (PDOException $e) {
+    die("Error: " . $e->getMessage());
+  }
+}
+
 ?>
 
 <main>

@@ -194,3 +194,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 ---
 + changed the href for the reviews on places.php
 + working on calculating the average of rates per province 
++ created a function to calculate the average on displayReviews.php
