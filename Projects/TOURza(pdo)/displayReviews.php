@@ -305,13 +305,13 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
               <a><strong class="text-warning">Mpumalanga</strong></a>
               </div>
               <div class="card-body" style="max-height: 250px; overflow-y: auto;">
-              <p class="card-text">
+              <!--<p class="card-text">-->
                   <ul class="dropdown-menu">
                       <li><span class="dropdown-item-text">---Reviews---</span></li>
                       <?php $provinceID = 'MP';
                       displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
                   </ul>
-                </p>      
+                <!--</p>    -->  
             </div>
             <div class="card-footer">
             <small class="text-body-secondary">Average for the places in this province out of 5 :
