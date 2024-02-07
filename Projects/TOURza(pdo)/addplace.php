@@ -5,6 +5,54 @@ include 'db.php';
 include 'imgupload.php';
 ?>
 
+<?php
+$table = 'place';
+
+// Check if the form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Get user input from the form
+    $placeID = $_POST["placeID"];
+    $placeName = $_POST["placeName"];
+    $placeDescription = $_POST["placeDescription"];
+    $placeLink = $_POST["placeLink"];
+    $provinceID = $_POST["provinceID"];
+
+    // SQL query to insert data into the 'place' table
+    $sql = "INSERT INTO `place` 
+            (`placeID`, `placeName`, `placeDescription`, `placeLink`, `provinceID`) 
+            VALUES 
+            (:placeID, :placeName, :placeDescription, :placeLink, :provinceID)";
+
+    // Use prepared statement to bind parameters
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(":placeID", $placeID, PDO::PARAM_STR);
+    $stmt->bindParam(":placeName", $placeName, PDO::PARAM_STR);
+    $stmt->bindParam(":placeDescription", $placeDescription, PDO::PARAM_STR);
+    $stmt->bindParam(":placeLink", $placeLink, PDO::PARAM_STR);
+    $stmt->bindParam(":provinceID", $provinceID, PDO::PARAM_STR);
+
+    // Execute the query
+    if ($stmt->execute()) {
+        // Store inserted data in session variables
+        session_start();
+        $_SESSION['placeID'] = $placeID;
+        $_SESSION['placeName'] = $placeName;
+        $_SESSION['placeDescription'] = $placeDescription;
+        $_SESSION['placeLink'] = $placeLink;
+        $_SESSION['provinceID'] = $provinceID;
+
+        // Redirect to confirmation page
+        header("Location: confirmation.php");
+        exit();
+    } else {
+        echo "Error inserting data: " . $stmt->errorInfo()[2];
+    }
+
+    $stmt->closeCursor();
+}
+$pdo = null;
+?>
+
   <head>
     <script src="assets\js\color-modes.js"></script>
 
@@ -112,55 +160,6 @@ include 'imgupload.php';
     </div>
   </div>
 </header>
-
-<?php
-
-$table = 'place';
-
-// Check if the form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get user input from the form
-    $placeID = $_POST["placeID"];
-    $placeName = $_POST["placeName"];
-    $placeDescription = $_POST["placeDescription"];
-    $placeLink = $_POST["placeLink"];
-    $provinceID = $_POST["provinceID"];
-
-    // SQL query to insert data into the 'place' table
-    $sql = "INSERT INTO `place` 
-            (`placeID`, `placeName`, `placeDescription`, `placeLink`, `provinceID`) 
-            VALUES 
-            (:placeID, :placeName, :placeDescription, :placeLink, :provinceID)";
-
-    // Use prepared statement to bind parameters
-    $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(":placeID", $placeID, PDO::PARAM_STR);
-    $stmt->bindParam(":placeName", $placeName, PDO::PARAM_STR);
-    $stmt->bindParam(":placeDescription", $placeDescription, PDO::PARAM_STR);
-    $stmt->bindParam(":placeLink", $placeLink, PDO::PARAM_STR);
-    $stmt->bindParam(":provinceID", $provinceID, PDO::PARAM_STR);
-
-    // Execute the query
-    if ($stmt->execute()) {
-        // Store inserted data in session variables
-        session_start();
-        $_SESSION['placeID'] = $placeID;
-        $_SESSION['placeName'] = $placeName;
-        $_SESSION['placeDescription'] = $placeDescription;
-        $_SESSION['placeLink'] = $placeLink;
-        $_SESSION['provinceID'] = $provinceID;
-
-        // Redirect to confirmation page
-        header("Location: confirmation.php");
-        exit();
-    } else {
-        echo "Error inserting data: " . $stmt->errorInfo()[2];
-    }
-
-    $stmt->closeCursor();
-}
-$pdo = null;
-?>
 
 <main> 
 <div class="container mt-5">

@@ -210,3 +210,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + it's not really displaying well, included popper scripts
 + working on the addplace.php file and added imgupload.php file to handle uploading the image
 + testing if the addplace works, threw an error of the included file , wrong name have to fix it
++ Addplace giving an error attached the screenshot on /bongihub/projects/docs/testing but image was uploaded 
