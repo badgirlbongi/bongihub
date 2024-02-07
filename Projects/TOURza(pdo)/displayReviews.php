@@ -133,8 +133,7 @@ function displayRatings($dsn, $username, $password, $options, $table1, $table2, 
         echo '<div class="card-body" style="max-height: 250px; overflow-y: auto;">';
         if ($stmt->rowCount() > 0) {
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-              echo '<li><a class="dropdown-item">'.$row['rateComment'].'-'.$row['placeID'].'</a></li>
-                    <li><hr class="dropdown-divider"></li>';
+              echo '<li><a class="dropdown-item">'.$row['rateComment'].'-'.$row['placeID'].'</a></li>';
             }
         } else {
             echo '<p class="card-text">No ratings available</p>';
