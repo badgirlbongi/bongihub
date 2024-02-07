@@ -1,5 +1,5 @@
 <?php
-include 'dp.php';
+include 'db.php';
 $table = 'images';
 
 $phpFileUploadErrors = array(
