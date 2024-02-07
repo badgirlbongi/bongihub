@@ -203,3 +203,7 @@ objectives : when you click a button on the index.phtml for example for free sta
 + created dp.php for connecting once to the db
 + function for counting places on index.php i now working
 + the rates are also display all the changes are working well
+
+07/02/2024
++ researching of a neat way to display the reviews on displayReviews.php
++ 
