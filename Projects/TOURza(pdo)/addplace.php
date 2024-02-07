@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['provinceID'] = $provinceID;
 
         // Redirect to confirmation page
-        header("Location: addplace.php");
+        header("Location: index.php");
         exit();
     } else {
         echo "Error inserting data: " . $stmt->errorInfo()[2];
@@ -165,7 +165,7 @@ $pdo = null;
 <div class="container mt-5">
     <h3 class="text-warning">Share details about the place you want to add</h3>
   
-    <form method="post" enctype="multipart/form-data">
+    <form id="addPlaceForm" method="post" enctype="multipart/form-data">
         <div class="form-group">
             <label for="placeID">Place ID:</label>
             <input type="text" class="form-control" name="placeID" placeholder="Enter the place ID " required>
@@ -206,5 +206,23 @@ $pdo = null;
 </footer>
 
 <script src="assets\dist\js\bootstrap.bundle.min.js"></script>
+
+<script>
+  // Get the form
+  var form = document.getElementById("addPlaceForm");
+
+  // Add submit event listener
+  form.addEventListener("submit", function(event) {
+    // Prevent the default form submission
+    event.preventDefault();
+    
+    // Show a success alert
+    alert("Place added successfully!");
+
+    // Optionally, reset the form
+    form.reset();
+  });
+</script>
+
 </body>
 </html>

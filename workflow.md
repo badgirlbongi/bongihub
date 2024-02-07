@@ -213,3 +213,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + Addplace giving an error attached the screenshot on /bongihub/projects/docs/testing but image was uploaded 
 + place is added problem is that it redirects to a page that doesn't exist want to test if it shows 
 + the added place is showing and it's reflecting on the database
++ added a pop up to show that the place was added successfully 
