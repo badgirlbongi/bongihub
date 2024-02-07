@@ -206,4 +206,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 
 07/02/2024
 + researching of a neat way to display the reviews on displayReviews.php
-+ trying dropdown designs to display
++ trying dropdown designs to display, it was not displaying so i made some changes on the same file testing from line 377 on the WC province
