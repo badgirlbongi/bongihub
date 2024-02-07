@@ -12,6 +12,8 @@
 
     <!--Links-->
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
     <link rel="stylesheet" href="assets\dist\css\bootstrap.min.css">
@@ -189,15 +191,11 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
             <div class="card-header">
               <a><strong class="text-warning">Eastern Cape</strong></a>
               </div>
-              <div class="card-body" style="max-height: 250px; overflow-y: auto;">
-                <p class="card-text">
-                  <ul class="dropdown-menu">
-                      <li><span class="dropdown-item-text">---Reviews---</span></li>
-                      <?php $provinceID = 'EC';
-                     echo displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
-                  </ul>
-                </p>   
-            </div>
+              <ul class="card-body" style="max-height: 250px; overflow-y: auto;">
+                <li><span class="dropdown-item-text">REVIEWS</span></li>
+                  <?php $provinceID = 'EC';
+                  displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
+              </ul>
             <div class="card-footer">
               <small class="text-body-secondary">Average for the places in this province out of 5 :
                 <?php $provinceID = 'EC';
@@ -212,15 +210,11 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
             <div class="card-header">
               <a><strong class="text-warning">Free State</strong></a>
               </div>
-              <div class="card-body" style="max-height: 250px; overflow-y: auto;">
-              <p class="card-text">
-                  <ul class="dropdown-menu">
-                      <li><span class="dropdown-item-text">---Reviews---</span></li>
-                      <?php $provinceID = 'FS';
-                      echo displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
-                  </ul>
-                </p>     
-            </div>
+              <ul class="card-body" style="max-height: 250px; overflow-y: auto;">
+                <li><span class="dropdown-item-text">REVIEWS</span></li>
+                  <?php $provinceID = 'FS';
+                  displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
+              </ul>
             <div class="card-footer">
             <small class="text-body-secondary">Average for the places in this province out of 5 :
                 <?php $provinceID = 'FS';
@@ -235,15 +229,11 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
             <div class="card-header">
               <a><strong class="text-warning">Gauteng</strong></a>
               </div>
-              <div class="card-body" style="max-height: 250px; overflow-y: auto;">
-              <p class="card-text">
-                  <ul class="dropdown-menu">
-                      <li><span class="dropdown-item-text">---Reviews---</span></li>
-                      <?php $provinceID = 'G';
-                      displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
-                  </ul>
-                </p>      
-            </div>
+              <ul class="card-body" style="max-height: 250px; overflow-y: auto;">
+                <li><span class="dropdown-item-text">REVIEWS</span></li>
+                  <?php $provinceID = 'G';
+                  displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
+              </ul>
             <div class="card-footer">
             <small class="text-body-secondary">Average for the places in this province out of 5 :
                 <?php $provinceID = 'G';
@@ -258,15 +248,11 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
             <div class="card-header">
               <a><strong class="text-warning">Kwa-Zulu Natal</strong></a>
               </div>
-              <div class="card-body" style="max-height: 250px; overflow-y: auto;">
-              <p class="card-text">
-                  <ul class="dropdown-menu">
-                      <li><span class="dropdown-item-text">---Reviews---</span></li>
-                      <?php $provinceID = 'KZN';
-                      displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
-                  </ul>
-                </p> 
-            </div>
+              <ul class="card-body" style="max-height: 250px; overflow-y: auto;">
+                <li><span class="dropdown-item-text">REVIEWS</span></li>
+                  <?php $provinceID = 'KZN';
+                  displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
+              </ul>
             <div class="card-footer">
             <small class="text-body-secondary">Average for the places in this province out of 5 :
                 <?php $provinceID = 'KZN';
@@ -281,15 +267,11 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
             <div class="card-header">
               <a><strong class="text-warning">Limpopo</strong></a>
               </div>
-              <div class="card-body" style="max-height: 250px; overflow-y: auto;">
-              <p class="card-text">
-                  <ul class="dropdown-menu">
-                      <li><span class="dropdown-item-text">---Reviews---</span></li>
-                      <?php $provinceID = 'L';
-                      displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
-                  </ul>
-                </p>      
-            </div>
+              <ul class="card-body" style="max-height: 250px; overflow-y: auto;">
+                <li><span class="dropdown-item-text">REVIEWS</span></li>
+                  <?php $provinceID = 'L';
+                  displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
+              </ul>
             <div class="card-footer">
             <small class="text-body-secondary">Average for the places in this province out of 5 :
                 <?php $provinceID = 'L';
@@ -304,15 +286,11 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
             <div class="card-header">
               <a><strong class="text-warning">Mpumalanga</strong></a>
               </div>
-              <div class="card-body" style="max-height: 250px; overflow-y: auto;">
-              <!--<p class="card-text">-->
-                  <ul class="dropdown-menu">
-                      <li><span class="dropdown-item-text">---Reviews---</span></li>
-                      <?php $provinceID = 'MP';
-                      displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
-                  </ul>
-                <!--</p>    -->  
-            </div>
+              <ul class="card-body" style="max-height: 250px; overflow-y: auto;">
+                <li><span class="dropdown-item-text">REVIEWS</span></li>
+                  <?php $provinceID = 'MP';
+                  displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
+              </ul>
             <div class="card-footer">
             <small class="text-body-secondary">Average for the places in this province out of 5 :
                 <?php $provinceID = 'MP';
@@ -327,15 +305,11 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
             <div class="card-header">
               <a><strong class="text-warning">Northern Cape</strong></a>
               </div>
-              <div class="card-body" style="max-height: 250px; overflow-y: auto;">
-              <p class="card-text">
-                  <ul class="dropdown-menu">
-                      <li><span class="dropdown-item-text">---Reviews---</span></li>
-                      <?php $provinceID = 'NC';
-                      displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
-                  </ul>
-                </p>       
-            </div>
+              <ul class="card-body" style="max-height: 250px; overflow-y: auto;">
+                <li><span class="dropdown-item-text">REVIEWS</span></li>
+                  <?php $provinceID = 'NC';
+                  displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
+              </ul>
             <div class="card-footer">
             <small class="text-body-secondary">Average for the places in this province out of 5 :
                 <?php $provinceID = 'NC';
@@ -350,15 +324,11 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
             <div class="card-header">
               <a><strong class="text-warning">North West</strong></a>
               </div>
-              <div class="card-body" style="max-height: 250px; overflow-y: auto;">
-              <p class="card-text">
-                  <ul class="dropdown-menu">
-                      <li><span class="dropdown-item-text">---Reviews---</span></li>
-                      <?php $provinceID = 'NW';
-                      displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
-                  </ul>
-                </p>       
-            </div>
+              <ul class="card-body" style="max-height: 250px; overflow-y: auto;">
+                <li><span class="dropdown-item-text">REVIEWS</span></li>
+                  <?php $provinceID = 'NW';
+                  displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
+              </ul>
             <div class="card-footer">
             <small class="text-body-secondary">Average for the places in this province out of 5 :
                 <?php $provinceID = 'NW';
@@ -373,22 +343,11 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
             <div class="card-header">
               <a><strong class="text-warning">Western Cape</strong></a>
             </div>
-            <?php 
-            $provinceID = 'EC';
-            echo '<ul class="card-body" style="max-height: 250px; overflow-y: auto;">
-                  <li><span class="dropdown-item-text">REVIEWS</span></li>';
-            displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID);
-            echo '</ul>';
-            ?>
-            <!--<div class="card-body" style="max-height: 250px; overflow-y: auto;">
-              <p class="card-text">
-                  <ul class="dropdown-menu">
-                      <li><span class="dropdown-item-text">---Reviews---</span></li>
-                      <?php // $provinceID = 'WC';
-                    // echo displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
-                  </ul>
-              </p>      
-            </div>-->
+            <ul class="card-body" style="max-height: 250px; overflow-y: auto;">
+                <li><span class="dropdown-item-text">REVIEWS</span></li>
+                  <?php $provinceID = 'WC';
+                  displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
+              </ul>
             <div class="card-footer">
             <small class="text-body-secondary">Average for the places in this province out of 5 :
                 <?php $provinceID = 'WC';
