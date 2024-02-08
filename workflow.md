@@ -221,4 +221,5 @@ objectives : when you click a button on the index.phtml for example for free sta
 + research on how to improve the project
 + improvised the display of reviews on displayReviews.php
 + fixed links to index.php
-+ adding a search bar on index.php
++ added a search bar on index.php
++ changed db.php to OOP and have to fix all files that uses the database 
