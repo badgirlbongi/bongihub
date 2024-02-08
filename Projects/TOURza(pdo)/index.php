@@ -1,7 +1,7 @@
 
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-<?php include 'db.php'; ?>
+
   <style>
     .card {
       height: 350px;
@@ -16,15 +16,21 @@
   </style>
 
 <?php
-function countPlacesByProvinceID($pdo, $provinceID) {
+require_once 'db.php'; 
+
+function countPlacesByProvinceID($provinceID) {
+    $db = new Database(); // Instantiate the Database class
+
     // Prepare SQL query to select and count places with the given provinceID
     $sql = "SELECT COUNT(*) AS placeCount FROM place WHERE provinceID = :provinceID";
-    $stmt = $pdo->prepare($sql);
+    $stmt = $db->prepare($sql); 
 
     $stmt->bindParam(':provinceID', $provinceID, PDO::PARAM_STR);
     $stmt->execute();
 
     $result = $stmt->fetch();
+
+    $db->closeConnection();
 
     return $result['placeCount'];
 }
@@ -217,7 +223,7 @@ function countPlacesByProvinceID($pdo, $provinceID) {
                               <a href="places.php?province=WC" class="btn btn-sm btn-outline-secondary" id="WC">View</a>
                             <small class="text-body-secondary">
                             <?php $provinceID = 'WC';
-                              $count = countPlacesByProvinceID($pdo,$provinceID);
+                              $count = countPlacesByProvinceID($provinceID);
                               echo $count; ?> places</small>
                         </div>
                     </div>
@@ -276,7 +282,7 @@ function countPlacesByProvinceID($pdo, $provinceID) {
                     <a href="places.php?province=EC" class="btn btn-sm btn-outline-secondary" id="EC">View</a>
                           <small class="text-body-secondary">
                           <?php $provinceID = 'EC';
-                              $count = countPlacesByProvinceID($pdo,$provinceID);
+                              $count = countPlacesByProvinceID($provinceID);
                               echo $count; ?> places</small>
                       </div>
                   </div>
@@ -331,7 +337,7 @@ function countPlacesByProvinceID($pdo, $provinceID) {
                     <a href="places.php?province=NC" class="btn btn-sm btn-outline-secondary" id="NC">View</a>
                         <small class="text-body-secondary"> 
                           <?php $provinceID = 'NC';
-                              $count = countPlacesByProvinceID($pdo,$provinceID);
+                              $count = countPlacesByProvinceID($provinceID);
                               echo $count; ?> places</small>
                     </div>
                 </div>
@@ -407,7 +413,7 @@ function countPlacesByProvinceID($pdo, $provinceID) {
                       <a href="places.php?province=KZN" class="btn btn-sm btn-outline-secondary" id="KZN">View</a>
                         <small class="text-body-secondary">
                         <?php $provinceID = 'KZN';
-                              $count = countPlacesByProvinceID($pdo,$provinceID);
+                              $count = countPlacesByProvinceID($provinceID);
                               echo $count; ?> places</small>
                     </div>
                 </div>
@@ -474,7 +480,7 @@ function countPlacesByProvinceID($pdo, $provinceID) {
                       <a href="places.php?province=MP" class="btn btn-sm btn-outline-secondary" id="MP">View</a>
                         <small class="text-body-secondary">
                         <?php $provinceID = 'MP';
-                              $count = countPlacesByProvinceID($pdo,$provinceID);
+                              $count = countPlacesByProvinceID($provinceID);
                               echo $count; ?> places</small>
                     </div>
                 </div>
@@ -537,7 +543,7 @@ function countPlacesByProvinceID($pdo, $provinceID) {
                     <a href="places.php?province=FS" class="btn btn-sm btn-outline-secondary" id="FS">View</a>
                         <small class="text-body-secondary">
                         <?php $provinceID = 'FS';
-                              $count = countPlacesByProvinceID($pdo,$provinceID);
+                              $count = countPlacesByProvinceID($provinceID);
                               echo $count; ?> places</small>
                     </div>
                 </div>
@@ -616,7 +622,7 @@ function countPlacesByProvinceID($pdo, $provinceID) {
                     <a href="places.php?province=G" class="btn btn-sm btn-outline-secondary" id="GP">View</a>
                         <small class="text-body-secondary">
                         <?php $provinceID = 'G';
-                              $count = countPlacesByProvinceID($pdo,$provinceID);
+                              $count = countPlacesByProvinceID($provinceID);
                               echo $count; ?> places</small>
                     </div>
                 </div>
@@ -683,7 +689,7 @@ function countPlacesByProvinceID($pdo, $provinceID) {
                         <a href="places.php?province=NW" class="btn btn-sm btn-outline-secondary" id="NW">View</a>
                         <small class="text-body-secondary">
                         <?php $provinceID = 'NW';
-                              $count = countPlacesByProvinceID($pdo,$provinceID);
+                              $count = countPlacesByProvinceID($provinceID);
                               echo $count; ?> places</small>
                     </div>
                 </div>
@@ -754,7 +760,7 @@ function countPlacesByProvinceID($pdo, $provinceID) {
                         <a href="places.php?province=L" class="btn btn-sm btn-outline-secondary" id="L">View</a>
                         <small class="text-body-secondary">
                         <?php $provinceID = 'L';
-                              $count = countPlacesByProvinceID($pdo,$provinceID);
+                              $count = countPlacesByProvinceID($provinceID);
                               echo $count; ?> places</small>
                     </div>
                 </div>

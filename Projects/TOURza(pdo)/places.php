@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-<?php include 'db.php'; ?>
 
   <head>
     <script src="assets\js\color-modes.js"></script>
@@ -140,10 +139,13 @@
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
-<?php
+      <?php
+require_once 'db.php'; // Include or require the db.php file to access the Database class
+
 $selectedProvince = $_GET['province'];
 
-function generateContent($pdo, $selectedProvince) {
+function generateContent($selectedProvince) {
+    $db = new Database(); // Instantiate the Database class
 
     $sql = "SELECT p.placeDescription, p.placeLink, p.provinceID, p.placeID, i.image_dir 
             FROM place p
@@ -151,10 +153,10 @@ function generateContent($pdo, $selectedProvince) {
             WHERE p.provinceID = :provinceID";
 
     // Prepare and execute the statement
-    $stmt = $pdo->prepare($sql);
+    $stmt = $db->prepare($sql);
     $stmt->bindParam(':provinceID', $selectedProvince, PDO::PARAM_STR);
     $stmt->execute();
-    
+
     // Get result
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -201,11 +203,12 @@ function generateContent($pdo, $selectedProvince) {
         </div>
       </div>";
     }
+
+    $db->closeConnection(); // Close the database connection
 }
+
 // Call the function
-generateContent($pdo, $selectedProvince);
-// Close the connection
-$pdo = null;
+generateContent($selectedProvince);
 ?>
 
         <a href="addplace.php">
