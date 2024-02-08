@@ -133,7 +133,8 @@ function displayRatings($dsn, $username, $password, $options, $table1, $table2, 
         echo '<div class="card-body" style="max-height: 250px; overflow-y: auto;">';
         if ($stmt->rowCount() > 0) {
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-              echo '<li><a class="dropdown-item">'.$row['rateComment'].'-'.$row['placeID'].'</a></li>';
+              echo '<li class="list-group-item">--'.$row['rateComment'].'-'.$row['placeID'].'</li>';
+              //echo '<li ><a class="dropdown-item">'.$row['rateComment'].'-'.$row['placeID'].'</a></li>';
             }
         } else {
             echo '<p class="card-text">No ratings available</p>';
@@ -190,8 +191,8 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
             <div class="card-header">
               <a><strong class="text-warning">Eastern Cape</strong></a>
               </div>
-              <ul class="card-body" style="max-height: 250px; overflow-y: auto;">
-                <li><span class="dropdown-item-text">REVIEWS</span></li>
+              <ul class="list-group list-group-flush" style="max-height: 250px; overflow-y: auto;">
+                <li class="list-group-item">REVIEWS</li>
                   <?php $provinceID = 'EC';
                   displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
               </ul>
@@ -209,8 +210,8 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
             <div class="card-header">
               <a><strong class="text-warning">Free State</strong></a>
               </div>
-              <ul class="card-body" style="max-height: 250px; overflow-y: auto;">
-                <li><span class="dropdown-item-text">REVIEWS</span></li>
+              <ul class="list-group list-group-flush" style="max-height: 250px; overflow-y: auto;">
+                  <li class="list-group-item">REVIEWS</li>
                   <?php $provinceID = 'FS';
                   displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
               </ul>
@@ -228,8 +229,8 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
             <div class="card-header">
               <a><strong class="text-warning">Gauteng</strong></a>
               </div>
-              <ul class="card-body" style="max-height: 250px; overflow-y: auto;">
-                <li><span class="dropdown-item-text">REVIEWS</span></li>
+              <ul class="list-group list-group-flush" style="max-height: 250px; overflow-y: auto;">
+                  <li class="list-group-item">REVIEWS</li>
                   <?php $provinceID = 'G';
                   displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
               </ul>
@@ -247,8 +248,8 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
             <div class="card-header">
               <a><strong class="text-warning">Kwa-Zulu Natal</strong></a>
               </div>
-              <ul class="card-body" style="max-height: 250px; overflow-y: auto;">
-                <li><span class="dropdown-item-text">REVIEWS</span></li>
+              <ul class="list-group list-group-flush" style="max-height: 250px; overflow-y: auto;">
+                  <li class="list-group-item">REVIEWS</li>
                   <?php $provinceID = 'KZN';
                   displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
               </ul>
@@ -266,8 +267,8 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
             <div class="card-header">
               <a><strong class="text-warning">Limpopo</strong></a>
               </div>
-              <ul class="card-body" style="max-height: 250px; overflow-y: auto;">
-                <li><span class="dropdown-item-text">REVIEWS</span></li>
+              <ul class="list-group list-group-flush" style="max-height: 250px; overflow-y: auto;">
+                  <li class="list-group-item">REVIEWS</li>
                   <?php $provinceID = 'L';
                   displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
               </ul>
@@ -285,8 +286,8 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
             <div class="card-header">
               <a><strong class="text-warning">Mpumalanga</strong></a>
               </div>
-              <ul class="card-body" style="max-height: 250px; overflow-y: auto;">
-                <li><span class="dropdown-item-text">REVIEWS</span></li>
+              <ul class="list-group list-group-flush" style="max-height: 250px; overflow-y: auto;">
+                  <li class="list-group-item">REVIEWS</li>
                   <?php $provinceID = 'MP';
                   displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
               </ul>
@@ -304,8 +305,8 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
             <div class="card-header">
               <a><strong class="text-warning">Northern Cape</strong></a>
               </div>
-              <ul class="card-body" style="max-height: 250px; overflow-y: auto;">
-                <li><span class="dropdown-item-text">REVIEWS</span></li>
+              <ul class="list-group list-group-flush" style="max-height: 250px; overflow-y: auto;">
+                  <li class="list-group-item">REVIEWS</li>
                   <?php $provinceID = 'NC';
                   displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
               </ul>
@@ -323,8 +324,8 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
             <div class="card-header">
               <a><strong class="text-warning">North West</strong></a>
               </div>
-              <ul class="card-body" style="max-height: 250px; overflow-y: auto;">
-                <li><span class="dropdown-item-text">REVIEWS</span></li>
+              <ul class="list-group list-group-flush" style="max-height: 250px; overflow-y: auto;">
+                  <li class="list-group-item">REVIEWS</li>
                   <?php $provinceID = 'NW';
                   displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
               </ul>
@@ -342,8 +343,8 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
             <div class="card-header">
               <a><strong class="text-warning">Western Cape</strong></a>
             </div>
-            <ul class="card-body" style="max-height: 250px; overflow-y: auto;">
-                <li><span class="dropdown-item-text">REVIEWS</span></li>
+            <ul class="list-group list-group-flush" style="max-height: 250px; overflow-y: auto;">
+                <li class="list-group-item">REVIEWS</li>
                   <?php $provinceID = 'WC';
                   displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
               </ul>

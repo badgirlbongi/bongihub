@@ -219,3 +219,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 08/02/2024
 + testing works, i added a new place, provided screenshots were i entered the data, submitted and pop up shows and redirects to the fill-in form cleared so that you can enter again, but i want to change it to redirect to the index page so that you can view the place added
 + research on how to improve the project
++ improvised the display of reviews on displayReviews.php
