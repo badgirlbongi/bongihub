@@ -22,10 +22,14 @@ class Database {
         }
     }
 
+    public function prepare($sql) {
+        return $this->pdo->prepare($sql);
+    }
+
     public function closeConnection() {
         $this->pdo = null;
     }
 }   
 
 ?>
-
+     

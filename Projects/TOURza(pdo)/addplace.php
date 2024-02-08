@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
-<?php 
-include 'db.php'; 
-include 'imgupload.php';
-?>
+<html lang="en" data-bs-theme="auto"> 
+<?php include 'imgupload.php'; ?>
 
 <?php
+require_once 'db.php'; 
+
+$database = new Database();
 $table = 'place';
 
 // Check if the form is submitted
@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             (:placeID, :placeName, :placeDescription, :placeLink, :provinceID)";
 
     // Use prepared statement to bind parameters
-    $stmt = $pdo->prepare($sql);
+    $stmt = $database->prepare($sql);
     $stmt->bindParam(":placeID", $placeID, PDO::PARAM_STR);
     $stmt->bindParam(":placeName", $placeName, PDO::PARAM_STR);
     $stmt->bindParam(":placeDescription", $placeDescription, PDO::PARAM_STR);
@@ -47,10 +47,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Error inserting data: " . $stmt->errorInfo()[2];
     }
-
-    $stmt->closeCursor();
 }
-$pdo = null;
+
+$database->closeConnection(); 
 ?>
 
   <head>
