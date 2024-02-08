@@ -1,8 +1,66 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-<?php include 'db.php'; ?>
-  <head><script src="assets\js\color-modes.js"></script>
 
+<?php
+require_once 'db.php'; 
+
+function displayRatings($db, $table1, $table2, $provinceID) {
+    // SQL query to retrieve comments
+    $sql = "SELECT r.rateComment, r.placeID, p.provinceID
+            FROM $table1 r
+            JOIN $table2 p ON r.placeID = p.placeID
+            WHERE p.provinceID = :provinceID";
+
+    try {
+        $stmt = $db->prepare($sql);
+        $stmt->bindParam(':provinceID', $provinceID, PDO::PARAM_INT);
+        $stmt->execute();
+
+        // Display ratings in card-body
+        echo '<div class="card-body" style="max-height: 250px; overflow-y: auto;">';
+        if ($stmt->rowCount() > 0) {
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+              echo '<li class="list-group-item">--'.$row['rateComment'].'-'.$row['placeID'].'</li>';
+            }
+        } else {
+            echo '<p class="card-text">No ratings available</p>';
+        }
+        echo '</div>';
+    } catch (PDOException $e) {
+        die("Error: " . $e->getMessage());
+    }
+}
+
+function displayAvrg($db, $table1, $table2, $provinceID) {
+  try {
+      $sql = "SELECT r.ratingValue
+              FROM $table1 r
+              JOIN $table2 p ON r.placeID = p.placeID
+              WHERE p.provinceID = :provinceID";
+
+      $stmt = $db->prepare($sql);
+      $stmt->execute([':provinceID' => $provinceID]);
+
+      $totalRatings = 0;
+      $sumRatings = 0;
+
+      while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+          $sumRatings += $row['ratingValue'];
+          $totalRatings++;
+      }
+
+      $averageRating = $totalRatings > 0 ? $sumRatings / $totalRatings : 0;
+
+      return $averageRating;
+
+  } catch (PDOException $e) {
+      die("Error: " . $e->getMessage());
+  }
+}
+?>
+
+  <head>
+    <script src="assets\js\color-modes.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -109,101 +167,37 @@
   </div>
 </header>
 
-<?php
-function displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) {
-    try {
-        $pdo = new PDO($dsn, $username, $password, $options);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch (PDOException $e) {
-        die("Connection failed: " . $e->getMessage());
-    }
-
-    // SQL query to retrieve comments
-    $sql = "SELECT r.rateComment, r.placeID, p.provinceID
-            FROM $table1 r
-            JOIN $table2 p ON r.placeID = p.placeID
-            WHERE p.provinceID = :provinceID";
-
-    try {
-        $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':provinceID', $provinceID, PDO::PARAM_INT);
-        $stmt->execute();
-
-        // Display ratings in card-body
-        echo '<div class="card-body" style="max-height: 250px; overflow-y: auto;">';
-        if ($stmt->rowCount() > 0) {
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-              echo '<li class="list-group-item">--'.$row['rateComment'].'-'.$row['placeID'].'</li>';
-              //echo '<li ><a class="dropdown-item">'.$row['rateComment'].'-'.$row['placeID'].'</a></li>';
-            }
-        } else {
-            echo '<p class="card-text">No ratings available</p>';
-        }
-        echo '</div>';
-    } catch (PDOException $e) {
-        die("Error: " . $e->getMessage());
-    }
-}
-
-function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID) {
-  try {
-      $pdo = new PDO($dsn, $username, $password, $options);
-      $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-      $sql = "SELECT r.ratingValue
-              FROM $table1 r
-              JOIN $table2 p ON r.placeID = p.placeID
-              WHERE p.provinceID = :provinceID";
-
-      $stmt = $pdo->prepare($sql);
-      $stmt->execute([':provinceID' => $provinceID]);
-
-      $totalRatings = 0;
-      $sumRatings = 0;
-
-      while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-          $sumRatings += $row['ratingValue'];
-          $totalRatings++;
-      }
-
-      $averageRating = $totalRatings > 0 ? $sumRatings / $totalRatings : 0;
-
-      return $averageRating;
-
-  } catch (PDOException $e) {
-      die("Error: " . $e->getMessage());
-  }
-}
-?>
-
 <main>
 <div class="album py-5 bg-body-tertiary">
     <div class="container">
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
       <?php
+        $db = new Database();
         $table1 = 'rating';
         $table2 = 'place';
       ?>
 
-        <div class="col">
-          <div class="card shadow-sm">
-            <div class="card-header">
-              <a><strong class="text-warning">Eastern Cape</strong></a>
-              </div>
-              <ul class="list-group list-group-flush" style="max-height: 250px; overflow-y: auto;">
-                <li class="list-group-item">REVIEWS</li>
-                  <?php $provinceID = 'EC';
-                  displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
-              </ul>
-            <div class="card-footer">
-              <small class="text-body-secondary">Average for the places in this province out of 5 :
-                <?php $provinceID = 'EC';
-                echo displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID);?>
-              </small>
-            </div>
-          </div>
+<div class="col">
+    <div class="card shadow-sm">
+        <div class="card-header">
+            <a><strong class="text-warning">Eastern Cape</strong></a>
         </div>
+        <ul class="list-group list-group-flush" style="max-height: 250px; overflow-y: auto;">
+            <li class="list-group-item">REVIEWS</li>
+            <?php $provinceID = 'EC';
+            displayRatings($db, $table1, $table2, $provinceID);
+            ?> 
+        </ul>
+        <div class="card-footer">
+            <small class="text-body-secondary">Average for the places in this province out of 5 :
+                <?php $provinceID = 'EC';
+                  echo displayAvrg($db, $table1, $table2, $provinceID); ?>
+            </small>
+        </div>
+    </div>
+</div>
+
 
         <div class="col">
           <div class="card shadow-sm">
@@ -213,13 +207,14 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
               <ul class="list-group list-group-flush" style="max-height: 250px; overflow-y: auto;">
                   <li class="list-group-item">REVIEWS</li>
                   <?php $provinceID = 'FS';
-                  displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
-              </ul>
-            <div class="card-footer">
-            <small class="text-body-secondary">Average for the places in this province out of 5 :
-                <?php $provinceID = 'FS';
-                echo displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID);?>
-              </small>
+               displayRatings($db, $table1, $table2, $provinceID);
+               ?> 
+           </ul>
+           <div class="card-footer">
+               <small class="text-body-secondary">Average for the places in this province out of 5 :
+                   <?php $provinceID = 'EC';
+                     echo displayAvrg($db, $table1, $table2, $provinceID); ?>
+               </small>
             </div>
           </div>
         </div>
@@ -232,13 +227,14 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
               <ul class="list-group list-group-flush" style="max-height: 250px; overflow-y: auto;">
                   <li class="list-group-item">REVIEWS</li>
                   <?php $provinceID = 'G';
-                  displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
+                  displayRatings($db, $table1, $table2, $provinceID);
+                  ?> 
               </ul>
-            <div class="card-footer">
-            <small class="text-body-secondary">Average for the places in this province out of 5 :
-                <?php $provinceID = 'G';
-                echo displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID);?>
-              </small>
+              <div class="card-footer">
+                  <small class="text-body-secondary">Average for the places in this province out of 5 :
+                      <?php $provinceID = 'EC';
+                        echo displayAvrg($db, $table1, $table2, $provinceID); ?>
+                  </small>
             </div>
           </div>
         </div>
@@ -251,13 +247,14 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
               <ul class="list-group list-group-flush" style="max-height: 250px; overflow-y: auto;">
                   <li class="list-group-item">REVIEWS</li>
                   <?php $provinceID = 'KZN';
-                  displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
-              </ul>
-            <div class="card-footer">
-            <small class="text-body-secondary">Average for the places in this province out of 5 :
-                <?php $provinceID = 'KZN';
-                echo displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID);?>
-              </small>
+                 displayRatings($db, $table1, $table2, $provinceID);
+                 ?> 
+             </ul>
+             <div class="card-footer">
+                 <small class="text-body-secondary">Average for the places in this province out of 5 :
+                     <?php $provinceID = 'EC';
+                       echo displayAvrg($db, $table1, $table2, $provinceID); ?>
+                 </small>
             </div>
           </div>
         </div>
@@ -270,13 +267,14 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
               <ul class="list-group list-group-flush" style="max-height: 250px; overflow-y: auto;">
                   <li class="list-group-item">REVIEWS</li>
                   <?php $provinceID = 'L';
-                  displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
+                  displayRatings($db, $table1, $table2, $provinceID);
+                  ?> 
               </ul>
-            <div class="card-footer">
-            <small class="text-body-secondary">Average for the places in this province out of 5 :
-                <?php $provinceID = 'L';
-                echo displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID);?>
-              </small>
+              <div class="card-footer">
+                  <small class="text-body-secondary">Average for the places in this province out of 5 :
+                      <?php $provinceID = 'EC';
+                        echo displayAvrg($db, $table1, $table2, $provinceID); ?>
+                  </small>
             </div>
           </div>
         </div>
@@ -289,13 +287,14 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
               <ul class="list-group list-group-flush" style="max-height: 250px; overflow-y: auto;">
                   <li class="list-group-item">REVIEWS</li>
                   <?php $provinceID = 'MP';
-                  displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
+                  displayRatings($db, $table1, $table2, $provinceID);
+                  ?> 
               </ul>
-            <div class="card-footer">
-            <small class="text-body-secondary">Average for the places in this province out of 5 :
-                <?php $provinceID = 'MP';
-                echo displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID);?>
-              </small>
+              <div class="card-footer">
+                  <small class="text-body-secondary">Average for the places in this province out of 5 :
+                      <?php $provinceID = 'EC';
+                        echo displayAvrg($db, $table1, $table2, $provinceID); ?>
+                  </small>
             </div>
           </div>
         </div>
@@ -308,13 +307,14 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
               <ul class="list-group list-group-flush" style="max-height: 250px; overflow-y: auto;">
                   <li class="list-group-item">REVIEWS</li>
                   <?php $provinceID = 'NC';
-                  displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
+                  displayRatings($db, $table1, $table2, $provinceID);
+                  ?> 
               </ul>
-            <div class="card-footer">
-            <small class="text-body-secondary">Average for the places in this province out of 5 :
-                <?php $provinceID = 'NC';
-                echo displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID);?>
-              </small>
+              <div class="card-footer">
+                  <small class="text-body-secondary">Average for the places in this province out of 5 :
+                      <?php $provinceID = 'EC';
+                        echo displayAvrg($db, $table1, $table2, $provinceID); ?>
+                  </small>
             </div>
           </div>
         </div>
@@ -327,13 +327,14 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
               <ul class="list-group list-group-flush" style="max-height: 250px; overflow-y: auto;">
                   <li class="list-group-item">REVIEWS</li>
                   <?php $provinceID = 'NW';
-                  displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
+                  displayRatings($db, $table1, $table2, $provinceID);
+                  ?> 
               </ul>
-            <div class="card-footer">
-            <small class="text-body-secondary">Average for the places in this province out of 5 :
-                <?php $provinceID = 'NW';
-                echo displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID);?>
-              </small>
+              <div class="card-footer">
+                  <small class="text-body-secondary">Average for the places in this province out of 5 :
+                      <?php $provinceID = 'EC';
+                        echo displayAvrg($db, $table1, $table2, $provinceID); ?>
+                  </small>
             </div>
           </div>
         </div>
@@ -346,13 +347,14 @@ function displayAvrg($dsn, $username, $password, $options, $table1, $table2, $pr
             <ul class="list-group list-group-flush" style="max-height: 250px; overflow-y: auto;">
                 <li class="list-group-item">REVIEWS</li>
                   <?php $provinceID = 'WC';
-                  displayRatings($dsn, $username, $password, $options, $table1, $table2, $provinceID) ?> 
+                  displayRatings($db, $table1, $table2, $provinceID);
+                  ?> 
               </ul>
-            <div class="card-footer">
-            <small class="text-body-secondary">Average for the places in this province out of 5 :
-                <?php $provinceID = 'WC';
-                echo displayAvrg($dsn, $username, $password, $options, $table1, $table2, $provinceID);?>
-              </small>
+              <div class="card-footer">
+                  <small class="text-body-secondary">Average for the places in this province out of 5 :
+                      <?php $provinceID = 'EC';
+                        echo displayAvrg($db, $table1, $table2, $provinceID); ?>
+                  </small>
             </div>
           </div>
         </div>
