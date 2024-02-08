@@ -1,5 +1,6 @@
 <?php
-include 'db.php';
+include 'db.php'; 
+
 $table = 'images';
 
 $phpFileUploadErrors = array(
@@ -13,7 +14,7 @@ $phpFileUploadErrors = array(
     7 => 'A PHP extension stopped the file upload',
 );
 
-function addImages($pdo, $filesArray, $tableName) {
+function addImages($db, $filesArray, $tableName) {
     global $phpFileUploadErrors;
 
     $uploadedImages = array();
@@ -33,7 +34,7 @@ function addImages($pdo, $filesArray, $tableName) {
                 move_uploaded_file($file['tmp_name'], $img_dir);
 
                 $sql = "INSERT IGNORE INTO $tableName (imageName, image_dir) VALUES(:name, :img_dir)";
-                $stmt = $pdo->prepare($sql);
+                $stmt = $db->prepare($sql);
                 $stmt->bindParam(':name', $name);
                 $stmt->bindParam(':img_dir', $img_dir);
 
@@ -71,8 +72,10 @@ function pre_r($array) {
 
 if (isset($_FILES['userfile'])) {
     $file_array = reArrayFiles($_FILES['userfile']);
-    $pdo = new PDO($dsn, $username, $password, $options);
-    $resultMessages = addImages($pdo, $file_array, $table);
+
+    // Instantiate the Database class
+    $db = new Database();
+    $resultMessages = addImages($db, $file_array, $table);
     foreach ($resultMessages as $message) {
         echo $message;
     }

@@ -225,3 +225,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + changed db.php to OOP and have to fix all files that uses the database 
 + fixed addplace.php to match the db.php
 + fixed displayReviews.php to match the db.php
++ fixed imgupload.php to match the db.php
