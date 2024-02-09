@@ -1,15 +1,34 @@
 
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-
 <?php
 session_start();
-// Check if success query parameter exists
+
+// Check if success query parameter exists and equals 1
 if (isset($_GET['success']) && $_GET['success'] == 1) {
-    // Display success message
-    echo "<p>Form submitted successfully!</p>";
+    // Display JavaScript code to show the success message as a pop-up
+    echo '<script>
+            // Function to display success message and close it after a certain time
+            function showSuccessMessage() {
+                // Display success message
+                var successMessage = "<p>Form submitted successfully!</p>";
+                document.getElementById("successMessage").innerHTML = successMessage;
+
+                // Automatically hide the message after 3 seconds (3000 milliseconds)
+                setTimeout(function(){
+                    document.getElementById("successMessage").innerHTML = "";
+                }, 3000);
+            }
+
+            // Call the function to display the success message
+            showSuccessMessage();
+          </script>';
 }
 ?>
+
+
+</body>
+</html>
 
   <style>
     .card {
@@ -62,6 +81,9 @@ function countPlacesByProvinceID($provinceID) {
   </head>
 
   <body>
+    <!-- Success message container -->
+    <div id="successMessage"></div>
+
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
