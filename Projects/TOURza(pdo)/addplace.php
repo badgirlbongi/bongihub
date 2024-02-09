@@ -164,7 +164,7 @@ $database->closeConnection();
 <div class="container mt-5">
     <h3 class="text-warning">Share details about the place you want to add</h3>
   
-    <form id="addPlaceForm" method="post" enctype="multipart/form-data">
+    <form  method="post" enctype="multipart/form-data">
         <div class="form-group">
             <label for="placeID">Place ID:</label>
             <input type="text" class="form-control" name="placeID" placeholder="Enter the place ID " required>
@@ -206,7 +206,7 @@ $database->closeConnection();
 
 <script src="assets\dist\js\bootstrap.bundle.min.js"></script>
 
-<script>
+<!--<script>
   // Get the form
   var form = document.getElementById("addPlaceForm");
 
@@ -221,7 +221,8 @@ $database->closeConnection();
     // Optionally, reset the form
     form.reset();
   });
-</script>
+  id="addPlaceForm"
+</script>-->
 
 </body>
 </html>

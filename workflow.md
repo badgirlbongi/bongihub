@@ -233,3 +233,6 @@ objectives : when you click a button on the index.phtml for example for free sta
 
 09/02/2024
 + doing testing if everything is working
++ all pages are working, there's an issue on the addplace.php issues:
+--The script was for the pop up message instead of just submitting so now the problem is when the pop up is active it says your things were submitted when actually they are not  and then it clears the form 
+--But the code with the script commented out , works properly it submits the info even record on the dB but it doesn’t show a message or tell you that your things were submitted it just goes to the redirected page (screen shots attached)
