@@ -230,3 +230,6 @@ objectives : when you click a button on the index.phtml for example for free sta
 + fixed places.php to match the db.php
 + fixed reviews.php to match the db.php
 + will do testing tomorrow
+
+09/02/2024
++ doing testing if everything is working
