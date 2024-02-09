@@ -1,31 +1,22 @@
 
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-<?php
-session_start();
+<script>
+  // Get the form
+  var form = document.getElementById("addPlaceForm");
 
-// Check if success query parameter exists and equals 1
-if (isset($_GET['success']) && $_GET['success'] == 1) {
-    // Display JavaScript code to show the success message as a pop-up
-    echo '<script>
-            // Function to display success message and close it after a certain time
-            function showSuccessMessage() {
-                // Display success message
-                var successMessage = "<p>Form submitted successfully!</p>";
-                document.getElementById("successMessage").innerHTML = successMessage;
+  // Add submit event listener
+  form.addEventListener("submit", function(event) {
+    // Prevent the default form submission
+    event.preventDefault();
+    
+    // Show a success alert
+    alert("Place added successfully!");
 
-                // Automatically hide the message after 3 seconds (3000 milliseconds)
-                setTimeout(function(){
-                    document.getElementById("successMessage").innerHTML = "";
-                }, 3000);
-            }
-
-            // Call the function to display the success message
-            showSuccessMessage();
-          </script>';
-}
-?>
-
+    // Optionally, reset the form
+    form.reset();
+  });
+</script>
 
 </body>
 </html>

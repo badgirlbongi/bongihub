@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['provinceID'] = $provinceID;
 
         // Redirect to confirmation page
-        header("Location: index.php?success=1");
+        header("Location: index.php");
         exit();
     } else {
         echo "Error inserting data: " . $stmt->errorInfo()[2];
@@ -165,7 +165,7 @@ $database->closeConnection();
 <div class="container mt-5">
     <h3 class="text-warning">Share details about the place you want to add</h3>
   
-    <form  method="post" enctype="multipart/form-data">
+    <form id ="addPlaceForm" method="post" enctype="multipart/form-data">
         <div class="form-group">
             <label for="placeID">Place ID:</label>
             <input type="text" class="form-control" name="placeID" placeholder="Enter the place ID " required>
