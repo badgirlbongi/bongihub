@@ -2,6 +2,15 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
 
+<?php
+session_start();
+// Check if success query parameter exists
+if (isset($_GET['success']) && $_GET['success'] == 1) {
+    // Display success message
+    echo "<p>Form submitted successfully!</p>";
+}
+?>
+
   <style>
     .card {
       height: 350px;

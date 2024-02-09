@@ -237,3 +237,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 --The script was for the pop up message instead of just submitting so now the problem is when the pop up is active it says your things were submitted when actually they are not  and then it clears the form 
 --But the code with the script commented out , works properly it submits the info even record on the dB but it doesn’t show a message or tell you that your things were submitted it just goes to the redirected page (screen shots attached)
 + research on how to display pop up correctly and use the search bar
++ testing added code for pop up message on addplace.php and index.php

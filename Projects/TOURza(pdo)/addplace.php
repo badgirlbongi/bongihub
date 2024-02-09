@@ -42,11 +42,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['provinceID'] = $provinceID;
 
         // Redirect to confirmation page
-        header("Location: index.php");
+        header("Location: index.php?success=1");
         exit();
     } else {
         echo "Error inserting data: " . $stmt->errorInfo()[2];
     }
+    
 }
 
 $database->closeConnection(); 
