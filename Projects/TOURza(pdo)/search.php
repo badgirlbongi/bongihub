@@ -21,7 +21,6 @@ class Search {
     
         return $results;
     }
-    
 }
 
 // Database connection
@@ -36,11 +35,10 @@ if (isset($_GET['q'])) {
 
     // Display search results
     foreach ($results as $result) {
-        echo "<h2>{$result['title']}</h2>";
+        echo "<h2>{$result['name']}</h2>";
         echo "<p>{$result['content']}</p>";
     }
 }
 
 $db->closeConnection(); 
 ?>
-
