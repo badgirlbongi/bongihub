@@ -72,9 +72,6 @@ function countPlacesByProvinceID($provinceID) {
   </head>
 
   <body>
-    <!-- Success message container -->
-    <div id="successMessage"></div>
-
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
@@ -159,6 +156,8 @@ function countPlacesByProvinceID($provinceID) {
 </header>
 
 <main>
+   <!-- Success message container -->
+    <div id="successMessage"></div>
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">

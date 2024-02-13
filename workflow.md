@@ -239,3 +239,6 @@ objectives : when you click a button on the index.phtml for example for free sta
 + research on how to display pop up correctly and use the search bar
 + testing added code for pop up message on addplace.php and index.php(did not display proper cause it doesnt disappear after showing the message, screenshots attached)
 + still not displaying
+
+13/02/2024
++ moved the <div> for displaying the pop up message on the index.php to the <main>, now doing testing to see if it will show
