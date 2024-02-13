@@ -242,4 +242,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 
 13/02/2024
 + moved the <div> for displaying the pop up message on the index.php to the <main>, now doing testing to see if it will show, still not showing but the place is added
-+ 
++ added a search.php file for the search form: the goal is for it to search through the whole system for keywords entered by the user
