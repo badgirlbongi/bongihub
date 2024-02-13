@@ -245,3 +245,5 @@ objectives : when you click a button on the index.phtml for example for free sta
 + added a search.php file for the search form linked: the goal is for it to search through the whole system for keywords entered by the user
 --- testing threw an error on line 39 (screenshot provided)
 --- the search form works well(screenshot provided)
+--- added search form on certain files
+--- put design on the search page

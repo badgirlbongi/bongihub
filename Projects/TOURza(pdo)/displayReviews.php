@@ -366,6 +366,21 @@ function displayAvrg($db, $table1, $table2, $provinceID) {
 
 <footer class="text-body-secondary py-5">
   <div class="container">
+
+  <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <p class="lead text-body-secondary">Can't find the place you're looking for?, Just search for it.</p>
+            </div>
+            <div class="container-fluid">
+                <form class="d-flex" action="search.php" method="GET">
+                    <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-warning" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
     <p class="float-end mb-1">
       <a href="#">Back to top</a>
     </p>
@@ -373,7 +388,7 @@ function displayAvrg($db, $table1, $table2, $provinceID) {
     <p class="mb-0">For accomodation around the places you want to explore <a href="https://www.airbnb.co.za/">visit airbnb.</a></p>
   </div>
 </footer>
-<script src="assets\dist\js\bootstrap.bundle.min.js"></script>
 
+<script src="assets\dist\js\bootstrap.bundle.min.js"></script>
 </body>
 </html>
