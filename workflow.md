@@ -247,3 +247,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 --- the search form works well(screenshot provided)
 --- added search form on certain files
 --- put design on the search page
+--- added else stateent for not found places and added link to google (screenshot provided)

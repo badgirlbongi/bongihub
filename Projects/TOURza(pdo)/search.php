@@ -144,9 +144,15 @@ if (isset($_GET['q'])) {
     $results = $search->searchWebsite($keyword);
 
     // Display search results
-    foreach ($results as $result) {
-        echo "<h2>{$result['name']}</h2>";
-        echo "<p>{$result['content']}</p>";
+    if (!empty($results)) {
+        foreach ($results as $result) {
+            echo "<h2>{$result['name']}</h2>"; 
+            echo "<p>{$result['content']}</p>";
+        }
+    } else {
+        echo "<div style='text-align: center;'>";
+        echo "<img src='img/notfound.png' alt='Keyword Not Found'>";
+        echo "</div>";
     }
 }
 
@@ -167,6 +173,10 @@ $db->closeConnection();
                     <input class="form-control me-2" type="search" name="q" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-warning" type="submit">Search</button>
                 </form>
+            </div>
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <br>
+                <p class="lead text-body-secondary">Alternatively Try searching on <a href = "https://www.google.com/">Google</a></p>
             </div>
         </div>
     </section>
