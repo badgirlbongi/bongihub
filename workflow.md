@@ -255,4 +255,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + modified the code on addplace.php for the pop-up
 + fixed the redirect to the index page after the pop-up
 + testing : still not showing the pop-up clashes with the imageupload success button (screenshots provided)
-+
++ 
