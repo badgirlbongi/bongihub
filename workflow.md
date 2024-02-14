@@ -256,3 +256,6 @@ objectives : when you click a button on the index.phtml for example for free sta
 + fixed the redirect to the index page after the pop-up
 + testing : still not showing the pop-up clashes with the imageupload success button (screenshots provided)
 + created a new mini project to understand login and sign-ups on bongihub/projects/loginsample
++ added a users table on the tourza db (projects/TOURza(pdo))
++ added code for displaying login/sign-up form 
++ database doesn't want to connect anymore to add a new place throws an error(screenshot provided)

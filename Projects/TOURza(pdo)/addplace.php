@@ -2,7 +2,7 @@
 <html lang="en" data-bs-theme="auto"> 
 
 <?php
-require_once 'db.php'; 
+include 'db.php'; 
 include 'imgupload.php';
 
 $database = new Database();
