@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto"> 
+<?php include 'imgupload.php'; ?>
 
 <?php
-include 'db.php'; 
-include 'imgupload.php';
+require_once 'db.php'; 
 
 $database = new Database();
 $table = 'place';
