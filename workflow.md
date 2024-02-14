@@ -251,3 +251,5 @@ objectives : when you click a button on the index.phtml for example for free sta
 
 14/02/2024
 + research on how to fix the pop-up on addplace.php
++ removed the oldcode for the pop-u on index.php 
++ modified the code on addplace.php for the pop-up

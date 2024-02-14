@@ -41,6 +41,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['placeLink'] = $placeLink;
         $_SESSION['provinceID'] = $provinceID;
 
+        // Echo JavaScript code
+        echo '<script>
+                var form = document.getElementById("addPlaceForm");
+
+                form.addEventListener("submit", function(event) {
+                    // Prevent the default form submission
+                    event.preventDefault();
+                    
+                    alert("Place added successfully!");
+                });
+              </script>';
+
         // Redirect to confirmation page
         header("Location: index.php");
         exit();
@@ -52,6 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $database->closeConnection(); 
 ?>
+
 
   <head>
     <script src="assets\js\color-modes.js"></script>
@@ -206,24 +219,6 @@ $database->closeConnection();
 </footer>
 
 <script src="assets\dist\js\bootstrap.bundle.min.js"></script>
-
-<!--<script>
-  // Get the form
-  var form = document.getElementById("addPlaceForm");
-
-  // Add submit event listener
-  form.addEventListener("submit", function(event) {
-    // Prevent the default form submission
-    event.preventDefault();
-    
-    // Show a success alert
-    alert("Place added successfully!");
-
-    // Optionally, reset the form
-    form.reset();
-  });
-  id="addPlaceForm"
-</script>-->
 
 </body>
 </html>

@@ -1,26 +1,6 @@
 
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
-<script>
-  // Get the form
-  var form = document.getElementById("addPlaceForm");
-
-  // Add submit event listener
-  form.addEventListener("submit", function(event) {
-    // Prevent the default form submission
-    event.preventDefault();
-    
-    // Show a success alert
-    alert("Place added successfully!");
-
-    // Optionally, reset the form
-    form.reset();
-  });
-</script>
-
-</body>
-</html>
-
   <style>
     .card {
       height: 350px;
@@ -156,8 +136,7 @@ function countPlacesByProvinceID($provinceID) {
 </header>
 
 <main>
-   <!-- Success message container -->
-    <div id="successMessage"></div>
+
   <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
