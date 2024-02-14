@@ -260,3 +260,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + added code for displaying login/sign-up form 
 + database doesn't want to connect anymore to add a new place throws an error(screenshot provided)
 + fixed the error the imgupload and addplace were clashing
++ 
