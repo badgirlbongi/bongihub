@@ -248,3 +248,6 @@ objectives : when you click a button on the index.phtml for example for free sta
 --- added search form on certain files
 --- put design on the search page
 --- added else stateent for not found places and added link to google (screenshot provided)
+
+14/02/2024
++ research on how to fix the pop-up on addplace.php
