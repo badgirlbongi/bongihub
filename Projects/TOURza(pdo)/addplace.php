@@ -1,9 +1,9 @@
 <!doctype html>
 <html lang="en" data-bs-theme="auto"> 
-<?php include 'imgupload.php'; ?>
 
 <?php
 require_once 'db.php'; 
+include 'imgupload.php';
 
 $database = new Database();
 $table = 'place';
@@ -43,23 +43,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Echo JavaScript code
         echo '<script>
-                var form = document.getElementById("addPlaceForm");
+        var form = document.getElementById("addPlaceForm");
 
-                form.addEventListener("submit", function(event) {
-                    // Prevent the default form submission
-                    event.preventDefault();
-                    
-                    alert("Place added successfully!");
-                });
-              </script>';
-
-        // Redirect to confirmation page
-        header("Location: index.php");
-        exit();
+        form.addEventListener("submit", function(event) 
+          {
+            event.preventDefault();
+            alert("Place added successfully!");
+            window.location.href = "index.php";
+          });
+      </script>';
     } else {
-        echo "Error inserting data: " . $stmt->errorInfo()[2];
-    }
-    
+      echo "Error inserting data: " . $stmt->errorInfo()[2];
+      }    
 }
 
 $database->closeConnection(); 

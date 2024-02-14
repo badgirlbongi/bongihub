@@ -253,3 +253,6 @@ objectives : when you click a button on the index.phtml for example for free sta
 + research on how to fix the pop-up on addplace.php
 + removed the oldcode for the pop-u on index.php 
 + modified the code on addplace.php for the pop-up
++ fixed the redirect to the index page after the pop-up
++ testing : still not showing the pop-up clashes with the imageupload success button (screenshots provided)
++
