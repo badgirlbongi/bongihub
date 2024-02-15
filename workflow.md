@@ -269,3 +269,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + buttons are now working and i added the design on user.php(screenshots provided)
 + created file to connect to the database userprocess.php and handle to details and store them on the database and validate
 + testing if login/signup and db are working and connected
++ 
