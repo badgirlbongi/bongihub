@@ -2,21 +2,7 @@
 <html lang="en" data-bs-theme="auto">
   <head>
     <script src="assets\js\color-modes.js"></script>
-    <script>
-        const loginForm = document.getElementById('login-form');
-        const signUpForm = document.getElementById('signup-form');
-
-        function showLoginForm() {
-          loginForm.style.display = 'block';
-          signUpForm.style.display = 'none';
-        }
-
-        function showSignUpForm() {
-          signUpForm.style.display = 'block';
-          loginForm.style.display = 'none';
-        }
-    </script>
-
+ 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -123,47 +109,80 @@
 
 <main>
     
-
 <section class="py-5 text-center container">
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
-        <h3 class="text-warning">You want to add a place?, Login or Sign-up with TourZA</h3>
-        <br><br>
-        <div class="form-buttons" id="form-buttons">
-        <button onclick="showLoginForm()">Login</button>
-        <button onclick="showSignUpForm()">Sign-up</button>
-        </div>
-      </div>
-    </div>
-</section>
 
-  
+        <h3 class="text-body-secondary">You want to add a place? Login or Sign-up with TourZA</h3>
+        <br>
+        <div class="form-buttons" id="form-buttons">
+        <button onclick="showLoginForm()" class="btn btn-dark">Login</button>
+        <button onclick="showSignUpForm()" class="btn btn-dark">Sign-up</button>
+        </div>
+        <br>
+ 
     <form id="login-form" style="display: none;">
         <div class="form-group">
-            <label for="userName">Email: </label>
-            <input type="text" class="form-control" id="userName" name="userName" placeholder="Enter your email" required>
+            <label for="loginUserName">Email: </label>
+            <input type="text" class="form-control" id="loginUserName" name="loginUserName" placeholder="Enter your email" required>
         </div>
         <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+            <label for="loginPassword">Password:</label>
+            <input type="password" class="form-control" id="loginPassword" name="loginPassword" placeholder="Enter your password" required>
         </div>
-        <button type="submit" class="btn btn-warning">Login</button>
+        <br>
+        <div class="d-grid gap-2">
+        <button type="button" class="btn btn-warning" onclick="login()">Login</button>
+        </div>
     </form>
 
     <form id="signup-form" style="display: none;">
         <div class="form-group">
-            <label for="userName">Email: </label>
-            <input type="text" class="form-control" id="userName" name="userName" placeholder="Enter your email" required>
+            <label for="signupUserName">Email</label>
+            <input type="text" class="form-control" id="signupUserName" name="signupUserName" placeholder="Enter your email" required>
         </div>
         <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" class="form-control" id="password" name="password" placeholder="Create password" required>
+            <label for="signupPassword">Password</label>
+            <input type="password" class="form-control" id="signupPassword" name="signupPassword" placeholder="Create password" required>
         </div>
         <div class="form-group">
-            <label for="password2">Password:</label>
-            <input type="password2" class="form-control" id="password2" name="password2" placeholder="Confirm password" required>
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" required>
         </div>
-        <button type="submit" class="btn btn-warning">Sign-up</button>  
+        <br>
+        <div class="d-grid gap-2">
+        <button type="button" class="btn btn-warning" onclick="signup()">Sign-up</button> 
+        </div> 
+    </form>
+
+    <script>
+        const loginForm = document.getElementById('login-form');
+        const signUpForm = document.getElementById('signup-form');
+
+        function showLoginForm() {
+          loginForm.style.display = 'block';
+          signUpForm.style.display = 'none';
+        }
+
+        function showSignUpForm() {
+          signUpForm.style.display = 'block';
+          loginForm.style.display = 'none';
+        }
+
+        function login() {
+          // Your login logic here
+          console.log('Login clicked');
+        }
+
+        function signup() {
+          // Your sign-up logic here
+          console.log('Sign-up clicked');
+        }
+    </script>
+
+    </div>
+  </div>
+</section>
 
 </main>
 
@@ -178,5 +197,5 @@
 </footer>
 <script src="assets\dist\js\bootstrap.bundle.min.js"></script>
 
-    </body>
+</body>
 </html>

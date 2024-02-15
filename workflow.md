@@ -266,3 +266,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + added a user.php page for handling login/sign-up
 + adding code on user.php for the desired output
 + buttons are not working(screen shots provided)
++ buttons are now working and i added the design on user.php(screenshots provided)
