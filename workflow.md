@@ -265,3 +265,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + doing the login/sign-up forms again
 + added a user.php page for handling login/sign-up
 + adding code on user.php for the desired output
++ buttons are not working(screen shots provided)
