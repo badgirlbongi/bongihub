@@ -146,24 +146,22 @@
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
       <?php
-      require_once 'db.php'; // Include or require the db.php file to access the Database class
+      require_once 'db.php';
 
       $selectedProvince = $_GET['province'];
 
       function generateContent($selectedProvince) {
-        $db = new Database(); // Instantiate the Database class
+        $db = new Database(); 
 
         $sql = "SELECT p.placeDescription, p.placeLink, p.provinceID, p.placeID, i.image_dir 
                 FROM place p
                 INNER JOIN images i ON p.placeID = i.imageName
                 WHERE p.provinceID = :provinceID";
 
-      // Prepare and execute the statement
       $stmt = $db->prepare($sql);
       $stmt->bindParam(':provinceID', $selectedProvince, PDO::PARAM_STR);
       $stmt->execute();
 
-      // Get result
       $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
       foreach ($result as $row) {

@@ -123,11 +123,11 @@
  
     <form id="login-form" style="display: none;">
         <div class="form-group">
-            <label for="loginUserName">Email: </label>
+            <label for="loginUserName">Email</label>
             <input type="text" class="form-control" id="loginUserName" name="loginUserName" placeholder="Enter your email" required>
         </div>
         <div class="form-group">
-            <label for="loginPassword">Password:</label>
+            <label for="loginPassword">Password</label>
             <input type="password" class="form-control" id="loginPassword" name="loginPassword" placeholder="Enter your password" required>
         </div>
         <br>
@@ -170,12 +170,12 @@
         }
 
         function login() {
-          // Your login logic here
+          
           console.log('Login clicked');
         }
 
         function signup() {
-          // Your sign-up logic here
+          
           console.log('Sign-up clicked');
         }
     </script>

@@ -267,3 +267,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + adding code on user.php for the desired output
 + buttons are not working(screen shots provided)
 + buttons are now working and i added the design on user.php(screenshots provided)
++ created file to connect to the database userprocess.php and handle to details and store them on the database and validate
