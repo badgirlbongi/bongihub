@@ -42,18 +42,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['provinceID'] = $provinceID;
 
         // Echo JavaScript code
-        echo '<script>
-        var form = document.getElementById("addPlaceForm");
-
-        form.addEventListener("submit", function(event) 
-          {
-            event.preventDefault();
-            alert("Place added successfully!");
-            window.location.href = "index.php";
-          });
-      </script>';
+        echo '<script>alert("Place added successfully!"); window.location.href = "index.php";</script>'; 
     } else {
-      echo "Error inserting data: " . $stmt->errorInfo()[2];
+      echo '<script>alert("Error inserting data: " . $stmt->errorInfo()[2]); window.location.href = "index.php";</script>';
       }    
 }
 
