@@ -121,7 +121,7 @@
         </div>
         <br>
  
-    <form id="login-form" style="display: none;">
+      <form id="login-form" style="display: none;" method="post" action="userprocess.php">
         <div class="form-group">
             <label for="loginUserName">Email</label>
             <input type="text" class="form-control" id="loginUserName" name="loginUserName" placeholder="Enter your email" required>
@@ -132,11 +132,11 @@
         </div>
         <br>
         <div class="d-grid gap-2">
-        <button type="button" class="btn btn-warning" onclick="login()">Login</button>
+        <button type="submit" name="login" class="btn btn-warning">Login</button>
         </div>
     </form>
 
-    <form id="signup-form" style="display: none;">
+    <form id="signup-form" style="display: none;" method="post" action="userprocess.php">
         <div class="form-group">
             <label for="signupUserName">Email</label>
             <input type="text" class="form-control" id="signupUserName" name="signupUserName" placeholder="Enter your email" required>
@@ -151,7 +151,7 @@
         </div>
         <br>
         <div class="d-grid gap-2">
-        <button type="button" class="btn btn-warning" onclick="signup()">Sign-up</button> 
+        <button type="submit" name="signup" class="btn btn-warning">Sign-up</button> 
         </div> 
     </form>
 
@@ -169,15 +169,6 @@
           loginForm.style.display = 'none';
         }
 
-        function login() {
-          
-          console.log('Login clicked');
-        }
-
-        function signup() {
-          
-          console.log('Sign-up clicked');
-        }
     </script>
 
     </div>

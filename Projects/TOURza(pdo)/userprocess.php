@@ -1,5 +1,4 @@
 <?php
-
 require_once 'db.php';
 $db = new Database(); 
 
@@ -25,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["signup"])) {
         if ($stmt->execute([$userName, $password])) {
             echo "Sign-up successful.";
         } else {
-            echo "Error: " . $stmt->error;
+            echo "Error: ";
         }
     }
 }
