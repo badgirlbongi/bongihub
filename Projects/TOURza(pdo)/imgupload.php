@@ -73,7 +73,6 @@ function pre_r($array) {
 if (isset($_FILES['userfile'])) {
     $file_array = reArrayFiles($_FILES['userfile']);
 
-    // Instantiate the Database class
     $db = new Database();
     $resultMessages = addImages($db, $file_array, $table);
     foreach ($resultMessages as $message) {

@@ -40,10 +40,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["login"])) {
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
     if ($result) {
         if (password_verify($password, $result["password"])) {
-            echo "Login successful.";
-            // Perform any necessary actions after successful login
+            echo '<script>alert("Login successful!"); window.location.href = "addplace.php";</script>';
         } else {
-            echo "Incorrect password.";
+           
+            echo '<script>alert("Incorrect password."); window.location.href = document.referrer;</script>';
         }
     } else {
         echo "User not found.";

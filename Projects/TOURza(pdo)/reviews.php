@@ -1,10 +1,10 @@
 <?php
-require_once 'db.php'; // Include or require the db.php file to access the Database class
+require_once 'db.php'; 
 
 $table = 'rating';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Instantiate the Database class
+    
     $db = new Database();
 
     if (isset($_POST['rateValue']) && isset($_POST['comment'])) {
@@ -22,14 +22,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->execute();
         $stmt->closeCursor();
 
-        // Use JavaScript to display the pop-up message
         echo "Comment and Rate submitted successfully";
     } else {
-        // Use JavaScript to display the error message
+        
         echo "Please select a rating and add a comment!";
     }
 
-    // Close the database connection
     $db->closeConnection();
 }
 ?>

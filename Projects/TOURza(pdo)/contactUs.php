@@ -1,7 +1,5 @@
 <?php
 
-//to process contactUs.phtml
-// Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Get form data and sanitize inputs

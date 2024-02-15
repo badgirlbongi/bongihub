@@ -133,7 +133,7 @@ class Search {
     }
 }
 
-// Database connection
+
 $db = new Database();
 
 // Check if search query is provided

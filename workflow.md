@@ -271,3 +271,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + testing if login/signup and db are working and connected
 + sign-up works fine and reflects on the db 
 + login doesn't work throws incorrect password error because of how the password is saved on the db(screenshots provided)
++ added pages redirects
