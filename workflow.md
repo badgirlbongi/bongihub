@@ -277,3 +277,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 16/02/2024
 + research on how to properly save the password
 + the password is now working properly login was successfull(screenshots provided)
++ fixing github folders
