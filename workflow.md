@@ -279,3 +279,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + the password is now working properly login was successfull(screenshots provided)
 + fixing github folders
 + testing adding a place again
++ everything is working fine(screenshots attached)
