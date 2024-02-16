@@ -273,3 +273,6 @@ objectives : when you click a button on the index.phtml for example for free sta
 + login doesn't work throws incorrect password error because of how the password is saved on the db(screenshots provided)
 + added pages redirects
 + fixed addplace.php pop-up
+
+16/02/2024
++ research on how to properly save the password
