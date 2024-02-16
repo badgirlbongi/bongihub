@@ -280,3 +280,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + fixing github folders
 + testing adding a place again
 + everything is working fine(screenshots attached)
++ adding inserted details validation on userprocess.php
