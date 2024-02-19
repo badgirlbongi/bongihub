@@ -287,4 +287,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + changed that if the password is not valid to redirect to the sign-up page
 + all the validations work properly
 + research on how to create a custom domain to host the system online
-+ working on the about page
++ working on the about page( changing pictures, style and information)
