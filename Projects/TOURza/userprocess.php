@@ -11,17 +11,17 @@ function sanitize($data) {
 function validatePassword($password) {
     // Check if password contains at least one capital letter
     if (!preg_match('/[A-Z]/', $password)) {
-        return "Password must contain at least one capital letter.";
+        echo '<script>alert("Password must contain at least one capital letter."); window.location.href = document.referrer;</script>';
     }
 
     // Check if password contains at least one special character
     if (!preg_match('/[^a-zA-Z\d]/', $password)) {
-        return "Password must contain at least one special character.";
+        echo '<script>alert("Password must contain at least one special character."); window.location.href = document.referrer;</script>';
     }
 
     // Check if password contains at least one number
     if (!preg_match('/\d/', $password)) {
-        return "Password must contain at least one number.";
+        echo '<script>alert("Password must contain at least one number."); window.location.href = document.referrer;</script>';
     }
 
     return true; // Password is valid

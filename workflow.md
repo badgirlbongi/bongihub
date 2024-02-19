@@ -283,4 +283,5 @@ objectives : when you click a button on the index.phtml for example for free sta
 + adding inserted details validation on userprocess.php
 
 19/02/2024
-+ testing password validation
++ testing password validation(screenshots attached)
++ changed that if the password is not valid to redirect to the sign-up page
