@@ -281,3 +281,6 @@ objectives : when you click a button on the index.phtml for example for free sta
 + testing adding a place again
 + everything is working fine(screenshots attached)
 + adding inserted details validation on userprocess.php
+
+19/02/2024
++ testing password validation
