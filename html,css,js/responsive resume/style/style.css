@@ -76,7 +76,7 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url('') no-repeat;
+    background: url("image/goblin3.png") no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -166,7 +166,6 @@ section {
 
 .btn-box .btn:hover::before {
     width: 100%;
-
 }
 
 .home-sci {
@@ -212,5 +211,19 @@ section {
 
 .home-sci a:hover::before {
     width: 100%;
+}
 
+.home-imgHover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid red;
+    transition: .3s;
+}
+
+.home-imgHover:hover {
+    background: yellowgreen;
 }
