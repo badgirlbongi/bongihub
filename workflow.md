@@ -293,3 +293,5 @@ objectives : when you click a button on the index.phtml for example for free sta
 + last touch-ups on the about page
 + new css,html and js project (responsive resume) bongihub/html,css,js/responsive resume
 --- doing the index.html
+--- doing style.css
+--- dong script.js
