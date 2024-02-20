@@ -296,3 +296,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 --- doing style.css
 --- dong script.js
 + design on style.css using css
++ main content on index.html using html
