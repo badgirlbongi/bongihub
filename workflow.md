@@ -288,3 +288,6 @@ objectives : when you click a button on the index.phtml for example for free sta
 + all the validations work properly
 + research on how to create a custom domain to host the system online
 + working on the about page( changing pictures, style and information)
+
+20/02/2024
++ last touch-ups on the about page
