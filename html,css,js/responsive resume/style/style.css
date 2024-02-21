@@ -220,10 +220,10 @@ section {
     width: 45%;
     height: 100%;
     background: transparent;
-    border: 2px solid red;
     transition: .3s;
 }
 
 .home-imgHover:hover {
-    background: yellowgreen;
+    background: var(--bg-color);
+    opacity: .8;
 }

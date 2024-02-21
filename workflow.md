@@ -298,3 +298,8 @@ objectives : when you click a button on the index.phtml for example for free sta
 + design on style.css using css
 + main content on index.html using html
 + background picture doesn't want to display
+
+21/02/2024
++ still continuing with the responsive resume on bongihub/html,css,js/responsive resume
+--- doing index.html
+--- doing script.css
