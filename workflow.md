@@ -302,4 +302,10 @@ objectives : when you click a button on the index.phtml for example for free sta
 21/02/2024
 + still continuing with the responsive resume on bongihub/html,css,js/responsive resume
 --- doing index.html
---- doing script.css
+--- doing style.css
+
+22/02/2024
+21/02/2024
++ still continuing with the responsive resume on bongihub/html,css,js/responsive resume
+--- doing index.html
+--- doing style.css
