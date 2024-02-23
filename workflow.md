@@ -309,3 +309,9 @@ objectives : when you click a button on the index.phtml for example for free sta
 --- doing index.html
 --- doing style.css
 --- doing script.js
+
+23/02/2024
++ still continuing with the responsive resume on bongihub/html,css,js/responsive resume
+--- doing index.html
+--- doing style.css
+--- doing script.js
