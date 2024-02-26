@@ -325,3 +325,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + bongihub/html,css,js/doyouwannagooutwithme
 --- valentines or any date mini project for wanting to ask someone out and they can't choose the no options
 ~ index.html 
+~ styles.css
