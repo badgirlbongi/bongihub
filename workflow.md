@@ -315,3 +315,6 @@ objectives : when you click a button on the index.phtml for example for free sta
 --- doing index.html
 --- doing style.css
 --- doing script.js
+
+26/02/2024
++ final touch-ups on bongihub/html,css,js/responsive resume
