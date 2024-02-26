@@ -327,3 +327,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 ~ index.html 
 ~ styles.css
 ~ yes.html
+~ yes_style.css
