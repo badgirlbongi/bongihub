@@ -318,3 +318,6 @@ objectives : when you click a button on the index.phtml for example for free sta
 
 26/02/2024
 + final touch-ups on bongihub/html,css,js/responsive resume
+---index.html
+--- style.css
+--- script.js

@@ -33,8 +33,6 @@ window.onscroll = () => {
         else {
             sec.classList.remove('show-animate');
         }
-
-
     });
 
     //sticky header
@@ -45,4 +43,9 @@ window.onscroll = () => {
     //remove toggle icon and navbar when click navbar links (scroll)
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
+
+    //animation footer on scroll
+    let footer = document.querySelector('footer');
+
+    footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight)
 }
