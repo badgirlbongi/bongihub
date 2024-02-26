@@ -321,3 +321,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 ---index.html
 --- style.css
 --- script.js
++ research on new project
