@@ -328,3 +328,7 @@ objectives : when you click a button on the index.phtml for example for free sta
 ~ styles.css
 ~ yes.html
 ~ yes_style.css
+
+27/02/2024
++ bongihub/projects/TOURza
+--- adding more records on the rating tables (for testing)
