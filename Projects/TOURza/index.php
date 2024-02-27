@@ -15,7 +15,7 @@
   </style>
 
 <?php
-require_once 'db.php'; 
+include 'db.php'; 
 
 function countPlacesByProvinceID($provinceID) {
     $db = new Database(); // Instantiate the Database class

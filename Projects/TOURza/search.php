@@ -109,7 +109,7 @@
 
 <main>
 <?php
-require_once 'db.php'; 
+include 'db.php'; 
 
 class Search {
     private $db;

@@ -2,7 +2,7 @@
 <html lang="en" data-bs-theme="auto">
 
 <?php
-require_once 'db.php'; 
+include 'db.php'; 
 
 function displayRatings($db, $table1, $table2, $provinceID) {
     // SQL query to retrieve comments

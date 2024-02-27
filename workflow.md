@@ -333,3 +333,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 + bongihub/projects/TOURza
 --- adding more records on the rating tables (for testing)
 --- research about updating and deleting of something then it updates or delete also on the database
+--- changed require_once 'db.php' to include 'db.php' on all files

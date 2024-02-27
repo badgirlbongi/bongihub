@@ -3,7 +3,7 @@
 <?php include 'imgupload.php'; ?>
 
 <?php
-require_once 'db.php'; 
+include 'db.php'; 
 
 $database = new Database();
 $table = 'place';
