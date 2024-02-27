@@ -332,3 +332,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 27/02/2024
 + bongihub/projects/TOURza
 --- adding more records on the rating tables (for testing)
+--- research about updating and deleting of something then it updates or delete also on the database
