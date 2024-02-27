@@ -334,3 +334,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 --- adding more records on the rating tables (for testing)
 --- research about updating and deleting of something then it updates or delete also on the database
 --- changed require_once 'db.php' to include 'db.php' on all files
+--- you can't rate more than once in one session you have to load the project all over which is a problem(screenshots provided)
