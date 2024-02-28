@@ -185,7 +185,7 @@
           </div>
           <!-- Rating Form -->
           <div class='card-footer'>
-            <form id='ratingForm' action='reviews.php' method='post'>
+            <form id='ratingForm_$placeID' action='reviews.php' method='post'>
               <p>Rate this place:</p>
               <label><input type='radio' name='rateValue' value='1'> ★</label>
               <label><input type='radio' name='rateValue' value='2'> ★★</label>

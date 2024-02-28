@@ -343,3 +343,7 @@ problems detailed
 --- the first place of every province gets rated successfully but the other places don't 
 --- on the mpumalanga province mbobela's image doesn't show
 + deleted the mbombela place and added it again , now the picture shows
++ From research this could be the problem:
+--- Verify HTML Structure: Ensure that each rating form within your loop has a unique identifier for the form and its elements. If multiple forms have the same identifier, it could cause unexpected behavior.
++ so i changed the rating forms to be unique
++ doing testing
