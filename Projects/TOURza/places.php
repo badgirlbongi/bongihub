@@ -20,7 +20,7 @@
 
 <script>
   function submitForm() {
-    var formData = new FormData(document.getElementById("ratingForm"));
+    var formData = new FormData(document.getElementById("ratingForm_$placeID"));
 
     // Send form data asynchronously using AJAX
     var xhr = new XMLHttpRequest();
@@ -29,7 +29,7 @@
       if (xhr.status === 200) {
         alert("Average Rating: " + xhr.responseText);
         // Reset the form after successful submission
-        document.getElementById("ratingForm").reset();
+        document.getElementById("ratingForm_$placeID").reset();
       }
     };
     xhr.send(formData);
@@ -193,7 +193,7 @@ function generateContent($selectedProvince) {
                         <label><input type='radio' name='rateValue' value='4'> ★★★★</label>
                         <label><input type='radio' name='rateValue' value='5'> ★★★★★</label>
                         <br><br>
-                        <input type='hidden' name='form_identifier' value='$placeID'> <!-- Unique form identifier -->
+                        <input type='hidden' name='form_identifier' value='$placeID'> 
                         <input type='hidden' name='placeID' value='$placeID'>
                         <div class='d-flex justify-content-between align-items-center'>
                             <div class='btn-group'>

@@ -348,3 +348,4 @@ problems detailed
 + so i changed the rating forms to be unique
 + doing testing (was still not working)
 + updated the reviews.php and the places.php 
++ updated the script on the places.php
