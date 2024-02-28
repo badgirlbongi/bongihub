@@ -353,3 +353,4 @@ problems detailed
 --- linkedin link not working (so removed)
 --- replaced include with require_once 
 --- fixed missing pictures on the carousel
+--- rating still doesn't work (changed script on places.php)

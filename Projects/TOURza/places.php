@@ -19,36 +19,37 @@
     <link rel="stylesheet" href="style.css">
 
 <script>
-  function submitForm() {
-    var formData = new FormData(document.getElementById("ratingForm_$placeID"));
+
+  function submitForm(formId) {
+    var formData = new FormData(document.getElementById(formId));
 
     // Send form data asynchronously using AJAX
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "reviews.php", true);
     xhr.onload = function() {
       if (xhr.status === 200) {
-        alert("Average Rating: " + xhr.responseText);
+        alert("Rating submitted successfully");
         // Reset the form after successful submission
-        document.getElementById("ratingForm_$placeID").reset();
+        document.getElementById(formId).reset();
       }
     };
     xhr.send(formData);
   }
 
-  function showPopup() {
+  function showPopup(formId) {
     var comment = prompt("Please enter your comment:");
     if (comment !== null) {
-      document.getElementById("comment").value = comment;
-      submitForm(); 
+      document.getElementById(formId).querySelector("#comment").value = comment;
+      submitForm(formId);
     }
   }
 
   document.getElementById("toggle-form").addEventListener("click", function() {
-  document.getElementById("login-form").style.display = "block";
-  document.getElementById("signup-form").style.display = "block";
+    document.getElementById("login-form").style.display = "block";
+    document.getElementById("signup-form").style.display = "block";
   });
-
 </script>
+
 </head>
   
   <body>
