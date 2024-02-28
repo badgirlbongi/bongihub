@@ -354,3 +354,4 @@ problems detailed
 --- replaced include with require_once 
 --- fixed missing pictures on the carousel
 --- rating still doesn't work (changed script on places.php)
+--- more changes for ratings

@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="style.css">
 
 <script>
-
   function submitForm(formId) {
     var formData = new FormData(document.getElementById(formId));
 
@@ -39,8 +38,10 @@
   function showPopup(formId) {
     var comment = prompt("Please enter your comment:");
     if (comment !== null) {
-      document.getElementById(formId).querySelector("#comment").value = comment;
-      submitForm(formId);
+        // Set the comment value
+        document.getElementById(formId).querySelector("input[name='comment']").value = comment;
+        // Submit the form
+        submitForm(formId);
     }
   }
 
@@ -203,6 +204,7 @@ function generateContent($selectedProvince) {
                             </div>
                             <small class='text-body-secondary'>$provinceID - $placeID</small>
                         </div>
+                        <input type='hidden' name='comment' id='comment'> <!-- for the pop-up -->
                     </form>
                 </div>
             </div>
