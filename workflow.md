@@ -355,3 +355,4 @@ problems detailed
 --- fixed missing pictures on the carousel
 --- rating still doesn't work (changed script on places.php)
 --- more changes for ratings
+--- doesn't show pop-ups for successful/not for the rates
