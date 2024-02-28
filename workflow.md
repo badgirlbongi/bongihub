@@ -336,5 +336,9 @@ objectives : when you click a button on the index.phtml for example for free sta
 --- changed require_once 'db.php' to include 'db.php' on all files
 --- you can't rate more than once in one session you have to load the project all over which is a problem(screenshots provided)
 
-28/02/2024
+28/02/2024(projects/TOURza)
 + research on how to figure out what could be causing the problem of mutliple rates not being allowed
++ changes on reviews.php
+problems detailed
+--- the first place of every province gets rated successfully but the other places don't 
+--- on the mpumalanga province mbobela's image doesn't show
