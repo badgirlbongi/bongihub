@@ -3,7 +3,7 @@
 <?php include 'imgupload.php'; ?>
 
 <?php
-include 'db.php'; 
+require_once 'db.php'; 
 
 $database = new Database();
 $table = 'place';
@@ -179,7 +179,7 @@ $database->closeConnection();
         </div>
         <div class="form-group">
           <label for="placeDescription">Place Description:</label>
-          <textarea class="form-control" name="placeDescription" rows="6" placeholder="Enter the place full name" required></textarea>
+          <textarea class="form-control" name="placeDescription" rows="6" placeholder="Brief description about the place" required></textarea>
       </div>
         <div class="form-group">
             <label for="placeLink">Place Link:</label>

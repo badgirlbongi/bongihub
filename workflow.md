@@ -342,3 +342,4 @@ objectives : when you click a button on the index.phtml for example for free sta
 problems detailed
 --- the first place of every province gets rated successfully but the other places don't 
 --- on the mpumalanga province mbobela's image doesn't show
++ deleted the mbombela place and added it again , now the picture shows
