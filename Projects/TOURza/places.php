@@ -146,25 +146,25 @@
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
       <?php
-      include 'db.php';
+include 'db.php';
 
-      $selectedProvince = $_GET['province'];
+$selectedProvince = $_GET['province'];
 
-      function generateContent($selectedProvince) {
-        $db = new Database(); 
+function generateContent($selectedProvince) {
+    $db = new Database(); 
 
-        $sql = "SELECT p.placeDescription, p.placeLink, p.provinceID, p.placeID, i.image_dir 
-                FROM place p
-                INNER JOIN images i ON p.placeID = i.imageName
-                WHERE p.provinceID = :provinceID";
+    $sql = "SELECT p.placeDescription, p.placeLink, p.provinceID, p.placeID, i.image_dir 
+            FROM place p
+            INNER JOIN images i ON p.placeID = i.imageName
+            WHERE p.provinceID = :provinceID";
 
-      $stmt = $db->prepare($sql);
-      $stmt->bindParam(':provinceID', $selectedProvince, PDO::PARAM_STR);
-      $stmt->execute();
+    $stmt = $db->prepare($sql);
+    $stmt->bindParam(':provinceID', $selectedProvince, PDO::PARAM_STR);
+    $stmt->execute();
 
-      $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-      foreach ($result as $row) {
+    foreach ($result as $row) {
         // Assign values to variables
         $image = $row['image_dir'];
         $description = $row['placeDescription'];
@@ -174,38 +174,38 @@
 
         // Display place information
         echo "
-      <div class='col'>
-        <div class='card shadow-sm'>
-          <div class='card-header'>
-            <img src='$image' class='bd-placeholder-img card-img-top' width='100%' height='225' alt='place image'>
-          </div>
-          <div class='card-body' style='max-height: 250px; overflow-y: auto;'>
-            <p class='card-text'>$description</p>
-            <p><a href='$link' class='link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover'>Visit this place</a></p>
-          </div>
-          <!-- Rating Form -->
-          <div class='card-footer'>
-            <form id='ratingForm_$placeID' action='reviews.php' method='post'>
-              <p>Rate this place:</p>
-              <label><input type='radio' name='rateValue' value='1'> ★</label>
-              <label><input type='radio' name='rateValue' value='2'> ★★</label>
-              <label><input type='radio' name='rateValue' value='3'> ★★★</label>
-              <label><input type='radio' name='rateValue' value='4'> ★★★★</label>
-              <label><input type='radio' name='rateValue' value='5'> ★★★★★</label>
-              <br><br>
-              <input type='hidden' id='comment' name='comment' value=''>
-              <input type='hidden' name='placeID' value='$placeID'>
-              <div class='d-flex justify-content-between align-items-center'>
-                <div class='btn-group'>
-                  <button type='button' onclick='showPopup()' class='btn btn-sm btn-outline-secondary'>Rate</button>
-                  <a href='displayReviews.php' class='btn btn-sm btn-outline-secondary' id='reviews'>Reviews</a>
+        <div class='col'>
+            <div class='card shadow-sm'>
+                <div class='card-header'>
+                    <img src='$image' class='bd-placeholder-img card-img-top' width='100%' height='225' alt='place image'>
                 </div>
-                <small class='text-body-secondary'>$provinceID - $placeID</small>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>";
+                <div class='card-body' style='max-height: 250px; overflow-y: auto;'>
+                    <p class='card-text'>$description</p>
+                    <p><a href='$link' class='link-warning link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover'>Visit this place</a></p>
+                </div>
+                <!-- Rating Form -->
+                <div class='card-footer'>
+                    <form id='ratingForm_$placeID' action='reviews.php' method='post'>
+                        <p>Rate this place:</p>
+                        <label><input type='radio' name='rateValue' value='1'> ★</label>
+                        <label><input type='radio' name='rateValue' value='2'> ★★</label>
+                        <label><input type='radio' name='rateValue' value='3'> ★★★</label>
+                        <label><input type='radio' name='rateValue' value='4'> ★★★★</label>
+                        <label><input type='radio' name='rateValue' value='5'> ★★★★★</label>
+                        <br><br>
+                        <input type='hidden' name='form_identifier' value='$placeID'> <!-- Unique form identifier -->
+                        <input type='hidden' name='placeID' value='$placeID'>
+                        <div class='d-flex justify-content-between align-items-center'>
+                            <div class='btn-group'>
+                                <button type='button' onclick='showPopup()' class='btn btn-sm btn-outline-secondary'>Rate</button>
+                                <a href='displayReviews.php' class='btn btn-sm btn-outline-secondary' id='reviews'>Reviews</a>
+                            </div>
+                            <small class='text-body-secondary'>$provinceID - $placeID</small>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>";
     }
 
     $db->closeConnection(); // Close the database connection
@@ -214,10 +214,9 @@
 // Call the function
 generateContent($selectedProvince);
 ?>
-
-      <a href="user.php" id="toggle-form">
-        <i class='bx bxs-plus-circle' style="color: #f7b602;font-size: 6em;"></i>
-      </a>
+        <a href="user.php" id="toggle-form">
+          <i class='bx bxs-plus-circle' style="color: #f7b602;font-size: 6em;"></i>
+        </a>
 
       </div>
     </div>

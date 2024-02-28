@@ -346,4 +346,5 @@ problems detailed
 + From research this could be the problem:
 --- Verify HTML Structure: Ensure that each rating form within your loop has a unique identifier for the form and its elements. If multiple forms have the same identifier, it could cause unexpected behavior.
 + so i changed the rating forms to be unique
-+ doing testing
++ doing testing (was still not working)
++ updated the reviews.php and the places.php 

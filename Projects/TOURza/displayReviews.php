@@ -20,7 +20,7 @@ function displayRatings($db, $table1, $table2, $provinceID) {
         echo '<div class="card-body" style="max-height: 250px; overflow-y: auto;">';
         if ($stmt->rowCount() > 0) {
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-              echo '<li class="list-group-item">--'.$row['rateComment'].'-'.$row['placeID'].'</li>';
+              echo '<li class="list-group-item">***'.$row['rateComment'].'-'.$row['placeID'].'</li>';
             }
         } else {
             echo '<p class="card-text">No ratings available</p>';

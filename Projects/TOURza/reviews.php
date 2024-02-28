@@ -4,10 +4,10 @@ require_once 'db.php';
 $table = 'rating';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
     $db = new Database();
 
-    if (isset($_POST['rateValue']) && isset($_POST['comment']) && isset($_POST['placeID'])) {
+    // Check if the form identifier is set in the POST data
+    if (isset($_POST['form_identifier']) && isset($_POST['rateValue']) && isset($_POST['comment']) && isset($_POST['placeID'])) {
         $rating = $_POST['rateValue'];
         $comment = $_POST['comment'];
         $placeID = $_POST['placeID'];
@@ -24,8 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         echo "Rating submitted successfully";
     } else {
-        
-        echo "Please select a rating and add a comment!";
+        echo "Invalid form submission!";
     }
 
     $db->closeConnection();
