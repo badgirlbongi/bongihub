@@ -335,3 +335,6 @@ objectives : when you click a button on the index.phtml for example for free sta
 --- research about updating and deleting of something then it updates or delete also on the database
 --- changed require_once 'db.php' to include 'db.php' on all files
 --- you can't rate more than once in one session you have to load the project all over which is a problem(screenshots provided)
+
+28/02/2024
++ research on how to figure out what could be causing the problem of mutliple rates not being allowed
