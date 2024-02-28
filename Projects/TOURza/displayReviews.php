@@ -146,7 +146,7 @@ function displayAvrg($db, $table1, $table2, $provinceID) {
               <i class='bx bxl-instagram text-warning' style="font-size: 2em;"></i></a>
           
             <a href="index.php" class="btn btn-warning my-2">Home</a>
-            <a href="displayReviews.php" class="btn btn-warning my-2">About</a>
+            <a href="about.html" class="btn btn-warning my-2">About</a>
             <a href="contactUs.html" class="btn btn-warning my-2">Contact Us</a>
           </div> 
         </div>

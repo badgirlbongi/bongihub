@@ -238,8 +238,6 @@ function countPlacesByProvinceID($provinceID) {
                     <button type="button" data-bs-target="#carouselEC" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselEC" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     <button type="button" data-bs-target="#carouselEC" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#carouselEC" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                    <button type="button" data-bs-target="#carouselEC" data-bs-slide-to="5" aria-label="Slide 6"></button>
                   </div>
                   <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -247,12 +245,6 @@ function countPlacesByProvinceID($provinceID) {
                     </div>
                     <div class="carousel-item">
                       <img src="img/easterncape.jpg" class="d-block w-100" alt="easterncape">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="img/east london.jpg" class="d-block w-100" alt="easterncape">
-                    </div>
-                    <div class="carousel-item">
-                      <img src="img/jeffreysbay.jpg" class="d-block w-100" alt="easterncape">
                     </div>
                     <div class="carousel-item">
                       <img src="img/portelizabeth.jpg" class="d-block w-100" alt="easterncape">
@@ -313,7 +305,7 @@ function countPlacesByProvinceID($provinceID) {
                     <img src="img/sutherland.jpg" class="d-block w-100" alt="northerncape">
                   </div>
                   <div class="carousel-item">
-                    <img src="img/ncc.jpg" class="d-block w-100" alt="northerncape">
+                    <img src="img/3.webp" class="d-block w-100" alt="northerncape">
                   </div>
               </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselNC" data-bs-slide="prev">
@@ -562,9 +554,6 @@ function countPlacesByProvinceID($provinceID) {
                 <button type="button" data-bs-target="#carouselG" data-bs-slide-to="5" aria-label="Slide 6"></button>
                 <button type="button" data-bs-target="#carouselG" data-bs-slide-to="6" aria-label="Slide 7"></button>
                 <button type="button" data-bs-target="#carouselG" data-bs-slide-to="7" aria-label="Slide 8"></button>
-                <button type="button" data-bs-target="#carouselG" data-bs-slide-to="8" aria-label="Slide 9"></button>
-                <button type="button" data-bs-target="#carouselG" data-bs-slide-to="9" aria-label="Slide 10"></button>
-                <button type="button" data-bs-target="#carouselG" data-bs-slide-to="10" aria-label="Slide 11"></button>
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -577,19 +566,10 @@ function countPlacesByProvinceID($provinceID) {
                   <img src="img/voortreker.jpg" class="d-block w-100" alt="gauteng">
                 </div>
                 <div class="carousel-item">
-                  <img src="img/hectorpieterson.jpg" class="d-block w-100" alt="gauteng">
-                </div>
-                <div class="carousel-item">
                   <img src="img/jhb.webp" class="d-block w-100" alt="gauteng">
                 </div>
                 <div class="carousel-item">
-                  <img src="img/kgugerssdome.jpg" class="d-block w-100" alt="gauteng">
-                </div>
-                <div class="carousel-item">
                   <img src="img/light.jpg" class="d-block w-100" alt="gauteng">
-                </div>
-                <div class="carousel-item">
-                  <img src="img/orange.jpg" class="d-block w-100" alt="gauteng">
                 </div>
                 <div class="carousel-item">
                   <img src="img/sowetotowers.jpg" class="d-block w-100" alt="gauteng">

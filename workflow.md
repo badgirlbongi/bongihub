@@ -351,3 +351,5 @@ problems detailed
 + updated the script on the places.php
 + checking and testing and fixing error from the start of the system to end
 --- linkedin link not working (so removed)
+--- replaced include with require_once 
+--- fixed missing pictures on the carousel
