@@ -349,3 +349,5 @@ problems detailed
 + doing testing (was still not working)
 + updated the reviews.php and the places.php 
 + updated the script on the places.php
++ checking and testing and fixing error from the start of the system to end
+--- linkedin link not working (so removed)

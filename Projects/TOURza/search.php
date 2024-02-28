@@ -84,7 +84,7 @@
               <i class='bx bxl-twitter text-warning' style="font-size: 3em;"></i></a>
             <a href="https://www.instagram.com/TOURza">
               <i class='bx bxl-instagram text-warning' style="font-size: 3em;"></i></a>
-            <a href="#"><i class='bx bxl-linkedin text-warning' style="font-size: 3em;"></i></a>
+            
             <a href="index.php" class="btn btn-warning my-2">Home</a>
             <a href="displayReviews.php" class="btn btn-warning my-2">Reviews</a>
             <a href="about.html" class="btn btn-warning my-2">About</a>
@@ -109,7 +109,7 @@
 
 <main>
 <?php
-include 'db.php'; 
+require_once 'db.php'; 
 
 class Search {
     private $db;

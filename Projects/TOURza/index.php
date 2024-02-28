@@ -15,7 +15,7 @@
   </style>
 
 <?php
-include 'db.php'; 
+require_once 'db.php'; 
 
 function countPlacesByProvinceID($provinceID) {
     $db = new Database(); // Instantiate the Database class
@@ -116,7 +116,6 @@ function countPlacesByProvinceID($provinceID) {
               <i class='bx bxl-twitter text-warning' style="font-size: 3em;"></i></a>
             <a href="https://www.instagram.com/TOURza">
               <i class='bx bxl-instagram text-warning' style="font-size: 3em;"></i></a>
-            <a href="#"><i class='bx bxl-linkedin text-warning' style="font-size: 3em;"></i></a>
           </div> 
         </div>
       </div>

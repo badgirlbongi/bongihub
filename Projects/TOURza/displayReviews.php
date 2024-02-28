@@ -2,7 +2,7 @@
 <html lang="en" data-bs-theme="auto">
 
 <?php
-include 'db.php'; 
+require_once 'db.php'; 
 
 function displayRatings($db, $table1, $table2, $provinceID) {
     // SQL query to retrieve comments
@@ -144,8 +144,7 @@ function displayAvrg($db, $table1, $table2, $provinceID) {
               <i class='bx bxl-twitter text-warning' style="font-size: 2em;"></i></a>
             <a href="https://www.instagram.com/TOURza">
               <i class='bx bxl-instagram text-warning' style="font-size: 2em;"></i></a>
-            <a href="https://www.linkedin.com/TOURza">
-                <i class='bx bxl-linkedin text-warning' style="font-size: 2em;"></i></a>
+          
             <a href="index.php" class="btn btn-warning my-2">Home</a>
             <a href="displayReviews.php" class="btn btn-warning my-2">About</a>
             <a href="contactUs.html" class="btn btn-warning my-2">Contact Us</a>
