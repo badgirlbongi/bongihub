@@ -12,21 +12,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $comment = $_POST['comment'];
         $placeID = $_POST['placeID'];
 
-        // Prepare and bind the SQL statement to insert a new rating record
-        $stmt = $db->prepare("INSERT INTO $table (ratingValue, rateComment, placeID) VALUES (?, ?, ?)");
-        $stmt->bindParam(1, $rating, PDO::PARAM_INT);
-        $stmt->bindParam(2, $comment, PDO::PARAM_STR);
-        $stmt->bindParam(3, $placeID, PDO::PARAM_INT);
+        try {
+            // Prepare and bind the SQL statement to insert a new rating record
+            $stmt = $db->prepare("INSERT INTO $table (ratingValue, rateComment, placeID) VALUES (?, ?, ?)");
+            $stmt->bindParam(1, $rating, PDO::PARAM_INT);
+            $stmt->bindParam(2, $comment, PDO::PARAM_STR);
+            $stmt->bindParam(3, $placeID, PDO::PARAM_INT);
 
-        // Execute the query
-        $stmt->execute();
-        $stmt->closeCursor();
+            // Execute the query
+            $stmt->execute();
+            $stmt->closeCursor();
 
-        echo "Rating submitted successfully";
+            // Provide success response
+            echo "Rating submitted successfully";
+        } catch (PDOException $e) {
+            // Handle database errors
+            echo "Error: " . $e->getMessage();
+        }
     } else {
+        // Invalid form submission
         echo "Invalid form submission!";
     }
 
+    // Close database connection
     $db->closeConnection();
 }
 ?>

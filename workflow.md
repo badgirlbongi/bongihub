@@ -361,3 +361,4 @@ problems detailed
 + research about the errors
 + trying to resolve the pop-up issue on reviews.php and places.php
 + made changes on the showpop-up function on places.php
++ made changes again on reviews.php and places.php

@@ -37,6 +37,7 @@
   }
 
   function showPopup(placeID) {
+    console.log("showPopup function called"); // Add this line for debugging
     var comment = prompt("Please enter your comment:");
     if (comment != null) {
         document.getElementById("comment").value = comment;
@@ -63,7 +64,6 @@
         xhr.send(formData);
     }
 }
-
 
   document.getElementById("toggle-form").addEventListener("click", function() {
     document.getElementById("login-form").style.display = "block";
