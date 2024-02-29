@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="style.css">
 
 <script>
+
   function submitForm(formId) {
     var formData = new FormData(document.getElementById(formId));
 
@@ -27,7 +28,7 @@
     xhr.open("POST", "reviews.php", true);
     xhr.onload = function() {
       if (xhr.status === 200) {
-        alert("Rating submitted successfully");
+        alert(xhr.responseText);
         // Reset the form after successful submission
         document.getElementById(formId).reset();
       }
@@ -50,7 +51,6 @@
     document.getElementById("signup-form").style.display = "block";
   });
 </script>
-
 </head>
   
   <body>

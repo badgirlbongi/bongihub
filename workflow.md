@@ -359,3 +359,4 @@ problems detailed
 
 29/02/2024
 + research about the errors
++ trying to resolve the pop-up issue on reviews.php and places.php
