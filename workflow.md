@@ -356,3 +356,6 @@ problems detailed
 --- rating still doesn't work (changed script on places.php)
 --- more changes for ratings
 --- doesn't show pop-ups for successful/not for the rates
+
+29/02/2024
++ research about the errors
