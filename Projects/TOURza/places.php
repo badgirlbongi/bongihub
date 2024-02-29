@@ -36,15 +36,34 @@
     xhr.send(formData);
   }
 
-  function showPopup(formId) {
+  function showPopup(placeID) {
     var comment = prompt("Please enter your comment:");
-    if (comment !== null) {
-        // Set the comment value
-        document.getElementById(formId).querySelector("input[name='comment']").value = comment;
-        // Submit the form
-        submitForm(formId);
+    if (comment != null) {
+        document.getElementById("comment").value = comment;
+        var form = document.getElementById("ratingForm_" + placeID);
+        var formData = new FormData(form);
+        
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", form.action, true);
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                // Handle successful submission, if needed
+                alert("Rating submitted successfully");
+                // Reset the form, if needed
+                form.reset();
+            } else {
+                // Handle errors, if needed
+                alert("Error: " + xhr.statusText);
+            }
+        };
+        xhr.onerror = function () {
+            // Handle connection errors, if needed
+            alert("Connection error");
+        };
+        xhr.send(formData);
     }
-  }
+}
+
 
   document.getElementById("toggle-form").addEventListener("click", function() {
     document.getElementById("login-form").style.display = "block";
