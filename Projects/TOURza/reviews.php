@@ -6,7 +6,7 @@ $table = 'rating';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $db = new Database();
-    if ( isset($_POST['rateValue']) && isset($_POST['comment']) && isset($_POST['placeID'])) {
+    if ( isset($_POST['ratingForm_$placeID']) && isset($_POST['rateValue']) && isset($_POST['comment']) && isset($_POST['placeID'])) {
         $rating = $_POST['rateValue'];
         $comment = $_POST['comment'];
         $placeID = $_POST['placeID'];
