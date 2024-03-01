@@ -362,3 +362,6 @@ problems detailed
 + trying to resolve the pop-up issue on reviews.php and places.php
 + made changes on the showpop-up function on places.php
 + made changes again on reviews.php and places.php
+
+01/03/2024
++ changing my code for the tourza project to the way it was before the changes made so that I can debugg it properly
