@@ -164,3 +164,33 @@ function generateContent($selectedProvince) {
 // Call the function
 generateContent($selectedProvince);
 ?>
+
+
+<script>
+  function submitForm() {
+    var formData = new FormData(document.getElementById("ratingForm"));
+    // Send form data asynchronously using AJAX
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "reviews.php", true);
+    xhr.onload = function() {
+      if (xhr.status === 200) {
+        alert("Average Rating: " + xhr.responseText);
+        // Reset the form after successful submission
+        document.getElementById("ratingForm").reset();
+      }
+    };
+    xhr.send(formData);
+  }
+  function showPopup() {
+    var comment = prompt("Please enter your comment:");
+    if (comment !== null) {
+      document.getElementById("comment").value = comment;
+      submitForm(); 
+    }
+  }
+  document.getElementById("toggle-form").addEventListener("click", function() {
+  document.getElementById("login-form").style.display = "block";
+  document.getElementById("signup-form").style.display = "block";
+  });
+</script>
+</head>
