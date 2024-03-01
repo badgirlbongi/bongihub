@@ -20,7 +20,7 @@
 
     <script>
   function submitForm() {
-    var formData = new FormData(document.getElementById("ratingForm"));
+    var formData = new FormData(document.getElementById("ratingForm_$placeID"));
     // Send form data asynchronously using AJAX
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "reviews.php", true);
@@ -28,7 +28,7 @@
       if (xhr.status === 200) {
         alert("Average Rating: " + xhr.responseText);
         // Reset the form after successful submission
-        document.getElementById("ratingForm").reset();
+        document.getElementById("ratingForm_$placeID").reset();
       }
     };
     xhr.send(formData);
@@ -177,7 +177,7 @@
           </div>
           <!-- Rating Form -->
           <div class='card-footer'>
-            <form id='ratingForm' action='reviews.php' method='post'>
+            <form id='ratingForm_$placeID' action='reviews.php' method='post'>
               <p>Rate this place:</p>
               <label><input type='radio' name='rateValue' value='1'> ★</label>
               <label><input type='radio' name='rateValue' value='2'> ★★</label>
