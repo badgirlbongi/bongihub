@@ -365,4 +365,4 @@ problems detailed
 
 01/03/2024
 + changing my code for the tourza project to the way it was before the changes made so that I can debugg it properly
-+ doing testing to see if it works as before
++ doing testing to see if it works as before(screenshots attached) system working as before so will try to fix the original problem of rates not being submitted and only sumits for the first card only per province
