@@ -365,3 +365,4 @@ problems detailed
 
 01/03/2024
 + changing my code for the tourza project to the way it was before the changes made so that I can debugg it properly
++ doing testing to see if it works as before
