@@ -19,6 +19,15 @@
     <link rel="stylesheet" href="style.css">
 
     <script>
+
+  function showPopup() {
+    var comment = prompt("Please enter your comment:");
+    if (comment !== null) {
+      document.getElementById("comment").value = comment;
+      submitForm(); 
+    }
+  }
+  
   function submitForm() {
     var formData = new FormData(document.getElementById("ratingForm_$placeID"));
     // Send form data asynchronously using AJAX
@@ -33,13 +42,8 @@
     };
     xhr.send(formData);
   }
-  function showPopup() {
-    var comment = prompt("Please enter your comment:");
-    if (comment !== null) {
-      document.getElementById("comment").value = comment;
-      submitForm(); 
-    }
-  }
+  
+  
   document.getElementById("toggle-form").addEventListener("click", function() {
   document.getElementById("login-form").style.display = "block";
   document.getElementById("signup-form").style.display = "block";
