@@ -370,6 +370,9 @@ problems detailed
 04/03/2024
 + new project called to-do list on bongihub/to-do-list
 + added all images and icon needed for the project
-+ added a index.html
-+ added a script.js
-+ added a style.css
++ added the index.html
++ added the script.js
++ added the style.css
++ finished the index.html
++ finished the style.css
++ 
