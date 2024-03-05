@@ -380,3 +380,5 @@ problems detailed
 + bongihub/to-do-list
 + working on the script.js
 + finished with the script.js
++ added a browserconfig.xml
++ added an svg
