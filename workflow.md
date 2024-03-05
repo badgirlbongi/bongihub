@@ -375,4 +375,7 @@ problems detailed
 + added the style.css
 + finished the index.html
 + finished the style.css
-+ 
+
+05/03/2024
++ bongihub/to-do-list
++ working on the script.js
