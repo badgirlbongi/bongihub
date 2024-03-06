@@ -382,3 +382,7 @@ problems detailed
 + finished with the script.js
 + added a browserconfig.xml
 + added an svg
+
+06/03/2024
++ brainstorming for a new python project
++ 
