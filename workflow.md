@@ -385,4 +385,6 @@ problems detailed
 
 06/03/2024
 + brainstorming for a new python project
++ recipe project on bongihub/recipe
++ notes on bongihub/recipe/notes.txt
 + 
