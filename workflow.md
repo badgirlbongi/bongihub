@@ -387,4 +387,4 @@ problems detailed
 + brainstorming for a new python project
 + recipe project on bongihub/recipe
 + notes on bongihub/recipe/notes.txt
-+ 
++ way to deploy this project added on notes.txt
