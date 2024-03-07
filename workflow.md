@@ -392,3 +392,5 @@ problems detailed
 07/03/2024
 + testing if python and its extensions still work
 + python not running (had to install python)
++ rearranged files
++ screenshot attached everything installed well and apps are running bongihub/python/docs
