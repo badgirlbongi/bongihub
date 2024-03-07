@@ -388,3 +388,6 @@ problems detailed
 + recipe project on bongihub/recipe
 + notes on bongihub/recipe/notes.txt
 + way to deploy this project added on notes.txt
+
+07/03/2024
++ testing if python and its extensions still work
