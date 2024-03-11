@@ -401,3 +401,6 @@ problems detailed
 + working on bongihub/python/projects/snake_game
 + resources folder contains all the  resources needed for this project
 + doing main.py 
+- adding window background
+- adding ablock image
+- moving the block image with keys
