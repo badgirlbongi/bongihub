@@ -397,4 +397,7 @@ problems detailed
 
 11/03/2024
 + refreshing memory with python coding so will be creating a python game
-+ installing pygame
++ installed pygame
++ working on bongihub/python/projects/snake_game
++ main.py 
+--- changing the background window (colour)
