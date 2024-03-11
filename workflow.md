@@ -394,3 +394,7 @@ problems detailed
 + python not running (had to install python)
 + rearranged files
 + screenshot attached everything installed well and apps are running bongihub/python/docs
+
+11/03/2024
++ refreshing memory with python coding so will be creating a python game
++ installing pygame
