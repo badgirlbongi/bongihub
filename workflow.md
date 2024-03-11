@@ -399,5 +399,6 @@ problems detailed
 + refreshing memory with python coding so will be creating a python game
 + installed pygame
 + working on bongihub/python/projects/snake_game
++ resources folder contains all the  resources needed for this project
 + main.py 
 --- changing the background window (colour)
