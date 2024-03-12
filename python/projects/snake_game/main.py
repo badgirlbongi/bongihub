@@ -9,21 +9,25 @@ class Snake:
         self.y = 100
 
     def draw(self):
-        self.surface.fill((110, 110, 5))
+        self.parent_screen.fill((110, 110, 5))
         self.parent_screen.blit(self.block, (self.x, self.y))
         pygame.display.flip()
 
     def move_left(self):
-        pass
+        self.x -= 10
+        self.draw()
 
     def move_right(self):
-        pass
+        self.x += 10
+        self.draw()
 
     def move_up(self):
-        pass
+        self.y -= 10
+        self.draw()
 
     def move_down(self):
-        pass
+        self.y += 10
+        self.draw()
 
 class Game:
     def __init__(self):
