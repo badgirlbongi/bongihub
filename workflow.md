@@ -404,3 +404,8 @@ problems detailed
 - adding window background
 - adding ablock image
 - moving the block image with keys
++ research about composers
+
+12/03/2024
++ contuining with snake_game on bongihub/python/projects/snake_game 
++ main.py changing it to OOP

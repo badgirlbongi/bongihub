@@ -3,7 +3,8 @@ from pygame.locals import *
 
 class Game:
     def __init__(self):
-        pass
+        pygame.init()
+
 
     def run(self):
         pass
@@ -17,14 +18,12 @@ if __name__ == "__main__":
     game = Game()
     game.run()
 
-    pygame.init()
-
     surface = pygame.display.set_mode((1000,500))
     surface.fill((110, 110, 5))
 
     block = pygame.image.load("python/projects/snake_game/resources/block.jpg").convert()
-    block_x = 100
-    block_y = 100
+    
+    block_x, block_y = 100, 100
     surface.blit(block,(block_x,block_y))
 
     pygame.display.flip()
