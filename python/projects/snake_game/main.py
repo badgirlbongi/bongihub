@@ -1,30 +1,33 @@
 import pygame
 from pygame.locals import *
 
+class Snake:
+    def __init__(self, parent_screen):
+        self.parent_screen = parent_screen
+        self.block = pygame.image.load("python/projects/snake_game/resources/block.jpg").convert()
+        self.x = 100
+        self.y = 100
+
+    def draw(self):
+        self.surface.fill((110, 110, 5))
+        self.parent_screen.blit(self.block, (self.x, self.y))
+        pygame.display.flip()
+
 class Game:
     def __init__(self):
         pygame.init()
+        self.surface = pygame.display.set_mode((500,500))
+        self.surface.fill((110, 110, 5))
+        self.snake = Snake(self.surface)
+        self.snake.draw()
 
 
     def run(self):
         pass
 
-def draw_block():
-    surface.fill((110, 110, 5))
-    surface.blit(block, (block_x, block_y))
-    pygame.display.flip()
-
 if __name__ == "__main__":
     game = Game()
     game.run()
-
-    surface = pygame.display.set_mode((1000,500))
-    surface.fill((110, 110, 5))
-
-    block = pygame.image.load("python/projects/snake_game/resources/block.jpg").convert()
-    
-    block_x, block_y = 100, 100
-    surface.blit(block,(block_x,block_y))
 
     pygame.display.flip()
 
