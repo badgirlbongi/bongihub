@@ -28,8 +28,18 @@ class Snake:
         pygame.display.flip()
 
     def walk(self):
+        if self.direction == 'left':
+            self.x -= 10
+
+        if self.direction == 'right':
+            self.x += 10
+
         if self.direction == 'up':
-            self.
+            self.y -= 10
+
+        if self.direction == 'down':
+            self.y += 10
+            
         self.draw()
 
 class Game:
@@ -61,6 +71,9 @@ class Game:
 
                 elif event.type == QUIT:
                     running = False
+            
+            self.snake.walk()
+            time.sleep(0.2)
 
 if __name__ == "__main__":
     game = Game()
