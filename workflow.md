@@ -410,3 +410,7 @@ problems detailed
 + contuining with snake_game on bongihub/python/projects/snake_game 
 + main.py changing it to OOP
 --- creating classes
+
+13/03/2024
++ contuining with snake_game on bongihub/python/projects/snake_game 
++ main.py creating classes
