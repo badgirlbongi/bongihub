@@ -414,3 +414,9 @@ problems detailed
 13/03/2024
 + contuining with snake_game on bongihub/python/projects/snake_game 
 + main.py creating classes
+--- created the block for the snake to move with x and y 
+--- added the apple to be eaten by the snake
+
+14/03/2024
++  contuining with snake_game on bongihub/python/projects/snake_game 
++ main.py creating classes
