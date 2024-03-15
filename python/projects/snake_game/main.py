@@ -90,7 +90,13 @@ class Game:
         pygame.mixer.music.load('python/projects/snake_game/resources/bg_music_1.mp3')
         pygame.mixer.music.play(-1, 0)
 
-    
+    def play_sound(self, sound_name):
+        if sound_name == "crash":
+            sound = pygame.mixer.Sound("python/projects/snake_game/resources/crash.mp3")
+        elif sound_name == "ding":
+            sound = pygame.mixer.Sound("python/projects/snake_game/resources/ding.mp3")
+        
+        pygame.mixer.Sound.play(sound)
 
     def reset(self):
         self.snake = Snake(self.surface)
@@ -101,8 +107,13 @@ class Game:
             if y1 >= y2 and y1 < y2 + SIZE:
                 return True
         return False
+    
+    def render_background(self):
+        bg = pygame.image.load("python/projects/snake_game/resources/background.jpg")
+        self.surface.blit(bg, (0,0))
 
     def play(self):
+        self.render_background()
         self.snake.walk()
         self.apple.draw()
         self.display_score()
@@ -110,12 +121,14 @@ class Game:
 
         #snake eating apple sncenario
         if self.is_collision(self.snake.x[0], self.snake.y[0], self.apple.x, self.apple.y):
+            self.play_sound("ding")
             self.snake.increase_length()
             self.apple.move()
 
         #snake colliding with itself
         for i in range(2, self.snake.length):
             if self.is_collision(self.snake.x[0], self.snake.y[0], self.snake.x[i], self.snake.y[i]):
+                self.play_sound("crash")
                 raise "Collision Occured"
 
     def display_score(self):
@@ -124,17 +137,19 @@ class Game:
         self.surface.blit(score,(850,10))
 
     def show_game_over(self):
-        self.surface.fill(BACKGROUND_COLOR)
+        self.render_background()
         font = pygame.font.SysFont('arial', 30)
         line1 = font.render(f"Game is over! Your score is {self.snake.length}", True, (255, 255, 255))
         self.surface.blit(line1, (200, 300))
         line2 = font.render("To play again press Enter. To exit press Escape!",True, (255, 255, 255))
         self.surface.blit(line2, (200, 350))
-
+        pygame.mixer.music.pause()
+        
         pygame.display.flip()
 
     def run(self):
         running = True
+        pause = False
 
         while running:
             for event in pygame.event.get():
