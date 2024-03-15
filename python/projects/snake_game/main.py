@@ -131,6 +131,11 @@ class Game:
                 self.play_sound("crash")
                 raise "Collision Occured"
 
+        #snake colliding with the boundries of the window
+        if not (0 <= self.snake.x[0] <= 1000 and 0 <= self.snake.y[0] <= 800):
+            self.play_sound("crash")
+            raise "Hit the boundry error"
+
     def display_score(self):
         font = pygame.font.SysFont('arial',30)
         score = font.render(f"Score: {self.snake.length}",True,(200,200,200))
@@ -158,6 +163,7 @@ class Game:
                         running = False
 
                     if event.key == K_RETURN:
+                        pygame.mixer.music.unpause()
                         pause = False
 
                     if not pause:
