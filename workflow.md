@@ -427,4 +427,6 @@ problems detailed
 15/04/2024
 +  contuining with snake_game on bongihub/python/projects/snake_game 
 + on main.py
---- doing the game over restart logic
+-- doing the game over restart logic
+-- adding music to the project
+-- finishing the projects

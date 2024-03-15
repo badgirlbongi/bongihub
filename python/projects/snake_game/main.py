@@ -62,10 +62,9 @@ class Snake:
         self.draw()
 
     def draw(self):
-        self.parent_screen.fill(BACKGROUND_COLOR)
-
         for i in range(self.length):
             self.parent_screen.blit(self.image, (self.x[i], self.y[i]))
+       
         pygame.display.flip()
 
     def increase_length(self):
@@ -77,11 +76,21 @@ class Game:
     def __init__(self):
         pygame.init()
         pygame.display.set_caption("Snake and Apple Game")
+
+        pygame.mixer.init()
+        self.play_background_music()
+
         self.surface = pygame.display.set_mode((1000, 800))
         self.snake = Snake(self.surface)
         self.snake.draw()
         self.apple = Apple(self.surface)
         self.apple.draw()
+
+    def play_background_music(self):
+        pygame.mixer.music.load('python/projects/snake_game/resources/bg_music_1.mp3')
+        pygame.mixer.music.play(-1, 0)
+
+    
 
     def reset(self):
         self.snake = Snake(self.surface)
