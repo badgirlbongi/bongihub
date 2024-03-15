@@ -422,4 +422,9 @@ problems detailed
 + main.py creating classes
 --- increasing length of the snake when eating the apple
 --- counting score and displaying it
---- class definition for cathering for collion
+--- class definition for cathering for collision
+
+15/04/2024
++  contuining with snake_game on bongihub/python/projects/snake_game 
++ on main.py
+--- doing the game over restart logic
