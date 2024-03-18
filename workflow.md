@@ -433,3 +433,6 @@ problems detailed
 
 18/03/2024
 + installed auto py to exe to convert py projects to exe
++ new project for this week - forex trading bot
+--- research about the forex trading bot 
+--- 
