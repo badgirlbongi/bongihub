@@ -439,3 +439,9 @@ problems detailed
 --- working on megan/defs.py
 --- working on megan/oanda_api.py
 --- working on megan/utils.py
+
+19/03/2024
++ megan trading bot project on bongihub/megan
+--- working on megan/defs.py
+--- working on megan/oanda_api.py
+--- working on megan/utils.py
