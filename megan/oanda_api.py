@@ -87,7 +87,7 @@ class OandaAPI():
 
         if "orderFillTransaction" in json_data and "tradeOpened" in json_data["orderFillTransaction"]:
             return int(json_data["orderFillTransaction"]["tradeOpened"]["tradeID"])
-        
+        return None
 
     @classmethod
     def candles_to_df(cls, json_data):
