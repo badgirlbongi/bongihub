@@ -445,3 +445,6 @@ problems detailed
 --- working on megan/defs.py
 --- working on megan/oanda_api.py
 --- working on megan/utils.py
+--- working runner.py
++ installed requests
++ installed pandas
