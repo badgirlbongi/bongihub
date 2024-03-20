@@ -6,8 +6,11 @@ while True:
     command = input("Enter command:")
     if command == "T":
         print("Make a trade")
-        trade_id = api.place_trade("EUR_USD", 1000)
-        print('trade_id', trade_id)
+        trade_id = api.place_trade("EUR_USD", 1000, take_profit = 1.94)
+
+        #trade_id = api.place_trade("EUR_USD", 1000, stop_loss = 1.94)
         
+        print('trade_id', trade_id)
+
     if command == "Q":
         break

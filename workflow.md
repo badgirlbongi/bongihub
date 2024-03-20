@@ -453,3 +453,4 @@ problems detailed
 + megan trading bot project on bongihub/megan
 --- working on megan/runner.py
 --- working on megan/oanda_api.py
++ test the application after making changes
