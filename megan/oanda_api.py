@@ -69,9 +69,16 @@ class OandaAPI():
             return status_code, None
 
         return status_code, OandaAPI.candles_to_df(data['candles'])
-        
+
+    def close_trade(self, trade_id):
+        url = f"{defs.OANDA_URL}/accounts/{defs.ACCOUNT_ID}/close"
+        status_code, json_data = self.make_request(url, verb ='put', code_ok = 200)
+        if status_code != 200:
+            return False
+        return True
+   
     def set_sl_tp(self, price, order_type, trade_id):
-        url = f"{defs.OANDA_URL}/accountss/{defs.ACCOUNT_ID}/orders"
+        url = f"{defs.OANDA_URL}/accounts/{defs.ACCOUNT_ID}/orders"
 
         data = {
             "order": {
@@ -89,7 +96,7 @@ class OandaAPI():
         return True
         
     def place_trade(self, pair, units, take_profit = None, stop_loss = None):
-        url = f"{defs.OANDA_URL}/accountss/{defs.ACCOUNT_ID}/orders"
+        url = f"{defs.OANDA_URL}/accounts/{defs.ACCOUNT_ID}/orders"
 
         data = {
             "order": {
