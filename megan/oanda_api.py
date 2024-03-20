@@ -71,7 +71,23 @@ class OandaAPI():
         return status_code, OandaAPI.candles_to_df(data['candles'])
         
     def set_sl_tp(self, price, order_type, trade_id):
+        url = f"{defs.OANDA_URL}/accountss/{defs.ACCOUNT_ID}/orders"
 
+        data = {
+            "order": {
+                "timeInForce": "GTC",
+                "price": str(price), # 1% 1.18274656362
+                "type": order_type,
+                "tradeID": str(trade_id)
+            }
+        }
+        
+        status_code, json_data = self.make_request(url, verb ='post', data = json.dumps(data), code_ok = 201)
+
+        if status_code != 201:
+            return False
+        return True
+        
     def place_trade(self, pair, units, take_proit = None, stop_loss = None):
         url = f"{defs.OANDA_URL}/accountss/{defs.ACCOUNT_ID}/orders"
 
@@ -91,9 +107,18 @@ class OandaAPI():
             return None
         
         trade_id = None
+        ok  = True
 
         if "orderFillTransaction" in json_data and "tradeOpened" in json_data["orderFillTransaction"]:
             trade_id = int(json_data["orderFillTransaction"]["tradeOpened"]["tradeID"])
+            if take_proit is not None:
+                if(self.set_sl_tp(take_proit, "TAKE_PROFIT", trade_id) == False):
+                    ok = False
+                
+            if stop_loss is not None:
+                if(self.set_sl_tp(stop_loss, "STOP_LOSS", trade_id) == False):
+                    ok = False
+            
         return trade_id
 
     @classmethod
