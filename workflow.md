@@ -448,3 +448,8 @@ problems detailed
 --- working runner.py
 + installed requests
 + installed pandas
+
+20/03/2024
++ megan trading bot project on bongihub/megan
+--- working on megan/runner.py
+--- working on megan/oanda_api.py
