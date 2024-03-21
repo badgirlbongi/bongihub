@@ -458,3 +458,4 @@ problems detailed
 21/03/2024
 + megan trading bot project on bongihub/megan
 --- working on log_wrapper.py
++ test the application after making changes
