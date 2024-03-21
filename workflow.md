@@ -454,3 +454,7 @@ problems detailed
 --- working on megan/runner.py
 --- working on megan/oanda_api.py
 + test the application after making changes
+
+21/03/2024
++ megan trading bot project on bongihub/megan
+--- working on log_wrapper.py
