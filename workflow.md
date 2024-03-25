@@ -455,9 +455,13 @@ problems detailed
 --- working on megan/oanda_api.py
 + test the application after making changes
 
-21/03/2024
+22/03/2024
 + megan trading bot project on bongihub/megan
 --- working on log_wrapper.py
 --- working on settings.json
 --- working on settings.py
 + test the application after making changes
+
+25/03/2024
++ megan trading bot project on bongihub/megan
+--- working on settings.py
