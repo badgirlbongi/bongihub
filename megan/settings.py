@@ -17,3 +17,9 @@ class Settings():
     @classmethod
     def load_settings(cls):
         data = json.loads(open('settings.json', 'r').read())
+        return [cls.from_file_ob(x) for x in data]
+    
+    @classmethod
+    def get_pairs(cls):
+        settings = cls.load_settings()
+        return [s.pair for s in settings]
