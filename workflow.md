@@ -467,3 +467,7 @@ problems detailed
 --- working on settings.py
 --- working on bot.py
 + test the application after making changes
+
+26/03/2024
++ megan trading bot project on bongihub/megan
+--- working oanda_api.py
