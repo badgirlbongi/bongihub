@@ -16,10 +16,36 @@ class Technicals():
             self.log.logger.debug(msg)
 
     def fetch_candles(self, row_count, candle_time):
-        pass
+        status_code, df = self.api.fetch_candles(self.pair, count = row_count, granularity = self.granularity)
+        if df is None:
+            self.log_message(f"Error fetching candles for pair:{self.pair} {candle_time}, df None")
+            return None
+        elif df.iloc[-1].time != candle_time:
+            self.log_message(f"Error fetching candles for pair:{self.pair} {candle_time} vs {df.iloc[-1].time}")
+            return None
+        else:
+            return df
 
     def process_candles(self, df):
-        pass
+
+        df.reset_index(drop = True, inplace = True)
+        df['PAIR'] = self.pair
+        df['SPREAD'] = df.ask_c - df.bid_c
+
+        short_prev = 'PREV_SHORT'
+        long_prev = 'PREV_LONG'
+
+        short_col = f'MA_{self.settings.short_ma}'
+        long_col = f'MA_{self.settings.long_ma}'
+
+        df[short_col] = df.mid_c.rolling(window = self.settings.short_ma).mean()
+        df[long_col] = df.mid_c.rolling(window = self.settings.long_ma).mean()
+
+        df[short_prev] = df[short_col].shift(1)
+        df[long_prev] = df[long_col].shift(1)
+
+        df['D_PREV'] = df[short_prev] - df[long_prev]
+        df['D_NOW'] = df[short_col] - df[long_col]
 
     def get_trade_decision(self, candle_time):
         max_rows = self.settings.long_ma + 2
@@ -27,4 +53,8 @@ class Technicals():
         self.log_message(f"get_trade_decision() pair:{self.pair} max_rows:{max_rows}")
 
         df = self.fetch_candles(max_rows, candle_time)
+
+        if df is not None:
+            return self.process_candles(df)
         
+        return NONE
