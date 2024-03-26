@@ -159,4 +159,5 @@ if __name__ == "__main__":
     api = OandaAPI()
     res, df = api.fetch_candles("EUR_USD")
     print(df)
+    print(api.last_complete_candle("EUR_USD"))
     
