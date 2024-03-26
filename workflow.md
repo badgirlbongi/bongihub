@@ -470,4 +470,6 @@ problems detailed
 
 26/03/2024
 + megan trading bot project on bongihub/megan
---- working oanda_api.py
+--- working on oanda_api.py
+--- working on timing.py
+--- working on bot.py
