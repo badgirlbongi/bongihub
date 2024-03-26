@@ -5,6 +5,8 @@ from settings import Settings
 from log_wrapper import LogWrapper
 from timing import Timing
 from oanda_api import OandaAPI
+from technicals import Technicals
+from defs import NONE, BUY, SELL
 
 GRANULARITY = "M1"
 SLEEP = 10.0
@@ -13,6 +15,7 @@ class TradingBot():
 
     def __init__(self):
         self.log = LogWrapper("TradingBot")
+        self.tech_log = LogWrapper("TechnicalsBot")
         self.trade_pairs = Settings.get_pairs()
         self.settings = Settings.load_settings()
         self.api = OandaAPI()
@@ -36,6 +39,8 @@ class TradingBot():
         for pair in self.trade_pairs:
             if self.timings[pair].ready == True:
                 self.log_message(f"Ready to trade {pair}")
+                techs = Technicals(self.settings[pair], self.api, pair, GRANULARITY, logs = self.tech_log)
+                decision = techs.get_trade_decision(self.timings[pair].last_candle)
 
     def run(self):
         while True:

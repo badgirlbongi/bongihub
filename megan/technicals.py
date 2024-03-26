@@ -47,6 +47,21 @@ class Technicals():
         df['D_PREV'] = df[short_prev] - df[long_prev]
         df['D_NOW'] = df[short_col] - df[long_col]
 
+        last = df.iloc[-1]
+        decision = NONE
+
+        if last.D_NOW < 0 and last.D_PREV > 0:
+            decision = SELL
+        elif last.D_NOW > 0 and last.D_PREV < 0:
+            decision = BUY
+
+        log_cols = ['time', 'volume', 'mid_c', 'SPREAD', 'PAIR', short_col, long_col, short_prev, long_prev, 'D_PREV', 'D_NOW']
+        self.log_message(f"Processed_df\n{df[log_cols].tail(2)}")
+        self.log_message(f"Trade_decision:{decision}")
+        self.log_message("")
+
+        return decision
+
     def get_trade_decision(self, candle_time):
         max_rows = self.settings.long_ma + 2
         self.log_message("")
