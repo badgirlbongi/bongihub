@@ -1,6 +1,11 @@
-2024-03-25 15:24:30 LogWrapper init()megan/logs/TradingBot.log
-2024-03-25 15:24:30 Bot started with
+2024-03-26 12:29:27 LogWrapper init()megan/logs/TradingBot.log
+2024-03-26 12:29:34 Bot started with
  {'AUD_USD': {'pair': 'AUD_USD', 'units': 1000, 'short_ma': 8, 'long_ma': 32},
  'EUR_USD': {'pair': 'EUR_USD', 'units': 1000, 'short_ma': 4, 'long_ma': 16},
  'GBP_JPY': {'pair': 'GBP_JPY', 'units': 1000, 'short_ma': 4, 'long_ma': 16},
  'GBP_USD': {'pair': 'GBP_USD', 'units': 1000, 'short_ma': 8, 'long_ma': 32}}
+2024-03-26 12:29:34 Bot Timings
+ {'AUD_USD': {'last_candle': datetime.datetime(2024, 3, 26, 10, 19, 34, 255012, tzinfo=datetime.timezone.utc), 'ready': False},
+ 'EUR_USD': {'last_candle': datetime.datetime(2024, 3, 26, 10, 19, 33, 545685, tzinfo=datetime.timezone.utc), 'ready': False},
+ 'GBP_JPY': {'last_candle': datetime.datetime(2024, 3, 26, 10, 19, 33, 910139, tzinfo=datetime.timezone.utc), 'ready': False},
+ 'GBP_USD': {'last_candle': datetime.datetime(2024, 3, 26, 10, 19, 34, 590986, tzinfo=datetime.timezone.utc), 'ready': False}}
