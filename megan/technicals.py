@@ -22,4 +22,9 @@ class Technicals():
         pass
 
     def get_trade_decision(self, candle_time):
-        pass
+        max_rows = self.settings.long_ma + 2
+        self.log_message("")
+        self.log_message(f"get_trade_decision() pair:{self.pair} max_rows:{max_rows}")
+
+        df = self.fetch_candles(max_rows, candle_time)
+        
