@@ -3,6 +3,7 @@ import pprint
 from settings import Settings
 from log_wrapper import LogWrapper
 from timing import Timing
+from oanda_api import OandaAPI
 
 GRANULARITY = "M1"
 
