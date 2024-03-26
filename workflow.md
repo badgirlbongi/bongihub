@@ -473,4 +473,5 @@ problems detailed
 --- working on oanda_api.py
 --- working on timing.py
 --- working on bot.py
+--- working on technicals.py
 + test the application after making changes
