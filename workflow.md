@@ -480,3 +480,4 @@ problems detailed
 + megan trading bot project on bongihub/megan
 --- working on bot.py
 --- working on defs.py
++ test the application after making changes

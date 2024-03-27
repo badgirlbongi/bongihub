@@ -42,6 +42,8 @@ class TradingBot():
                 techs = Technicals(self.settings[pair], self.api, pair, GRANULARITY, logs = self.tech_log)
                 decision = techs.get_trade_decision(self.timings[pair].last_candle)
                 units = decision * self.settings[pair].units
+                if units != 0:
+                    self.log_message(f"we would trade {units} units")
 
     def run(self):
         while True:
