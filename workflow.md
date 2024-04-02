@@ -485,5 +485,6 @@ problems detailed
 02/04/2024
 + megan trading bot project on bongihub/megan
 --- working on oanda_trade.py
---- working on megan/runner.py
+--- working on oanda_api.py
+--- working on trade_manager.py
 + test the application after making changes
