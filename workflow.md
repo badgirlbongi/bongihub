@@ -487,4 +487,6 @@ problems detailed
 --- working on oanda_trade.py
 --- working on oanda_api.py
 --- working on trade_manager.py
+--- working on bot.py
 + test the application after making changes
+
