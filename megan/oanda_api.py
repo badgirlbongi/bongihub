@@ -6,6 +6,8 @@ import utils
 import sys
 import json
 
+from oanda_trade import OandaTrade
+
 class OandaAPI():
 
     def __init__(self):
@@ -133,6 +135,11 @@ class OandaAPI():
                     ok = False
             
         return trade_id, ok
+    
+    def fetch_instruments(self):
+        url = f"{}/instruments"
+        status_code, data = self.make_request(url)
+        return status_code, data
 
     @classmethod
     def candles_to_df(cls, json_data):

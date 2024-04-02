@@ -481,3 +481,9 @@ problems detailed
 --- working on bot.py
 --- working on defs.py
 + test the application after making changes
+
+02/04/2024
++ megan trading bot project on bongihub/megan
+--- working on oanda_trade.py
+--- working on megan/runner.py
++ test the application after making changes
