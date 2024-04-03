@@ -90,3 +90,25 @@ def trading_job():
 
     TPBuy = float(str(candle.bid.o))+previous_candleR*SLTPRatio
     TPSell = float(str(candle.bid.o))-previous_candleR*SLTPRatio
+
+    print(dfstream.iloc[:-1,:])
+    print(TPBuy, "  ", SLBuy, "  ", TPSell, "  ", SLSell)
+    signal = 2
+    #Sell
+    if signal == 1:
+        mo = MarketOrderRequest(instrument="EUR_USD", units=-1000, takeProfitOnFill=TakeProfitDetails(price=TPSell).data, stopLossOnFill=StopLossDetails(price=SLSell).data)
+        r = orders.OrderCreate(accountID, data=mo.data)
+        rv = client.request(r)
+        print(rv)
+    #Buy
+    elif signal == 2:
+        mo = MarketOrderRequest(instrument="EUR_USD", units=1000, takeProfitOnFill=TakeProfitDetails(price=TPBuy).data, stopLossOnFill=StopLossDetails(price=SLBuy).data)
+        r = orders.OrderCreate(accountID, data=mo.data)
+        rv = client.request(r)
+        print(rv)
+
+trading_job()
+
+#scheduler = BlockingScheduler()
+#scheduler.add_job(trading_job, 'cron', day_of_week='mon-fri', hour='00-23', minute='1,16,31,46', start_date='2022-01-12 12:00:00', timezone='America/Chicago')
+#scheduler.start()
