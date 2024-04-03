@@ -490,3 +490,5 @@ problems detailed
 --- working on bot.py
 + test the application after making changes
 
+03/04/2024
++ another trading bot project on bongihub/tradingbot
