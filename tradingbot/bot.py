@@ -38,3 +38,55 @@ dataF["signal"] = signal
 
 dataF.Ssignal.value_counts()
 #dataF.iloc[:, :]
+
+from apscheduler.schedulers.blocking import BlockingScheduler
+from oandapyV20 import API
+import oandapyV20.endpoints.orders as orders
+from oandapyV20.contrib.requests import MarketOrderRequest
+from oanda_candles import Pair, Gran, CandleCollector, CandleClient
+from oandapyV20.contrib.requests import TakeProfitDetails, StopLossDetails
+
+from config import access_token, accountID
+def get_candle(n):
+    #access_token = 'XXXXXXX' #You need token here generated from OANDA account
+    client = CandleClient(access_token, real = False)
+    collector = client.get_collector(Pair.EUR_USD, Gran.M15)
+    candles = collector.grab(n)
+    return candles 
+
+candles = get_candles(3)
+#for candle in candles:
+#   print(float(str(candle.bid.o)) > 1)
+
+
+def trading_job():
+    candles = get_candles(3)
+    dfstream = pd.DataFrame(columns=['Open','Close','High','Low'])
+    
+    i=0
+    for candle in candles:
+        dfstream.loc[i, ['Open']] = float(str(candle.bid.o))
+        dfstream.loc[i, ['Close']] = float(str(candle.bid.c))
+        dfstream.loc[i, ['High']] = float(str(candle.bid.h))
+        dfstream.loc[i, ['Low']] = float(str(candle.bid.l))
+        i=i+1
+
+    dfstream['Open'] = dfstream['Open'].astype(float)
+    dfstream['Close'] = dfstream['Close'].astype(float)
+    dfstream['High'] = dfstream['High'].astype(float)
+    dfstream['Low'] = dfstream['Low'].astype(float)
+
+    signal = signal_generator(dfstream.iloc[:-1,:])#
+    
+    # EXECUTING ORDERS
+    #accountID = "XXXXXXX" #your account ID here
+    client = API(access_token)
+         
+    SLTPRatio = 2.
+    previous_candleR = abs(dfstream['High'].iloc[-2]-dfstream['Low'].iloc[-2])
+    
+    SLBuy = float(str(candle.bid.o))-previous_candleR
+    SLSell = float(str(candle.bid.o))+previous_candleR
+
+    TPBuy = float(str(candle.bid.o))+previous_candleR*SLTPRatio
+    TPSell = float(str(candle.bid.o))-previous_candleR*SLTPRatio
