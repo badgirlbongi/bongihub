@@ -492,3 +492,6 @@ problems detailed
 
 03/04/2024
 + another trading bot project on bongihub/tradingbot
+--- working on bot.py
+--- working on bot2.py
+
