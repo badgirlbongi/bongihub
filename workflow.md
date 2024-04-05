@@ -497,4 +497,6 @@ problems detailed
 
 05/04/2024
 + python mini-project bongihub/python/pythonminiproject
---- working on main.py 
+--- working on heart.py 
++ working on birthday1.py
+--- created the code to appear on the terminal
