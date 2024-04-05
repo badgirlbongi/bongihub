@@ -494,3 +494,7 @@ problems detailed
 + another trading bot project on bongihub/tradingbot
 + deleted and then merged bot2 with bot.py
 --- working on bot.py
+
+05/04/2024
++ python mini-project bongihub/python/pythonminiproject
+--- working on main.py 
