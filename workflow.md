@@ -501,3 +501,6 @@ problems detailed
 + working on birthday1.py
 --- created the code to appear on the terminal
 --- changed the python code to appear inside the turtle instead of the terminal
+
+08/04/2024
++ portfolio website
