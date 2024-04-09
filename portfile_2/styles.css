@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  header {
+    background-color: #333;
+    padding: 20px 0;
+  }
+  
+  header img {
+    height: 50px;
+    float: left;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .home-section,
+  .about-section,
+  .contact-section {
+    padding: 50px 0;
+  }
+  
+  .home-section h2,
+  .about-section h2,
+  .contact-section h2 {
+    text-align: center;
+  }
+  
+  video {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+  }
+  
+  .about-section img {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+  }
+  
+  .contact-info {
+    text-align: center;
+  }
+  
+  #map {
+    height: 300px;
+    width: 80%;
+    margin: 20px auto;
+  }
+  

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="files/logo1.jpeg" alt="Logo">
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="home-section">
+    <div class="container">
+      <h2>Welcome to My Portfolio</h2>
+      <video controls>
+        <source src="files/html.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <div class="container">
+      <h2>Bongisiwe Shabalala</h2>
+      <img src="files/bongi.jpg" alt="Profile Picture">
+      <p>IT graduate with a specialization in software development,
+        possessing a strong foundation in programming and application
+        development. Eager to expand expertise in data analysis and
+        cybersecurity through continuous learning. Demonstrated
+        adaptability, problem-solving skills, and a commitment to staying
+        current with industry trends.
+        </p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <div class="contact-info">
+        <p>166 Gregory Street, Peacehaven, Randfontein, Gauteng</p>
+        <div id="map"></div>
+        <p>Phone: +2782-594-7973</p>
+        <p>Email: bongisiweshabalala@outlook.com</p>
+
+        <div class="social-media">
+            <a href="https://github.com/beeyourthingscode"> Github</a>
+            <a href="https://www.instagram.com/beeyourthings"> Instagram</a>
+            <a href="https://www.linkedin.com/in/bongisiwe-shabalala-6b2468284/"> Linkedin</a>  
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // JavaScript for embedding Google Maps
+    function initMap() {
+      var location = {lat: 51.5074, lng: -0.1278};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: location
+      });
+      var marker = new google.maps.Marker({
+        position: location,
+        map: map
+      });
+    }
+  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+  </script>
+</body>
+</html>

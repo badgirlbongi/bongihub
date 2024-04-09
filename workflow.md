@@ -503,4 +503,7 @@ problems detailed
 --- changed the python code to appear inside the turtle instead of the terminal
 
 08/04/2024
-+ portfolio website
++ portfolio website called portfile on bongihub/portfile
+
+09/04/2024
++ continuing with portfile project created portfile 2 replica of portfile
