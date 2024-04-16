@@ -516,6 +516,8 @@ problems detailed
 
 16/04/2024
 + rearranged files
++ installed flask
 + new python projects python_portfolio 
 --- working on framework.py
+--- working on index.html
 
