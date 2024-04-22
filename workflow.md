@@ -495,6 +495,9 @@ problems detailed
 + deleted and then merged bot2 with bot.py
 --- working on bot.py
 
+04/04/2024
++ research about python small projects with graphics
+
 05/04/2024
 + python mini-project bongihub/python/pythonminiproject
 --- working on heart.py 
@@ -514,11 +517,30 @@ problems detailed
 + continuing working on portfile_2 
 --- learning how to find an api for google maps 
 
-16/04/2024
+11/04/2024
++ research about google maps and APIs
+
+12/04/2024
++ research about creating python website without using django
+
+15/04/2024
 + rearranged files
 + installed flask
++ learning about flask
+
+16/04/2024
 + new python projects python_portfolio 
 --- working on framework.py
 --- working on index.html
 --- working on about.html
+
+17/0/2024
+
+18/04/2024
+
+19/04/2024
+
+20/04/2024
+
+22/04/2024
 
