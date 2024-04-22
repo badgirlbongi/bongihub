@@ -544,4 +544,6 @@ problems detailed
 
 22/04/2024
 + updates on python_portfolio
++ running the flask app
+--- file doesn't want to run
 
