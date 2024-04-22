@@ -546,4 +546,5 @@ problems detailed
 + updates on python_portfolio
 + running the flask app
 --- file doesn't want to run
+--- trying to find a way to run the files
 
