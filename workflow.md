@@ -535,12 +535,16 @@ problems detailed
 --- working on about.html
 
 17/0/2024
++ 
 
 18/04/2024
++ 
 
 19/04/2024
++ 
 
 20/04/2024
++ 
 
 22/04/2024
 + updates on python_portfolio
@@ -552,6 +556,3 @@ problems detailed
 23/04/2024
 + downloaded node.js
 + trying to install node.js
-
-
-
