@@ -549,3 +549,9 @@ problems detailed
 --- trying to find a way to run the files
 --- app is now runing using web address
 
+23/04/2024
++ downloaded node.js
++ trying to install node.js
+
+
+
