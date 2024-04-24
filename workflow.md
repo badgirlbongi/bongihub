@@ -535,10 +535,16 @@ problems detailed
 --- working on about.html
 
 17/0/2024
-+ 
++ python project python_portfolio 
+--- working on framework.py
+--- working on index.html
+--- working on about.html
 
 18/04/2024
-+ 
++ python projects python_portfolio 
+--- working on framework.py
+--- working on index.html
+--- working on about.html
 
 19/04/2024
 + 
@@ -556,3 +562,7 @@ problems detailed
 23/04/2024
 + downloaded node.js
 + trying to install node.js
+
+24/04/2024
++ doing javascript codes and running them on terminal
++ on bongihub/javascript
