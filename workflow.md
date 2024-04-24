@@ -565,5 +565,5 @@ problems detailed
 
 24/04/2024
 + doing javascript codes and running them on terminal
-+ on bongihub/javascript
---- practice1.js
++ bongihub/javascript/practice1.js
+--- screenshot provided
