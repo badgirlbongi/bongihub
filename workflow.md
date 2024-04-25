@@ -572,3 +572,4 @@ problems detailed
 + doing javascript codes and running them on terminal
 + bongihub/javascript/practice2.js
 --- screenshot provided
+s
