@@ -567,3 +567,8 @@ problems detailed
 + doing javascript codes and running them on terminal
 + bongihub/javascript/practice1.js
 --- screenshot provided
+
+25/04/2024
++ doing javascript codes and running them on terminal
++ bongihub/javascript/practice2.js
+--- screenshot provided
