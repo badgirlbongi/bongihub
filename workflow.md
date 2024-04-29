@@ -568,5 +568,7 @@ problems detailed
 --- screenshot provided
 
 26/04/2024
-+ doing node.js and running on terminal
-+ bongihub/nodejs codes/
++ doing node.js code and running on terminal
++ installed chalk 
++ bongihub/nodejs codes/practice3.js
+
