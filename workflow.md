@@ -546,12 +546,6 @@ problems detailed
 --- working on index.html
 --- working on about.html
 
-19/04/2024
-+ 
-
-20/04/2024
-+ 
-
 22/04/2024
 + updates on python_portfolio
 + running the flask app
@@ -565,11 +559,14 @@ problems detailed
 
 24/04/2024
 + doing javascript codes and running them on terminal
-+ bongihub/javascript/practice1.js
++ bongihub/nodejs codes/practice1.js
 --- screenshot provided
 
 25/04/2024
 + doing javascript codes and running them on terminal
-+ bongihub/javascript/practice2.js
++ bongihub/nodejs codes/practice2.js
 --- screenshot provided
-s
+
+26/04/2024
++ doing node.js and running on terminal
++ bongihub/nodejs codes/
