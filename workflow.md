@@ -559,12 +559,12 @@ problems detailed
 
 24/04/2024
 + doing javascript codes and running them on terminal
-+ bongihub/nodejs codes/practice1.js
++ bongihub/nodejs_codes/practice1.js
 --- screenshot provided
 
 25/04/2024
 + doing javascript codes and running them on terminal
-+ bongihub/nodejs codes/practice2.js
++ bongihub/nodejs_codes/practice2.js
 --- screenshot provided
 
 26/04/2024
