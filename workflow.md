@@ -572,3 +572,13 @@ problems detailed
 + installed chalk 
 + bongihub/nodejs codes/practice3.js
 
+29/04/2024
++ completd bongihub/nodejs_code/practice3.js
+
+30/04/2024
++ new mini node.js project bongihub/nodejs_code/practice4
++ installed mongoose
+--- practice4/models/todo.js
+--- practice4/routes/todo.js
+--- app.js
+
