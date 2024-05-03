@@ -582,3 +582,7 @@ problems detailed
 --- practice4/routes/todo.js
 --- app.js
 
+02/05/2024
++ mini node.js project bongihub/nodes_code/practice5.js
+---practicing using mangoose
+
