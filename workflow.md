@@ -589,4 +589,5 @@ problems detailed
 03/05/2024
 + mini node.js project bongihub/nodes_code/practice6.js
 + installed axios
+--- practice6 is about practicing using axios
 
