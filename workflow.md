@@ -586,3 +586,7 @@ problems detailed
 + mini node.js project bongihub/nodes_code/practice5.js
 ---practicing using mangoose
 
+03/05/2024
++ mini node.js project bongihub/nodes_code/practice6.js
++ installed axios
+
