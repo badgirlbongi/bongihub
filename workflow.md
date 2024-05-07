@@ -592,6 +592,9 @@ problems detailed
 --- practice6 is about practicing using 
 
 07/05/2024
-+ mini node.js project bongihub/nodes_code/practice7.js
++ mini node.js project bongihub/nodes_code/practice7
 + installed express
+--- public(styles.css)
+--- views (index.ejs, greet.ejs)
+--- index.js
 
