@@ -595,7 +595,6 @@ problems detailed
 + mini node.js project bongihub/nodes_code/practice7
 + installed express
 + installed body-parser ejs
-
 --- public(styles.css)
 --- views (index.ejs, greet.ejs)
 --- index.js

@@ -13,12 +13,12 @@ app.use(express.static('public'));
 app.set('view engine', 'ejs');
 
 // Define a route for the homepage
-app.get('/', (req, res) => {
+app.get('nodejs_codes/practice7', (req, res) => {
   res.render('index');
 });
 
 // Define a route for form submission
-app.post('/greet', (req, res) => {
+app.post('nodejs_codes/practice7/views', (req, res) => {
   const name = req.body.name;
   res.render('greet', { name });
 });
