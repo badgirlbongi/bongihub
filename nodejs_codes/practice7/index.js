@@ -9,16 +9,19 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Serve static files from the public directory
 app.use(express.static('public'));
 
+// Set the views directory
+app.set('views', 'C:/xampp/htdocss/bongihub/nodejs_codes/practice7/views');
+
 // Set EJS as the templating engine
 app.set('view engine', 'ejs');
 
 // Define a route for the homepage
-app.get('nodejs_codes/practice7', (req, res) => {
+app.get('/', (req, res) => {
   res.render('index');
 });
 
 // Define a route for form submission
-app.post('nodejs_codes/practice7/views', (req, res) => {
+app.post('/greet', (req, res) => {
   const name = req.body.name;
   res.render('greet', { name });
 });

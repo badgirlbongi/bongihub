@@ -591,11 +591,18 @@ problems detailed
 + installed axios
 --- practice6 is about practicing using 
 
-07/05/2024
+06/05/2024
 + mini node.js project bongihub/nodes_code/practice7
 + installed express
 + installed body-parser ejs
 --- public(styles.css)
 --- views (index.ejs, greet.ejs)
 --- index.js
+
+07/05/2024
++ mini node.js project bongihub/nodes_code/practice7
++ project7 not running properly
++ sscreenshots provided
++ trying to fix it so that it can run properly without errors
+
 
