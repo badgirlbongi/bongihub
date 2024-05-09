@@ -600,9 +600,13 @@ problems detailed
 --- index.js
 
 07/05/2024
-+ mini node.js project bongihub/nodes_code/practice7
++ mini node.js project bongihub/nodesjs_code/practice7
 + project7 not running properly
 + sscreenshots provided
 + trying to fix it so that it can run properly without errors
+
+08/05/2024
++ still trying to fix the errors on project bongihub/nodesjs_code/practice7
+
 
 
