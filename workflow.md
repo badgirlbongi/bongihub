@@ -607,6 +607,14 @@ problems detailed
 
 08/05/2024
 + still trying to fix the errors on project bongihub/nodesjs_code/practice7
++ couldn't solve the path error
+
+09/05/2024
++ mini node.js project on bongihub/nodejs_code/practice8
++ guessing game
+
+10/05/2024
++ mini node.js project on bongihub/nodejs_code/practice9
 
 
 
