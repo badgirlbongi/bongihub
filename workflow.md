@@ -610,11 +610,15 @@ problems detailed
 + couldn't solve the path error
 
 09/05/2024
-+ mini node.js project on bongihub/nodejs_code/practice8
++ mini node.js project on bongihub/nodejs_code/practice8.js
 + guessing game
 
 10/05/2024
-+ mini node.js project on bongihub/nodejs_code/practice9
++ mini node.js project on bongihub/nodejs_code/practice9.js
 + tic-tac-toe game
+
+13/05/2024
++ mini node.js project on bongihub/nodejs_code/practice10.js
++ hangman game
 
 
