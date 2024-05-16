@@ -628,3 +628,6 @@ problems detailed
 
 15/05/2024
 + document on system development styles on bongihub/documentation/system development styles.pdf
+
+16/05/2024
++ document on architecture of systems on bongihub/documentation/Architectures of Systems.pdf
