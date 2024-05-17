@@ -631,3 +631,8 @@ problems detailed
 
 16/05/2024
 + document on architecture of systems on bongihub/documentation/Architectures of Systems.pdf
+
+17/05/2024
++ mini node.js project on bongihub/nodejs_code/practice12.js
++ installed inquirer
++ doing text-based adventure game where the player navigates through a dungeon and encounters various scenarios.
