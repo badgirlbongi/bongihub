@@ -643,3 +643,9 @@ problems detailed
 + index.html on public
 + server.js
 + word chain game
+
+21/05/2024
++ mini node.js project on bongihub/nodejs_code/practice13
++ index.html on public
++ server.js
++ rock paper scissors game

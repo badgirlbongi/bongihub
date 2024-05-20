@@ -1,4 +1,3 @@
-// server.js
 const express = require('express');
 const http = require('http');
 const WebSocket = require('ws');
@@ -10,6 +9,7 @@ const wss = new WebSocket.Server({ server });
 let players = [];
 let choices = {};
 
+// Function to determine the winner
 function getWinner(player1Choice, player2Choice) {
   if (player1Choice === player2Choice) {
     return 'Draw';
@@ -25,6 +25,7 @@ function getWinner(player1Choice, player2Choice) {
   }
 }
 
+// Function to broadcast a message to all connected clients
 function broadcast(data) {
   wss.clients.forEach(client => {
     if (client.readyState === WebSocket.OPEN) {
@@ -34,14 +35,17 @@ function broadcast(data) {
 }
 
 wss.on('connection', ws => {
+  // Add player if there are less than 2 players connected
   if (players.length < 2) {
     players.push(ws);
     ws.send(JSON.stringify({ type: 'init', player: players.length }));
 
+    // Start the game if there are 2 players
     if (players.length === 2) {
       broadcast({ type: 'start' });
     }
 
+    // Handle messages from clients
     ws.on('message', message => {
       const data = JSON.parse(message);
       if (data.type === 'choice' && players.includes(ws)) {
@@ -54,6 +58,7 @@ wss.on('connection', ws => {
       }
     });
 
+    // Handle player disconnection
     ws.on('close', () => {
       players = players.filter(player => player !== ws);
       choices = {};
@@ -64,6 +69,10 @@ wss.on('connection', ws => {
   }
 });
 
+// Serve static files from the "public" directory
 app.use(express.static('public'));
 
-server.listen(
+// Start the server on port 8080
+server.listen(8080, () => {
+  console.log('Server is listening on port 8080');
+});
