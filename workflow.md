@@ -636,3 +636,10 @@ problems detailed
 + mini node.js project on bongihub/nodejs_code/practice12.js
 + installed inquirer
 + doing text-based adventure game where the player navigates through a dungeon and encounters various scenarios.
+
+20/05/2024
++ mini node.js project on bongihub/nodejs_code/practice14
++ installed express ws
++ index.html on public
++ server.js
++ word chain game

@@ -1,0 +1,84 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Chain</title>
+  <style>
+    #chat {
+      display: flex;
+      flex-direction: column;
+      height: 300px;
+      width: 400px;
+      border: 1px solid #000;
+      overflow-y: auto;
+      margin-bottom: 10px;
+    }
+    #input {
+      display: flex;
+    }
+    #input input {
+      flex-grow: 1;
+      padding: 10px;
+    }
+    #input button {
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Word Chain</h1>
+  <div id="status"></div>
+  <div id="chat"></div>
+  <div id="input">
+    <input type="text" id="word" placeholder="Enter word" />
+    <button onclick="sendWord()">Send</button>
+  </div>
+  <script>
+    const ws = new WebSocket('ws://localhost:8080');
+    let player;
+    let isMyTurn = false;
+
+    ws.onmessage = (message) => {
+      const data = JSON.parse(message.data);
+      const chat = document.getElementById('chat');
+      const status = document.getElementById('status');
+      if (data.type === 'init') {
+        player = data.player;
+        status.innerText = `You are player ${player}`;
+      } else if (data.type === 'start') {
+        status.innerText = `Game started! Player 1's turn`;
+        isMyTurn = (player === 1);
+      } else if (data.type === 'word') {
+        const wordDiv = document.createElement('div');
+        wordDiv.innerText = `Player ${data.player}: ${data.word}`;
+        chat.appendChild(wordDiv);
+        isMyTurn = (data.player % players.length) === (player - 1);
+        status.innerText = isMyTurn ? `Your turn` : `Player ${data.player % players.length + 1}'s turn`;
+      } else if (data.type === 'invalid') {
+        alert(data.message);
+      } else if (data.type === 'timeout') {
+        if (data.player === player) {
+          alert('You ran out of time!');
+        }
+      } else if (data.type === 'reset') {
+        chat.innerHTML = '';
+        status.innerText = 'Game reset. Waiting for players...';
+      } else if (data.type === 'full') {
+        status.innerText = 'Game is full. Please try again later.';
+      }
+    };
+
+    function sendWord() {
+      const wordInput = document.getElementById('word');
+      if (isMyTurn && wordInput.value.trim() !== '') {
+        ws.send(JSON.stringify({ type: 'word', word: wordInput.value.trim() }));
+        wordInput.value = '';
+      } else {
+        alert('It is not your turn or the input is empty');
+      }
+    }
+  </script>
+</body>
+</html>
