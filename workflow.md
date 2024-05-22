@@ -649,3 +649,7 @@ problems detailed
 + index.html on public
 + server.js
 + rock paper scissors game
+
+22/05/2024
++ new portfolio profile with bootstrap
++ on bongihub/myportfolio
