@@ -653,3 +653,17 @@ problems detailed
 22/05/2024
 + new portfolio profile with bootstrap
 + on bongihub/myportfolio
+
+23/05/2024
+
+
+24/05/2024
+
+
+27/05/2024
+
+28/05/2024
+
+29/05/2024
+
+30/05/2024
