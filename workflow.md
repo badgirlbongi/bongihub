@@ -665,20 +665,19 @@ problems detailed
 + file index.html 
 + file script.js
 + file style.css
-+ 
++ snake game
 
 27/05/2024
-+ 
-+ 
++javascript mini project  on bongihub/javascript/practice3
++ file index.html 
++ file script.js
++ brick breaker
 
 28/05/2024
-+ 
-+ 
++ javascript mini project  on bongihub/javascript/practice2
++ file index.html 
++ file script.js
++ file style.css
++ snake game 
 
-29/05/2024
-+ 
-+ 
 
-30/05/2024
-+ 
-+ 
