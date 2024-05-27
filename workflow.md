@@ -658,12 +658,14 @@ problems detailed
 + javascript mini project  on bongihub/javascript/practice1
 + file index.html 
 + file game.js
++ catch a ball game
 
 24/05/2024
 + javascript mini project  on bongihub/javascript/practice2
 + file index.html 
 + file script.js
 + file style.css
++ 
 
 27/05/2024
 + 

@@ -37,4 +37,60 @@ function keyUpHandler(e) {
 
 function drawPaddle() {
     ctx.beginPath();
-    ctx.rect(paddleX, paddleY
+    ctx.rect(paddleX, paddleY, paddleWidth, paddleHeight);
+    ctx.fillStyle = "#0095DD";
+    ctx.fill();
+    ctx.closePath();
+}
+
+function drawBall() {
+    ctx.beginPath();
+    ctx.arc(ballX, ballY, ballRadius, 0, Math.PI * 2);
+    ctx.fillStyle = "#0095DD";
+    ctx.fill();
+    ctx.closePath();
+}
+
+function drawScore() {
+    ctx.font = "16px Arial";
+    ctx.fillStyle = "#0095DD";
+    ctx.fillText("Score: " + score, 8, 20);
+}
+
+function movePaddle() {
+    if (rightPressed && paddleX < canvas.width - paddleWidth) {
+        paddleX += 7;
+    } else if (leftPressed && paddleX > 0) {
+        paddleX -= 7;
+    }
+}
+
+function moveBall() {
+    ballY += ballDy;
+
+    // Check if the ball hits the paddle
+    if (ballY + ballRadius > paddleY && ballX > paddleX && ballX < paddleX + paddleWidth) {
+        ballY = ballRadius;  // Reset ball position
+        ballX = Math.random() * (canvas.width - ballRadius * 2) + ballRadius;
+        score++;
+    }
+
+    // Check if the ball hits the bottom (missed by the paddle)
+    if (ballY + ballRadius > canvas.height) {
+        alert("GAME OVER");
+        document.location.reload();
+    }
+}
+
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawPaddle();
+    drawBall();
+    drawScore();
+    movePaddle();
+    moveBall();
+
+    requestAnimationFrame(draw);
+}
+
+draw();
