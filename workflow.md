@@ -655,15 +655,28 @@ problems detailed
 + on bongihub/myportfolio
 
 23/05/2024
-
++ javascript mini project  on bongihub/javascript/practice1
++ file index.html 
++ file game.js
 
 24/05/2024
-
++ javascript mini project  on bongihub/javascript/practice2
++ file index.html 
++ file script.js
++ file style.css
 
 27/05/2024
++ 
++ 
 
 28/05/2024
++ 
++ 
 
 29/05/2024
++ 
++ 
 
 30/05/2024
++ 
++ 
