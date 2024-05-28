@@ -674,9 +674,9 @@ problems detailed
 + brick breaker
 
 28/05/2024
-+ javascript mini project  on bongihub/javascript/practice2
++ javascript mini project  on bongihub/javascript/practice4
 + file index.html 
-+ file script.js
++ file game.js
 + file style.css
 + snake game 
 
