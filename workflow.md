@@ -688,5 +688,8 @@ problems detailed
 + guessing game 
 
 31/05/2024
-
-
++ javascript mini project  on bongihub/javascript/practice6
++ file index.html 
++ file game.js
++ file style.css
++ guessing number game 
