@@ -678,6 +678,15 @@ problems detailed
 + file index.html 
 + file game.js
 + file style.css
-+ snake game 
++ x and o game 
+
+30/05/2024
++ javascript mini project  on bongihub/javascript/practice5
++ file index.html 
++ file game.js
++ file style.css
++ guessing game 
+
+31/05/2024
 
 
