@@ -685,7 +685,7 @@ problems detailed
 + file index.html 
 + file game.js
 + file style.css
-+ guessing game 
++ rock paper scissors game 
 
 31/05/2024
 + javascript mini project  on bongihub/javascript/practice6
